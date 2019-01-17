@@ -31,7 +31,7 @@ NetworkStyle::NetworkStyle(const QString &_appName, const int iconColorHueShift,
     if (std::char_traits<char>::length(_titleAddText) == 0) {
         pixmap.load(":/icons/bitcoin");
     } else {
-        pixmap.load(":/icons/litecoin_splash");
+        pixmap.load(":/icons/OGC_splash");
     }
 
     if(iconColorHueShift != 0 && iconColorSaturationReduction != 0)
@@ -46,7 +46,7 @@ NetworkStyle::NetworkStyle(const QString &_appName, const int iconColorHueShift,
         {
             QRgb *scL = reinterpret_cast< QRgb *>( img.scanLine( y ) );
 
-            // loop through pixels
+            // loop through gram
             for(int x=0;x<img.width();x++)
             {
                 // preserve alpha because QColor::getHsl doesen't return the alpha value

@@ -1,42 +1,52 @@
-Litecoin Core integration/staging tree
+OG Core integration/staging tree
 =====================================
 
-[![Build Status](https://travis-ci.org/litecoin-project/litecoin.svg?branch=master)](https://travis-ci.org/litecoin-project/litecoin)
+https://og.bitwall.ca
 
-https://litecoin.org
-
-What is Litecoin?
+What is OG Coin?
 ----------------
 
-Litecoin is an experimental digital currency that enables instant payments to
-anyone, anywhere in the world. Litecoin uses peer-to-peer technology to operate
+OG Coin is an experimental digital currency that enables instant payments to
+anyone, anywhere in the world. OG uses peer-to-peer technology to operate
 with no central authority: managing transactions and issuing money are carried
-out collectively by the network. Litecoin Core is the name of open source
+out collectively by the network. OG Core is the name of open source
 software which enables the use of this currency.
 
+OG uses scrypt as a proof-of-work algorithm designed to study and patent new Marijuana strains. 
+
+2.5 minute block targets
+subsidy halves in 840k blocks (~4 years)
+~42 million total coins
+2 Million premined amount for fundraising
+2000 Confirmations per mined block
+
+The rest is the same as Bitcoin.
+50 coins per block
+2016 blocks to retarget difficulty
+
 For more information, as well as an immediately useable, binary version of
-the Litecoin Core software, see [https://litecoin.org](https://litecoin.org).
+the OG Core software, see [https://og.bitwall.ca](https://og.bitwall.ca).
 
 License
 -------
 
-Litecoin Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
+OG Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see https://opensource.org/licenses/MIT.
 
 Development Process
 -------------------
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/litecoin-project/litecoin/tags) are created
-regularly to indicate new official, stable release versions of Litecoin Core.
+completely stable. [Tags](https://github.com/minblock/OGC/tags) are created
+regularly to indicate new official, stable release versions of OG Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).
 
-The developer [mailing list](https://groups.google.com/forum/#!forum/litecoin-dev)
+The developer [mailing list](https://groups.google.com/forum/#!forum/OGC-dev)
 should be used to discuss complicated or controversial changes before working
 on a patch set.
 
-Developer IRC can be found on Freenode at #litecoin-dev.
+Developer IRC can be found on Freenode at #OGC-dev.
 
 Testing
 -------
@@ -70,10 +80,14 @@ Translations
 ------------
 
 We only accept translation fixes that are submitted through [Bitcoin Core's Transifex page](https://www.transifex.com/projects/p/bitcoin/).
-Translations are converted to Litecoin periodically.
+Translations are converted to OG periodically.
 
 Translations are periodically pulled from Transifex and merged into the git repository. See the
 [translation process](doc/translation_process.md) for details on how this works.
 
 **Important**: We do not accept translation changes as GitHub pull requests because the next
 pull from Transifex would automatically overwrite them again.
+
+Copyright (c) 2009-2018 Bitcoin Developers
+Copyright (c) 2011-2018 Litecoin Developers
+Copyright (c) 2019 OG Core Developer
