@@ -280,8 +280,8 @@ def run_tests(test_list, src_dir, build_dir, exeext, tmpdir, jobs=1, enable_cove
         print("%sWARNING!%s There is a cache directory here: %s. If tests fail unexpectedly, try deleting the cache directory." % (BOLD[1], BOLD[0], cache_dir))
 
     #Set env vars
-    if "PICSCOIND" not in os.environ:
-        os.environ["PICSCOIND"] = build_dir + '/src/OGd' + exeext
+    if "OGD" not in os.environ:
+        os.environ["OGD"] = build_dir + '/src/OGd' + exeext
         os.environ["PICSCOINCLI"] = build_dir + '/src/OG-cli' + exeext
 
     tests_dir = src_dir + '/test/functional/'
