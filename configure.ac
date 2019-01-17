@@ -14,10 +14,10 @@ AC_CONFIG_HEADERS([src/config/bitcoin-config.h])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([build-aux/m4])
 
-BITCOIN_DAEMON_NAME=OGd
-BITCOIN_GUI_NAME=OG-qt
-BITCOIN_CLI_NAME=OG-cli
-BITCOIN_TX_NAME=OG-tx
+BITCOIN_DAEMON_NAME=ogd
+BITCOIN_GUI_NAME=og-qt
+BITCOIN_CLI_NAME=og-cli
+BITCOIN_TX_NAME=og-tx
 
 dnl Unless the user specified ARFLAGS, force it to be cr
 AC_ARG_VAR(ARFLAGS, [Flags for the archiver, defaults to <cr> if not set])
