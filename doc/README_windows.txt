@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 OG Core
 =============
 
@@ -46,4 +45,3 @@ process can take anywhere from a few hours to a day or more.
 See the OG wiki at:
   https://OG.info/
 for more help and information.
->>>>>>> master
