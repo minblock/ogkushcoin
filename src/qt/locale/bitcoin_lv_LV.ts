@@ -39,11 +39,11 @@
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation>Izvēlies adresi uz kuru sūtīt OGCoins</translation>
+        <translation>Izvēlies adresi uz kuru sūtīt OGoins</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation>Izvēlies adresi ar kuru saņemt OGCoins</translation>
+        <translation>Izvēlies adresi ar kuru saņemt OGoins</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -278,12 +278,12 @@
         <translation>Ciļņu rīkjosla</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and OGC: URIs)</source>
-        <translation>Pieprasīt maksājumus (izveido QR kodu un OGC: URIs)</translation>
+        <source>Request payments (generates QR codes and OG: URIs)</source>
+        <translation>Pieprasīt maksājumus (izveido QR kodu un OG: URIs)</translation>
     </message>
     <message>
-        <source>Open a OGC: URI or payment request</source>
-        <translation>Atvērt OGC URI vai maksājuma pieprasījumu</translation>
+        <source>Open a OG: URI or payment request</source>
+        <translation>Atvērt OG URI vai maksājuma pieprasījumu</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -563,7 +563,7 @@
     </message>
     <message>
         <source>Enable coin &amp;control features</source>
-        <translation>Ieslēgt OGC &amp;kontroles funkcijas</translation>
+        <translation>Ieslēgt OG &amp;kontroles funkcijas</translation>
     </message>
     <message>
         <source>&amp;Spend unconfirmed change</source>

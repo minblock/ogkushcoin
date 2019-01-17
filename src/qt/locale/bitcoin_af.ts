@@ -398,8 +398,8 @@
         <translation>Orebalk</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and OGC: URIs)</source>
-        <translation>Versoek betalings (genereer QR-kodes en OGC: URI's)</translation>
+        <source>Request payments (generates QR codes and OG: URIs)</source>
+        <translation>Versoek betalings (genereer QR-kodes en OG: URI's)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -410,8 +410,8 @@
         <translation>Vertoon die lys van gebruikte ontvangers-adresse en etikette</translation>
     </message>
     <message>
-        <source>Open a OGC: URI or payment request</source>
-        <translation>Skep 'n OGC: URI of betalingsversoek</translation>
+        <source>Open a OG: URI or payment request</source>
+        <translation>Skep 'n OG: URI of betalingsversoek</translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>

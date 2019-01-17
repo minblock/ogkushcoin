@@ -10,19 +10,19 @@ SetCompressor /SOLID lzma
 !define URL https://og.bitwall.ca/
 
 # MUI Symbol Definitions
-!define MUI_ICON "/home/spanky/OGC/share/pixmaps/bitcoin.ico"
-!define MUI_WELCOMEFINISHPAGE_BITMAP "/home/spanky/OGC/share/pixmaps/nsis-wizard.bmp"
+!define MUI_ICON "/home/spanky/OG/share/pixmaps/bitcoin.ico"
+!define MUI_WELCOMEFINISHPAGE_BITMAP "/home/spanky/OG/share/pixmaps/nsis-wizard.bmp"
 !define MUI_HEADERIMAGE
 !define MUI_HEADERIMAGE_RIGHT
-!define MUI_HEADERIMAGE_BITMAP "/home/spanky/OGC/share/pixmaps/nsis-header.bmp"
+!define MUI_HEADERIMAGE_BITMAP "/home/spanky/OG/share/pixmaps/nsis-header.bmp"
 !define MUI_FINISHPAGE_NOAUTOCLOSE
 !define MUI_STARTMENUPAGE_REGISTRY_ROOT HKLM
 !define MUI_STARTMENUPAGE_REGISTRY_KEY ${REGKEY}
 !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME StartMenuGroup
 !define MUI_STARTMENUPAGE_DEFAULTFOLDER "OG Core"
-!define MUI_FINISHPAGE_RUN $INSTDIR\OGC-qt
+!define MUI_FINISHPAGE_RUN $INSTDIR\OG-qt
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
-!define MUI_UNWELCOMEFINISHPAGE_BITMAP "/home/spanky/OGC/share/pixmaps/nsis-wizard.bmp"
+!define MUI_UNWELCOMEFINISHPAGE_BITMAP "/home/spanky/OG/share/pixmaps/nsis-wizard.bmp"
 !define MUI_UNFINISHPAGE_NOAUTOCLOSE
 
 # Included files
@@ -48,7 +48,7 @@ Var StartMenuGroup
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile /home/spanky/OGC/OGC-${VERSION}-win-setup.exe
+OutFile /home/spanky/OG/OG-${VERSION}-win-setup.exe
 !if "" == "64"
 InstallDir $PROGRAMFILES64\OG
 !else
@@ -73,14 +73,14 @@ ShowUninstDetails show
 Section -Main SEC0000
     SetOutPath $INSTDIR
     SetOverwrite on
-    File /home/spanky/OGC/release/OGC-qt
-    File /oname=COPYING.txt /home/spanky/OGC/COPYING
-    File /oname=readme.txt /home/spanky/OGC/doc/README_windows.txt
+    File /home/spanky/OG/release/OG-qt
+    File /oname=COPYING.txt /home/spanky/OG/COPYING
+    File /oname=readme.txt /home/spanky/OG/doc/README_windows.txt
     SetOutPath $INSTDIR\daemon
-    File /home/spanky/OGC/release/OGCd
-    File /home/spanky/OGC/release/OGC-cli
+    File /home/spanky/OG/release/OGd
+    File /home/spanky/OG/release/OG-cli
     SetOutPath $INSTDIR\doc
-    File /r /home/spanky/OGC/doc\*.*
+    File /r /home/spanky/OG/doc\*.*
     SetOutPath $INSTDIR
     WriteRegStr HKCU "${REGKEY}\Components" Main 1
 SectionEnd
@@ -91,8 +91,8 @@ Section -post SEC0001
     WriteUninstaller $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
     CreateDirectory $SMPROGRAMS\$StartMenuGroup
-    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\$(^Name).lnk" $INSTDIR\OGC-qt
-    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\OG Core (testnet, -bit).lnk" "$INSTDIR\OGC-qt" "-testnet" "$INSTDIR\OGC-qt" 1
+    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\$(^Name).lnk" $INSTDIR\OG-qt
+    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\OG Core (testnet, -bit).lnk" "$INSTDIR\OG-qt" "-testnet" "$INSTDIR\OG-qt" 1
     CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Uninstall $(^Name).lnk" $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_END
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" DisplayName "$(^Name)"
@@ -103,10 +103,10 @@ Section -post SEC0001
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" UninstallString $INSTDIR\uninstall.exe
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoModify 1
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoRepair 1
-    WriteRegStr HKCR "OGC" "URL Protocol" ""
-    WriteRegStr HKCR "OGC" "" "URL:OG"
-    WriteRegStr HKCR "OGC\DefaultIcon" "" $INSTDIR\OGC-qt
-    WriteRegStr HKCR "OGC\shell\open\command" "" '"$INSTDIR\OGC-qt" "%1"'
+    WriteRegStr HKCR "OG" "URL Protocol" ""
+    WriteRegStr HKCR "OG" "" "URL:OG"
+    WriteRegStr HKCR "OG\DefaultIcon" "" $INSTDIR\OG-qt
+    WriteRegStr HKCR "OG\shell\open\command" "" '"$INSTDIR\OG-qt" "%1"'
 SectionEnd
 
 # Macro for selecting uninstaller sections
@@ -124,7 +124,7 @@ done${UNSECTION_ID}:
 
 # Uninstaller sections
 Section /o -un.Main UNSEC0000
-    Delete /REBOOTOK $INSTDIR\OGC-qt
+    Delete /REBOOTOK $INSTDIR\OG-qt
     Delete /REBOOTOK $INSTDIR\COPYING.txt
     Delete /REBOOTOK $INSTDIR\readme.txt
     RMDir /r /REBOOTOK $INSTDIR\daemon
@@ -145,7 +145,7 @@ Section -un.post UNSEC0001
     DeleteRegValue HKCU "${REGKEY}" Path
     DeleteRegKey /IfEmpty HKCU "${REGKEY}\Components"
     DeleteRegKey /IfEmpty HKCU "${REGKEY}"
-    DeleteRegKey HKCR "OGC"
+    DeleteRegKey HKCR "OG"
     RmDir /REBOOTOK $SMPROGRAMS\$StartMenuGroup
     RmDir /REBOOTOK $INSTDIR
     Push $R0

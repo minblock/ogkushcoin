@@ -131,7 +131,7 @@
     </message>
     <message>
         <source>Send coins to a OG address</source>
-        <translation>Пошаљите новац на OGC адресу</translation>
+        <translation>Пошаљите новац на OG адресу</translation>
     </message>
     <message>
         <source>Change the passphrase used for wallet encryption</source>

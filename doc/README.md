@@ -15,12 +15,12 @@ The following are some helpful notes on how to run OG on your native platform.
 
 Unpack the files into a directory and run:
 
-- `bin/OGC-qt` (GUI) or
-- `bin/OGCd` (headless)
+- `bin/OG-qt` (GUI) or
+- `bin/OGd` (headless)
 
 ### Windows
 
-Unpack the files into a directory, and then run OGC-qt.exe.
+Unpack the files into a directory, and then run OG-qt.exe.
 
 ### OS X
 
@@ -28,10 +28,10 @@ Drag OG-Core to your applications folder, and then run OG-Core.
 
 ### Need Help?
 
-* See the documentation at the [OG Wiki](https://OGC.info/)
+* See the documentation at the [OG Wiki](https://OG.info/)
 for help and more information.
-* Ask for help on [#OGC](http://webchat.freenode.net?channels=OGC) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=OGC).
-* Ask for help on the [OGTalk](https://OGCtalk.io/) forums.
+* Ask for help on [#OG](http://webchat.freenode.net?channels=OG) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=OG).
+* Ask for help on the [OGTalk](https://OGtalk.io/) forums.
 
 Building
 ---------------------
@@ -50,7 +50,7 @@ The OG repo's [root README](/README.md) contains relevant information on the dev
 - [Developer Notes](developer-notes.md)
 - [Release Notes](release-notes.md)
 - [Release Process](release-process.md)
-- [Source Code Documentation (External Link)](https://dev.visucore.com/OGC/doxygen/)
+- [Source Code Documentation (External Link)](https://dev.visucore.com/OG/doxygen/)
 - [Translation Process](translation_process.md)
 - [Translation Strings Policy](translation_strings_policy.md)
 - [Travis CI](travis-ci.md)
@@ -61,8 +61,8 @@ The OG repo's [root README](/README.md) contains relevant information on the dev
 - [Benchmarking](benchmarking.md)
 
 ### Resources
-* Discuss on the [OGTalk](https://OGCtalk.io/) forums.
-* Discuss general OG development on #OGC-dev on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=OGC-dev).
+* Discuss on the [OGTalk](https://OGtalk.io/) forums.
+* Discuss general OG development on #OG-dev on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=OG-dev).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

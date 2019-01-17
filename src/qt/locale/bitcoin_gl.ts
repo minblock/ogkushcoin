@@ -206,8 +206,8 @@
         <translation>Barra de ferramentas</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and OGC: URIs)</source>
-        <translation>Solicitar pagos (xenera códigos QR e OGC: URIs)</translation>
+        <source>Request payments (generates QR codes and OG: URIs)</source>
+        <translation>Solicitar pagos (xenera códigos QR e OG: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -218,8 +218,8 @@
         <translation>Amosar a listaxe de etiquetas e direccións para recibir empregadas</translation>
     </message>
     <message>
-        <source>Open a OGC: URI or payment request</source>
-        <translation>Abrir un OGC: URI ou solicitude de pago</translation>
+        <source>Open a OG: URI or payment request</source>
+        <translation>Abrir un OG: URI ou solicitude de pago</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>

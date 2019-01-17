@@ -87,8 +87,8 @@
 // Application startup time (used for uptime calculation)
 const int64_t nStartupTime = GetTime();
 
-const char * const BITCOIN_CONF_FILENAME = "OGC.conf";
-const char * const BITCOIN_PID_FILENAME = "OGC.pid";
+const char * const BITCOIN_CONF_FILENAME = "OG.conf";
+const char * const BITCOIN_PID_FILENAME = "OG.pid";
 
 ArgsManager gArgs;
 bool fPrintToConsole = false;
@@ -505,7 +505,7 @@ static std::string FormatException(const std::exception* pex, const char* pszThr
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(nullptr, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "OGC";
+    const char* pszModule = "OG";
 #endif
     if (pex)
         return strprintf(
@@ -543,7 +543,7 @@ fs::path GetDefaultDataDir()
     return pathRet / "Library/Application Support/OG";
 #else
     // Unix
-    return pathRet / ".OGC";
+    return pathRet / ".OG";
 #endif
 #endif
 }

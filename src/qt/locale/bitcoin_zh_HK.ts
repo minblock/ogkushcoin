@@ -168,7 +168,7 @@
         <translation>錢包已加密</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your OGCoins from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your OGoins from being stolen by malware infecting your computer.</source>
         <translation>%1 現在要關閉來完成加密程序。請記得將錢包加密不能完全防止你的 OGs 經被入侵電腦的惡意程式偷取。</translation>
     </message>
     <message>
@@ -370,8 +370,8 @@
         <translation>說明 &amp;H</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and OGC: URIs)</source>
-        <translation>要求付款 (產生QR碼 OGC: URIs)</translation>
+        <source>Request payments (generates QR codes and OG: URIs)</source>
+        <translation>要求付款 (產生QR碼 OG: URIs)</translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>

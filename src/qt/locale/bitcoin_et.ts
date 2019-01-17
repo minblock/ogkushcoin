@@ -366,12 +366,12 @@
         <translation>Vahelehe tööriistariba</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and OGC: URIs)</source>
-        <translation>Loo maksepäring (genereerib QR koodid ja OGCi: URId)</translation>
+        <source>Request payments (generates QR codes and OG: URIs)</source>
+        <translation>Loo maksepäring (genereerib QR koodid ja OGi: URId)</translation>
     </message>
     <message>
-        <source>Open a OGC: URI or payment request</source>
-        <translation>Ava OGCi: URI või maksepäring</translation>
+        <source>Open a OG: URI or payment request</source>
+        <translation>Ava OGi: URI või maksepäring</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>

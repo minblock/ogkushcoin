@@ -218,7 +218,7 @@
         <translation>Barra de pestañas</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and OGC: URIs)</source>
+        <source>Request payments (generates QR codes and OG: URIs)</source>
         <translation>Solicitar pagos (genera codigo QR y URL's de OG)</translation>
     </message>
     <message>
@@ -230,8 +230,8 @@
         <translation>Muestra la lista de direcciones de recepción y etiquetas</translation>
     </message>
     <message>
-        <source>Open a OGC: URI or payment request</source>
-        <translation>Abrir un OGC: URI o petición de pago</translation>
+        <source>Open a OG: URI or payment request</source>
+        <translation>Abrir un OG: URI o petición de pago</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>

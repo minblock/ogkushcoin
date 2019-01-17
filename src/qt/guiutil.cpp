@@ -146,7 +146,7 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
 bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
     // return if URI is not valid or is no bitcoin: URI
-    if(!uri.isValid() || uri.scheme() != QString("OGC"))
+    if(!uri.isValid() || uri.scheme() != QString("OG"))
         return false;
 
     SendCoinsRecipient rv;
@@ -210,9 +210,9 @@ bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
     //
     //    Cannot handle this later, because bitcoin:// will cause Qt to see the part after // as host,
     //    which will lower-case it (and thus invalidate the address).
-    if(uri.startsWith("OGC://", Qt::CaseInsensitive))
+    if(uri.startsWith("OG://", Qt::CaseInsensitive))
     {
-        uri.replace(0, 11, "OGC:");
+        uri.replace(0, 11, "OG:");
     }
     QUrl uriInstance(uri);
     return parseBitcoinURI(uriInstance, out);
@@ -220,7 +220,7 @@ bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 
 QString formatBitcoinURI(const SendCoinsRecipient &info)
 {
-    QString ret = QString("OGC:%1").arg(info.address);
+    QString ret = QString("OG:%1").arg(info.address);
     int paramCount = 0;
 
     if (info.amount)
@@ -713,8 +713,8 @@ fs::path static GetAutostartFilePath()
 {
     std::string chain = ChainNameFromCommandLine();
     if (chain == CBaseChainParams::MAIN)
-        return GetAutostartDir() / "OGC.desktop";
-    return GetAutostartDir() / strprintf("OGC-%s.lnk", chain);
+        return GetAutostartDir() / "OG.desktop";
+    return GetAutostartDir() / strprintf("OG-%s.lnk", chain);
 }
 
 bool GetStartOnSystemStartup()

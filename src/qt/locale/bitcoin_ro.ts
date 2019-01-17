@@ -214,12 +214,12 @@
         <translation>&amp;Ajutor</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and OGC: URIs)</source>
-        <translation>Cerere plată (generează coduri QR și OGC: URIs)</translation>
+        <source>Request payments (generates QR codes and OG: URIs)</source>
+        <translation>Cerere plată (generează coduri QR și OG: URIs)</translation>
     </message>
     <message>
-        <source>Open a OGC: URI or payment request</source>
-        <translation>Deschide un OGC: URI sau cerere de plată</translation>
+        <source>Open a OG: URI or payment request</source>
+        <translation>Deschide un OG: URI sau cerere de plată</translation>
     </message>
     <message>
         <source>%1 behind</source>

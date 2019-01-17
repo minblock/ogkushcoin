@@ -96,10 +96,10 @@ am__make_running_with_option = \
   test $$has_opt = yes
 am__make_dryrun = (target_option=n; $(am__make_running_with_option))
 am__make_keepgoing = (target_option=k; $(am__make_running_with_option))
-pkgdatadir = $(datadir)/OGC
-pkgincludedir = $(includedir)/OGC
-pkglibdir = $(libdir)/OGC
-pkglibexecdir = $(libexecdir)/OGC
+pkgdatadir = $(datadir)/OG
+pkgincludedir = $(includedir)/OG
+pkglibdir = $(libdir)/OG
+pkglibexecdir = $(libexecdir)/OG
 am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd
 install_sh_DATA = $(install_sh) -c -m 644
 install_sh_PROGRAM = $(install_sh) -c
@@ -118,8 +118,8 @@ bin_PROGRAMS = $(am__EXEEXT_1) $(am__EXEEXT_2) $(am__EXEEXT_3) \
 	$(am__EXEEXT_4) $(am__EXEEXT_5) $(am__EXEEXT_6)
 noinst_PROGRAMS = $(am__EXEEXT_7)
 TESTS = $(am__EXEEXT_3) $(am__EXEEXT_6)
-am__append_1 = OGCd
-am__append_2 = OGC-cli OGC-tx
+am__append_1 = OGd
+am__append_2 = OG-cli OG-tx
 #am__append_3 = crypto/sha256_sse4.cpp
 #am__append_4 = compat/glibc_compat.cpp
 #am__append_5 = bitcoind-res.rc
@@ -140,9 +140,9 @@ am__append_14 = -DLEVELDB_PLATFORM_POSIX
 am__append_16 = leveldb/port/port_posix.cc
 am__append_17 = -DLEVELDB_PLATFORM_POSIX_SSE
 am__append_18 = $(SSE42_CXXFLAGS)
-am__append_19 = test/test_OGC
-am__append_20 = test/test_OGC
-am__append_21 = test/test_OGC_fuzzy
+am__append_19 = test/test_OG
+am__append_20 = test/test_OG
+am__append_21 = test/test_OG_fuzzy
 am__append_22 = \
   wallet/test/wallet_test_fixture.cpp \
   wallet/test/wallet_test_fixture.h \
@@ -153,12 +153,12 @@ am__append_22 = \
 am__append_23 = $(LIBBITCOIN_WALLET)
 am__append_24 = $(ZMQ_LIBS)
 am__append_25 = $(CLEAN_BITCOIN_TEST)
-am__append_26 = bench/bench_OGC
+am__append_26 = bench/bench_OG
 am__append_27 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 am__append_28 = bench/coin_selection.cpp
 am__append_29 = $(LIBBITCOIN_WALLET) $(LIBBITCOIN_CRYPTO)
 am__append_30 = $(CLEAN_BITCOIN_BENCH)
-am__append_31 = qt/OGC-qt
+am__append_31 = qt/OG-qt
 am__append_32 = qt/libbitcoinqt.a
 #am__append_33 = $(BITCOIN_QT_WINDOWS_CPP)
 am__append_34 = $(BITCOIN_QT_WALLET_CPP)
@@ -167,8 +167,8 @@ am__append_34 = $(BITCOIN_QT_WALLET_CPP)
 am__append_37 = $(LIBBITCOIN_WALLET)
 am__append_38 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 am__append_39 = $(CLEAN_QT)
-am__append_40 = qt/test/test_OGC-qt
-am__append_41 = qt/test/test_OGC-qt
+am__append_40 = qt/test/test_OG-qt
+am__append_41 = qt/test/test_OG-qt
 am__append_42 = \
   qt/test/moc_paymentservertests.cpp \
   qt/test/moc_wallettests.cpp
@@ -635,7 +635,7 @@ am__qt_libbitcoinqt_a_SOURCES_DIST = qt/bantablemodel.cpp \
 	qt/res/icons/fontsmaller.png qt/res/icons/hd_disabled.png \
 	qt/res/icons/hd_enabled.png qt/res/icons/history.png \
 	qt/res/icons/info.png qt/res/icons/key.png \
-	qt/res/icons/OGC_splash.png qt/res/icons/lock_closed.png \
+	qt/res/icons/OG_splash.png qt/res/icons/lock_closed.png \
 	qt/res/icons/lock_open.png qt/res/icons/network_disabled.png \
 	qt/res/icons/open.png qt/res/icons/overview.png \
 	qt/res/icons/quit.png qt/res/icons/receive.png \
@@ -853,17 +853,17 @@ libbitcoinconsensus_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(libbitcoinconsensus_la_LDFLAGS) $(LDFLAGS) -o $@
 am_libbitcoinconsensus_la_rpath = -rpath \
 	$(libdir)
-am__EXEEXT_1 = OGCd$(EXEEXT)
-am__EXEEXT_2 = OGC-cli$(EXEEXT) \
-	OGC-tx$(EXEEXT)
-am__EXEEXT_3 = test/test_OGC$(EXEEXT)
-am__EXEEXT_4 = bench/bench_OGC$(EXEEXT)
-am__EXEEXT_5 = qt/OGC-qt$(EXEEXT)
+am__EXEEXT_1 = OGd$(EXEEXT)
+am__EXEEXT_2 = OG-cli$(EXEEXT) \
+	OG-tx$(EXEEXT)
+am__EXEEXT_3 = test/test_OG$(EXEEXT)
+am__EXEEXT_4 = bench/bench_OG$(EXEEXT)
+am__EXEEXT_5 = qt/OG-qt$(EXEEXT)
 am__EXEEXT_6 =  \
-	qt/test/test_OGC-qt$(EXEEXT)
-am__EXEEXT_7 = test/test_OGC_fuzzy$(EXEEXT)
+	qt/test/test_OG-qt$(EXEEXT)
+am__EXEEXT_7 = test/test_OG_fuzzy$(EXEEXT)
 PROGRAMS = $(bin_PROGRAMS) $(noinst_PROGRAMS)
-am__bench_bench_OGC_SOURCES_DIST = bench/bench_bitcoin.cpp \
+am__bench_bench_OG_SOURCES_DIST = bench/bench_bitcoin.cpp \
 	bench/bench.cpp bench/bench.h bench/checkblock.cpp \
 	bench/checkqueue.cpp bench/Examples.cpp bench/rollingbloom.cpp \
 	bench/crypto_hash.cpp bench/ccoins_caching.cpp \
@@ -871,30 +871,30 @@ am__bench_bench_OGC_SOURCES_DIST = bench/bench_bitcoin.cpp \
 	bench/base58.cpp bench/lockedpool.cpp bench/perf.cpp \
 	bench/perf.h bench/prevector_destructor.cpp \
 	bench/coin_selection.cpp
-am__objects_20 = bench/bench_bench_OGC-coin_selection.$(OBJEXT)
-am_bench_bench_OGC_OBJECTS = bench/bench_bench_OGC-bench_bitcoin.$(OBJEXT) \
-	bench/bench_bench_OGC-bench.$(OBJEXT) \
-	bench/bench_bench_OGC-checkblock.$(OBJEXT) \
-	bench/bench_bench_OGC-checkqueue.$(OBJEXT) \
-	bench/bench_bench_OGC-Examples.$(OBJEXT) \
-	bench/bench_bench_OGC-rollingbloom.$(OBJEXT) \
-	bench/bench_bench_OGC-crypto_hash.$(OBJEXT) \
-	bench/bench_bench_OGC-ccoins_caching.$(OBJEXT) \
-	bench/bench_bench_OGC-mempool_eviction.$(OBJEXT) \
-	bench/bench_bench_OGC-verify_script.$(OBJEXT) \
-	bench/bench_bench_OGC-base58.$(OBJEXT) \
-	bench/bench_bench_OGC-lockedpool.$(OBJEXT) \
-	bench/bench_bench_OGC-perf.$(OBJEXT) \
-	bench/bench_bench_OGC-prevector_destructor.$(OBJEXT) \
+am__objects_20 = bench/bench_bench_OG-coin_selection.$(OBJEXT)
+am_bench_bench_OG_OBJECTS = bench/bench_bench_OG-bench_bitcoin.$(OBJEXT) \
+	bench/bench_bench_OG-bench.$(OBJEXT) \
+	bench/bench_bench_OG-checkblock.$(OBJEXT) \
+	bench/bench_bench_OG-checkqueue.$(OBJEXT) \
+	bench/bench_bench_OG-Examples.$(OBJEXT) \
+	bench/bench_bench_OG-rollingbloom.$(OBJEXT) \
+	bench/bench_bench_OG-crypto_hash.$(OBJEXT) \
+	bench/bench_bench_OG-ccoins_caching.$(OBJEXT) \
+	bench/bench_bench_OG-mempool_eviction.$(OBJEXT) \
+	bench/bench_bench_OG-verify_script.$(OBJEXT) \
+	bench/bench_bench_OG-base58.$(OBJEXT) \
+	bench/bench_bench_OG-lockedpool.$(OBJEXT) \
+	bench/bench_bench_OG-perf.$(OBJEXT) \
+	bench/bench_bench_OG-prevector_destructor.$(OBJEXT) \
 	$(am__objects_20)
 #am__objects_21 =  \
 #	$(am__objects_4) \
 #	$(am__objects_4)
 am__objects_21 = $(am__objects_4)
-nodist_bench_bench_OGC_OBJECTS =  \
+nodist_bench_bench_OG_OBJECTS =  \
 	$(am__objects_21)
-bench_bench_OGC_OBJECTS = $(am_bench_bench_OGC_OBJECTS) \
-	$(nodist_bench_bench_OGC_OBJECTS)
+bench_bench_OG_OBJECTS = $(am_bench_bench_OG_OBJECTS) \
+	$(nodist_bench_bench_OG_OBJECTS)
 am__DEPENDENCIES_2 = $(am__append_10)
 am__DEPENDENCIES_3 = $(am__append_11)
 #am__DEPENDENCIES_4 = $(am__DEPENDENCIES_1)
@@ -902,7 +902,7 @@ am__DEPENDENCIES_4 = univalue/libunivalue.la
 am__DEPENDENCIES_5 =  \
 	$(LIBBITCOIN_ZMQ) \
 	$(am__DEPENDENCIES_1)
-bench_bench_OGC_DEPENDENCIES =  \
+bench_bench_OG_DEPENDENCIES =  \
 	$(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
 	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CONSENSUS) \
 	$(LIBBITCOIN_CRYPTO) $(am__DEPENDENCIES_2) \
@@ -913,39 +913,39 @@ bench_bench_OGC_DEPENDENCIES =  \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1)
-bench_bench_OGC_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
+bench_bench_OG_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
-	$(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) \
-	$(bench_bench_OGC_LDFLAGS) $(LDFLAGS) -o $@
-am__OGC_cli_SOURCES_DIST = bitcoin-cli.cpp bitcoin-cli-res.rc
+	$(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) \
+	$(bench_bench_OG_LDFLAGS) $(LDFLAGS) -o $@
+am__OG_cli_SOURCES_DIST = bitcoin-cli.cpp bitcoin-cli-res.rc
 #am__objects_22 = bitcoin-cli-res.$(OBJEXT)
-am_OGC_cli_OBJECTS = OGC_cli-bitcoin-cli.$(OBJEXT) \
+am_OG_cli_OBJECTS = OG_cli-bitcoin-cli.$(OBJEXT) \
 	$(am__objects_22)
-OGC_cli_OBJECTS = $(am_OGC_cli_OBJECTS)
-OGC_cli_DEPENDENCIES = $(LIBBITCOIN_CLI) $(am__DEPENDENCIES_4) \
+OG_cli_OBJECTS = $(am_OG_cli_OBJECTS)
+OG_cli_DEPENDENCIES = $(LIBBITCOIN_CLI) $(am__DEPENDENCIES_4) \
 	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1)
-OGC_cli_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
-	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(OGC_cli_CXXFLAGS) \
-	$(CXXFLAGS) $(OGC_cli_LDFLAGS) $(LDFLAGS) -o $@
-am__OGC_tx_SOURCES_DIST = bitcoin-tx.cpp bitcoin-tx-res.rc
+OG_cli_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
+	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(OG_cli_CXXFLAGS) \
+	$(CXXFLAGS) $(OG_cli_LDFLAGS) $(LDFLAGS) -o $@
+am__OG_tx_SOURCES_DIST = bitcoin-tx.cpp bitcoin-tx-res.rc
 #am__objects_23 = bitcoin-tx-res.$(OBJEXT)
-am_OGC_tx_OBJECTS = OGC_tx-bitcoin-tx.$(OBJEXT) \
+am_OG_tx_OBJECTS = OG_tx-bitcoin-tx.$(OBJEXT) \
 	$(am__objects_23)
-OGC_tx_OBJECTS = $(am_OGC_tx_OBJECTS)
-OGC_tx_DEPENDENCIES = $(am__DEPENDENCIES_4) $(LIBBITCOIN_COMMON) \
+OG_tx_OBJECTS = $(am_OG_tx_OBJECTS)
+OG_tx_DEPENDENCIES = $(am__DEPENDENCIES_4) $(LIBBITCOIN_COMMON) \
 	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CONSENSUS) \
 	$(LIBBITCOIN_CRYPTO) $(LIBSECP256K1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1)
-OGC_tx_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
-	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(OGC_tx_CXXFLAGS) \
-	$(CXXFLAGS) $(OGC_tx_LDFLAGS) $(LDFLAGS) -o $@
-am__OGCd_SOURCES_DIST = bitcoind.cpp bitcoind-res.rc
+OG_tx_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
+	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(OG_tx_CXXFLAGS) \
+	$(CXXFLAGS) $(OG_tx_LDFLAGS) $(LDFLAGS) -o $@
+am__OGd_SOURCES_DIST = bitcoind.cpp bitcoind-res.rc
 #am__objects_24 = bitcoind-res.$(OBJEXT)
-am_OGCd_OBJECTS = OGCd-bitcoind.$(OBJEXT) $(am__objects_24)
-OGCd_OBJECTS = $(am_OGCd_OBJECTS)
-OGCd_DEPENDENCIES = $(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
+am_OGd_OBJECTS = OGd-bitcoind.$(OBJEXT) $(am__objects_24)
+OGd_OBJECTS = $(am_OGd_OBJECTS)
+OGd_DEPENDENCIES = $(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
 	$(am__DEPENDENCIES_4) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_WALLET) \
 	$(LIBBITCOIN_ZMQ) $(LIBBITCOIN_CONSENSUS) $(LIBBITCOIN_CRYPTO) \
 	$(am__DEPENDENCIES_2) $(LIBLEVELDB_SSE42) \
@@ -954,27 +954,27 @@ OGCd_DEPENDENCIES = $(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1)
-OGCd_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
-	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(OGCd_CXXFLAGS) \
-	$(CXXFLAGS) $(OGCd_LDFLAGS) $(LDFLAGS) -o $@
-am__qt_OGC_qt_SOURCES_DIST = qt/bitcoin.cpp \
+OGd_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
+	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(OGd_CXXFLAGS) \
+	$(CXXFLAGS) $(OGd_LDFLAGS) $(LDFLAGS) -o $@
+am__qt_OG_qt_SOURCES_DIST = qt/bitcoin.cpp \
 	qt/macdockiconhandler.mm qt/macnotificationhandler.mm \
 	qt/res/bitcoin-qt-res.rc
-am__objects_25 = qt/qt_OGC_qt-macdockiconhandler.$(OBJEXT) \
-	qt/qt_OGC_qt-macnotificationhandler.$(OBJEXT)
+am__objects_25 = qt/qt_OG_qt-macdockiconhandler.$(OBJEXT) \
+	qt/qt_OG_qt-macnotificationhandler.$(OBJEXT)
 #am__objects_26 =  \
 #	$(am__objects_25)
 am__objects_27 = qt/res/bitcoin-qt-res.$(OBJEXT)
 #am__objects_28 =  \
 #	$(am__objects_27)
-am_qt_OGC_qt_OBJECTS =  \
-	qt/qt_OGC_qt-bitcoin.$(OBJEXT) \
+am_qt_OG_qt_OBJECTS =  \
+	qt/qt_OG_qt-bitcoin.$(OBJEXT) \
 	$(am__objects_26) $(am__objects_28)
-qt_OGC_qt_OBJECTS = $(am_qt_OGC_qt_OBJECTS)
+qt_OG_qt_OBJECTS = $(am_qt_OG_qt_OBJECTS)
 am__DEPENDENCIES_6 =  \
 	$(LIBBITCOIN_ZMQ) \
 	$(am__DEPENDENCIES_1)
-qt_OGC_qt_DEPENDENCIES = qt/libbitcoinqt.a \
+qt_OG_qt_DEPENDENCIES = qt/libbitcoinqt.a \
 	$(LIBBITCOIN_SERVER) $(am__append_37) \
 	$(am__DEPENDENCIES_6) $(LIBBITCOIN_CLI) \
 	$(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) \
@@ -987,11 +987,11 @@ qt_OGC_qt_DEPENDENCIES = qt/libbitcoinqt.a \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1) $(LIBSECP256K1) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
-qt_OGC_qt_LINK = $(LIBTOOL) $(AM_V_lt) \
-	$(qt_OGC_qt_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link \
+qt_OG_qt_LINK = $(LIBTOOL) $(AM_V_lt) \
+	$(qt_OG_qt_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link \
 	$(OBJCXXLD) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) \
-	$(qt_OGC_qt_LDFLAGS) $(LDFLAGS) -o $@
-am__qt_test_test_OGC_qt_SOURCES_DIST = qt/test/compattests.cpp \
+	$(qt_OG_qt_LDFLAGS) $(LDFLAGS) -o $@
+am__qt_test_test_OG_qt_SOURCES_DIST = qt/test/compattests.cpp \
 	qt/test/rpcnestedtests.cpp qt/test/test_main.cpp \
 	qt/test/uritests.cpp qt/test/compattests.h \
 	qt/test/rpcnestedtests.h qt/test/uritests.h \
@@ -999,31 +999,31 @@ am__qt_test_test_OGC_qt_SOURCES_DIST = qt/test/compattests.cpp \
 	qt/test/wallettests.h test/test_bitcoin.cpp \
 	test/test_bitcoin.h qt/test/paymentservertests.cpp \
 	qt/test/wallettests.cpp wallet/test/wallet_test_fixture.cpp
-am__objects_29 = test/qt_test_test_OGC_qt-test_bitcoin.$(OBJEXT)
-am__objects_30 = qt/test/qt_test_test_OGC_qt-paymentservertests.$(OBJEXT) \
-	qt/test/qt_test_test_OGC_qt-wallettests.$(OBJEXT) \
-	wallet/test/qt_test_test_OGC_qt-wallet_test_fixture.$(OBJEXT)
-am_qt_test_test_OGC_qt_OBJECTS = qt/test/qt_test_test_OGC_qt-compattests.$(OBJEXT) \
-	qt/test/qt_test_test_OGC_qt-rpcnestedtests.$(OBJEXT) \
-	qt/test/qt_test_test_OGC_qt-test_main.$(OBJEXT) \
-	qt/test/qt_test_test_OGC_qt-uritests.$(OBJEXT) \
+am__objects_29 = test/qt_test_test_OG_qt-test_bitcoin.$(OBJEXT)
+am__objects_30 = qt/test/qt_test_test_OG_qt-paymentservertests.$(OBJEXT) \
+	qt/test/qt_test_test_OG_qt-wallettests.$(OBJEXT) \
+	wallet/test/qt_test_test_OG_qt-wallet_test_fixture.$(OBJEXT)
+am_qt_test_test_OG_qt_OBJECTS = qt/test/qt_test_test_OG_qt-compattests.$(OBJEXT) \
+	qt/test/qt_test_test_OG_qt-rpcnestedtests.$(OBJEXT) \
+	qt/test/qt_test_test_OG_qt-test_main.$(OBJEXT) \
+	qt/test/qt_test_test_OG_qt-uritests.$(OBJEXT) \
 	$(am__objects_4) $(am__objects_29) \
 	$(am__objects_4) $(am__objects_30)
-am__objects_31 = qt/test/qt_test_test_OGC_qt-moc_paymentservertests.$(OBJEXT) \
-	qt/test/qt_test_test_OGC_qt-moc_wallettests.$(OBJEXT)
-am__objects_32 = qt/test/qt_test_test_OGC_qt-moc_compattests.$(OBJEXT) \
-	qt/test/qt_test_test_OGC_qt-moc_rpcnestedtests.$(OBJEXT) \
-	qt/test/qt_test_test_OGC_qt-moc_uritests.$(OBJEXT) \
+am__objects_31 = qt/test/qt_test_test_OG_qt-moc_paymentservertests.$(OBJEXT) \
+	qt/test/qt_test_test_OG_qt-moc_wallettests.$(OBJEXT)
+am__objects_32 = qt/test/qt_test_test_OG_qt-moc_compattests.$(OBJEXT) \
+	qt/test/qt_test_test_OG_qt-moc_rpcnestedtests.$(OBJEXT) \
+	qt/test/qt_test_test_OG_qt-moc_uritests.$(OBJEXT) \
 	$(am__objects_31)
-nodist_qt_test_test_OGC_qt_OBJECTS =  \
+nodist_qt_test_test_OG_qt_OBJECTS =  \
 	$(am__objects_32)
-qt_test_test_OGC_qt_OBJECTS =  \
-	$(am_qt_test_test_OGC_qt_OBJECTS) \
-	$(nodist_qt_test_test_OGC_qt_OBJECTS)
+qt_test_test_OG_qt_OBJECTS =  \
+	$(am_qt_test_test_OG_qt_OBJECTS) \
+	$(nodist_qt_test_test_OG_qt_OBJECTS)
 am__DEPENDENCIES_7 =  \
 	$(LIBBITCOIN_ZMQ) \
 	$(am__DEPENDENCIES_1)
-qt_test_test_OGC_qt_DEPENDENCIES =  \
+qt_test_test_OG_qt_DEPENDENCIES =  \
 	$(LIBBITCOINQT) $(LIBBITCOIN_SERVER) \
 	$(am__append_44) $(am__DEPENDENCIES_7) \
 	$(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) \
@@ -1046,11 +1046,11 @@ qt_test_test_OGC_qt_DEPENDENCIES =  \
 	$(am__DEPENDENCIES_1) $(LIBSECP256K1) \
 	$(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1)
-qt_test_test_OGC_qt_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
+qt_test_test_OG_qt_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
-	$(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) \
-	$(qt_test_test_OGC_qt_LDFLAGS) $(LDFLAGS) -o $@
-am__test_test_OGC_SOURCES_DIST = test/arith_uint256_tests.cpp \
+	$(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) \
+	$(qt_test_test_OG_qt_LDFLAGS) $(LDFLAGS) -o $@
+am__test_test_OG_SOURCES_DIST = test/arith_uint256_tests.cpp \
 	test/scriptnum10.h test/addrman_tests.cpp \
 	test/amount_tests.cpp test/allocator_tests.cpp \
 	test/base32_tests.cpp test/base58_tests.cpp \
@@ -1089,78 +1089,78 @@ am__test_test_OGC_SOURCES_DIST = test/arith_uint256_tests.cpp \
 	test/data/base58_keys_invalid.json test/data/tx_invalid.json \
 	test/data/tx_valid.json test/data/sighash.json \
 	bench/data/block413567.raw
-am__objects_33 = wallet/test/test_test_OGC-wallet_test_fixture.$(OBJEXT) \
-	wallet/test/test_test_OGC-accounting_tests.$(OBJEXT) \
-	wallet/test/test_test_OGC-wallet_tests.$(OBJEXT) \
-	wallet/test/test_test_OGC-crypto_tests.$(OBJEXT)
-am__objects_34 = test/test_test_OGC-arith_uint256_tests.$(OBJEXT) \
-	test/test_test_OGC-addrman_tests.$(OBJEXT) \
-	test/test_test_OGC-amount_tests.$(OBJEXT) \
-	test/test_test_OGC-allocator_tests.$(OBJEXT) \
-	test/test_test_OGC-base32_tests.$(OBJEXT) \
-	test/test_test_OGC-base58_tests.$(OBJEXT) \
-	test/test_test_OGC-base64_tests.$(OBJEXT) \
-	test/test_test_OGC-bip32_tests.$(OBJEXT) \
-	test/test_test_OGC-bloom_tests.$(OBJEXT) \
-	test/test_test_OGC-bswap_tests.$(OBJEXT) \
-	test/test_test_OGC-checkqueue_tests.$(OBJEXT) \
-	test/test_test_OGC-coins_tests.$(OBJEXT) \
-	test/test_test_OGC-compress_tests.$(OBJEXT) \
-	test/test_test_OGC-crypto_tests.$(OBJEXT) \
-	test/test_test_OGC-cuckoocache_tests.$(OBJEXT) \
-	test/test_test_OGC-DoS_tests.$(OBJEXT) \
-	test/test_test_OGC-getarg_tests.$(OBJEXT) \
-	test/test_test_OGC-hash_tests.$(OBJEXT) \
-	test/test_test_OGC-key_tests.$(OBJEXT) \
-	test/test_test_OGC-limitedmap_tests.$(OBJEXT) \
-	test/test_test_OGC-dbwrapper_tests.$(OBJEXT) \
-	test/test_test_OGC-main_tests.$(OBJEXT) \
-	test/test_test_OGC-mempool_tests.$(OBJEXT) \
-	test/test_test_OGC-merkle_tests.$(OBJEXT) \
-	test/test_test_OGC-miner_tests.$(OBJEXT) \
-	test/test_test_OGC-multisig_tests.$(OBJEXT) \
-	test/test_test_OGC-net_tests.$(OBJEXT) \
-	test/test_test_OGC-netbase_tests.$(OBJEXT) \
-	test/test_test_OGC-pmt_tests.$(OBJEXT) \
-	test/test_test_OGC-policyestimator_tests.$(OBJEXT) \
-	test/test_test_OGC-pow_tests.$(OBJEXT) \
-	test/test_test_OGC-prevector_tests.$(OBJEXT) \
-	test/test_test_OGC-raii_event_tests.$(OBJEXT) \
-	test/test_test_OGC-random_tests.$(OBJEXT) \
-	test/test_test_OGC-reverselock_tests.$(OBJEXT) \
-	test/test_test_OGC-rpc_tests.$(OBJEXT) \
-	test/test_test_OGC-sanity_tests.$(OBJEXT) \
-	test/test_test_OGC-scheduler_tests.$(OBJEXT) \
-	test/test_test_OGC-script_P2SH_tests.$(OBJEXT) \
-	test/test_test_OGC-script_tests.$(OBJEXT) \
-	test/test_test_OGC-script_standard_tests.$(OBJEXT) \
-	test/test_test_OGC-scriptnum_tests.$(OBJEXT) \
-	test/test_test_OGC-scrypt_tests.$(OBJEXT) \
-	test/test_test_OGC-serialize_tests.$(OBJEXT) \
-	test/test_test_OGC-sighash_tests.$(OBJEXT) \
-	test/test_test_OGC-sigopcount_tests.$(OBJEXT) \
-	test/test_test_OGC-skiplist_tests.$(OBJEXT) \
-	test/test_test_OGC-streams_tests.$(OBJEXT) \
-	test/test_test_OGC-test_bitcoin.$(OBJEXT) \
-	test/test_test_OGC-test_bitcoin_main.$(OBJEXT) \
-	test/test_test_OGC-timedata_tests.$(OBJEXT) \
-	test/test_test_OGC-torcontrol_tests.$(OBJEXT) \
-	test/test_test_OGC-transaction_tests.$(OBJEXT) \
-	test/test_test_OGC-txvalidationcache_tests.$(OBJEXT) \
-	test/test_test_OGC-versionbits_tests.$(OBJEXT) \
-	test/test_test_OGC-uint256_tests.$(OBJEXT) \
-	test/test_test_OGC-univalue_tests.$(OBJEXT) \
-	test/test_test_OGC-util_tests.$(OBJEXT) \
+am__objects_33 = wallet/test/test_test_OG-wallet_test_fixture.$(OBJEXT) \
+	wallet/test/test_test_OG-accounting_tests.$(OBJEXT) \
+	wallet/test/test_test_OG-wallet_tests.$(OBJEXT) \
+	wallet/test/test_test_OG-crypto_tests.$(OBJEXT)
+am__objects_34 = test/test_test_OG-arith_uint256_tests.$(OBJEXT) \
+	test/test_test_OG-addrman_tests.$(OBJEXT) \
+	test/test_test_OG-amount_tests.$(OBJEXT) \
+	test/test_test_OG-allocator_tests.$(OBJEXT) \
+	test/test_test_OG-base32_tests.$(OBJEXT) \
+	test/test_test_OG-base58_tests.$(OBJEXT) \
+	test/test_test_OG-base64_tests.$(OBJEXT) \
+	test/test_test_OG-bip32_tests.$(OBJEXT) \
+	test/test_test_OG-bloom_tests.$(OBJEXT) \
+	test/test_test_OG-bswap_tests.$(OBJEXT) \
+	test/test_test_OG-checkqueue_tests.$(OBJEXT) \
+	test/test_test_OG-coins_tests.$(OBJEXT) \
+	test/test_test_OG-compress_tests.$(OBJEXT) \
+	test/test_test_OG-crypto_tests.$(OBJEXT) \
+	test/test_test_OG-cuckoocache_tests.$(OBJEXT) \
+	test/test_test_OG-DoS_tests.$(OBJEXT) \
+	test/test_test_OG-getarg_tests.$(OBJEXT) \
+	test/test_test_OG-hash_tests.$(OBJEXT) \
+	test/test_test_OG-key_tests.$(OBJEXT) \
+	test/test_test_OG-limitedmap_tests.$(OBJEXT) \
+	test/test_test_OG-dbwrapper_tests.$(OBJEXT) \
+	test/test_test_OG-main_tests.$(OBJEXT) \
+	test/test_test_OG-mempool_tests.$(OBJEXT) \
+	test/test_test_OG-merkle_tests.$(OBJEXT) \
+	test/test_test_OG-miner_tests.$(OBJEXT) \
+	test/test_test_OG-multisig_tests.$(OBJEXT) \
+	test/test_test_OG-net_tests.$(OBJEXT) \
+	test/test_test_OG-netbase_tests.$(OBJEXT) \
+	test/test_test_OG-pmt_tests.$(OBJEXT) \
+	test/test_test_OG-policyestimator_tests.$(OBJEXT) \
+	test/test_test_OG-pow_tests.$(OBJEXT) \
+	test/test_test_OG-prevector_tests.$(OBJEXT) \
+	test/test_test_OG-raii_event_tests.$(OBJEXT) \
+	test/test_test_OG-random_tests.$(OBJEXT) \
+	test/test_test_OG-reverselock_tests.$(OBJEXT) \
+	test/test_test_OG-rpc_tests.$(OBJEXT) \
+	test/test_test_OG-sanity_tests.$(OBJEXT) \
+	test/test_test_OG-scheduler_tests.$(OBJEXT) \
+	test/test_test_OG-script_P2SH_tests.$(OBJEXT) \
+	test/test_test_OG-script_tests.$(OBJEXT) \
+	test/test_test_OG-script_standard_tests.$(OBJEXT) \
+	test/test_test_OG-scriptnum_tests.$(OBJEXT) \
+	test/test_test_OG-scrypt_tests.$(OBJEXT) \
+	test/test_test_OG-serialize_tests.$(OBJEXT) \
+	test/test_test_OG-sighash_tests.$(OBJEXT) \
+	test/test_test_OG-sigopcount_tests.$(OBJEXT) \
+	test/test_test_OG-skiplist_tests.$(OBJEXT) \
+	test/test_test_OG-streams_tests.$(OBJEXT) \
+	test/test_test_OG-test_bitcoin.$(OBJEXT) \
+	test/test_test_OG-test_bitcoin_main.$(OBJEXT) \
+	test/test_test_OG-timedata_tests.$(OBJEXT) \
+	test/test_test_OG-torcontrol_tests.$(OBJEXT) \
+	test/test_test_OG-transaction_tests.$(OBJEXT) \
+	test/test_test_OG-txvalidationcache_tests.$(OBJEXT) \
+	test/test_test_OG-versionbits_tests.$(OBJEXT) \
+	test/test_test_OG-uint256_tests.$(OBJEXT) \
+	test/test_test_OG-univalue_tests.$(OBJEXT) \
+	test/test_test_OG-util_tests.$(OBJEXT) \
 	$(am__objects_33)
-am_test_test_OGC_OBJECTS = $(am__objects_34) \
+am_test_test_OG_OBJECTS = $(am__objects_34) \
 	$(am__objects_4) $(am__objects_4)
-nodist_test_test_OGC_OBJECTS =  \
+nodist_test_test_OG_OBJECTS =  \
 	$(am__objects_21)
-test_test_OGC_OBJECTS = $(am_test_test_OGC_OBJECTS) \
-	$(nodist_test_test_OGC_OBJECTS)
+test_test_OG_OBJECTS = $(am_test_test_OG_OBJECTS) \
+	$(nodist_test_test_OG_OBJECTS)
 am__DEPENDENCIES_8 =  \
 	$(am__DEPENDENCIES_1)
-test_test_OGC_DEPENDENCIES = $(am__append_23) \
+test_test_OG_DEPENDENCIES = $(am__append_23) \
 	$(LIBBITCOIN_SERVER) $(LIBBITCOIN_CLI) \
 	$(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) \
 	$(LIBBITCOIN_CONSENSUS) \
@@ -1173,25 +1173,25 @@ test_test_OGC_DEPENDENCIES = $(am__append_23) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_8)
-test_test_OGC_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
+test_test_OG_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
-	$(test_test_OGC_CXXFLAGS) $(CXXFLAGS) \
-	$(test_test_OGC_LDFLAGS) $(LDFLAGS) -o $@
-am__test_test_OGC_fuzzy_SOURCES_DIST =  \
+	$(test_test_OG_CXXFLAGS) $(CXXFLAGS) \
+	$(test_test_OG_LDFLAGS) $(LDFLAGS) -o $@
+am__test_test_OG_fuzzy_SOURCES_DIST =  \
 	test/test_bitcoin_fuzzy.cpp
-am_test_test_OGC_fuzzy_OBJECTS = test/test_test_OGC_fuzzy-test_bitcoin_fuzzy.$(OBJEXT)
-test_test_OGC_fuzzy_OBJECTS =  \
-	$(am_test_test_OGC_fuzzy_OBJECTS)
-test_test_OGC_fuzzy_DEPENDENCIES =  \
+am_test_test_OG_fuzzy_OBJECTS = test/test_test_OG_fuzzy-test_bitcoin_fuzzy.$(OBJEXT)
+test_test_OG_fuzzy_OBJECTS =  \
+	$(am_test_test_OG_fuzzy_OBJECTS)
+test_test_OG_fuzzy_DEPENDENCIES =  \
 	$(am__DEPENDENCIES_4) $(LIBBITCOIN_SERVER) \
 	$(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) \
 	$(LIBBITCOIN_CONSENSUS) \
 	$(LIBBITCOIN_CRYPTO) $(LIBSECP256K1) \
 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
-test_test_OGC_fuzzy_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
+test_test_OG_fuzzy_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
-	$(test_test_OGC_fuzzy_CXXFLAGS) $(CXXFLAGS) \
-	$(test_test_OGC_fuzzy_LDFLAGS) $(LDFLAGS) -o $@
+	$(test_test_OG_fuzzy_CXXFLAGS) $(CXXFLAGS) \
+	$(test_test_OG_fuzzy_LDFLAGS) $(LDFLAGS) -o $@
 AM_V_P = $(am__v_P_$(V))
 am__v_P_ = $(am__v_P_$(AM_DEFAULT_VERBOSITY))
 am__v_P_0 = false
@@ -1274,14 +1274,14 @@ SOURCES = $(crypto_libbitcoin_crypto_a_SOURCES) \
 	$(qt_libbitcoinqt_a_SOURCES) \
 	$(nodist_qt_libbitcoinqt_a_SOURCES) \
 	$(libbitcoinconsensus_la_SOURCES) \
-	$(bench_bench_OGC_SOURCES) \
-	$(nodist_bench_bench_OGC_SOURCES) $(OGC_cli_SOURCES) \
-	$(OGC_tx_SOURCES) $(OGCd_SOURCES) \
-	$(qt_OGC_qt_SOURCES) $(qt_test_test_OGC_qt_SOURCES) \
-	$(nodist_qt_test_test_OGC_qt_SOURCES) \
-	$(test_test_OGC_SOURCES) \
-	$(nodist_test_test_OGC_SOURCES) \
-	$(test_test_OGC_fuzzy_SOURCES)
+	$(bench_bench_OG_SOURCES) \
+	$(nodist_bench_bench_OG_SOURCES) $(OG_cli_SOURCES) \
+	$(OG_tx_SOURCES) $(OGd_SOURCES) \
+	$(qt_OG_qt_SOURCES) $(qt_test_test_OG_qt_SOURCES) \
+	$(nodist_qt_test_test_OG_qt_SOURCES) \
+	$(test_test_OG_SOURCES) \
+	$(nodist_test_test_OG_SOURCES) \
+	$(test_test_OG_fuzzy_SOURCES)
 DIST_SOURCES = $(am__crypto_libbitcoin_crypto_a_SOURCES_DIST) \
 	$(am__leveldb_libleveldb_a_SOURCES_DIST) \
 	$(am__leveldb_libleveldb_sse42_a_SOURCES_DIST) \
@@ -1294,13 +1294,13 @@ DIST_SOURCES = $(am__crypto_libbitcoin_crypto_a_SOURCES_DIST) \
 	$(am__libbitcoin_zmq_a_SOURCES_DIST) \
 	$(am__qt_libbitcoinqt_a_SOURCES_DIST) \
 	$(am__libbitcoinconsensus_la_SOURCES_DIST) \
-	$(am__bench_bench_OGC_SOURCES_DIST) \
-	$(am__OGC_cli_SOURCES_DIST) \
-	$(am__OGC_tx_SOURCES_DIST) $(am__OGCd_SOURCES_DIST) \
-	$(am__qt_OGC_qt_SOURCES_DIST) \
-	$(am__qt_test_test_OGC_qt_SOURCES_DIST) \
-	$(am__test_test_OGC_SOURCES_DIST) \
-	$(am__test_test_OGC_fuzzy_SOURCES_DIST)
+	$(am__bench_bench_OG_SOURCES_DIST) \
+	$(am__OG_cli_SOURCES_DIST) \
+	$(am__OG_tx_SOURCES_DIST) $(am__OGd_SOURCES_DIST) \
+	$(am__qt_OG_qt_SOURCES_DIST) \
+	$(am__qt_test_test_OG_qt_SOURCES_DIST) \
+	$(am__test_test_OG_SOURCES_DIST) \
+	$(am__test_test_OG_fuzzy_SOURCES_DIST)
 RECURSIVE_TARGETS = all-recursive check-recursive cscopelist-recursive \
 	ctags-recursive dvi-recursive html-recursive info-recursive \
 	install-data-recursive install-dvi-recursive \
@@ -1552,22 +1552,22 @@ am__relativize = \
     dir1=`echo "$$dir1" | sed -e "$$sed_rest"`; \
   done; \
   reldir="$$dir2"
-ACLOCAL = ${SHELL} /home/spanky/OGC/build-aux/missing aclocal-1.15
+ACLOCAL = ${SHELL} /home/spanky/OG/build-aux/missing aclocal-1.15
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
 AR = /usr/bin/ar
 ARFLAGS = cr
-AUTOCONF = ${SHELL} /home/spanky/OGC/build-aux/missing autoconf
-AUTOHEADER = ${SHELL} /home/spanky/OGC/build-aux/missing autoheader
-AUTOMAKE = ${SHELL} /home/spanky/OGC/build-aux/missing automake-1.15
+AUTOCONF = ${SHELL} /home/spanky/OG/build-aux/missing autoconf
+AUTOHEADER = ${SHELL} /home/spanky/OG/build-aux/missing autoheader
+AUTOMAKE = ${SHELL} /home/spanky/OG/build-aux/missing automake-1.15
 AWK = mawk
 BDB_CFLAGS = 
 BDB_CPPFLAGS = 
 BDB_LIBS = -ldb_cxx-4.8
-BITCOIN_CLI_NAME = OGC-cli
-BITCOIN_DAEMON_NAME = OGCd
-BITCOIN_GUI_NAME = OGC-qt
-BITCOIN_TX_NAME = OGC-tx
+BITCOIN_CLI_NAME = OG-cli
+BITCOIN_DAEMON_NAME = OGd
+BITCOIN_GUI_NAME = OG-qt
+BITCOIN_TX_NAME = OG-tx
 BOOST_CHRONO_LIB = -lboost_chrono
 BOOST_CPPFLAGS = -DBOOST_SP_USE_STD_ATOMIC -DBOOST_AC_USE_STD_ATOMIC -pthread -I/usr/include
 BOOST_FILESYSTEM_LIB = -lboost_filesystem
@@ -1654,7 +1654,7 @@ LTLIBOBJS =
 LT_SYS_LIBRARY_PATH = 
 LUPDATE = /usr/lib/x86_64-linux-gnu/qt5/bin/lupdate
 MAINT = 
-MAKEINFO = ${SHELL} /home/spanky/OGC/build-aux/missing makeinfo
+MAKEINFO = ${SHELL} /home/spanky/OG/build-aux/missing makeinfo
 MAKENSIS = 
 MANIFEST_TOOL = :
 MINIUPNPC_CPPFLAGS = 
@@ -1672,11 +1672,11 @@ OBJDUMP = objdump
 OBJEXT = o
 OTOOL = 
 OTOOL64 = 
-PACKAGE = OGC
-PACKAGE_BUGREPORT = https://github.com/minblock/OGC/issues
+PACKAGE = OG
+PACKAGE_BUGREPORT = https://github.com/minblock/OG/issues
 PACKAGE_NAME = OG Core
 PACKAGE_STRING = OG Core 0.15.1
-PACKAGE_TARNAME = OGC
+PACKAGE_TARNAME = OG
 PACKAGE_URL = https://og.bitwall.ca/
 PACKAGE_VERSION = 0.15.1
 PATH_SEPARATOR = :
@@ -1746,10 +1746,10 @@ X11XCB_LIBS =
 XGETTEXT = 
 ZMQ_CFLAGS = 
 ZMQ_LIBS = -lzmq
-abs_builddir = /home/spanky/OGC/src
-abs_srcdir = /home/spanky/OGC/src
-abs_top_builddir = /home/spanky/OGC
-abs_top_srcdir = /home/spanky/OGC
+abs_builddir = /home/spanky/OG/src
+abs_srcdir = /home/spanky/OG/src
+abs_top_builddir = /home/spanky/OG
+abs_top_srcdir = /home/spanky/OG
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -1781,7 +1781,7 @@ host_vendor = pc
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/spanky/OGC/build-aux/install-sh
+install_sh = ${SHELL} /home/spanky/OG/build-aux/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -2092,11 +2092,11 @@ nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
 # bitcoind binary #
-OGCd_SOURCES = bitcoind.cpp $(am__append_5)
-OGCd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-OGCd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-OGCd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-OGCd_LDADD = $(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
+OGd_SOURCES = bitcoind.cpp $(am__append_5)
+OGd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+OGd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+OGd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+OGd_LDADD = $(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
 	$(LIBUNIVALUE) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_WALLET) \
 	$(LIBBITCOIN_ZMQ) $(LIBBITCOIN_CONSENSUS) $(LIBBITCOIN_CRYPTO) \
 	$(LIBLEVELDB) $(LIBLEVELDB_SSE42) $(LIBMEMENV) $(LIBSECP256K1) \
@@ -2105,21 +2105,21 @@ OGCd_LDADD = $(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
 	$(ZMQ_LIBS)
 
 # bitcoin-cli binary #
-OGC_cli_SOURCES = bitcoin-cli.cpp $(am__append_6)
-OGC_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-OGC_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-OGC_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-OGC_cli_LDADD = $(LIBBITCOIN_CLI) $(LIBUNIVALUE) \
+OG_cli_SOURCES = bitcoin-cli.cpp $(am__append_6)
+OG_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+OG_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+OG_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+OG_cli_LDADD = $(LIBBITCOIN_CLI) $(LIBUNIVALUE) \
 	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CRYPTO) $(BOOST_LIBS) \
 	$(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
 # bitcoin-tx binary #
-OGC_tx_SOURCES = bitcoin-tx.cpp $(am__append_7)
-OGC_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-OGC_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-OGC_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-OGC_tx_LDADD = $(LIBUNIVALUE) $(LIBBITCOIN_COMMON) \
+OG_tx_SOURCES = bitcoin-tx.cpp $(am__append_7)
+OG_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+OG_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+OG_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+OG_tx_LDADD = $(LIBUNIVALUE) $(LIBBITCOIN_COMMON) \
 	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CONSENSUS) \
 	$(LIBBITCOIN_CRYPTO) $(LIBSECP256K1) $(BOOST_LIBS) \
 	$(CRYPTO_LIBS)
@@ -2267,7 +2267,7 @@ leveldb_libleveldb_sse42_a_CXXFLAGS =  \
 	$(am__append_18)
 leveldb_libleveldb_sse42_a_SOURCES = leveldb/port/port_posix_sse.cc
 TEST_SRCDIR = test
-TEST_BINARY = test/test_OGC$(EXEEXT)
+TEST_BINARY = test/test_OG$(EXEEXT)
 JSON_TEST_FILES = \
   test/data/script_tests.json \
   test/data/base58_keys_valid.json \
@@ -2332,9 +2332,9 @@ BITCOIN_TESTS = test/arith_uint256_tests.cpp \
 	test/uint256_tests.cpp \
 	test/univalue_tests.cpp test/util_tests.cpp \
 	$(am__append_22)
-test_test_OGC_SOURCES = $(BITCOIN_TESTS) $(JSON_TEST_FILES) $(RAW_TEST_FILES)
-test_test_OGC_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) -I$(builddir)/test/ $(TESTDEFS) $(EVENT_CFLAGS)
-test_test_OGC_LDADD = $(am__append_23) \
+test_test_OG_SOURCES = $(BITCOIN_TESTS) $(JSON_TEST_FILES) $(RAW_TEST_FILES)
+test_test_OG_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) -I$(builddir)/test/ $(TESTDEFS) $(EVENT_CFLAGS)
+test_test_OG_LDADD = $(am__append_23) \
 	$(LIBBITCOIN_SERVER) $(LIBBITCOIN_CLI) \
 	$(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) \
 	$(LIBBITCOIN_CONSENSUS) \
@@ -2347,26 +2347,26 @@ test_test_OGC_LDADD = $(am__append_23) \
 	$(LIBBITCOIN_CONSENSUS) $(BDB_LIBS) \
 	$(SSL_LIBS) $(CRYPTO_LIBS) \
 	$(MINIUPNPC_LIBS) $(am__append_24)
-test_test_OGC_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-test_test_OGC_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) -static
+test_test_OG_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+test_test_OG_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) -static
 #
 
 # test_bitcoin_fuzzy binary #
-test_test_OGC_fuzzy_SOURCES = test/test_bitcoin_fuzzy.cpp
-test_test_OGC_fuzzy_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-test_test_OGC_fuzzy_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-test_test_OGC_fuzzy_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-test_test_OGC_fuzzy_LDADD = $(LIBUNIVALUE) \
+test_test_OG_fuzzy_SOURCES = test/test_bitcoin_fuzzy.cpp
+test_test_OG_fuzzy_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+test_test_OG_fuzzy_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+test_test_OG_fuzzy_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+test_test_OG_fuzzy_LDADD = $(LIBUNIVALUE) \
 	$(LIBBITCOIN_SERVER) $(LIBBITCOIN_COMMON) \
 	$(LIBBITCOIN_UTIL) $(LIBBITCOIN_CONSENSUS) \
 	$(LIBBITCOIN_CRYPTO) $(LIBSECP256K1) \
 	$(BOOST_LIBS) $(CRYPTO_LIBS)
 #
-nodist_test_test_OGC_SOURCES = $(GENERATED_TEST_FILES)
+nodist_test_test_OG_SOURCES = $(GENERATED_TEST_FILES)
 CLEAN_BITCOIN_TEST = test/*.gcda test/*.gcno $(GENERATED_TEST_FILES)
 BENCH_SRCDIR = bench
-BENCH_BINARY = bench/bench_OGC$(EXEEXT)
-bench_bench_OGC_SOURCES =  \
+BENCH_BINARY = bench/bench_OG$(EXEEXT)
+bench_bench_OG_SOURCES =  \
 	bench/bench_bitcoin.cpp bench/bench.cpp \
 	bench/bench.h bench/checkblock.cpp \
 	bench/checkqueue.cpp bench/Examples.cpp \
@@ -2378,10 +2378,10 @@ bench_bench_OGC_SOURCES =  \
 	bench/lockedpool.cpp bench/perf.cpp \
 	bench/perf.h bench/prevector_destructor.cpp \
 	$(am__append_28)
-nodist_bench_bench_OGC_SOURCES = $(GENERATED_TEST_FILES)
-bench_bench_OGC_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CLFAGS) $(EVENT_PTHREADS_CFLAGS) -I$(builddir)/bench/
-bench_bench_OGC_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-bench_bench_OGC_LDADD = $(LIBBITCOIN_SERVER) \
+nodist_bench_bench_OG_SOURCES = $(GENERATED_TEST_FILES)
+bench_bench_OG_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CLFAGS) $(EVENT_PTHREADS_CFLAGS) -I$(builddir)/bench/
+bench_bench_OG_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+bench_bench_OG_LDADD = $(LIBBITCOIN_SERVER) \
 	$(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) \
 	$(LIBBITCOIN_CONSENSUS) \
 	$(LIBBITCOIN_CRYPTO) $(LIBLEVELDB) \
@@ -2391,7 +2391,7 @@ bench_bench_OGC_LDADD = $(LIBBITCOIN_SERVER) \
 	$(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) \
 	$(CRYPTO_LIBS) $(MINIUPNPC_LIBS) \
 	$(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
-bench_bench_OGC_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+bench_bench_OG_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 CLEAN_BITCOIN_BENCH = bench/*.gcda bench/*.gcno $(GENERATED_TEST_FILES)
 
 # bitcoin qt core #
@@ -2675,7 +2675,7 @@ RES_ICONS = \
   qt/res/icons/history.png \
   qt/res/icons/info.png \
   qt/res/icons/key.png \
-  qt/res/icons/OGC_splash.png \
+  qt/res/icons/OG_splash.png \
   qt/res/icons/lock_closed.png \
   qt/res/icons/lock_open.png \
   qt/res/icons/network_disabled.png \
@@ -2773,13 +2773,13 @@ nodist_qt_libbitcoinqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(PROTOBUF_CC) \
 QT_FORMS_H = $(join $(dir $(QT_FORMS_UI)),$(addprefix ui_, $(notdir $(QT_FORMS_UI:.ui=.h))))
 
 # bitcoin-qt binary #
-qt_OGC_qt_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
+qt_OG_qt_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
   $(QT_INCLUDES) $(PROTOBUF_CFLAGS) $(QR_CFLAGS)
 
-qt_OGC_qt_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
-qt_OGC_qt_SOURCES = qt/bitcoin.cpp \
+qt_OG_qt_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
+qt_OG_qt_SOURCES = qt/bitcoin.cpp \
 	$(am__append_35) $(am__append_36)
-qt_OGC_qt_LDADD = qt/libbitcoinqt.a \
+qt_OG_qt_LDADD = qt/libbitcoinqt.a \
 	$(LIBBITCOIN_SERVER) $(am__append_37) \
 	$(am__append_38) $(LIBBITCOIN_CLI) \
 	$(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) \
@@ -2791,8 +2791,8 @@ qt_OGC_qt_LDADD = qt/libbitcoinqt.a \
 	$(CRYPTO_LIBS) $(MINIUPNPC_LIBS) \
 	$(LIBSECP256K1) $(EVENT_PTHREADS_LIBS) \
 	$(EVENT_LIBS)
-qt_OGC_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-qt_OGC_qt_LIBTOOLFLAGS = --tag CXX
+qt_OG_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+qt_OG_qt_LIBTOOLFLAGS = --tag CXX
 
 #locale/foo.ts -> locale/foo.qm
 QT_QM = $(QT_TS:.ts=.qm)
@@ -2815,18 +2815,18 @@ TEST_BITCOIN_CPP = \
 TEST_BITCOIN_H = \
   test/test_bitcoin.h
 
-qt_test_test_OGC_qt_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
+qt_test_test_OG_qt_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
   $(QT_INCLUDES) $(QT_TEST_INCLUDES) $(PROTOBUF_CFLAGS)
 
-qt_test_test_OGC_qt_SOURCES =  \
+qt_test_test_OG_qt_SOURCES =  \
 	qt/test/compattests.cpp \
 	qt/test/rpcnestedtests.cpp \
 	qt/test/test_main.cpp \
 	qt/test/uritests.cpp $(TEST_QT_H) \
 	$(TEST_BITCOIN_CPP) $(TEST_BITCOIN_H) \
 	$(am__append_43)
-nodist_qt_test_test_OGC_qt_SOURCES = $(TEST_QT_MOC_CPP)
-qt_test_test_OGC_qt_LDADD =  \
+nodist_qt_test_test_OG_qt_SOURCES = $(TEST_QT_MOC_CPP)
+qt_test_test_OG_qt_LDADD =  \
 	$(LIBBITCOINQT) $(LIBBITCOIN_SERVER) \
 	$(am__append_44) $(am__append_45) \
 	$(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) \
@@ -2840,8 +2840,8 @@ qt_test_test_OGC_qt_LDADD =  \
 	$(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) \
 	$(MINIUPNPC_LIBS) $(LIBSECP256K1) \
 	$(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
-qt_test_test_OGC_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-qt_test_test_OGC_qt_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
+qt_test_test_OG_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+qt_test_test_OG_qt_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
 CLEAN_BITCOIN_QT_TEST = $(TEST_QT_MOC_CPP) qt/test/*.gcda qt/test/*.gcno
 all: all-recursive
 
@@ -3607,57 +3607,57 @@ bench/$(am__dirstamp):
 bench/$(DEPDIR)/$(am__dirstamp):
 	@$(MKDIR_P) bench/$(DEPDIR)
 	@: > bench/$(DEPDIR)/$(am__dirstamp)
-bench/bench_bench_OGC-bench_bitcoin.$(OBJEXT):  \
+bench/bench_bench_OG-bench_bitcoin.$(OBJEXT):  \
 	bench/$(am__dirstamp) bench/$(DEPDIR)/$(am__dirstamp)
-bench/bench_bench_OGC-bench.$(OBJEXT): bench/$(am__dirstamp) \
+bench/bench_bench_OG-bench.$(OBJEXT): bench/$(am__dirstamp) \
 	bench/$(DEPDIR)/$(am__dirstamp)
-bench/bench_bench_OGC-checkblock.$(OBJEXT):  \
+bench/bench_bench_OG-checkblock.$(OBJEXT):  \
 	bench/$(am__dirstamp) bench/$(DEPDIR)/$(am__dirstamp)
-bench/bench_bench_OGC-checkqueue.$(OBJEXT):  \
+bench/bench_bench_OG-checkqueue.$(OBJEXT):  \
 	bench/$(am__dirstamp) bench/$(DEPDIR)/$(am__dirstamp)
-bench/bench_bench_OGC-Examples.$(OBJEXT): bench/$(am__dirstamp) \
+bench/bench_bench_OG-Examples.$(OBJEXT): bench/$(am__dirstamp) \
 	bench/$(DEPDIR)/$(am__dirstamp)
-bench/bench_bench_OGC-rollingbloom.$(OBJEXT):  \
+bench/bench_bench_OG-rollingbloom.$(OBJEXT):  \
 	bench/$(am__dirstamp) bench/$(DEPDIR)/$(am__dirstamp)
-bench/bench_bench_OGC-crypto_hash.$(OBJEXT):  \
+bench/bench_bench_OG-crypto_hash.$(OBJEXT):  \
 	bench/$(am__dirstamp) bench/$(DEPDIR)/$(am__dirstamp)
-bench/bench_bench_OGC-ccoins_caching.$(OBJEXT):  \
+bench/bench_bench_OG-ccoins_caching.$(OBJEXT):  \
 	bench/$(am__dirstamp) bench/$(DEPDIR)/$(am__dirstamp)
-bench/bench_bench_OGC-mempool_eviction.$(OBJEXT):  \
+bench/bench_bench_OG-mempool_eviction.$(OBJEXT):  \
 	bench/$(am__dirstamp) bench/$(DEPDIR)/$(am__dirstamp)
-bench/bench_bench_OGC-verify_script.$(OBJEXT):  \
+bench/bench_bench_OG-verify_script.$(OBJEXT):  \
 	bench/$(am__dirstamp) bench/$(DEPDIR)/$(am__dirstamp)
-bench/bench_bench_OGC-base58.$(OBJEXT): bench/$(am__dirstamp) \
+bench/bench_bench_OG-base58.$(OBJEXT): bench/$(am__dirstamp) \
 	bench/$(DEPDIR)/$(am__dirstamp)
-bench/bench_bench_OGC-lockedpool.$(OBJEXT):  \
+bench/bench_bench_OG-lockedpool.$(OBJEXT):  \
 	bench/$(am__dirstamp) bench/$(DEPDIR)/$(am__dirstamp)
-bench/bench_bench_OGC-perf.$(OBJEXT): bench/$(am__dirstamp) \
+bench/bench_bench_OG-perf.$(OBJEXT): bench/$(am__dirstamp) \
 	bench/$(DEPDIR)/$(am__dirstamp)
-bench/bench_bench_OGC-prevector_destructor.$(OBJEXT):  \
+bench/bench_bench_OG-prevector_destructor.$(OBJEXT):  \
 	bench/$(am__dirstamp) bench/$(DEPDIR)/$(am__dirstamp)
-bench/bench_bench_OGC-coin_selection.$(OBJEXT):  \
+bench/bench_bench_OG-coin_selection.$(OBJEXT):  \
 	bench/$(am__dirstamp) bench/$(DEPDIR)/$(am__dirstamp)
 
-bench/bench_OGC$(EXEEXT): $(bench_bench_OGC_OBJECTS) $(bench_bench_OGC_DEPENDENCIES) $(EXTRA_bench_bench_OGC_DEPENDENCIES) bench/$(am__dirstamp)
-	@rm -f bench/bench_OGC$(EXEEXT)
-	$(AM_V_CXXLD)$(bench_bench_OGC_LINK) $(bench_bench_OGC_OBJECTS) $(bench_bench_OGC_LDADD) $(LIBS)
+bench/bench_OG$(EXEEXT): $(bench_bench_OG_OBJECTS) $(bench_bench_OG_DEPENDENCIES) $(EXTRA_bench_bench_OG_DEPENDENCIES) bench/$(am__dirstamp)
+	@rm -f bench/bench_OG$(EXEEXT)
+	$(AM_V_CXXLD)$(bench_bench_OG_LINK) $(bench_bench_OG_OBJECTS) $(bench_bench_OG_LDADD) $(LIBS)
 
-OGC-cli$(EXEEXT): $(OGC_cli_OBJECTS) $(OGC_cli_DEPENDENCIES) $(EXTRA_OGC_cli_DEPENDENCIES) 
-	@rm -f OGC-cli$(EXEEXT)
-	$(AM_V_CXXLD)$(OGC_cli_LINK) $(OGC_cli_OBJECTS) $(OGC_cli_LDADD) $(LIBS)
+OG-cli$(EXEEXT): $(OG_cli_OBJECTS) $(OG_cli_DEPENDENCIES) $(EXTRA_OG_cli_DEPENDENCIES) 
+	@rm -f OG-cli$(EXEEXT)
+	$(AM_V_CXXLD)$(OG_cli_LINK) $(OG_cli_OBJECTS) $(OG_cli_LDADD) $(LIBS)
 
-OGC-tx$(EXEEXT): $(OGC_tx_OBJECTS) $(OGC_tx_DEPENDENCIES) $(EXTRA_OGC_tx_DEPENDENCIES) 
-	@rm -f OGC-tx$(EXEEXT)
-	$(AM_V_CXXLD)$(OGC_tx_LINK) $(OGC_tx_OBJECTS) $(OGC_tx_LDADD) $(LIBS)
+OG-tx$(EXEEXT): $(OG_tx_OBJECTS) $(OG_tx_DEPENDENCIES) $(EXTRA_OG_tx_DEPENDENCIES) 
+	@rm -f OG-tx$(EXEEXT)
+	$(AM_V_CXXLD)$(OG_tx_LINK) $(OG_tx_OBJECTS) $(OG_tx_LDADD) $(LIBS)
 
-OGCd$(EXEEXT): $(OGCd_OBJECTS) $(OGCd_DEPENDENCIES) $(EXTRA_OGCd_DEPENDENCIES) 
-	@rm -f OGCd$(EXEEXT)
-	$(AM_V_CXXLD)$(OGCd_LINK) $(OGCd_OBJECTS) $(OGCd_LDADD) $(LIBS)
-qt/qt_OGC_qt-bitcoin.$(OBJEXT): qt/$(am__dirstamp) \
+OGd$(EXEEXT): $(OGd_OBJECTS) $(OGd_DEPENDENCIES) $(EXTRA_OGd_DEPENDENCIES) 
+	@rm -f OGd$(EXEEXT)
+	$(AM_V_CXXLD)$(OGd_LINK) $(OGd_OBJECTS) $(OGd_LDADD) $(LIBS)
+qt/qt_OG_qt-bitcoin.$(OBJEXT): qt/$(am__dirstamp) \
 	qt/$(DEPDIR)/$(am__dirstamp)
-qt/qt_OGC_qt-macdockiconhandler.$(OBJEXT): qt/$(am__dirstamp) \
+qt/qt_OG_qt-macdockiconhandler.$(OBJEXT): qt/$(am__dirstamp) \
 	qt/$(DEPDIR)/$(am__dirstamp)
-qt/qt_OGC_qt-macnotificationhandler.$(OBJEXT):  \
+qt/qt_OG_qt-macnotificationhandler.$(OBJEXT):  \
 	qt/$(am__dirstamp) qt/$(DEPDIR)/$(am__dirstamp)
 qt/res/$(am__dirstamp):
 	@$(MKDIR_P) qt/res
@@ -3668,22 +3668,22 @@ qt/res/$(DEPDIR)/$(am__dirstamp):
 qt/res/bitcoin-qt-res.$(OBJEXT): qt/res/$(am__dirstamp) \
 	qt/res/$(DEPDIR)/$(am__dirstamp)
 
-qt/OGC-qt$(EXEEXT): $(qt_OGC_qt_OBJECTS) $(qt_OGC_qt_DEPENDENCIES) $(EXTRA_qt_OGC_qt_DEPENDENCIES) qt/$(am__dirstamp)
-	@rm -f qt/OGC-qt$(EXEEXT)
-	$(AM_V_OBJCXXLD)$(qt_OGC_qt_LINK) $(qt_OGC_qt_OBJECTS) $(qt_OGC_qt_LDADD) $(LIBS)
+qt/OG-qt$(EXEEXT): $(qt_OG_qt_OBJECTS) $(qt_OG_qt_DEPENDENCIES) $(EXTRA_qt_OG_qt_DEPENDENCIES) qt/$(am__dirstamp)
+	@rm -f qt/OG-qt$(EXEEXT)
+	$(AM_V_OBJCXXLD)$(qt_OG_qt_LINK) $(qt_OG_qt_OBJECTS) $(qt_OG_qt_LDADD) $(LIBS)
 qt/test/$(am__dirstamp):
 	@$(MKDIR_P) qt/test
 	@: > qt/test/$(am__dirstamp)
 qt/test/$(DEPDIR)/$(am__dirstamp):
 	@$(MKDIR_P) qt/test/$(DEPDIR)
 	@: > qt/test/$(DEPDIR)/$(am__dirstamp)
-qt/test/qt_test_test_OGC_qt-compattests.$(OBJEXT):  \
+qt/test/qt_test_test_OG_qt-compattests.$(OBJEXT):  \
 	qt/test/$(am__dirstamp) qt/test/$(DEPDIR)/$(am__dirstamp)
-qt/test/qt_test_test_OGC_qt-rpcnestedtests.$(OBJEXT):  \
+qt/test/qt_test_test_OG_qt-rpcnestedtests.$(OBJEXT):  \
 	qt/test/$(am__dirstamp) qt/test/$(DEPDIR)/$(am__dirstamp)
-qt/test/qt_test_test_OGC_qt-test_main.$(OBJEXT):  \
+qt/test/qt_test_test_OG_qt-test_main.$(OBJEXT):  \
 	qt/test/$(am__dirstamp) qt/test/$(DEPDIR)/$(am__dirstamp)
-qt/test/qt_test_test_OGC_qt-uritests.$(OBJEXT):  \
+qt/test/qt_test_test_OG_qt-uritests.$(OBJEXT):  \
 	qt/test/$(am__dirstamp) qt/test/$(DEPDIR)/$(am__dirstamp)
 test/$(am__dirstamp):
 	@$(MKDIR_P) test
@@ -3691,11 +3691,11 @@ test/$(am__dirstamp):
 test/$(DEPDIR)/$(am__dirstamp):
 	@$(MKDIR_P) test/$(DEPDIR)
 	@: > test/$(DEPDIR)/$(am__dirstamp)
-test/qt_test_test_OGC_qt-test_bitcoin.$(OBJEXT):  \
+test/qt_test_test_OG_qt-test_bitcoin.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-qt/test/qt_test_test_OGC_qt-paymentservertests.$(OBJEXT):  \
+qt/test/qt_test_test_OG_qt-paymentservertests.$(OBJEXT):  \
 	qt/test/$(am__dirstamp) qt/test/$(DEPDIR)/$(am__dirstamp)
-qt/test/qt_test_test_OGC_qt-wallettests.$(OBJEXT):  \
+qt/test/qt_test_test_OG_qt-wallettests.$(OBJEXT):  \
 	qt/test/$(am__dirstamp) qt/test/$(DEPDIR)/$(am__dirstamp)
 wallet/test/$(am__dirstamp):
 	@$(MKDIR_P) wallet/test
@@ -3703,161 +3703,161 @@ wallet/test/$(am__dirstamp):
 wallet/test/$(DEPDIR)/$(am__dirstamp):
 	@$(MKDIR_P) wallet/test/$(DEPDIR)
 	@: > wallet/test/$(DEPDIR)/$(am__dirstamp)
-wallet/test/qt_test_test_OGC_qt-wallet_test_fixture.$(OBJEXT):  \
+wallet/test/qt_test_test_OG_qt-wallet_test_fixture.$(OBJEXT):  \
 	wallet/test/$(am__dirstamp) \
 	wallet/test/$(DEPDIR)/$(am__dirstamp)
-qt/test/qt_test_test_OGC_qt-moc_compattests.$(OBJEXT):  \
+qt/test/qt_test_test_OG_qt-moc_compattests.$(OBJEXT):  \
 	qt/test/$(am__dirstamp) qt/test/$(DEPDIR)/$(am__dirstamp)
-qt/test/qt_test_test_OGC_qt-moc_rpcnestedtests.$(OBJEXT):  \
+qt/test/qt_test_test_OG_qt-moc_rpcnestedtests.$(OBJEXT):  \
 	qt/test/$(am__dirstamp) qt/test/$(DEPDIR)/$(am__dirstamp)
-qt/test/qt_test_test_OGC_qt-moc_uritests.$(OBJEXT):  \
+qt/test/qt_test_test_OG_qt-moc_uritests.$(OBJEXT):  \
 	qt/test/$(am__dirstamp) qt/test/$(DEPDIR)/$(am__dirstamp)
-qt/test/qt_test_test_OGC_qt-moc_paymentservertests.$(OBJEXT):  \
+qt/test/qt_test_test_OG_qt-moc_paymentservertests.$(OBJEXT):  \
 	qt/test/$(am__dirstamp) qt/test/$(DEPDIR)/$(am__dirstamp)
-qt/test/qt_test_test_OGC_qt-moc_wallettests.$(OBJEXT):  \
+qt/test/qt_test_test_OG_qt-moc_wallettests.$(OBJEXT):  \
 	qt/test/$(am__dirstamp) qt/test/$(DEPDIR)/$(am__dirstamp)
 
-qt/test/test_OGC-qt$(EXEEXT): $(qt_test_test_OGC_qt_OBJECTS) $(qt_test_test_OGC_qt_DEPENDENCIES) $(EXTRA_qt_test_test_OGC_qt_DEPENDENCIES) qt/test/$(am__dirstamp)
-	@rm -f qt/test/test_OGC-qt$(EXEEXT)
-	$(AM_V_CXXLD)$(qt_test_test_OGC_qt_LINK) $(qt_test_test_OGC_qt_OBJECTS) $(qt_test_test_OGC_qt_LDADD) $(LIBS)
-test/test_test_OGC-arith_uint256_tests.$(OBJEXT):  \
+qt/test/test_OG-qt$(EXEEXT): $(qt_test_test_OG_qt_OBJECTS) $(qt_test_test_OG_qt_DEPENDENCIES) $(EXTRA_qt_test_test_OG_qt_DEPENDENCIES) qt/test/$(am__dirstamp)
+	@rm -f qt/test/test_OG-qt$(EXEEXT)
+	$(AM_V_CXXLD)$(qt_test_test_OG_qt_LINK) $(qt_test_test_OG_qt_OBJECTS) $(qt_test_test_OG_qt_LDADD) $(LIBS)
+test/test_test_OG-arith_uint256_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-addrman_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_OG-addrman_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-amount_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_OG-amount_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-allocator_tests.$(OBJEXT):  \
+test/test_test_OG-allocator_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-base32_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_OG-base32_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-base58_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_OG-base58_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-base64_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_OG-base64_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-bip32_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_OG-bip32_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-bloom_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_OG-bloom_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-bswap_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_OG-bswap_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-checkqueue_tests.$(OBJEXT):  \
+test/test_test_OG-checkqueue_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-coins_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_OG-coins_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-compress_tests.$(OBJEXT):  \
+test/test_test_OG-compress_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-crypto_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_OG-crypto_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-cuckoocache_tests.$(OBJEXT):  \
+test/test_test_OG-cuckoocache_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-DoS_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_OG-DoS_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-getarg_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_OG-getarg_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-hash_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_OG-hash_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-key_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_OG-key_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-limitedmap_tests.$(OBJEXT):  \
+test/test_test_OG-limitedmap_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-dbwrapper_tests.$(OBJEXT):  \
+test/test_test_OG-dbwrapper_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-main_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_OG-main_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-mempool_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_OG-mempool_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-merkle_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_OG-merkle_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-miner_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_OG-miner_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-multisig_tests.$(OBJEXT):  \
+test/test_test_OG-multisig_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-net_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_OG-net_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-netbase_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_OG-netbase_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-pmt_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_OG-pmt_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-policyestimator_tests.$(OBJEXT):  \
+test/test_test_OG-policyestimator_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-pow_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_OG-pow_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-prevector_tests.$(OBJEXT):  \
+test/test_test_OG-prevector_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-raii_event_tests.$(OBJEXT):  \
+test/test_test_OG-raii_event_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-random_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_OG-random_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-reverselock_tests.$(OBJEXT):  \
+test/test_test_OG-reverselock_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-rpc_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_OG-rpc_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-sanity_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_OG-sanity_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-scheduler_tests.$(OBJEXT):  \
+test/test_test_OG-scheduler_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-script_P2SH_tests.$(OBJEXT):  \
+test/test_test_OG-script_P2SH_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-script_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_OG-script_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-script_standard_tests.$(OBJEXT):  \
+test/test_test_OG-script_standard_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-scriptnum_tests.$(OBJEXT):  \
+test/test_test_OG-scriptnum_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-scrypt_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_OG-scrypt_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-serialize_tests.$(OBJEXT):  \
+test/test_test_OG-serialize_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-sighash_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_OG-sighash_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-sigopcount_tests.$(OBJEXT):  \
+test/test_test_OG-sigopcount_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-skiplist_tests.$(OBJEXT):  \
+test/test_test_OG-skiplist_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-streams_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_OG-streams_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-test_bitcoin.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_OG-test_bitcoin.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-test_bitcoin_main.$(OBJEXT):  \
+test/test_test_OG-test_bitcoin_main.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-timedata_tests.$(OBJEXT):  \
+test/test_test_OG-timedata_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-torcontrol_tests.$(OBJEXT):  \
+test/test_test_OG-torcontrol_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-transaction_tests.$(OBJEXT):  \
+test/test_test_OG-transaction_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-txvalidationcache_tests.$(OBJEXT):  \
+test/test_test_OG-txvalidationcache_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-versionbits_tests.$(OBJEXT):  \
+test/test_test_OG-versionbits_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-uint256_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_OG-uint256_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-univalue_tests.$(OBJEXT):  \
+test/test_test_OG-univalue_tests.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
-test/test_test_OGC-util_tests.$(OBJEXT): test/$(am__dirstamp) \
+test/test_test_OG-util_tests.$(OBJEXT): test/$(am__dirstamp) \
 	test/$(DEPDIR)/$(am__dirstamp)
-wallet/test/test_test_OGC-wallet_test_fixture.$(OBJEXT):  \
+wallet/test/test_test_OG-wallet_test_fixture.$(OBJEXT):  \
 	wallet/test/$(am__dirstamp) \
 	wallet/test/$(DEPDIR)/$(am__dirstamp)
-wallet/test/test_test_OGC-accounting_tests.$(OBJEXT):  \
+wallet/test/test_test_OG-accounting_tests.$(OBJEXT):  \
 	wallet/test/$(am__dirstamp) \
 	wallet/test/$(DEPDIR)/$(am__dirstamp)
-wallet/test/test_test_OGC-wallet_tests.$(OBJEXT):  \
+wallet/test/test_test_OG-wallet_tests.$(OBJEXT):  \
 	wallet/test/$(am__dirstamp) \
 	wallet/test/$(DEPDIR)/$(am__dirstamp)
-wallet/test/test_test_OGC-crypto_tests.$(OBJEXT):  \
+wallet/test/test_test_OG-crypto_tests.$(OBJEXT):  \
 	wallet/test/$(am__dirstamp) \
 	wallet/test/$(DEPDIR)/$(am__dirstamp)
 
-test/test_OGC$(EXEEXT): $(test_test_OGC_OBJECTS) $(test_test_OGC_DEPENDENCIES) $(EXTRA_test_test_OGC_DEPENDENCIES) test/$(am__dirstamp)
-	@rm -f test/test_OGC$(EXEEXT)
-	$(AM_V_CXXLD)$(test_test_OGC_LINK) $(test_test_OGC_OBJECTS) $(test_test_OGC_LDADD) $(LIBS)
-test/test_test_OGC_fuzzy-test_bitcoin_fuzzy.$(OBJEXT):  \
+test/test_OG$(EXEEXT): $(test_test_OG_OBJECTS) $(test_test_OG_DEPENDENCIES) $(EXTRA_test_test_OG_DEPENDENCIES) test/$(am__dirstamp)
+	@rm -f test/test_OG$(EXEEXT)
+	$(AM_V_CXXLD)$(test_test_OG_LINK) $(test_test_OG_OBJECTS) $(test_test_OG_LDADD) $(LIBS)
+test/test_test_OG_fuzzy-test_bitcoin_fuzzy.$(OBJEXT):  \
 	test/$(am__dirstamp) test/$(DEPDIR)/$(am__dirstamp)
 
-test/test_OGC_fuzzy$(EXEEXT): $(test_test_OGC_fuzzy_OBJECTS) $(test_test_OGC_fuzzy_DEPENDENCIES) $(EXTRA_test_test_OGC_fuzzy_DEPENDENCIES) test/$(am__dirstamp)
-	@rm -f test/test_OGC_fuzzy$(EXEEXT)
-	$(AM_V_CXXLD)$(test_test_OGC_fuzzy_LINK) $(test_test_OGC_fuzzy_OBJECTS) $(test_test_OGC_fuzzy_LDADD) $(LIBS)
+test/test_OG_fuzzy$(EXEEXT): $(test_test_OG_fuzzy_OBJECTS) $(test_test_OG_fuzzy_DEPENDENCIES) $(EXTRA_test_test_OG_fuzzy_DEPENDENCIES) test/$(am__dirstamp)
+	@rm -f test/test_OG_fuzzy$(EXEEXT)
+	$(AM_V_CXXLD)$(test_test_OG_fuzzy_LINK) $(test_test_OG_fuzzy_OBJECTS) $(test_test_OG_fuzzy_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -3949,24 +3949,24 @@ include ./$(DEPDIR)/libbitcoinconsensus_la-hash.Plo
 include ./$(DEPDIR)/libbitcoinconsensus_la-pubkey.Plo
 include ./$(DEPDIR)/libbitcoinconsensus_la-uint256.Plo
 include ./$(DEPDIR)/libbitcoinconsensus_la-utilstrencodings.Plo
-include ./$(DEPDIR)/OGC_cli-bitcoin-cli.Po
-include ./$(DEPDIR)/OGC_tx-bitcoin-tx.Po
-include ./$(DEPDIR)/OGCd-bitcoind.Po
-include bench/$(DEPDIR)/bench_bench_OGC-Examples.Po
-include bench/$(DEPDIR)/bench_bench_OGC-base58.Po
-include bench/$(DEPDIR)/bench_bench_OGC-bench.Po
-include bench/$(DEPDIR)/bench_bench_OGC-bench_bitcoin.Po
-include bench/$(DEPDIR)/bench_bench_OGC-ccoins_caching.Po
-include bench/$(DEPDIR)/bench_bench_OGC-checkblock.Po
-include bench/$(DEPDIR)/bench_bench_OGC-checkqueue.Po
-include bench/$(DEPDIR)/bench_bench_OGC-coin_selection.Po
-include bench/$(DEPDIR)/bench_bench_OGC-crypto_hash.Po
-include bench/$(DEPDIR)/bench_bench_OGC-lockedpool.Po
-include bench/$(DEPDIR)/bench_bench_OGC-mempool_eviction.Po
-include bench/$(DEPDIR)/bench_bench_OGC-perf.Po
-include bench/$(DEPDIR)/bench_bench_OGC-prevector_destructor.Po
-include bench/$(DEPDIR)/bench_bench_OGC-rollingbloom.Po
-include bench/$(DEPDIR)/bench_bench_OGC-verify_script.Po
+include ./$(DEPDIR)/OG_cli-bitcoin-cli.Po
+include ./$(DEPDIR)/OG_tx-bitcoin-tx.Po
+include ./$(DEPDIR)/OGd-bitcoind.Po
+include bench/$(DEPDIR)/bench_bench_OG-Examples.Po
+include bench/$(DEPDIR)/bench_bench_OG-base58.Po
+include bench/$(DEPDIR)/bench_bench_OG-bench.Po
+include bench/$(DEPDIR)/bench_bench_OG-bench_bitcoin.Po
+include bench/$(DEPDIR)/bench_bench_OG-ccoins_caching.Po
+include bench/$(DEPDIR)/bench_bench_OG-checkblock.Po
+include bench/$(DEPDIR)/bench_bench_OG-checkqueue.Po
+include bench/$(DEPDIR)/bench_bench_OG-coin_selection.Po
+include bench/$(DEPDIR)/bench_bench_OG-crypto_hash.Po
+include bench/$(DEPDIR)/bench_bench_OG-lockedpool.Po
+include bench/$(DEPDIR)/bench_bench_OG-mempool_eviction.Po
+include bench/$(DEPDIR)/bench_bench_OG-perf.Po
+include bench/$(DEPDIR)/bench_bench_OG-prevector_destructor.Po
+include bench/$(DEPDIR)/bench_bench_OG-rollingbloom.Po
+include bench/$(DEPDIR)/bench_bench_OG-verify_script.Po
 include compat/$(DEPDIR)/libbitcoin_util_a-glibc_compat.Po
 include compat/$(DEPDIR)/libbitcoin_util_a-glibc_sanity.Po
 include compat/$(DEPDIR)/libbitcoin_util_a-glibcxx_sanity.Po
@@ -4146,20 +4146,20 @@ include qt/$(DEPDIR)/qt_libbitcoinqt_a-walletmodel.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-walletmodeltransaction.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-walletview.Po
 include qt/$(DEPDIR)/qt_libbitcoinqt_a-winshutdownmonitor.Po
-include qt/$(DEPDIR)/qt_OGC_qt-bitcoin.Po
-include qt/$(DEPDIR)/qt_OGC_qt-macdockiconhandler.Po
-include qt/$(DEPDIR)/qt_OGC_qt-macnotificationhandler.Po
-include qt/test/$(DEPDIR)/qt_test_test_OGC_qt-compattests.Po
-include qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_compattests.Po
-include qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_paymentservertests.Po
-include qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_rpcnestedtests.Po
-include qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_uritests.Po
-include qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_wallettests.Po
-include qt/test/$(DEPDIR)/qt_test_test_OGC_qt-paymentservertests.Po
-include qt/test/$(DEPDIR)/qt_test_test_OGC_qt-rpcnestedtests.Po
-include qt/test/$(DEPDIR)/qt_test_test_OGC_qt-test_main.Po
-include qt/test/$(DEPDIR)/qt_test_test_OGC_qt-uritests.Po
-include qt/test/$(DEPDIR)/qt_test_test_OGC_qt-wallettests.Po
+include qt/$(DEPDIR)/qt_OG_qt-bitcoin.Po
+include qt/$(DEPDIR)/qt_OG_qt-macdockiconhandler.Po
+include qt/$(DEPDIR)/qt_OG_qt-macnotificationhandler.Po
+include qt/test/$(DEPDIR)/qt_test_test_OG_qt-compattests.Po
+include qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_compattests.Po
+include qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_paymentservertests.Po
+include qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_rpcnestedtests.Po
+include qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_uritests.Po
+include qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_wallettests.Po
+include qt/test/$(DEPDIR)/qt_test_test_OG_qt-paymentservertests.Po
+include qt/test/$(DEPDIR)/qt_test_test_OG_qt-rpcnestedtests.Po
+include qt/test/$(DEPDIR)/qt_test_test_OG_qt-test_main.Po
+include qt/test/$(DEPDIR)/qt_test_test_OG_qt-uritests.Po
+include qt/test/$(DEPDIR)/qt_test_test_OG_qt-wallettests.Po
 include rpc/$(DEPDIR)/libbitcoin_cli_a-client.Po
 include rpc/$(DEPDIR)/libbitcoin_server_a-blockchain.Po
 include rpc/$(DEPDIR)/libbitcoin_server_a-mining.Po
@@ -4182,66 +4182,66 @@ include script/$(DEPDIR)/libbitcoinconsensus_la-script.Plo
 include script/$(DEPDIR)/libbitcoinconsensus_la-script_error.Plo
 include support/$(DEPDIR)/libbitcoin_util_a-cleanse.Po
 include support/$(DEPDIR)/libbitcoin_util_a-lockedpool.Po
-include test/$(DEPDIR)/qt_test_test_OGC_qt-test_bitcoin.Po
-include test/$(DEPDIR)/test_test_OGC-DoS_tests.Po
-include test/$(DEPDIR)/test_test_OGC-addrman_tests.Po
-include test/$(DEPDIR)/test_test_OGC-allocator_tests.Po
-include test/$(DEPDIR)/test_test_OGC-amount_tests.Po
-include test/$(DEPDIR)/test_test_OGC-arith_uint256_tests.Po
-include test/$(DEPDIR)/test_test_OGC-base32_tests.Po
-include test/$(DEPDIR)/test_test_OGC-base58_tests.Po
-include test/$(DEPDIR)/test_test_OGC-base64_tests.Po
-include test/$(DEPDIR)/test_test_OGC-bip32_tests.Po
-include test/$(DEPDIR)/test_test_OGC-bloom_tests.Po
-include test/$(DEPDIR)/test_test_OGC-bswap_tests.Po
-include test/$(DEPDIR)/test_test_OGC-checkqueue_tests.Po
-include test/$(DEPDIR)/test_test_OGC-coins_tests.Po
-include test/$(DEPDIR)/test_test_OGC-compress_tests.Po
-include test/$(DEPDIR)/test_test_OGC-crypto_tests.Po
-include test/$(DEPDIR)/test_test_OGC-cuckoocache_tests.Po
-include test/$(DEPDIR)/test_test_OGC-dbwrapper_tests.Po
-include test/$(DEPDIR)/test_test_OGC-getarg_tests.Po
-include test/$(DEPDIR)/test_test_OGC-hash_tests.Po
-include test/$(DEPDIR)/test_test_OGC-key_tests.Po
-include test/$(DEPDIR)/test_test_OGC-limitedmap_tests.Po
-include test/$(DEPDIR)/test_test_OGC-main_tests.Po
-include test/$(DEPDIR)/test_test_OGC-mempool_tests.Po
-include test/$(DEPDIR)/test_test_OGC-merkle_tests.Po
-include test/$(DEPDIR)/test_test_OGC-miner_tests.Po
-include test/$(DEPDIR)/test_test_OGC-multisig_tests.Po
-include test/$(DEPDIR)/test_test_OGC-net_tests.Po
-include test/$(DEPDIR)/test_test_OGC-netbase_tests.Po
-include test/$(DEPDIR)/test_test_OGC-pmt_tests.Po
-include test/$(DEPDIR)/test_test_OGC-policyestimator_tests.Po
-include test/$(DEPDIR)/test_test_OGC-pow_tests.Po
-include test/$(DEPDIR)/test_test_OGC-prevector_tests.Po
-include test/$(DEPDIR)/test_test_OGC-raii_event_tests.Po
-include test/$(DEPDIR)/test_test_OGC-random_tests.Po
-include test/$(DEPDIR)/test_test_OGC-reverselock_tests.Po
-include test/$(DEPDIR)/test_test_OGC-rpc_tests.Po
-include test/$(DEPDIR)/test_test_OGC-sanity_tests.Po
-include test/$(DEPDIR)/test_test_OGC-scheduler_tests.Po
-include test/$(DEPDIR)/test_test_OGC-script_P2SH_tests.Po
-include test/$(DEPDIR)/test_test_OGC-script_standard_tests.Po
-include test/$(DEPDIR)/test_test_OGC-script_tests.Po
-include test/$(DEPDIR)/test_test_OGC-scriptnum_tests.Po
-include test/$(DEPDIR)/test_test_OGC-scrypt_tests.Po
-include test/$(DEPDIR)/test_test_OGC-serialize_tests.Po
-include test/$(DEPDIR)/test_test_OGC-sighash_tests.Po
-include test/$(DEPDIR)/test_test_OGC-sigopcount_tests.Po
-include test/$(DEPDIR)/test_test_OGC-skiplist_tests.Po
-include test/$(DEPDIR)/test_test_OGC-streams_tests.Po
-include test/$(DEPDIR)/test_test_OGC-test_bitcoin.Po
-include test/$(DEPDIR)/test_test_OGC-test_bitcoin_main.Po
-include test/$(DEPDIR)/test_test_OGC-timedata_tests.Po
-include test/$(DEPDIR)/test_test_OGC-torcontrol_tests.Po
-include test/$(DEPDIR)/test_test_OGC-transaction_tests.Po
-include test/$(DEPDIR)/test_test_OGC-txvalidationcache_tests.Po
-include test/$(DEPDIR)/test_test_OGC-uint256_tests.Po
-include test/$(DEPDIR)/test_test_OGC-univalue_tests.Po
-include test/$(DEPDIR)/test_test_OGC-util_tests.Po
-include test/$(DEPDIR)/test_test_OGC-versionbits_tests.Po
-include test/$(DEPDIR)/test_test_OGC_fuzzy-test_bitcoin_fuzzy.Po
+include test/$(DEPDIR)/qt_test_test_OG_qt-test_bitcoin.Po
+include test/$(DEPDIR)/test_test_OG-DoS_tests.Po
+include test/$(DEPDIR)/test_test_OG-addrman_tests.Po
+include test/$(DEPDIR)/test_test_OG-allocator_tests.Po
+include test/$(DEPDIR)/test_test_OG-amount_tests.Po
+include test/$(DEPDIR)/test_test_OG-arith_uint256_tests.Po
+include test/$(DEPDIR)/test_test_OG-base32_tests.Po
+include test/$(DEPDIR)/test_test_OG-base58_tests.Po
+include test/$(DEPDIR)/test_test_OG-base64_tests.Po
+include test/$(DEPDIR)/test_test_OG-bip32_tests.Po
+include test/$(DEPDIR)/test_test_OG-bloom_tests.Po
+include test/$(DEPDIR)/test_test_OG-bswap_tests.Po
+include test/$(DEPDIR)/test_test_OG-checkqueue_tests.Po
+include test/$(DEPDIR)/test_test_OG-coins_tests.Po
+include test/$(DEPDIR)/test_test_OG-compress_tests.Po
+include test/$(DEPDIR)/test_test_OG-crypto_tests.Po
+include test/$(DEPDIR)/test_test_OG-cuckoocache_tests.Po
+include test/$(DEPDIR)/test_test_OG-dbwrapper_tests.Po
+include test/$(DEPDIR)/test_test_OG-getarg_tests.Po
+include test/$(DEPDIR)/test_test_OG-hash_tests.Po
+include test/$(DEPDIR)/test_test_OG-key_tests.Po
+include test/$(DEPDIR)/test_test_OG-limitedmap_tests.Po
+include test/$(DEPDIR)/test_test_OG-main_tests.Po
+include test/$(DEPDIR)/test_test_OG-mempool_tests.Po
+include test/$(DEPDIR)/test_test_OG-merkle_tests.Po
+include test/$(DEPDIR)/test_test_OG-miner_tests.Po
+include test/$(DEPDIR)/test_test_OG-multisig_tests.Po
+include test/$(DEPDIR)/test_test_OG-net_tests.Po
+include test/$(DEPDIR)/test_test_OG-netbase_tests.Po
+include test/$(DEPDIR)/test_test_OG-pmt_tests.Po
+include test/$(DEPDIR)/test_test_OG-policyestimator_tests.Po
+include test/$(DEPDIR)/test_test_OG-pow_tests.Po
+include test/$(DEPDIR)/test_test_OG-prevector_tests.Po
+include test/$(DEPDIR)/test_test_OG-raii_event_tests.Po
+include test/$(DEPDIR)/test_test_OG-random_tests.Po
+include test/$(DEPDIR)/test_test_OG-reverselock_tests.Po
+include test/$(DEPDIR)/test_test_OG-rpc_tests.Po
+include test/$(DEPDIR)/test_test_OG-sanity_tests.Po
+include test/$(DEPDIR)/test_test_OG-scheduler_tests.Po
+include test/$(DEPDIR)/test_test_OG-script_P2SH_tests.Po
+include test/$(DEPDIR)/test_test_OG-script_standard_tests.Po
+include test/$(DEPDIR)/test_test_OG-script_tests.Po
+include test/$(DEPDIR)/test_test_OG-scriptnum_tests.Po
+include test/$(DEPDIR)/test_test_OG-scrypt_tests.Po
+include test/$(DEPDIR)/test_test_OG-serialize_tests.Po
+include test/$(DEPDIR)/test_test_OG-sighash_tests.Po
+include test/$(DEPDIR)/test_test_OG-sigopcount_tests.Po
+include test/$(DEPDIR)/test_test_OG-skiplist_tests.Po
+include test/$(DEPDIR)/test_test_OG-streams_tests.Po
+include test/$(DEPDIR)/test_test_OG-test_bitcoin.Po
+include test/$(DEPDIR)/test_test_OG-test_bitcoin_main.Po
+include test/$(DEPDIR)/test_test_OG-timedata_tests.Po
+include test/$(DEPDIR)/test_test_OG-torcontrol_tests.Po
+include test/$(DEPDIR)/test_test_OG-transaction_tests.Po
+include test/$(DEPDIR)/test_test_OG-txvalidationcache_tests.Po
+include test/$(DEPDIR)/test_test_OG-uint256_tests.Po
+include test/$(DEPDIR)/test_test_OG-univalue_tests.Po
+include test/$(DEPDIR)/test_test_OG-util_tests.Po
+include test/$(DEPDIR)/test_test_OG-versionbits_tests.Po
+include test/$(DEPDIR)/test_test_OG_fuzzy-test_bitcoin_fuzzy.Po
 include wallet/$(DEPDIR)/libbitcoin_wallet_a-crypter.Po
 include wallet/$(DEPDIR)/libbitcoin_wallet_a-db.Po
 include wallet/$(DEPDIR)/libbitcoin_wallet_a-feebumper.Po
@@ -4249,11 +4249,11 @@ include wallet/$(DEPDIR)/libbitcoin_wallet_a-rpcdump.Po
 include wallet/$(DEPDIR)/libbitcoin_wallet_a-rpcwallet.Po
 include wallet/$(DEPDIR)/libbitcoin_wallet_a-wallet.Po
 include wallet/$(DEPDIR)/libbitcoin_wallet_a-walletdb.Po
-include wallet/test/$(DEPDIR)/qt_test_test_OGC_qt-wallet_test_fixture.Po
-include wallet/test/$(DEPDIR)/test_test_OGC-accounting_tests.Po
-include wallet/test/$(DEPDIR)/test_test_OGC-crypto_tests.Po
-include wallet/test/$(DEPDIR)/test_test_OGC-wallet_test_fixture.Po
-include wallet/test/$(DEPDIR)/test_test_OGC-wallet_tests.Po
+include wallet/test/$(DEPDIR)/qt_test_test_OG_qt-wallet_test_fixture.Po
+include wallet/test/$(DEPDIR)/test_test_OG-accounting_tests.Po
+include wallet/test/$(DEPDIR)/test_test_OG-crypto_tests.Po
+include wallet/test/$(DEPDIR)/test_test_OG-wallet_test_fixture.Po
+include wallet/test/$(DEPDIR)/test_test_OG-wallet_tests.Po
 include zmq/$(DEPDIR)/libbitcoin_zmq_a-zmqabstractnotifier.Po
 include zmq/$(DEPDIR)/libbitcoin_zmq_a-zmqnotificationinterface.Po
 include zmq/$(DEPDIR)/libbitcoin_zmq_a-zmqpublishnotifier.Po
@@ -7880,1335 +7880,1335 @@ compat/libbitcoinconsensus_la-glibc_compat.lo: compat/glibc_compat.cpp
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
 #	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libbitcoinconsensus_la_CPPFLAGS) $(CPPFLAGS) $(libbitcoinconsensus_la_CXXFLAGS) $(CXXFLAGS) -c -o compat/libbitcoinconsensus_la-glibc_compat.lo `test -f 'compat/glibc_compat.cpp' || echo '$(srcdir)/'`compat/glibc_compat.cpp
 
-bench/bench_bench_OGC-bench_bitcoin.o: bench/bench_bitcoin.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OGC-bench_bitcoin.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_OGC-bench_bitcoin.Tpo -c -o bench/bench_bench_OGC-bench_bitcoin.o `test -f 'bench/bench_bitcoin.cpp' || echo '$(srcdir)/'`bench/bench_bitcoin.cpp
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OGC-bench_bitcoin.Tpo bench/$(DEPDIR)/bench_bench_OGC-bench_bitcoin.Po
-#	$(AM_V_CXX)source='bench/bench_bitcoin.cpp' object='bench/bench_bench_OGC-bench_bitcoin.o' libtool=no \
+bench/bench_bench_OG-bench_bitcoin.o: bench/bench_bitcoin.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OG-bench_bitcoin.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_OG-bench_bitcoin.Tpo -c -o bench/bench_bench_OG-bench_bitcoin.o `test -f 'bench/bench_bitcoin.cpp' || echo '$(srcdir)/'`bench/bench_bitcoin.cpp
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OG-bench_bitcoin.Tpo bench/$(DEPDIR)/bench_bench_OG-bench_bitcoin.Po
+#	$(AM_V_CXX)source='bench/bench_bitcoin.cpp' object='bench/bench_bench_OG-bench_bitcoin.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OGC-bench_bitcoin.o `test -f 'bench/bench_bitcoin.cpp' || echo '$(srcdir)/'`bench/bench_bitcoin.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OG-bench_bitcoin.o `test -f 'bench/bench_bitcoin.cpp' || echo '$(srcdir)/'`bench/bench_bitcoin.cpp
 
-bench/bench_bench_OGC-bench_bitcoin.obj: bench/bench_bitcoin.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OGC-bench_bitcoin.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_OGC-bench_bitcoin.Tpo -c -o bench/bench_bench_OGC-bench_bitcoin.obj `if test -f 'bench/bench_bitcoin.cpp'; then $(CYGPATH_W) 'bench/bench_bitcoin.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/bench_bitcoin.cpp'; fi`
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OGC-bench_bitcoin.Tpo bench/$(DEPDIR)/bench_bench_OGC-bench_bitcoin.Po
-#	$(AM_V_CXX)source='bench/bench_bitcoin.cpp' object='bench/bench_bench_OGC-bench_bitcoin.obj' libtool=no \
+bench/bench_bench_OG-bench_bitcoin.obj: bench/bench_bitcoin.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OG-bench_bitcoin.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_OG-bench_bitcoin.Tpo -c -o bench/bench_bench_OG-bench_bitcoin.obj `if test -f 'bench/bench_bitcoin.cpp'; then $(CYGPATH_W) 'bench/bench_bitcoin.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/bench_bitcoin.cpp'; fi`
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OG-bench_bitcoin.Tpo bench/$(DEPDIR)/bench_bench_OG-bench_bitcoin.Po
+#	$(AM_V_CXX)source='bench/bench_bitcoin.cpp' object='bench/bench_bench_OG-bench_bitcoin.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OGC-bench_bitcoin.obj `if test -f 'bench/bench_bitcoin.cpp'; then $(CYGPATH_W) 'bench/bench_bitcoin.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/bench_bitcoin.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OG-bench_bitcoin.obj `if test -f 'bench/bench_bitcoin.cpp'; then $(CYGPATH_W) 'bench/bench_bitcoin.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/bench_bitcoin.cpp'; fi`
 
-bench/bench_bench_OGC-bench.o: bench/bench.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OGC-bench.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_OGC-bench.Tpo -c -o bench/bench_bench_OGC-bench.o `test -f 'bench/bench.cpp' || echo '$(srcdir)/'`bench/bench.cpp
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OGC-bench.Tpo bench/$(DEPDIR)/bench_bench_OGC-bench.Po
-#	$(AM_V_CXX)source='bench/bench.cpp' object='bench/bench_bench_OGC-bench.o' libtool=no \
+bench/bench_bench_OG-bench.o: bench/bench.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OG-bench.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_OG-bench.Tpo -c -o bench/bench_bench_OG-bench.o `test -f 'bench/bench.cpp' || echo '$(srcdir)/'`bench/bench.cpp
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OG-bench.Tpo bench/$(DEPDIR)/bench_bench_OG-bench.Po
+#	$(AM_V_CXX)source='bench/bench.cpp' object='bench/bench_bench_OG-bench.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OGC-bench.o `test -f 'bench/bench.cpp' || echo '$(srcdir)/'`bench/bench.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OG-bench.o `test -f 'bench/bench.cpp' || echo '$(srcdir)/'`bench/bench.cpp
 
-bench/bench_bench_OGC-bench.obj: bench/bench.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OGC-bench.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_OGC-bench.Tpo -c -o bench/bench_bench_OGC-bench.obj `if test -f 'bench/bench.cpp'; then $(CYGPATH_W) 'bench/bench.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/bench.cpp'; fi`
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OGC-bench.Tpo bench/$(DEPDIR)/bench_bench_OGC-bench.Po
-#	$(AM_V_CXX)source='bench/bench.cpp' object='bench/bench_bench_OGC-bench.obj' libtool=no \
+bench/bench_bench_OG-bench.obj: bench/bench.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OG-bench.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_OG-bench.Tpo -c -o bench/bench_bench_OG-bench.obj `if test -f 'bench/bench.cpp'; then $(CYGPATH_W) 'bench/bench.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/bench.cpp'; fi`
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OG-bench.Tpo bench/$(DEPDIR)/bench_bench_OG-bench.Po
+#	$(AM_V_CXX)source='bench/bench.cpp' object='bench/bench_bench_OG-bench.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OGC-bench.obj `if test -f 'bench/bench.cpp'; then $(CYGPATH_W) 'bench/bench.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/bench.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OG-bench.obj `if test -f 'bench/bench.cpp'; then $(CYGPATH_W) 'bench/bench.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/bench.cpp'; fi`
 
-bench/bench_bench_OGC-checkblock.o: bench/checkblock.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OGC-checkblock.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_OGC-checkblock.Tpo -c -o bench/bench_bench_OGC-checkblock.o `test -f 'bench/checkblock.cpp' || echo '$(srcdir)/'`bench/checkblock.cpp
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OGC-checkblock.Tpo bench/$(DEPDIR)/bench_bench_OGC-checkblock.Po
-#	$(AM_V_CXX)source='bench/checkblock.cpp' object='bench/bench_bench_OGC-checkblock.o' libtool=no \
+bench/bench_bench_OG-checkblock.o: bench/checkblock.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OG-checkblock.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_OG-checkblock.Tpo -c -o bench/bench_bench_OG-checkblock.o `test -f 'bench/checkblock.cpp' || echo '$(srcdir)/'`bench/checkblock.cpp
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OG-checkblock.Tpo bench/$(DEPDIR)/bench_bench_OG-checkblock.Po
+#	$(AM_V_CXX)source='bench/checkblock.cpp' object='bench/bench_bench_OG-checkblock.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OGC-checkblock.o `test -f 'bench/checkblock.cpp' || echo '$(srcdir)/'`bench/checkblock.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OG-checkblock.o `test -f 'bench/checkblock.cpp' || echo '$(srcdir)/'`bench/checkblock.cpp
 
-bench/bench_bench_OGC-checkblock.obj: bench/checkblock.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OGC-checkblock.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_OGC-checkblock.Tpo -c -o bench/bench_bench_OGC-checkblock.obj `if test -f 'bench/checkblock.cpp'; then $(CYGPATH_W) 'bench/checkblock.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/checkblock.cpp'; fi`
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OGC-checkblock.Tpo bench/$(DEPDIR)/bench_bench_OGC-checkblock.Po
-#	$(AM_V_CXX)source='bench/checkblock.cpp' object='bench/bench_bench_OGC-checkblock.obj' libtool=no \
+bench/bench_bench_OG-checkblock.obj: bench/checkblock.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OG-checkblock.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_OG-checkblock.Tpo -c -o bench/bench_bench_OG-checkblock.obj `if test -f 'bench/checkblock.cpp'; then $(CYGPATH_W) 'bench/checkblock.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/checkblock.cpp'; fi`
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OG-checkblock.Tpo bench/$(DEPDIR)/bench_bench_OG-checkblock.Po
+#	$(AM_V_CXX)source='bench/checkblock.cpp' object='bench/bench_bench_OG-checkblock.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OGC-checkblock.obj `if test -f 'bench/checkblock.cpp'; then $(CYGPATH_W) 'bench/checkblock.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/checkblock.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OG-checkblock.obj `if test -f 'bench/checkblock.cpp'; then $(CYGPATH_W) 'bench/checkblock.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/checkblock.cpp'; fi`
 
-bench/bench_bench_OGC-checkqueue.o: bench/checkqueue.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OGC-checkqueue.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_OGC-checkqueue.Tpo -c -o bench/bench_bench_OGC-checkqueue.o `test -f 'bench/checkqueue.cpp' || echo '$(srcdir)/'`bench/checkqueue.cpp
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OGC-checkqueue.Tpo bench/$(DEPDIR)/bench_bench_OGC-checkqueue.Po
-#	$(AM_V_CXX)source='bench/checkqueue.cpp' object='bench/bench_bench_OGC-checkqueue.o' libtool=no \
+bench/bench_bench_OG-checkqueue.o: bench/checkqueue.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OG-checkqueue.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_OG-checkqueue.Tpo -c -o bench/bench_bench_OG-checkqueue.o `test -f 'bench/checkqueue.cpp' || echo '$(srcdir)/'`bench/checkqueue.cpp
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OG-checkqueue.Tpo bench/$(DEPDIR)/bench_bench_OG-checkqueue.Po
+#	$(AM_V_CXX)source='bench/checkqueue.cpp' object='bench/bench_bench_OG-checkqueue.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OGC-checkqueue.o `test -f 'bench/checkqueue.cpp' || echo '$(srcdir)/'`bench/checkqueue.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OG-checkqueue.o `test -f 'bench/checkqueue.cpp' || echo '$(srcdir)/'`bench/checkqueue.cpp
 
-bench/bench_bench_OGC-checkqueue.obj: bench/checkqueue.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OGC-checkqueue.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_OGC-checkqueue.Tpo -c -o bench/bench_bench_OGC-checkqueue.obj `if test -f 'bench/checkqueue.cpp'; then $(CYGPATH_W) 'bench/checkqueue.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/checkqueue.cpp'; fi`
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OGC-checkqueue.Tpo bench/$(DEPDIR)/bench_bench_OGC-checkqueue.Po
-#	$(AM_V_CXX)source='bench/checkqueue.cpp' object='bench/bench_bench_OGC-checkqueue.obj' libtool=no \
+bench/bench_bench_OG-checkqueue.obj: bench/checkqueue.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OG-checkqueue.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_OG-checkqueue.Tpo -c -o bench/bench_bench_OG-checkqueue.obj `if test -f 'bench/checkqueue.cpp'; then $(CYGPATH_W) 'bench/checkqueue.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/checkqueue.cpp'; fi`
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OG-checkqueue.Tpo bench/$(DEPDIR)/bench_bench_OG-checkqueue.Po
+#	$(AM_V_CXX)source='bench/checkqueue.cpp' object='bench/bench_bench_OG-checkqueue.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OGC-checkqueue.obj `if test -f 'bench/checkqueue.cpp'; then $(CYGPATH_W) 'bench/checkqueue.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/checkqueue.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OG-checkqueue.obj `if test -f 'bench/checkqueue.cpp'; then $(CYGPATH_W) 'bench/checkqueue.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/checkqueue.cpp'; fi`
 
-bench/bench_bench_OGC-Examples.o: bench/Examples.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OGC-Examples.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_OGC-Examples.Tpo -c -o bench/bench_bench_OGC-Examples.o `test -f 'bench/Examples.cpp' || echo '$(srcdir)/'`bench/Examples.cpp
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OGC-Examples.Tpo bench/$(DEPDIR)/bench_bench_OGC-Examples.Po
-#	$(AM_V_CXX)source='bench/Examples.cpp' object='bench/bench_bench_OGC-Examples.o' libtool=no \
+bench/bench_bench_OG-Examples.o: bench/Examples.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OG-Examples.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_OG-Examples.Tpo -c -o bench/bench_bench_OG-Examples.o `test -f 'bench/Examples.cpp' || echo '$(srcdir)/'`bench/Examples.cpp
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OG-Examples.Tpo bench/$(DEPDIR)/bench_bench_OG-Examples.Po
+#	$(AM_V_CXX)source='bench/Examples.cpp' object='bench/bench_bench_OG-Examples.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OGC-Examples.o `test -f 'bench/Examples.cpp' || echo '$(srcdir)/'`bench/Examples.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OG-Examples.o `test -f 'bench/Examples.cpp' || echo '$(srcdir)/'`bench/Examples.cpp
 
-bench/bench_bench_OGC-Examples.obj: bench/Examples.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OGC-Examples.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_OGC-Examples.Tpo -c -o bench/bench_bench_OGC-Examples.obj `if test -f 'bench/Examples.cpp'; then $(CYGPATH_W) 'bench/Examples.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/Examples.cpp'; fi`
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OGC-Examples.Tpo bench/$(DEPDIR)/bench_bench_OGC-Examples.Po
-#	$(AM_V_CXX)source='bench/Examples.cpp' object='bench/bench_bench_OGC-Examples.obj' libtool=no \
+bench/bench_bench_OG-Examples.obj: bench/Examples.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OG-Examples.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_OG-Examples.Tpo -c -o bench/bench_bench_OG-Examples.obj `if test -f 'bench/Examples.cpp'; then $(CYGPATH_W) 'bench/Examples.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/Examples.cpp'; fi`
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OG-Examples.Tpo bench/$(DEPDIR)/bench_bench_OG-Examples.Po
+#	$(AM_V_CXX)source='bench/Examples.cpp' object='bench/bench_bench_OG-Examples.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OGC-Examples.obj `if test -f 'bench/Examples.cpp'; then $(CYGPATH_W) 'bench/Examples.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/Examples.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OG-Examples.obj `if test -f 'bench/Examples.cpp'; then $(CYGPATH_W) 'bench/Examples.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/Examples.cpp'; fi`
 
-bench/bench_bench_OGC-rollingbloom.o: bench/rollingbloom.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OGC-rollingbloom.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_OGC-rollingbloom.Tpo -c -o bench/bench_bench_OGC-rollingbloom.o `test -f 'bench/rollingbloom.cpp' || echo '$(srcdir)/'`bench/rollingbloom.cpp
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OGC-rollingbloom.Tpo bench/$(DEPDIR)/bench_bench_OGC-rollingbloom.Po
-#	$(AM_V_CXX)source='bench/rollingbloom.cpp' object='bench/bench_bench_OGC-rollingbloom.o' libtool=no \
+bench/bench_bench_OG-rollingbloom.o: bench/rollingbloom.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OG-rollingbloom.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_OG-rollingbloom.Tpo -c -o bench/bench_bench_OG-rollingbloom.o `test -f 'bench/rollingbloom.cpp' || echo '$(srcdir)/'`bench/rollingbloom.cpp
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OG-rollingbloom.Tpo bench/$(DEPDIR)/bench_bench_OG-rollingbloom.Po
+#	$(AM_V_CXX)source='bench/rollingbloom.cpp' object='bench/bench_bench_OG-rollingbloom.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OGC-rollingbloom.o `test -f 'bench/rollingbloom.cpp' || echo '$(srcdir)/'`bench/rollingbloom.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OG-rollingbloom.o `test -f 'bench/rollingbloom.cpp' || echo '$(srcdir)/'`bench/rollingbloom.cpp
 
-bench/bench_bench_OGC-rollingbloom.obj: bench/rollingbloom.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OGC-rollingbloom.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_OGC-rollingbloom.Tpo -c -o bench/bench_bench_OGC-rollingbloom.obj `if test -f 'bench/rollingbloom.cpp'; then $(CYGPATH_W) 'bench/rollingbloom.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/rollingbloom.cpp'; fi`
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OGC-rollingbloom.Tpo bench/$(DEPDIR)/bench_bench_OGC-rollingbloom.Po
-#	$(AM_V_CXX)source='bench/rollingbloom.cpp' object='bench/bench_bench_OGC-rollingbloom.obj' libtool=no \
+bench/bench_bench_OG-rollingbloom.obj: bench/rollingbloom.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OG-rollingbloom.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_OG-rollingbloom.Tpo -c -o bench/bench_bench_OG-rollingbloom.obj `if test -f 'bench/rollingbloom.cpp'; then $(CYGPATH_W) 'bench/rollingbloom.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/rollingbloom.cpp'; fi`
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OG-rollingbloom.Tpo bench/$(DEPDIR)/bench_bench_OG-rollingbloom.Po
+#	$(AM_V_CXX)source='bench/rollingbloom.cpp' object='bench/bench_bench_OG-rollingbloom.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OGC-rollingbloom.obj `if test -f 'bench/rollingbloom.cpp'; then $(CYGPATH_W) 'bench/rollingbloom.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/rollingbloom.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OG-rollingbloom.obj `if test -f 'bench/rollingbloom.cpp'; then $(CYGPATH_W) 'bench/rollingbloom.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/rollingbloom.cpp'; fi`
 
-bench/bench_bench_OGC-crypto_hash.o: bench/crypto_hash.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OGC-crypto_hash.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_OGC-crypto_hash.Tpo -c -o bench/bench_bench_OGC-crypto_hash.o `test -f 'bench/crypto_hash.cpp' || echo '$(srcdir)/'`bench/crypto_hash.cpp
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OGC-crypto_hash.Tpo bench/$(DEPDIR)/bench_bench_OGC-crypto_hash.Po
-#	$(AM_V_CXX)source='bench/crypto_hash.cpp' object='bench/bench_bench_OGC-crypto_hash.o' libtool=no \
+bench/bench_bench_OG-crypto_hash.o: bench/crypto_hash.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OG-crypto_hash.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_OG-crypto_hash.Tpo -c -o bench/bench_bench_OG-crypto_hash.o `test -f 'bench/crypto_hash.cpp' || echo '$(srcdir)/'`bench/crypto_hash.cpp
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OG-crypto_hash.Tpo bench/$(DEPDIR)/bench_bench_OG-crypto_hash.Po
+#	$(AM_V_CXX)source='bench/crypto_hash.cpp' object='bench/bench_bench_OG-crypto_hash.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OGC-crypto_hash.o `test -f 'bench/crypto_hash.cpp' || echo '$(srcdir)/'`bench/crypto_hash.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OG-crypto_hash.o `test -f 'bench/crypto_hash.cpp' || echo '$(srcdir)/'`bench/crypto_hash.cpp
 
-bench/bench_bench_OGC-crypto_hash.obj: bench/crypto_hash.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OGC-crypto_hash.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_OGC-crypto_hash.Tpo -c -o bench/bench_bench_OGC-crypto_hash.obj `if test -f 'bench/crypto_hash.cpp'; then $(CYGPATH_W) 'bench/crypto_hash.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/crypto_hash.cpp'; fi`
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OGC-crypto_hash.Tpo bench/$(DEPDIR)/bench_bench_OGC-crypto_hash.Po
-#	$(AM_V_CXX)source='bench/crypto_hash.cpp' object='bench/bench_bench_OGC-crypto_hash.obj' libtool=no \
+bench/bench_bench_OG-crypto_hash.obj: bench/crypto_hash.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OG-crypto_hash.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_OG-crypto_hash.Tpo -c -o bench/bench_bench_OG-crypto_hash.obj `if test -f 'bench/crypto_hash.cpp'; then $(CYGPATH_W) 'bench/crypto_hash.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/crypto_hash.cpp'; fi`
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OG-crypto_hash.Tpo bench/$(DEPDIR)/bench_bench_OG-crypto_hash.Po
+#	$(AM_V_CXX)source='bench/crypto_hash.cpp' object='bench/bench_bench_OG-crypto_hash.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OGC-crypto_hash.obj `if test -f 'bench/crypto_hash.cpp'; then $(CYGPATH_W) 'bench/crypto_hash.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/crypto_hash.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OG-crypto_hash.obj `if test -f 'bench/crypto_hash.cpp'; then $(CYGPATH_W) 'bench/crypto_hash.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/crypto_hash.cpp'; fi`
 
-bench/bench_bench_OGC-ccoins_caching.o: bench/ccoins_caching.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OGC-ccoins_caching.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_OGC-ccoins_caching.Tpo -c -o bench/bench_bench_OGC-ccoins_caching.o `test -f 'bench/ccoins_caching.cpp' || echo '$(srcdir)/'`bench/ccoins_caching.cpp
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OGC-ccoins_caching.Tpo bench/$(DEPDIR)/bench_bench_OGC-ccoins_caching.Po
-#	$(AM_V_CXX)source='bench/ccoins_caching.cpp' object='bench/bench_bench_OGC-ccoins_caching.o' libtool=no \
+bench/bench_bench_OG-ccoins_caching.o: bench/ccoins_caching.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OG-ccoins_caching.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_OG-ccoins_caching.Tpo -c -o bench/bench_bench_OG-ccoins_caching.o `test -f 'bench/ccoins_caching.cpp' || echo '$(srcdir)/'`bench/ccoins_caching.cpp
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OG-ccoins_caching.Tpo bench/$(DEPDIR)/bench_bench_OG-ccoins_caching.Po
+#	$(AM_V_CXX)source='bench/ccoins_caching.cpp' object='bench/bench_bench_OG-ccoins_caching.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OGC-ccoins_caching.o `test -f 'bench/ccoins_caching.cpp' || echo '$(srcdir)/'`bench/ccoins_caching.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OG-ccoins_caching.o `test -f 'bench/ccoins_caching.cpp' || echo '$(srcdir)/'`bench/ccoins_caching.cpp
 
-bench/bench_bench_OGC-ccoins_caching.obj: bench/ccoins_caching.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OGC-ccoins_caching.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_OGC-ccoins_caching.Tpo -c -o bench/bench_bench_OGC-ccoins_caching.obj `if test -f 'bench/ccoins_caching.cpp'; then $(CYGPATH_W) 'bench/ccoins_caching.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/ccoins_caching.cpp'; fi`
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OGC-ccoins_caching.Tpo bench/$(DEPDIR)/bench_bench_OGC-ccoins_caching.Po
-#	$(AM_V_CXX)source='bench/ccoins_caching.cpp' object='bench/bench_bench_OGC-ccoins_caching.obj' libtool=no \
+bench/bench_bench_OG-ccoins_caching.obj: bench/ccoins_caching.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OG-ccoins_caching.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_OG-ccoins_caching.Tpo -c -o bench/bench_bench_OG-ccoins_caching.obj `if test -f 'bench/ccoins_caching.cpp'; then $(CYGPATH_W) 'bench/ccoins_caching.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/ccoins_caching.cpp'; fi`
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OG-ccoins_caching.Tpo bench/$(DEPDIR)/bench_bench_OG-ccoins_caching.Po
+#	$(AM_V_CXX)source='bench/ccoins_caching.cpp' object='bench/bench_bench_OG-ccoins_caching.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OGC-ccoins_caching.obj `if test -f 'bench/ccoins_caching.cpp'; then $(CYGPATH_W) 'bench/ccoins_caching.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/ccoins_caching.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OG-ccoins_caching.obj `if test -f 'bench/ccoins_caching.cpp'; then $(CYGPATH_W) 'bench/ccoins_caching.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/ccoins_caching.cpp'; fi`
 
-bench/bench_bench_OGC-mempool_eviction.o: bench/mempool_eviction.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OGC-mempool_eviction.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_OGC-mempool_eviction.Tpo -c -o bench/bench_bench_OGC-mempool_eviction.o `test -f 'bench/mempool_eviction.cpp' || echo '$(srcdir)/'`bench/mempool_eviction.cpp
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OGC-mempool_eviction.Tpo bench/$(DEPDIR)/bench_bench_OGC-mempool_eviction.Po
-#	$(AM_V_CXX)source='bench/mempool_eviction.cpp' object='bench/bench_bench_OGC-mempool_eviction.o' libtool=no \
+bench/bench_bench_OG-mempool_eviction.o: bench/mempool_eviction.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OG-mempool_eviction.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_OG-mempool_eviction.Tpo -c -o bench/bench_bench_OG-mempool_eviction.o `test -f 'bench/mempool_eviction.cpp' || echo '$(srcdir)/'`bench/mempool_eviction.cpp
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OG-mempool_eviction.Tpo bench/$(DEPDIR)/bench_bench_OG-mempool_eviction.Po
+#	$(AM_V_CXX)source='bench/mempool_eviction.cpp' object='bench/bench_bench_OG-mempool_eviction.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OGC-mempool_eviction.o `test -f 'bench/mempool_eviction.cpp' || echo '$(srcdir)/'`bench/mempool_eviction.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OG-mempool_eviction.o `test -f 'bench/mempool_eviction.cpp' || echo '$(srcdir)/'`bench/mempool_eviction.cpp
 
-bench/bench_bench_OGC-mempool_eviction.obj: bench/mempool_eviction.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OGC-mempool_eviction.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_OGC-mempool_eviction.Tpo -c -o bench/bench_bench_OGC-mempool_eviction.obj `if test -f 'bench/mempool_eviction.cpp'; then $(CYGPATH_W) 'bench/mempool_eviction.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/mempool_eviction.cpp'; fi`
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OGC-mempool_eviction.Tpo bench/$(DEPDIR)/bench_bench_OGC-mempool_eviction.Po
-#	$(AM_V_CXX)source='bench/mempool_eviction.cpp' object='bench/bench_bench_OGC-mempool_eviction.obj' libtool=no \
+bench/bench_bench_OG-mempool_eviction.obj: bench/mempool_eviction.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OG-mempool_eviction.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_OG-mempool_eviction.Tpo -c -o bench/bench_bench_OG-mempool_eviction.obj `if test -f 'bench/mempool_eviction.cpp'; then $(CYGPATH_W) 'bench/mempool_eviction.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/mempool_eviction.cpp'; fi`
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OG-mempool_eviction.Tpo bench/$(DEPDIR)/bench_bench_OG-mempool_eviction.Po
+#	$(AM_V_CXX)source='bench/mempool_eviction.cpp' object='bench/bench_bench_OG-mempool_eviction.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OGC-mempool_eviction.obj `if test -f 'bench/mempool_eviction.cpp'; then $(CYGPATH_W) 'bench/mempool_eviction.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/mempool_eviction.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OG-mempool_eviction.obj `if test -f 'bench/mempool_eviction.cpp'; then $(CYGPATH_W) 'bench/mempool_eviction.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/mempool_eviction.cpp'; fi`
 
-bench/bench_bench_OGC-verify_script.o: bench/verify_script.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OGC-verify_script.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_OGC-verify_script.Tpo -c -o bench/bench_bench_OGC-verify_script.o `test -f 'bench/verify_script.cpp' || echo '$(srcdir)/'`bench/verify_script.cpp
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OGC-verify_script.Tpo bench/$(DEPDIR)/bench_bench_OGC-verify_script.Po
-#	$(AM_V_CXX)source='bench/verify_script.cpp' object='bench/bench_bench_OGC-verify_script.o' libtool=no \
+bench/bench_bench_OG-verify_script.o: bench/verify_script.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OG-verify_script.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_OG-verify_script.Tpo -c -o bench/bench_bench_OG-verify_script.o `test -f 'bench/verify_script.cpp' || echo '$(srcdir)/'`bench/verify_script.cpp
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OG-verify_script.Tpo bench/$(DEPDIR)/bench_bench_OG-verify_script.Po
+#	$(AM_V_CXX)source='bench/verify_script.cpp' object='bench/bench_bench_OG-verify_script.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OGC-verify_script.o `test -f 'bench/verify_script.cpp' || echo '$(srcdir)/'`bench/verify_script.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OG-verify_script.o `test -f 'bench/verify_script.cpp' || echo '$(srcdir)/'`bench/verify_script.cpp
 
-bench/bench_bench_OGC-verify_script.obj: bench/verify_script.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OGC-verify_script.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_OGC-verify_script.Tpo -c -o bench/bench_bench_OGC-verify_script.obj `if test -f 'bench/verify_script.cpp'; then $(CYGPATH_W) 'bench/verify_script.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/verify_script.cpp'; fi`
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OGC-verify_script.Tpo bench/$(DEPDIR)/bench_bench_OGC-verify_script.Po
-#	$(AM_V_CXX)source='bench/verify_script.cpp' object='bench/bench_bench_OGC-verify_script.obj' libtool=no \
+bench/bench_bench_OG-verify_script.obj: bench/verify_script.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OG-verify_script.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_OG-verify_script.Tpo -c -o bench/bench_bench_OG-verify_script.obj `if test -f 'bench/verify_script.cpp'; then $(CYGPATH_W) 'bench/verify_script.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/verify_script.cpp'; fi`
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OG-verify_script.Tpo bench/$(DEPDIR)/bench_bench_OG-verify_script.Po
+#	$(AM_V_CXX)source='bench/verify_script.cpp' object='bench/bench_bench_OG-verify_script.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OGC-verify_script.obj `if test -f 'bench/verify_script.cpp'; then $(CYGPATH_W) 'bench/verify_script.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/verify_script.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OG-verify_script.obj `if test -f 'bench/verify_script.cpp'; then $(CYGPATH_W) 'bench/verify_script.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/verify_script.cpp'; fi`
 
-bench/bench_bench_OGC-base58.o: bench/base58.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OGC-base58.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_OGC-base58.Tpo -c -o bench/bench_bench_OGC-base58.o `test -f 'bench/base58.cpp' || echo '$(srcdir)/'`bench/base58.cpp
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OGC-base58.Tpo bench/$(DEPDIR)/bench_bench_OGC-base58.Po
-#	$(AM_V_CXX)source='bench/base58.cpp' object='bench/bench_bench_OGC-base58.o' libtool=no \
+bench/bench_bench_OG-base58.o: bench/base58.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OG-base58.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_OG-base58.Tpo -c -o bench/bench_bench_OG-base58.o `test -f 'bench/base58.cpp' || echo '$(srcdir)/'`bench/base58.cpp
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OG-base58.Tpo bench/$(DEPDIR)/bench_bench_OG-base58.Po
+#	$(AM_V_CXX)source='bench/base58.cpp' object='bench/bench_bench_OG-base58.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OGC-base58.o `test -f 'bench/base58.cpp' || echo '$(srcdir)/'`bench/base58.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OG-base58.o `test -f 'bench/base58.cpp' || echo '$(srcdir)/'`bench/base58.cpp
 
-bench/bench_bench_OGC-base58.obj: bench/base58.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OGC-base58.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_OGC-base58.Tpo -c -o bench/bench_bench_OGC-base58.obj `if test -f 'bench/base58.cpp'; then $(CYGPATH_W) 'bench/base58.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/base58.cpp'; fi`
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OGC-base58.Tpo bench/$(DEPDIR)/bench_bench_OGC-base58.Po
-#	$(AM_V_CXX)source='bench/base58.cpp' object='bench/bench_bench_OGC-base58.obj' libtool=no \
+bench/bench_bench_OG-base58.obj: bench/base58.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OG-base58.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_OG-base58.Tpo -c -o bench/bench_bench_OG-base58.obj `if test -f 'bench/base58.cpp'; then $(CYGPATH_W) 'bench/base58.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/base58.cpp'; fi`
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OG-base58.Tpo bench/$(DEPDIR)/bench_bench_OG-base58.Po
+#	$(AM_V_CXX)source='bench/base58.cpp' object='bench/bench_bench_OG-base58.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OGC-base58.obj `if test -f 'bench/base58.cpp'; then $(CYGPATH_W) 'bench/base58.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/base58.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OG-base58.obj `if test -f 'bench/base58.cpp'; then $(CYGPATH_W) 'bench/base58.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/base58.cpp'; fi`
 
-bench/bench_bench_OGC-lockedpool.o: bench/lockedpool.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OGC-lockedpool.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_OGC-lockedpool.Tpo -c -o bench/bench_bench_OGC-lockedpool.o `test -f 'bench/lockedpool.cpp' || echo '$(srcdir)/'`bench/lockedpool.cpp
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OGC-lockedpool.Tpo bench/$(DEPDIR)/bench_bench_OGC-lockedpool.Po
-#	$(AM_V_CXX)source='bench/lockedpool.cpp' object='bench/bench_bench_OGC-lockedpool.o' libtool=no \
+bench/bench_bench_OG-lockedpool.o: bench/lockedpool.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OG-lockedpool.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_OG-lockedpool.Tpo -c -o bench/bench_bench_OG-lockedpool.o `test -f 'bench/lockedpool.cpp' || echo '$(srcdir)/'`bench/lockedpool.cpp
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OG-lockedpool.Tpo bench/$(DEPDIR)/bench_bench_OG-lockedpool.Po
+#	$(AM_V_CXX)source='bench/lockedpool.cpp' object='bench/bench_bench_OG-lockedpool.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OGC-lockedpool.o `test -f 'bench/lockedpool.cpp' || echo '$(srcdir)/'`bench/lockedpool.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OG-lockedpool.o `test -f 'bench/lockedpool.cpp' || echo '$(srcdir)/'`bench/lockedpool.cpp
 
-bench/bench_bench_OGC-lockedpool.obj: bench/lockedpool.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OGC-lockedpool.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_OGC-lockedpool.Tpo -c -o bench/bench_bench_OGC-lockedpool.obj `if test -f 'bench/lockedpool.cpp'; then $(CYGPATH_W) 'bench/lockedpool.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/lockedpool.cpp'; fi`
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OGC-lockedpool.Tpo bench/$(DEPDIR)/bench_bench_OGC-lockedpool.Po
-#	$(AM_V_CXX)source='bench/lockedpool.cpp' object='bench/bench_bench_OGC-lockedpool.obj' libtool=no \
+bench/bench_bench_OG-lockedpool.obj: bench/lockedpool.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OG-lockedpool.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_OG-lockedpool.Tpo -c -o bench/bench_bench_OG-lockedpool.obj `if test -f 'bench/lockedpool.cpp'; then $(CYGPATH_W) 'bench/lockedpool.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/lockedpool.cpp'; fi`
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OG-lockedpool.Tpo bench/$(DEPDIR)/bench_bench_OG-lockedpool.Po
+#	$(AM_V_CXX)source='bench/lockedpool.cpp' object='bench/bench_bench_OG-lockedpool.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OGC-lockedpool.obj `if test -f 'bench/lockedpool.cpp'; then $(CYGPATH_W) 'bench/lockedpool.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/lockedpool.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OG-lockedpool.obj `if test -f 'bench/lockedpool.cpp'; then $(CYGPATH_W) 'bench/lockedpool.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/lockedpool.cpp'; fi`
 
-bench/bench_bench_OGC-perf.o: bench/perf.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OGC-perf.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_OGC-perf.Tpo -c -o bench/bench_bench_OGC-perf.o `test -f 'bench/perf.cpp' || echo '$(srcdir)/'`bench/perf.cpp
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OGC-perf.Tpo bench/$(DEPDIR)/bench_bench_OGC-perf.Po
-#	$(AM_V_CXX)source='bench/perf.cpp' object='bench/bench_bench_OGC-perf.o' libtool=no \
+bench/bench_bench_OG-perf.o: bench/perf.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OG-perf.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_OG-perf.Tpo -c -o bench/bench_bench_OG-perf.o `test -f 'bench/perf.cpp' || echo '$(srcdir)/'`bench/perf.cpp
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OG-perf.Tpo bench/$(DEPDIR)/bench_bench_OG-perf.Po
+#	$(AM_V_CXX)source='bench/perf.cpp' object='bench/bench_bench_OG-perf.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OGC-perf.o `test -f 'bench/perf.cpp' || echo '$(srcdir)/'`bench/perf.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OG-perf.o `test -f 'bench/perf.cpp' || echo '$(srcdir)/'`bench/perf.cpp
 
-bench/bench_bench_OGC-perf.obj: bench/perf.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OGC-perf.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_OGC-perf.Tpo -c -o bench/bench_bench_OGC-perf.obj `if test -f 'bench/perf.cpp'; then $(CYGPATH_W) 'bench/perf.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/perf.cpp'; fi`
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OGC-perf.Tpo bench/$(DEPDIR)/bench_bench_OGC-perf.Po
-#	$(AM_V_CXX)source='bench/perf.cpp' object='bench/bench_bench_OGC-perf.obj' libtool=no \
+bench/bench_bench_OG-perf.obj: bench/perf.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OG-perf.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_OG-perf.Tpo -c -o bench/bench_bench_OG-perf.obj `if test -f 'bench/perf.cpp'; then $(CYGPATH_W) 'bench/perf.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/perf.cpp'; fi`
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OG-perf.Tpo bench/$(DEPDIR)/bench_bench_OG-perf.Po
+#	$(AM_V_CXX)source='bench/perf.cpp' object='bench/bench_bench_OG-perf.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OGC-perf.obj `if test -f 'bench/perf.cpp'; then $(CYGPATH_W) 'bench/perf.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/perf.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OG-perf.obj `if test -f 'bench/perf.cpp'; then $(CYGPATH_W) 'bench/perf.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/perf.cpp'; fi`
 
-bench/bench_bench_OGC-prevector_destructor.o: bench/prevector_destructor.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OGC-prevector_destructor.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_OGC-prevector_destructor.Tpo -c -o bench/bench_bench_OGC-prevector_destructor.o `test -f 'bench/prevector_destructor.cpp' || echo '$(srcdir)/'`bench/prevector_destructor.cpp
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OGC-prevector_destructor.Tpo bench/$(DEPDIR)/bench_bench_OGC-prevector_destructor.Po
-#	$(AM_V_CXX)source='bench/prevector_destructor.cpp' object='bench/bench_bench_OGC-prevector_destructor.o' libtool=no \
+bench/bench_bench_OG-prevector_destructor.o: bench/prevector_destructor.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OG-prevector_destructor.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_OG-prevector_destructor.Tpo -c -o bench/bench_bench_OG-prevector_destructor.o `test -f 'bench/prevector_destructor.cpp' || echo '$(srcdir)/'`bench/prevector_destructor.cpp
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OG-prevector_destructor.Tpo bench/$(DEPDIR)/bench_bench_OG-prevector_destructor.Po
+#	$(AM_V_CXX)source='bench/prevector_destructor.cpp' object='bench/bench_bench_OG-prevector_destructor.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OGC-prevector_destructor.o `test -f 'bench/prevector_destructor.cpp' || echo '$(srcdir)/'`bench/prevector_destructor.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OG-prevector_destructor.o `test -f 'bench/prevector_destructor.cpp' || echo '$(srcdir)/'`bench/prevector_destructor.cpp
 
-bench/bench_bench_OGC-prevector_destructor.obj: bench/prevector_destructor.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OGC-prevector_destructor.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_OGC-prevector_destructor.Tpo -c -o bench/bench_bench_OGC-prevector_destructor.obj `if test -f 'bench/prevector_destructor.cpp'; then $(CYGPATH_W) 'bench/prevector_destructor.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/prevector_destructor.cpp'; fi`
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OGC-prevector_destructor.Tpo bench/$(DEPDIR)/bench_bench_OGC-prevector_destructor.Po
-#	$(AM_V_CXX)source='bench/prevector_destructor.cpp' object='bench/bench_bench_OGC-prevector_destructor.obj' libtool=no \
+bench/bench_bench_OG-prevector_destructor.obj: bench/prevector_destructor.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OG-prevector_destructor.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_OG-prevector_destructor.Tpo -c -o bench/bench_bench_OG-prevector_destructor.obj `if test -f 'bench/prevector_destructor.cpp'; then $(CYGPATH_W) 'bench/prevector_destructor.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/prevector_destructor.cpp'; fi`
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OG-prevector_destructor.Tpo bench/$(DEPDIR)/bench_bench_OG-prevector_destructor.Po
+#	$(AM_V_CXX)source='bench/prevector_destructor.cpp' object='bench/bench_bench_OG-prevector_destructor.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OGC-prevector_destructor.obj `if test -f 'bench/prevector_destructor.cpp'; then $(CYGPATH_W) 'bench/prevector_destructor.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/prevector_destructor.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OG-prevector_destructor.obj `if test -f 'bench/prevector_destructor.cpp'; then $(CYGPATH_W) 'bench/prevector_destructor.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/prevector_destructor.cpp'; fi`
 
-bench/bench_bench_OGC-coin_selection.o: bench/coin_selection.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OGC-coin_selection.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_OGC-coin_selection.Tpo -c -o bench/bench_bench_OGC-coin_selection.o `test -f 'bench/coin_selection.cpp' || echo '$(srcdir)/'`bench/coin_selection.cpp
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OGC-coin_selection.Tpo bench/$(DEPDIR)/bench_bench_OGC-coin_selection.Po
-#	$(AM_V_CXX)source='bench/coin_selection.cpp' object='bench/bench_bench_OGC-coin_selection.o' libtool=no \
+bench/bench_bench_OG-coin_selection.o: bench/coin_selection.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OG-coin_selection.o -MD -MP -MF bench/$(DEPDIR)/bench_bench_OG-coin_selection.Tpo -c -o bench/bench_bench_OG-coin_selection.o `test -f 'bench/coin_selection.cpp' || echo '$(srcdir)/'`bench/coin_selection.cpp
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OG-coin_selection.Tpo bench/$(DEPDIR)/bench_bench_OG-coin_selection.Po
+#	$(AM_V_CXX)source='bench/coin_selection.cpp' object='bench/bench_bench_OG-coin_selection.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OGC-coin_selection.o `test -f 'bench/coin_selection.cpp' || echo '$(srcdir)/'`bench/coin_selection.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OG-coin_selection.o `test -f 'bench/coin_selection.cpp' || echo '$(srcdir)/'`bench/coin_selection.cpp
 
-bench/bench_bench_OGC-coin_selection.obj: bench/coin_selection.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OGC-coin_selection.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_OGC-coin_selection.Tpo -c -o bench/bench_bench_OGC-coin_selection.obj `if test -f 'bench/coin_selection.cpp'; then $(CYGPATH_W) 'bench/coin_selection.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/coin_selection.cpp'; fi`
-	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OGC-coin_selection.Tpo bench/$(DEPDIR)/bench_bench_OGC-coin_selection.Po
-#	$(AM_V_CXX)source='bench/coin_selection.cpp' object='bench/bench_bench_OGC-coin_selection.obj' libtool=no \
+bench/bench_bench_OG-coin_selection.obj: bench/coin_selection.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -MT bench/bench_bench_OG-coin_selection.obj -MD -MP -MF bench/$(DEPDIR)/bench_bench_OG-coin_selection.Tpo -c -o bench/bench_bench_OG-coin_selection.obj `if test -f 'bench/coin_selection.cpp'; then $(CYGPATH_W) 'bench/coin_selection.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/coin_selection.cpp'; fi`
+	$(AM_V_at)$(am__mv) bench/$(DEPDIR)/bench_bench_OG-coin_selection.Tpo bench/$(DEPDIR)/bench_bench_OG-coin_selection.Po
+#	$(AM_V_CXX)source='bench/coin_selection.cpp' object='bench/bench_bench_OG-coin_selection.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OGC_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OGC_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OGC-coin_selection.obj `if test -f 'bench/coin_selection.cpp'; then $(CYGPATH_W) 'bench/coin_selection.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/coin_selection.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bench_bench_OG_CPPFLAGS) $(CPPFLAGS) $(bench_bench_OG_CXXFLAGS) $(CXXFLAGS) -c -o bench/bench_bench_OG-coin_selection.obj `if test -f 'bench/coin_selection.cpp'; then $(CYGPATH_W) 'bench/coin_selection.cpp'; else $(CYGPATH_W) '$(srcdir)/bench/coin_selection.cpp'; fi`
 
-OGC_cli-bitcoin-cli.o: bitcoin-cli.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(OGC_cli_CPPFLAGS) $(CPPFLAGS) $(OGC_cli_CXXFLAGS) $(CXXFLAGS) -MT OGC_cli-bitcoin-cli.o -MD -MP -MF $(DEPDIR)/OGC_cli-bitcoin-cli.Tpo -c -o OGC_cli-bitcoin-cli.o `test -f 'bitcoin-cli.cpp' || echo '$(srcdir)/'`bitcoin-cli.cpp
-	$(AM_V_at)$(am__mv) $(DEPDIR)/OGC_cli-bitcoin-cli.Tpo $(DEPDIR)/OGC_cli-bitcoin-cli.Po
-#	$(AM_V_CXX)source='bitcoin-cli.cpp' object='OGC_cli-bitcoin-cli.o' libtool=no \
+OG_cli-bitcoin-cli.o: bitcoin-cli.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(OG_cli_CPPFLAGS) $(CPPFLAGS) $(OG_cli_CXXFLAGS) $(CXXFLAGS) -MT OG_cli-bitcoin-cli.o -MD -MP -MF $(DEPDIR)/OG_cli-bitcoin-cli.Tpo -c -o OG_cli-bitcoin-cli.o `test -f 'bitcoin-cli.cpp' || echo '$(srcdir)/'`bitcoin-cli.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/OG_cli-bitcoin-cli.Tpo $(DEPDIR)/OG_cli-bitcoin-cli.Po
+#	$(AM_V_CXX)source='bitcoin-cli.cpp' object='OG_cli-bitcoin-cli.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(OGC_cli_CPPFLAGS) $(CPPFLAGS) $(OGC_cli_CXXFLAGS) $(CXXFLAGS) -c -o OGC_cli-bitcoin-cli.o `test -f 'bitcoin-cli.cpp' || echo '$(srcdir)/'`bitcoin-cli.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(OG_cli_CPPFLAGS) $(CPPFLAGS) $(OG_cli_CXXFLAGS) $(CXXFLAGS) -c -o OG_cli-bitcoin-cli.o `test -f 'bitcoin-cli.cpp' || echo '$(srcdir)/'`bitcoin-cli.cpp
 
-OGC_cli-bitcoin-cli.obj: bitcoin-cli.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(OGC_cli_CPPFLAGS) $(CPPFLAGS) $(OGC_cli_CXXFLAGS) $(CXXFLAGS) -MT OGC_cli-bitcoin-cli.obj -MD -MP -MF $(DEPDIR)/OGC_cli-bitcoin-cli.Tpo -c -o OGC_cli-bitcoin-cli.obj `if test -f 'bitcoin-cli.cpp'; then $(CYGPATH_W) 'bitcoin-cli.cpp'; else $(CYGPATH_W) '$(srcdir)/bitcoin-cli.cpp'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/OGC_cli-bitcoin-cli.Tpo $(DEPDIR)/OGC_cli-bitcoin-cli.Po
-#	$(AM_V_CXX)source='bitcoin-cli.cpp' object='OGC_cli-bitcoin-cli.obj' libtool=no \
+OG_cli-bitcoin-cli.obj: bitcoin-cli.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(OG_cli_CPPFLAGS) $(CPPFLAGS) $(OG_cli_CXXFLAGS) $(CXXFLAGS) -MT OG_cli-bitcoin-cli.obj -MD -MP -MF $(DEPDIR)/OG_cli-bitcoin-cli.Tpo -c -o OG_cli-bitcoin-cli.obj `if test -f 'bitcoin-cli.cpp'; then $(CYGPATH_W) 'bitcoin-cli.cpp'; else $(CYGPATH_W) '$(srcdir)/bitcoin-cli.cpp'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/OG_cli-bitcoin-cli.Tpo $(DEPDIR)/OG_cli-bitcoin-cli.Po
+#	$(AM_V_CXX)source='bitcoin-cli.cpp' object='OG_cli-bitcoin-cli.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(OGC_cli_CPPFLAGS) $(CPPFLAGS) $(OGC_cli_CXXFLAGS) $(CXXFLAGS) -c -o OGC_cli-bitcoin-cli.obj `if test -f 'bitcoin-cli.cpp'; then $(CYGPATH_W) 'bitcoin-cli.cpp'; else $(CYGPATH_W) '$(srcdir)/bitcoin-cli.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(OG_cli_CPPFLAGS) $(CPPFLAGS) $(OG_cli_CXXFLAGS) $(CXXFLAGS) -c -o OG_cli-bitcoin-cli.obj `if test -f 'bitcoin-cli.cpp'; then $(CYGPATH_W) 'bitcoin-cli.cpp'; else $(CYGPATH_W) '$(srcdir)/bitcoin-cli.cpp'; fi`
 
-OGC_tx-bitcoin-tx.o: bitcoin-tx.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(OGC_tx_CPPFLAGS) $(CPPFLAGS) $(OGC_tx_CXXFLAGS) $(CXXFLAGS) -MT OGC_tx-bitcoin-tx.o -MD -MP -MF $(DEPDIR)/OGC_tx-bitcoin-tx.Tpo -c -o OGC_tx-bitcoin-tx.o `test -f 'bitcoin-tx.cpp' || echo '$(srcdir)/'`bitcoin-tx.cpp
-	$(AM_V_at)$(am__mv) $(DEPDIR)/OGC_tx-bitcoin-tx.Tpo $(DEPDIR)/OGC_tx-bitcoin-tx.Po
-#	$(AM_V_CXX)source='bitcoin-tx.cpp' object='OGC_tx-bitcoin-tx.o' libtool=no \
+OG_tx-bitcoin-tx.o: bitcoin-tx.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(OG_tx_CPPFLAGS) $(CPPFLAGS) $(OG_tx_CXXFLAGS) $(CXXFLAGS) -MT OG_tx-bitcoin-tx.o -MD -MP -MF $(DEPDIR)/OG_tx-bitcoin-tx.Tpo -c -o OG_tx-bitcoin-tx.o `test -f 'bitcoin-tx.cpp' || echo '$(srcdir)/'`bitcoin-tx.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/OG_tx-bitcoin-tx.Tpo $(DEPDIR)/OG_tx-bitcoin-tx.Po
+#	$(AM_V_CXX)source='bitcoin-tx.cpp' object='OG_tx-bitcoin-tx.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(OGC_tx_CPPFLAGS) $(CPPFLAGS) $(OGC_tx_CXXFLAGS) $(CXXFLAGS) -c -o OGC_tx-bitcoin-tx.o `test -f 'bitcoin-tx.cpp' || echo '$(srcdir)/'`bitcoin-tx.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(OG_tx_CPPFLAGS) $(CPPFLAGS) $(OG_tx_CXXFLAGS) $(CXXFLAGS) -c -o OG_tx-bitcoin-tx.o `test -f 'bitcoin-tx.cpp' || echo '$(srcdir)/'`bitcoin-tx.cpp
 
-OGC_tx-bitcoin-tx.obj: bitcoin-tx.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(OGC_tx_CPPFLAGS) $(CPPFLAGS) $(OGC_tx_CXXFLAGS) $(CXXFLAGS) -MT OGC_tx-bitcoin-tx.obj -MD -MP -MF $(DEPDIR)/OGC_tx-bitcoin-tx.Tpo -c -o OGC_tx-bitcoin-tx.obj `if test -f 'bitcoin-tx.cpp'; then $(CYGPATH_W) 'bitcoin-tx.cpp'; else $(CYGPATH_W) '$(srcdir)/bitcoin-tx.cpp'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/OGC_tx-bitcoin-tx.Tpo $(DEPDIR)/OGC_tx-bitcoin-tx.Po
-#	$(AM_V_CXX)source='bitcoin-tx.cpp' object='OGC_tx-bitcoin-tx.obj' libtool=no \
+OG_tx-bitcoin-tx.obj: bitcoin-tx.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(OG_tx_CPPFLAGS) $(CPPFLAGS) $(OG_tx_CXXFLAGS) $(CXXFLAGS) -MT OG_tx-bitcoin-tx.obj -MD -MP -MF $(DEPDIR)/OG_tx-bitcoin-tx.Tpo -c -o OG_tx-bitcoin-tx.obj `if test -f 'bitcoin-tx.cpp'; then $(CYGPATH_W) 'bitcoin-tx.cpp'; else $(CYGPATH_W) '$(srcdir)/bitcoin-tx.cpp'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/OG_tx-bitcoin-tx.Tpo $(DEPDIR)/OG_tx-bitcoin-tx.Po
+#	$(AM_V_CXX)source='bitcoin-tx.cpp' object='OG_tx-bitcoin-tx.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(OGC_tx_CPPFLAGS) $(CPPFLAGS) $(OGC_tx_CXXFLAGS) $(CXXFLAGS) -c -o OGC_tx-bitcoin-tx.obj `if test -f 'bitcoin-tx.cpp'; then $(CYGPATH_W) 'bitcoin-tx.cpp'; else $(CYGPATH_W) '$(srcdir)/bitcoin-tx.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(OG_tx_CPPFLAGS) $(CPPFLAGS) $(OG_tx_CXXFLAGS) $(CXXFLAGS) -c -o OG_tx-bitcoin-tx.obj `if test -f 'bitcoin-tx.cpp'; then $(CYGPATH_W) 'bitcoin-tx.cpp'; else $(CYGPATH_W) '$(srcdir)/bitcoin-tx.cpp'; fi`
 
-OGCd-bitcoind.o: bitcoind.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(OGCd_CPPFLAGS) $(CPPFLAGS) $(OGCd_CXXFLAGS) $(CXXFLAGS) -MT OGCd-bitcoind.o -MD -MP -MF $(DEPDIR)/OGCd-bitcoind.Tpo -c -o OGCd-bitcoind.o `test -f 'bitcoind.cpp' || echo '$(srcdir)/'`bitcoind.cpp
-	$(AM_V_at)$(am__mv) $(DEPDIR)/OGCd-bitcoind.Tpo $(DEPDIR)/OGCd-bitcoind.Po
-#	$(AM_V_CXX)source='bitcoind.cpp' object='OGCd-bitcoind.o' libtool=no \
+OGd-bitcoind.o: bitcoind.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(OGd_CPPFLAGS) $(CPPFLAGS) $(OGd_CXXFLAGS) $(CXXFLAGS) -MT OGd-bitcoind.o -MD -MP -MF $(DEPDIR)/OGd-bitcoind.Tpo -c -o OGd-bitcoind.o `test -f 'bitcoind.cpp' || echo '$(srcdir)/'`bitcoind.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/OGd-bitcoind.Tpo $(DEPDIR)/OGd-bitcoind.Po
+#	$(AM_V_CXX)source='bitcoind.cpp' object='OGd-bitcoind.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(OGCd_CPPFLAGS) $(CPPFLAGS) $(OGCd_CXXFLAGS) $(CXXFLAGS) -c -o OGCd-bitcoind.o `test -f 'bitcoind.cpp' || echo '$(srcdir)/'`bitcoind.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(OGd_CPPFLAGS) $(CPPFLAGS) $(OGd_CXXFLAGS) $(CXXFLAGS) -c -o OGd-bitcoind.o `test -f 'bitcoind.cpp' || echo '$(srcdir)/'`bitcoind.cpp
 
-OGCd-bitcoind.obj: bitcoind.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(OGCd_CPPFLAGS) $(CPPFLAGS) $(OGCd_CXXFLAGS) $(CXXFLAGS) -MT OGCd-bitcoind.obj -MD -MP -MF $(DEPDIR)/OGCd-bitcoind.Tpo -c -o OGCd-bitcoind.obj `if test -f 'bitcoind.cpp'; then $(CYGPATH_W) 'bitcoind.cpp'; else $(CYGPATH_W) '$(srcdir)/bitcoind.cpp'; fi`
-	$(AM_V_at)$(am__mv) $(DEPDIR)/OGCd-bitcoind.Tpo $(DEPDIR)/OGCd-bitcoind.Po
-#	$(AM_V_CXX)source='bitcoind.cpp' object='OGCd-bitcoind.obj' libtool=no \
+OGd-bitcoind.obj: bitcoind.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(OGd_CPPFLAGS) $(CPPFLAGS) $(OGd_CXXFLAGS) $(CXXFLAGS) -MT OGd-bitcoind.obj -MD -MP -MF $(DEPDIR)/OGd-bitcoind.Tpo -c -o OGd-bitcoind.obj `if test -f 'bitcoind.cpp'; then $(CYGPATH_W) 'bitcoind.cpp'; else $(CYGPATH_W) '$(srcdir)/bitcoind.cpp'; fi`
+	$(AM_V_at)$(am__mv) $(DEPDIR)/OGd-bitcoind.Tpo $(DEPDIR)/OGd-bitcoind.Po
+#	$(AM_V_CXX)source='bitcoind.cpp' object='OGd-bitcoind.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(OGCd_CPPFLAGS) $(CPPFLAGS) $(OGCd_CXXFLAGS) $(CXXFLAGS) -c -o OGCd-bitcoind.obj `if test -f 'bitcoind.cpp'; then $(CYGPATH_W) 'bitcoind.cpp'; else $(CYGPATH_W) '$(srcdir)/bitcoind.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(OGd_CPPFLAGS) $(CPPFLAGS) $(OGd_CXXFLAGS) $(CXXFLAGS) -c -o OGd-bitcoind.obj `if test -f 'bitcoind.cpp'; then $(CYGPATH_W) 'bitcoind.cpp'; else $(CYGPATH_W) '$(srcdir)/bitcoind.cpp'; fi`
 
-qt/qt_OGC_qt-bitcoin.o: qt/bitcoin.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_OGC_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_OGC_qt-bitcoin.o -MD -MP -MF qt/$(DEPDIR)/qt_OGC_qt-bitcoin.Tpo -c -o qt/qt_OGC_qt-bitcoin.o `test -f 'qt/bitcoin.cpp' || echo '$(srcdir)/'`qt/bitcoin.cpp
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_OGC_qt-bitcoin.Tpo qt/$(DEPDIR)/qt_OGC_qt-bitcoin.Po
-#	$(AM_V_CXX)source='qt/bitcoin.cpp' object='qt/qt_OGC_qt-bitcoin.o' libtool=no \
+qt/qt_OG_qt-bitcoin.o: qt/bitcoin.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_OG_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_OG_qt-bitcoin.o -MD -MP -MF qt/$(DEPDIR)/qt_OG_qt-bitcoin.Tpo -c -o qt/qt_OG_qt-bitcoin.o `test -f 'qt/bitcoin.cpp' || echo '$(srcdir)/'`qt/bitcoin.cpp
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_OG_qt-bitcoin.Tpo qt/$(DEPDIR)/qt_OG_qt-bitcoin.Po
+#	$(AM_V_CXX)source='qt/bitcoin.cpp' object='qt/qt_OG_qt-bitcoin.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_OGC_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_OGC_qt-bitcoin.o `test -f 'qt/bitcoin.cpp' || echo '$(srcdir)/'`qt/bitcoin.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_OG_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_OG_qt-bitcoin.o `test -f 'qt/bitcoin.cpp' || echo '$(srcdir)/'`qt/bitcoin.cpp
 
-qt/qt_OGC_qt-bitcoin.obj: qt/bitcoin.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_OGC_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_OGC_qt-bitcoin.obj -MD -MP -MF qt/$(DEPDIR)/qt_OGC_qt-bitcoin.Tpo -c -o qt/qt_OGC_qt-bitcoin.obj `if test -f 'qt/bitcoin.cpp'; then $(CYGPATH_W) 'qt/bitcoin.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/bitcoin.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_OGC_qt-bitcoin.Tpo qt/$(DEPDIR)/qt_OGC_qt-bitcoin.Po
-#	$(AM_V_CXX)source='qt/bitcoin.cpp' object='qt/qt_OGC_qt-bitcoin.obj' libtool=no \
+qt/qt_OG_qt-bitcoin.obj: qt/bitcoin.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_OG_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/qt_OG_qt-bitcoin.obj -MD -MP -MF qt/$(DEPDIR)/qt_OG_qt-bitcoin.Tpo -c -o qt/qt_OG_qt-bitcoin.obj `if test -f 'qt/bitcoin.cpp'; then $(CYGPATH_W) 'qt/bitcoin.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/bitcoin.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_OG_qt-bitcoin.Tpo qt/$(DEPDIR)/qt_OG_qt-bitcoin.Po
+#	$(AM_V_CXX)source='qt/bitcoin.cpp' object='qt/qt_OG_qt-bitcoin.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_OGC_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_OGC_qt-bitcoin.obj `if test -f 'qt/bitcoin.cpp'; then $(CYGPATH_W) 'qt/bitcoin.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/bitcoin.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_OG_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/qt_OG_qt-bitcoin.obj `if test -f 'qt/bitcoin.cpp'; then $(CYGPATH_W) 'qt/bitcoin.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/bitcoin.cpp'; fi`
 
-qt/test/qt_test_test_OGC_qt-compattests.o: qt/test/compattests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OGC_qt-compattests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OGC_qt-compattests.Tpo -c -o qt/test/qt_test_test_OGC_qt-compattests.o `test -f 'qt/test/compattests.cpp' || echo '$(srcdir)/'`qt/test/compattests.cpp
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OGC_qt-compattests.Tpo qt/test/$(DEPDIR)/qt_test_test_OGC_qt-compattests.Po
-#	$(AM_V_CXX)source='qt/test/compattests.cpp' object='qt/test/qt_test_test_OGC_qt-compattests.o' libtool=no \
+qt/test/qt_test_test_OG_qt-compattests.o: qt/test/compattests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OG_qt-compattests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OG_qt-compattests.Tpo -c -o qt/test/qt_test_test_OG_qt-compattests.o `test -f 'qt/test/compattests.cpp' || echo '$(srcdir)/'`qt/test/compattests.cpp
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OG_qt-compattests.Tpo qt/test/$(DEPDIR)/qt_test_test_OG_qt-compattests.Po
+#	$(AM_V_CXX)source='qt/test/compattests.cpp' object='qt/test/qt_test_test_OG_qt-compattests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OGC_qt-compattests.o `test -f 'qt/test/compattests.cpp' || echo '$(srcdir)/'`qt/test/compattests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OG_qt-compattests.o `test -f 'qt/test/compattests.cpp' || echo '$(srcdir)/'`qt/test/compattests.cpp
 
-qt/test/qt_test_test_OGC_qt-compattests.obj: qt/test/compattests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OGC_qt-compattests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OGC_qt-compattests.Tpo -c -o qt/test/qt_test_test_OGC_qt-compattests.obj `if test -f 'qt/test/compattests.cpp'; then $(CYGPATH_W) 'qt/test/compattests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/compattests.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OGC_qt-compattests.Tpo qt/test/$(DEPDIR)/qt_test_test_OGC_qt-compattests.Po
-#	$(AM_V_CXX)source='qt/test/compattests.cpp' object='qt/test/qt_test_test_OGC_qt-compattests.obj' libtool=no \
+qt/test/qt_test_test_OG_qt-compattests.obj: qt/test/compattests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OG_qt-compattests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OG_qt-compattests.Tpo -c -o qt/test/qt_test_test_OG_qt-compattests.obj `if test -f 'qt/test/compattests.cpp'; then $(CYGPATH_W) 'qt/test/compattests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/compattests.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OG_qt-compattests.Tpo qt/test/$(DEPDIR)/qt_test_test_OG_qt-compattests.Po
+#	$(AM_V_CXX)source='qt/test/compattests.cpp' object='qt/test/qt_test_test_OG_qt-compattests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OGC_qt-compattests.obj `if test -f 'qt/test/compattests.cpp'; then $(CYGPATH_W) 'qt/test/compattests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/compattests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OG_qt-compattests.obj `if test -f 'qt/test/compattests.cpp'; then $(CYGPATH_W) 'qt/test/compattests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/compattests.cpp'; fi`
 
-qt/test/qt_test_test_OGC_qt-rpcnestedtests.o: qt/test/rpcnestedtests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OGC_qt-rpcnestedtests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OGC_qt-rpcnestedtests.Tpo -c -o qt/test/qt_test_test_OGC_qt-rpcnestedtests.o `test -f 'qt/test/rpcnestedtests.cpp' || echo '$(srcdir)/'`qt/test/rpcnestedtests.cpp
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OGC_qt-rpcnestedtests.Tpo qt/test/$(DEPDIR)/qt_test_test_OGC_qt-rpcnestedtests.Po
-#	$(AM_V_CXX)source='qt/test/rpcnestedtests.cpp' object='qt/test/qt_test_test_OGC_qt-rpcnestedtests.o' libtool=no \
+qt/test/qt_test_test_OG_qt-rpcnestedtests.o: qt/test/rpcnestedtests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OG_qt-rpcnestedtests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OG_qt-rpcnestedtests.Tpo -c -o qt/test/qt_test_test_OG_qt-rpcnestedtests.o `test -f 'qt/test/rpcnestedtests.cpp' || echo '$(srcdir)/'`qt/test/rpcnestedtests.cpp
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OG_qt-rpcnestedtests.Tpo qt/test/$(DEPDIR)/qt_test_test_OG_qt-rpcnestedtests.Po
+#	$(AM_V_CXX)source='qt/test/rpcnestedtests.cpp' object='qt/test/qt_test_test_OG_qt-rpcnestedtests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OGC_qt-rpcnestedtests.o `test -f 'qt/test/rpcnestedtests.cpp' || echo '$(srcdir)/'`qt/test/rpcnestedtests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OG_qt-rpcnestedtests.o `test -f 'qt/test/rpcnestedtests.cpp' || echo '$(srcdir)/'`qt/test/rpcnestedtests.cpp
 
-qt/test/qt_test_test_OGC_qt-rpcnestedtests.obj: qt/test/rpcnestedtests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OGC_qt-rpcnestedtests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OGC_qt-rpcnestedtests.Tpo -c -o qt/test/qt_test_test_OGC_qt-rpcnestedtests.obj `if test -f 'qt/test/rpcnestedtests.cpp'; then $(CYGPATH_W) 'qt/test/rpcnestedtests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/rpcnestedtests.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OGC_qt-rpcnestedtests.Tpo qt/test/$(DEPDIR)/qt_test_test_OGC_qt-rpcnestedtests.Po
-#	$(AM_V_CXX)source='qt/test/rpcnestedtests.cpp' object='qt/test/qt_test_test_OGC_qt-rpcnestedtests.obj' libtool=no \
+qt/test/qt_test_test_OG_qt-rpcnestedtests.obj: qt/test/rpcnestedtests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OG_qt-rpcnestedtests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OG_qt-rpcnestedtests.Tpo -c -o qt/test/qt_test_test_OG_qt-rpcnestedtests.obj `if test -f 'qt/test/rpcnestedtests.cpp'; then $(CYGPATH_W) 'qt/test/rpcnestedtests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/rpcnestedtests.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OG_qt-rpcnestedtests.Tpo qt/test/$(DEPDIR)/qt_test_test_OG_qt-rpcnestedtests.Po
+#	$(AM_V_CXX)source='qt/test/rpcnestedtests.cpp' object='qt/test/qt_test_test_OG_qt-rpcnestedtests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OGC_qt-rpcnestedtests.obj `if test -f 'qt/test/rpcnestedtests.cpp'; then $(CYGPATH_W) 'qt/test/rpcnestedtests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/rpcnestedtests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OG_qt-rpcnestedtests.obj `if test -f 'qt/test/rpcnestedtests.cpp'; then $(CYGPATH_W) 'qt/test/rpcnestedtests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/rpcnestedtests.cpp'; fi`
 
-qt/test/qt_test_test_OGC_qt-test_main.o: qt/test/test_main.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OGC_qt-test_main.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OGC_qt-test_main.Tpo -c -o qt/test/qt_test_test_OGC_qt-test_main.o `test -f 'qt/test/test_main.cpp' || echo '$(srcdir)/'`qt/test/test_main.cpp
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OGC_qt-test_main.Tpo qt/test/$(DEPDIR)/qt_test_test_OGC_qt-test_main.Po
-#	$(AM_V_CXX)source='qt/test/test_main.cpp' object='qt/test/qt_test_test_OGC_qt-test_main.o' libtool=no \
+qt/test/qt_test_test_OG_qt-test_main.o: qt/test/test_main.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OG_qt-test_main.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OG_qt-test_main.Tpo -c -o qt/test/qt_test_test_OG_qt-test_main.o `test -f 'qt/test/test_main.cpp' || echo '$(srcdir)/'`qt/test/test_main.cpp
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OG_qt-test_main.Tpo qt/test/$(DEPDIR)/qt_test_test_OG_qt-test_main.Po
+#	$(AM_V_CXX)source='qt/test/test_main.cpp' object='qt/test/qt_test_test_OG_qt-test_main.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OGC_qt-test_main.o `test -f 'qt/test/test_main.cpp' || echo '$(srcdir)/'`qt/test/test_main.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OG_qt-test_main.o `test -f 'qt/test/test_main.cpp' || echo '$(srcdir)/'`qt/test/test_main.cpp
 
-qt/test/qt_test_test_OGC_qt-test_main.obj: qt/test/test_main.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OGC_qt-test_main.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OGC_qt-test_main.Tpo -c -o qt/test/qt_test_test_OGC_qt-test_main.obj `if test -f 'qt/test/test_main.cpp'; then $(CYGPATH_W) 'qt/test/test_main.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/test_main.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OGC_qt-test_main.Tpo qt/test/$(DEPDIR)/qt_test_test_OGC_qt-test_main.Po
-#	$(AM_V_CXX)source='qt/test/test_main.cpp' object='qt/test/qt_test_test_OGC_qt-test_main.obj' libtool=no \
+qt/test/qt_test_test_OG_qt-test_main.obj: qt/test/test_main.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OG_qt-test_main.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OG_qt-test_main.Tpo -c -o qt/test/qt_test_test_OG_qt-test_main.obj `if test -f 'qt/test/test_main.cpp'; then $(CYGPATH_W) 'qt/test/test_main.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/test_main.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OG_qt-test_main.Tpo qt/test/$(DEPDIR)/qt_test_test_OG_qt-test_main.Po
+#	$(AM_V_CXX)source='qt/test/test_main.cpp' object='qt/test/qt_test_test_OG_qt-test_main.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OGC_qt-test_main.obj `if test -f 'qt/test/test_main.cpp'; then $(CYGPATH_W) 'qt/test/test_main.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/test_main.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OG_qt-test_main.obj `if test -f 'qt/test/test_main.cpp'; then $(CYGPATH_W) 'qt/test/test_main.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/test_main.cpp'; fi`
 
-qt/test/qt_test_test_OGC_qt-uritests.o: qt/test/uritests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OGC_qt-uritests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OGC_qt-uritests.Tpo -c -o qt/test/qt_test_test_OGC_qt-uritests.o `test -f 'qt/test/uritests.cpp' || echo '$(srcdir)/'`qt/test/uritests.cpp
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OGC_qt-uritests.Tpo qt/test/$(DEPDIR)/qt_test_test_OGC_qt-uritests.Po
-#	$(AM_V_CXX)source='qt/test/uritests.cpp' object='qt/test/qt_test_test_OGC_qt-uritests.o' libtool=no \
+qt/test/qt_test_test_OG_qt-uritests.o: qt/test/uritests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OG_qt-uritests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OG_qt-uritests.Tpo -c -o qt/test/qt_test_test_OG_qt-uritests.o `test -f 'qt/test/uritests.cpp' || echo '$(srcdir)/'`qt/test/uritests.cpp
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OG_qt-uritests.Tpo qt/test/$(DEPDIR)/qt_test_test_OG_qt-uritests.Po
+#	$(AM_V_CXX)source='qt/test/uritests.cpp' object='qt/test/qt_test_test_OG_qt-uritests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OGC_qt-uritests.o `test -f 'qt/test/uritests.cpp' || echo '$(srcdir)/'`qt/test/uritests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OG_qt-uritests.o `test -f 'qt/test/uritests.cpp' || echo '$(srcdir)/'`qt/test/uritests.cpp
 
-qt/test/qt_test_test_OGC_qt-uritests.obj: qt/test/uritests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OGC_qt-uritests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OGC_qt-uritests.Tpo -c -o qt/test/qt_test_test_OGC_qt-uritests.obj `if test -f 'qt/test/uritests.cpp'; then $(CYGPATH_W) 'qt/test/uritests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/uritests.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OGC_qt-uritests.Tpo qt/test/$(DEPDIR)/qt_test_test_OGC_qt-uritests.Po
-#	$(AM_V_CXX)source='qt/test/uritests.cpp' object='qt/test/qt_test_test_OGC_qt-uritests.obj' libtool=no \
+qt/test/qt_test_test_OG_qt-uritests.obj: qt/test/uritests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OG_qt-uritests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OG_qt-uritests.Tpo -c -o qt/test/qt_test_test_OG_qt-uritests.obj `if test -f 'qt/test/uritests.cpp'; then $(CYGPATH_W) 'qt/test/uritests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/uritests.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OG_qt-uritests.Tpo qt/test/$(DEPDIR)/qt_test_test_OG_qt-uritests.Po
+#	$(AM_V_CXX)source='qt/test/uritests.cpp' object='qt/test/qt_test_test_OG_qt-uritests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OGC_qt-uritests.obj `if test -f 'qt/test/uritests.cpp'; then $(CYGPATH_W) 'qt/test/uritests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/uritests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OG_qt-uritests.obj `if test -f 'qt/test/uritests.cpp'; then $(CYGPATH_W) 'qt/test/uritests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/uritests.cpp'; fi`
 
-test/qt_test_test_OGC_qt-test_bitcoin.o: test/test_bitcoin.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -MT test/qt_test_test_OGC_qt-test_bitcoin.o -MD -MP -MF test/$(DEPDIR)/qt_test_test_OGC_qt-test_bitcoin.Tpo -c -o test/qt_test_test_OGC_qt-test_bitcoin.o `test -f 'test/test_bitcoin.cpp' || echo '$(srcdir)/'`test/test_bitcoin.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/qt_test_test_OGC_qt-test_bitcoin.Tpo test/$(DEPDIR)/qt_test_test_OGC_qt-test_bitcoin.Po
-#	$(AM_V_CXX)source='test/test_bitcoin.cpp' object='test/qt_test_test_OGC_qt-test_bitcoin.o' libtool=no \
+test/qt_test_test_OG_qt-test_bitcoin.o: test/test_bitcoin.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -MT test/qt_test_test_OG_qt-test_bitcoin.o -MD -MP -MF test/$(DEPDIR)/qt_test_test_OG_qt-test_bitcoin.Tpo -c -o test/qt_test_test_OG_qt-test_bitcoin.o `test -f 'test/test_bitcoin.cpp' || echo '$(srcdir)/'`test/test_bitcoin.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/qt_test_test_OG_qt-test_bitcoin.Tpo test/$(DEPDIR)/qt_test_test_OG_qt-test_bitcoin.Po
+#	$(AM_V_CXX)source='test/test_bitcoin.cpp' object='test/qt_test_test_OG_qt-test_bitcoin.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -c -o test/qt_test_test_OGC_qt-test_bitcoin.o `test -f 'test/test_bitcoin.cpp' || echo '$(srcdir)/'`test/test_bitcoin.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -c -o test/qt_test_test_OG_qt-test_bitcoin.o `test -f 'test/test_bitcoin.cpp' || echo '$(srcdir)/'`test/test_bitcoin.cpp
 
-test/qt_test_test_OGC_qt-test_bitcoin.obj: test/test_bitcoin.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -MT test/qt_test_test_OGC_qt-test_bitcoin.obj -MD -MP -MF test/$(DEPDIR)/qt_test_test_OGC_qt-test_bitcoin.Tpo -c -o test/qt_test_test_OGC_qt-test_bitcoin.obj `if test -f 'test/test_bitcoin.cpp'; then $(CYGPATH_W) 'test/test_bitcoin.cpp'; else $(CYGPATH_W) '$(srcdir)/test/test_bitcoin.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/qt_test_test_OGC_qt-test_bitcoin.Tpo test/$(DEPDIR)/qt_test_test_OGC_qt-test_bitcoin.Po
-#	$(AM_V_CXX)source='test/test_bitcoin.cpp' object='test/qt_test_test_OGC_qt-test_bitcoin.obj' libtool=no \
+test/qt_test_test_OG_qt-test_bitcoin.obj: test/test_bitcoin.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -MT test/qt_test_test_OG_qt-test_bitcoin.obj -MD -MP -MF test/$(DEPDIR)/qt_test_test_OG_qt-test_bitcoin.Tpo -c -o test/qt_test_test_OG_qt-test_bitcoin.obj `if test -f 'test/test_bitcoin.cpp'; then $(CYGPATH_W) 'test/test_bitcoin.cpp'; else $(CYGPATH_W) '$(srcdir)/test/test_bitcoin.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/qt_test_test_OG_qt-test_bitcoin.Tpo test/$(DEPDIR)/qt_test_test_OG_qt-test_bitcoin.Po
+#	$(AM_V_CXX)source='test/test_bitcoin.cpp' object='test/qt_test_test_OG_qt-test_bitcoin.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -c -o test/qt_test_test_OGC_qt-test_bitcoin.obj `if test -f 'test/test_bitcoin.cpp'; then $(CYGPATH_W) 'test/test_bitcoin.cpp'; else $(CYGPATH_W) '$(srcdir)/test/test_bitcoin.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -c -o test/qt_test_test_OG_qt-test_bitcoin.obj `if test -f 'test/test_bitcoin.cpp'; then $(CYGPATH_W) 'test/test_bitcoin.cpp'; else $(CYGPATH_W) '$(srcdir)/test/test_bitcoin.cpp'; fi`
 
-qt/test/qt_test_test_OGC_qt-paymentservertests.o: qt/test/paymentservertests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OGC_qt-paymentservertests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OGC_qt-paymentservertests.Tpo -c -o qt/test/qt_test_test_OGC_qt-paymentservertests.o `test -f 'qt/test/paymentservertests.cpp' || echo '$(srcdir)/'`qt/test/paymentservertests.cpp
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OGC_qt-paymentservertests.Tpo qt/test/$(DEPDIR)/qt_test_test_OGC_qt-paymentservertests.Po
-#	$(AM_V_CXX)source='qt/test/paymentservertests.cpp' object='qt/test/qt_test_test_OGC_qt-paymentservertests.o' libtool=no \
+qt/test/qt_test_test_OG_qt-paymentservertests.o: qt/test/paymentservertests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OG_qt-paymentservertests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OG_qt-paymentservertests.Tpo -c -o qt/test/qt_test_test_OG_qt-paymentservertests.o `test -f 'qt/test/paymentservertests.cpp' || echo '$(srcdir)/'`qt/test/paymentservertests.cpp
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OG_qt-paymentservertests.Tpo qt/test/$(DEPDIR)/qt_test_test_OG_qt-paymentservertests.Po
+#	$(AM_V_CXX)source='qt/test/paymentservertests.cpp' object='qt/test/qt_test_test_OG_qt-paymentservertests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OGC_qt-paymentservertests.o `test -f 'qt/test/paymentservertests.cpp' || echo '$(srcdir)/'`qt/test/paymentservertests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OG_qt-paymentservertests.o `test -f 'qt/test/paymentservertests.cpp' || echo '$(srcdir)/'`qt/test/paymentservertests.cpp
 
-qt/test/qt_test_test_OGC_qt-paymentservertests.obj: qt/test/paymentservertests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OGC_qt-paymentservertests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OGC_qt-paymentservertests.Tpo -c -o qt/test/qt_test_test_OGC_qt-paymentservertests.obj `if test -f 'qt/test/paymentservertests.cpp'; then $(CYGPATH_W) 'qt/test/paymentservertests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/paymentservertests.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OGC_qt-paymentservertests.Tpo qt/test/$(DEPDIR)/qt_test_test_OGC_qt-paymentservertests.Po
-#	$(AM_V_CXX)source='qt/test/paymentservertests.cpp' object='qt/test/qt_test_test_OGC_qt-paymentservertests.obj' libtool=no \
+qt/test/qt_test_test_OG_qt-paymentservertests.obj: qt/test/paymentservertests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OG_qt-paymentservertests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OG_qt-paymentservertests.Tpo -c -o qt/test/qt_test_test_OG_qt-paymentservertests.obj `if test -f 'qt/test/paymentservertests.cpp'; then $(CYGPATH_W) 'qt/test/paymentservertests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/paymentservertests.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OG_qt-paymentservertests.Tpo qt/test/$(DEPDIR)/qt_test_test_OG_qt-paymentservertests.Po
+#	$(AM_V_CXX)source='qt/test/paymentservertests.cpp' object='qt/test/qt_test_test_OG_qt-paymentservertests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OGC_qt-paymentservertests.obj `if test -f 'qt/test/paymentservertests.cpp'; then $(CYGPATH_W) 'qt/test/paymentservertests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/paymentservertests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OG_qt-paymentservertests.obj `if test -f 'qt/test/paymentservertests.cpp'; then $(CYGPATH_W) 'qt/test/paymentservertests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/paymentservertests.cpp'; fi`
 
-qt/test/qt_test_test_OGC_qt-wallettests.o: qt/test/wallettests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OGC_qt-wallettests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OGC_qt-wallettests.Tpo -c -o qt/test/qt_test_test_OGC_qt-wallettests.o `test -f 'qt/test/wallettests.cpp' || echo '$(srcdir)/'`qt/test/wallettests.cpp
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OGC_qt-wallettests.Tpo qt/test/$(DEPDIR)/qt_test_test_OGC_qt-wallettests.Po
-#	$(AM_V_CXX)source='qt/test/wallettests.cpp' object='qt/test/qt_test_test_OGC_qt-wallettests.o' libtool=no \
+qt/test/qt_test_test_OG_qt-wallettests.o: qt/test/wallettests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OG_qt-wallettests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OG_qt-wallettests.Tpo -c -o qt/test/qt_test_test_OG_qt-wallettests.o `test -f 'qt/test/wallettests.cpp' || echo '$(srcdir)/'`qt/test/wallettests.cpp
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OG_qt-wallettests.Tpo qt/test/$(DEPDIR)/qt_test_test_OG_qt-wallettests.Po
+#	$(AM_V_CXX)source='qt/test/wallettests.cpp' object='qt/test/qt_test_test_OG_qt-wallettests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OGC_qt-wallettests.o `test -f 'qt/test/wallettests.cpp' || echo '$(srcdir)/'`qt/test/wallettests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OG_qt-wallettests.o `test -f 'qt/test/wallettests.cpp' || echo '$(srcdir)/'`qt/test/wallettests.cpp
 
-qt/test/qt_test_test_OGC_qt-wallettests.obj: qt/test/wallettests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OGC_qt-wallettests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OGC_qt-wallettests.Tpo -c -o qt/test/qt_test_test_OGC_qt-wallettests.obj `if test -f 'qt/test/wallettests.cpp'; then $(CYGPATH_W) 'qt/test/wallettests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/wallettests.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OGC_qt-wallettests.Tpo qt/test/$(DEPDIR)/qt_test_test_OGC_qt-wallettests.Po
-#	$(AM_V_CXX)source='qt/test/wallettests.cpp' object='qt/test/qt_test_test_OGC_qt-wallettests.obj' libtool=no \
+qt/test/qt_test_test_OG_qt-wallettests.obj: qt/test/wallettests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OG_qt-wallettests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OG_qt-wallettests.Tpo -c -o qt/test/qt_test_test_OG_qt-wallettests.obj `if test -f 'qt/test/wallettests.cpp'; then $(CYGPATH_W) 'qt/test/wallettests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/wallettests.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OG_qt-wallettests.Tpo qt/test/$(DEPDIR)/qt_test_test_OG_qt-wallettests.Po
+#	$(AM_V_CXX)source='qt/test/wallettests.cpp' object='qt/test/qt_test_test_OG_qt-wallettests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OGC_qt-wallettests.obj `if test -f 'qt/test/wallettests.cpp'; then $(CYGPATH_W) 'qt/test/wallettests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/wallettests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OG_qt-wallettests.obj `if test -f 'qt/test/wallettests.cpp'; then $(CYGPATH_W) 'qt/test/wallettests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/wallettests.cpp'; fi`
 
-wallet/test/qt_test_test_OGC_qt-wallet_test_fixture.o: wallet/test/wallet_test_fixture.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -MT wallet/test/qt_test_test_OGC_qt-wallet_test_fixture.o -MD -MP -MF wallet/test/$(DEPDIR)/qt_test_test_OGC_qt-wallet_test_fixture.Tpo -c -o wallet/test/qt_test_test_OGC_qt-wallet_test_fixture.o `test -f 'wallet/test/wallet_test_fixture.cpp' || echo '$(srcdir)/'`wallet/test/wallet_test_fixture.cpp
-	$(AM_V_at)$(am__mv) wallet/test/$(DEPDIR)/qt_test_test_OGC_qt-wallet_test_fixture.Tpo wallet/test/$(DEPDIR)/qt_test_test_OGC_qt-wallet_test_fixture.Po
-#	$(AM_V_CXX)source='wallet/test/wallet_test_fixture.cpp' object='wallet/test/qt_test_test_OGC_qt-wallet_test_fixture.o' libtool=no \
+wallet/test/qt_test_test_OG_qt-wallet_test_fixture.o: wallet/test/wallet_test_fixture.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -MT wallet/test/qt_test_test_OG_qt-wallet_test_fixture.o -MD -MP -MF wallet/test/$(DEPDIR)/qt_test_test_OG_qt-wallet_test_fixture.Tpo -c -o wallet/test/qt_test_test_OG_qt-wallet_test_fixture.o `test -f 'wallet/test/wallet_test_fixture.cpp' || echo '$(srcdir)/'`wallet/test/wallet_test_fixture.cpp
+	$(AM_V_at)$(am__mv) wallet/test/$(DEPDIR)/qt_test_test_OG_qt-wallet_test_fixture.Tpo wallet/test/$(DEPDIR)/qt_test_test_OG_qt-wallet_test_fixture.Po
+#	$(AM_V_CXX)source='wallet/test/wallet_test_fixture.cpp' object='wallet/test/qt_test_test_OG_qt-wallet_test_fixture.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -c -o wallet/test/qt_test_test_OGC_qt-wallet_test_fixture.o `test -f 'wallet/test/wallet_test_fixture.cpp' || echo '$(srcdir)/'`wallet/test/wallet_test_fixture.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -c -o wallet/test/qt_test_test_OG_qt-wallet_test_fixture.o `test -f 'wallet/test/wallet_test_fixture.cpp' || echo '$(srcdir)/'`wallet/test/wallet_test_fixture.cpp
 
-wallet/test/qt_test_test_OGC_qt-wallet_test_fixture.obj: wallet/test/wallet_test_fixture.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -MT wallet/test/qt_test_test_OGC_qt-wallet_test_fixture.obj -MD -MP -MF wallet/test/$(DEPDIR)/qt_test_test_OGC_qt-wallet_test_fixture.Tpo -c -o wallet/test/qt_test_test_OGC_qt-wallet_test_fixture.obj `if test -f 'wallet/test/wallet_test_fixture.cpp'; then $(CYGPATH_W) 'wallet/test/wallet_test_fixture.cpp'; else $(CYGPATH_W) '$(srcdir)/wallet/test/wallet_test_fixture.cpp'; fi`
-	$(AM_V_at)$(am__mv) wallet/test/$(DEPDIR)/qt_test_test_OGC_qt-wallet_test_fixture.Tpo wallet/test/$(DEPDIR)/qt_test_test_OGC_qt-wallet_test_fixture.Po
-#	$(AM_V_CXX)source='wallet/test/wallet_test_fixture.cpp' object='wallet/test/qt_test_test_OGC_qt-wallet_test_fixture.obj' libtool=no \
+wallet/test/qt_test_test_OG_qt-wallet_test_fixture.obj: wallet/test/wallet_test_fixture.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -MT wallet/test/qt_test_test_OG_qt-wallet_test_fixture.obj -MD -MP -MF wallet/test/$(DEPDIR)/qt_test_test_OG_qt-wallet_test_fixture.Tpo -c -o wallet/test/qt_test_test_OG_qt-wallet_test_fixture.obj `if test -f 'wallet/test/wallet_test_fixture.cpp'; then $(CYGPATH_W) 'wallet/test/wallet_test_fixture.cpp'; else $(CYGPATH_W) '$(srcdir)/wallet/test/wallet_test_fixture.cpp'; fi`
+	$(AM_V_at)$(am__mv) wallet/test/$(DEPDIR)/qt_test_test_OG_qt-wallet_test_fixture.Tpo wallet/test/$(DEPDIR)/qt_test_test_OG_qt-wallet_test_fixture.Po
+#	$(AM_V_CXX)source='wallet/test/wallet_test_fixture.cpp' object='wallet/test/qt_test_test_OG_qt-wallet_test_fixture.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -c -o wallet/test/qt_test_test_OGC_qt-wallet_test_fixture.obj `if test -f 'wallet/test/wallet_test_fixture.cpp'; then $(CYGPATH_W) 'wallet/test/wallet_test_fixture.cpp'; else $(CYGPATH_W) '$(srcdir)/wallet/test/wallet_test_fixture.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -c -o wallet/test/qt_test_test_OG_qt-wallet_test_fixture.obj `if test -f 'wallet/test/wallet_test_fixture.cpp'; then $(CYGPATH_W) 'wallet/test/wallet_test_fixture.cpp'; else $(CYGPATH_W) '$(srcdir)/wallet/test/wallet_test_fixture.cpp'; fi`
 
-qt/test/qt_test_test_OGC_qt-moc_compattests.o: qt/test/moc_compattests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OGC_qt-moc_compattests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_compattests.Tpo -c -o qt/test/qt_test_test_OGC_qt-moc_compattests.o `test -f 'qt/test/moc_compattests.cpp' || echo '$(srcdir)/'`qt/test/moc_compattests.cpp
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_compattests.Tpo qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_compattests.Po
-#	$(AM_V_CXX)source='qt/test/moc_compattests.cpp' object='qt/test/qt_test_test_OGC_qt-moc_compattests.o' libtool=no \
+qt/test/qt_test_test_OG_qt-moc_compattests.o: qt/test/moc_compattests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OG_qt-moc_compattests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_compattests.Tpo -c -o qt/test/qt_test_test_OG_qt-moc_compattests.o `test -f 'qt/test/moc_compattests.cpp' || echo '$(srcdir)/'`qt/test/moc_compattests.cpp
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_compattests.Tpo qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_compattests.Po
+#	$(AM_V_CXX)source='qt/test/moc_compattests.cpp' object='qt/test/qt_test_test_OG_qt-moc_compattests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OGC_qt-moc_compattests.o `test -f 'qt/test/moc_compattests.cpp' || echo '$(srcdir)/'`qt/test/moc_compattests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OG_qt-moc_compattests.o `test -f 'qt/test/moc_compattests.cpp' || echo '$(srcdir)/'`qt/test/moc_compattests.cpp
 
-qt/test/qt_test_test_OGC_qt-moc_compattests.obj: qt/test/moc_compattests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OGC_qt-moc_compattests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_compattests.Tpo -c -o qt/test/qt_test_test_OGC_qt-moc_compattests.obj `if test -f 'qt/test/moc_compattests.cpp'; then $(CYGPATH_W) 'qt/test/moc_compattests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_compattests.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_compattests.Tpo qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_compattests.Po
-#	$(AM_V_CXX)source='qt/test/moc_compattests.cpp' object='qt/test/qt_test_test_OGC_qt-moc_compattests.obj' libtool=no \
+qt/test/qt_test_test_OG_qt-moc_compattests.obj: qt/test/moc_compattests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OG_qt-moc_compattests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_compattests.Tpo -c -o qt/test/qt_test_test_OG_qt-moc_compattests.obj `if test -f 'qt/test/moc_compattests.cpp'; then $(CYGPATH_W) 'qt/test/moc_compattests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_compattests.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_compattests.Tpo qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_compattests.Po
+#	$(AM_V_CXX)source='qt/test/moc_compattests.cpp' object='qt/test/qt_test_test_OG_qt-moc_compattests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OGC_qt-moc_compattests.obj `if test -f 'qt/test/moc_compattests.cpp'; then $(CYGPATH_W) 'qt/test/moc_compattests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_compattests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OG_qt-moc_compattests.obj `if test -f 'qt/test/moc_compattests.cpp'; then $(CYGPATH_W) 'qt/test/moc_compattests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_compattests.cpp'; fi`
 
-qt/test/qt_test_test_OGC_qt-moc_rpcnestedtests.o: qt/test/moc_rpcnestedtests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OGC_qt-moc_rpcnestedtests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_rpcnestedtests.Tpo -c -o qt/test/qt_test_test_OGC_qt-moc_rpcnestedtests.o `test -f 'qt/test/moc_rpcnestedtests.cpp' || echo '$(srcdir)/'`qt/test/moc_rpcnestedtests.cpp
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_rpcnestedtests.Tpo qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_rpcnestedtests.Po
-#	$(AM_V_CXX)source='qt/test/moc_rpcnestedtests.cpp' object='qt/test/qt_test_test_OGC_qt-moc_rpcnestedtests.o' libtool=no \
+qt/test/qt_test_test_OG_qt-moc_rpcnestedtests.o: qt/test/moc_rpcnestedtests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OG_qt-moc_rpcnestedtests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_rpcnestedtests.Tpo -c -o qt/test/qt_test_test_OG_qt-moc_rpcnestedtests.o `test -f 'qt/test/moc_rpcnestedtests.cpp' || echo '$(srcdir)/'`qt/test/moc_rpcnestedtests.cpp
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_rpcnestedtests.Tpo qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_rpcnestedtests.Po
+#	$(AM_V_CXX)source='qt/test/moc_rpcnestedtests.cpp' object='qt/test/qt_test_test_OG_qt-moc_rpcnestedtests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OGC_qt-moc_rpcnestedtests.o `test -f 'qt/test/moc_rpcnestedtests.cpp' || echo '$(srcdir)/'`qt/test/moc_rpcnestedtests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OG_qt-moc_rpcnestedtests.o `test -f 'qt/test/moc_rpcnestedtests.cpp' || echo '$(srcdir)/'`qt/test/moc_rpcnestedtests.cpp
 
-qt/test/qt_test_test_OGC_qt-moc_rpcnestedtests.obj: qt/test/moc_rpcnestedtests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OGC_qt-moc_rpcnestedtests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_rpcnestedtests.Tpo -c -o qt/test/qt_test_test_OGC_qt-moc_rpcnestedtests.obj `if test -f 'qt/test/moc_rpcnestedtests.cpp'; then $(CYGPATH_W) 'qt/test/moc_rpcnestedtests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_rpcnestedtests.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_rpcnestedtests.Tpo qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_rpcnestedtests.Po
-#	$(AM_V_CXX)source='qt/test/moc_rpcnestedtests.cpp' object='qt/test/qt_test_test_OGC_qt-moc_rpcnestedtests.obj' libtool=no \
+qt/test/qt_test_test_OG_qt-moc_rpcnestedtests.obj: qt/test/moc_rpcnestedtests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OG_qt-moc_rpcnestedtests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_rpcnestedtests.Tpo -c -o qt/test/qt_test_test_OG_qt-moc_rpcnestedtests.obj `if test -f 'qt/test/moc_rpcnestedtests.cpp'; then $(CYGPATH_W) 'qt/test/moc_rpcnestedtests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_rpcnestedtests.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_rpcnestedtests.Tpo qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_rpcnestedtests.Po
+#	$(AM_V_CXX)source='qt/test/moc_rpcnestedtests.cpp' object='qt/test/qt_test_test_OG_qt-moc_rpcnestedtests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OGC_qt-moc_rpcnestedtests.obj `if test -f 'qt/test/moc_rpcnestedtests.cpp'; then $(CYGPATH_W) 'qt/test/moc_rpcnestedtests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_rpcnestedtests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OG_qt-moc_rpcnestedtests.obj `if test -f 'qt/test/moc_rpcnestedtests.cpp'; then $(CYGPATH_W) 'qt/test/moc_rpcnestedtests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_rpcnestedtests.cpp'; fi`
 
-qt/test/qt_test_test_OGC_qt-moc_uritests.o: qt/test/moc_uritests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OGC_qt-moc_uritests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_uritests.Tpo -c -o qt/test/qt_test_test_OGC_qt-moc_uritests.o `test -f 'qt/test/moc_uritests.cpp' || echo '$(srcdir)/'`qt/test/moc_uritests.cpp
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_uritests.Tpo qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_uritests.Po
-#	$(AM_V_CXX)source='qt/test/moc_uritests.cpp' object='qt/test/qt_test_test_OGC_qt-moc_uritests.o' libtool=no \
+qt/test/qt_test_test_OG_qt-moc_uritests.o: qt/test/moc_uritests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OG_qt-moc_uritests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_uritests.Tpo -c -o qt/test/qt_test_test_OG_qt-moc_uritests.o `test -f 'qt/test/moc_uritests.cpp' || echo '$(srcdir)/'`qt/test/moc_uritests.cpp
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_uritests.Tpo qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_uritests.Po
+#	$(AM_V_CXX)source='qt/test/moc_uritests.cpp' object='qt/test/qt_test_test_OG_qt-moc_uritests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OGC_qt-moc_uritests.o `test -f 'qt/test/moc_uritests.cpp' || echo '$(srcdir)/'`qt/test/moc_uritests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OG_qt-moc_uritests.o `test -f 'qt/test/moc_uritests.cpp' || echo '$(srcdir)/'`qt/test/moc_uritests.cpp
 
-qt/test/qt_test_test_OGC_qt-moc_uritests.obj: qt/test/moc_uritests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OGC_qt-moc_uritests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_uritests.Tpo -c -o qt/test/qt_test_test_OGC_qt-moc_uritests.obj `if test -f 'qt/test/moc_uritests.cpp'; then $(CYGPATH_W) 'qt/test/moc_uritests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_uritests.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_uritests.Tpo qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_uritests.Po
-#	$(AM_V_CXX)source='qt/test/moc_uritests.cpp' object='qt/test/qt_test_test_OGC_qt-moc_uritests.obj' libtool=no \
+qt/test/qt_test_test_OG_qt-moc_uritests.obj: qt/test/moc_uritests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OG_qt-moc_uritests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_uritests.Tpo -c -o qt/test/qt_test_test_OG_qt-moc_uritests.obj `if test -f 'qt/test/moc_uritests.cpp'; then $(CYGPATH_W) 'qt/test/moc_uritests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_uritests.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_uritests.Tpo qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_uritests.Po
+#	$(AM_V_CXX)source='qt/test/moc_uritests.cpp' object='qt/test/qt_test_test_OG_qt-moc_uritests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OGC_qt-moc_uritests.obj `if test -f 'qt/test/moc_uritests.cpp'; then $(CYGPATH_W) 'qt/test/moc_uritests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_uritests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OG_qt-moc_uritests.obj `if test -f 'qt/test/moc_uritests.cpp'; then $(CYGPATH_W) 'qt/test/moc_uritests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_uritests.cpp'; fi`
 
-qt/test/qt_test_test_OGC_qt-moc_paymentservertests.o: qt/test/moc_paymentservertests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OGC_qt-moc_paymentservertests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_paymentservertests.Tpo -c -o qt/test/qt_test_test_OGC_qt-moc_paymentservertests.o `test -f 'qt/test/moc_paymentservertests.cpp' || echo '$(srcdir)/'`qt/test/moc_paymentservertests.cpp
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_paymentservertests.Tpo qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_paymentservertests.Po
-#	$(AM_V_CXX)source='qt/test/moc_paymentservertests.cpp' object='qt/test/qt_test_test_OGC_qt-moc_paymentservertests.o' libtool=no \
+qt/test/qt_test_test_OG_qt-moc_paymentservertests.o: qt/test/moc_paymentservertests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OG_qt-moc_paymentservertests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_paymentservertests.Tpo -c -o qt/test/qt_test_test_OG_qt-moc_paymentservertests.o `test -f 'qt/test/moc_paymentservertests.cpp' || echo '$(srcdir)/'`qt/test/moc_paymentservertests.cpp
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_paymentservertests.Tpo qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_paymentservertests.Po
+#	$(AM_V_CXX)source='qt/test/moc_paymentservertests.cpp' object='qt/test/qt_test_test_OG_qt-moc_paymentservertests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OGC_qt-moc_paymentservertests.o `test -f 'qt/test/moc_paymentservertests.cpp' || echo '$(srcdir)/'`qt/test/moc_paymentservertests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OG_qt-moc_paymentservertests.o `test -f 'qt/test/moc_paymentservertests.cpp' || echo '$(srcdir)/'`qt/test/moc_paymentservertests.cpp
 
-qt/test/qt_test_test_OGC_qt-moc_paymentservertests.obj: qt/test/moc_paymentservertests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OGC_qt-moc_paymentservertests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_paymentservertests.Tpo -c -o qt/test/qt_test_test_OGC_qt-moc_paymentservertests.obj `if test -f 'qt/test/moc_paymentservertests.cpp'; then $(CYGPATH_W) 'qt/test/moc_paymentservertests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_paymentservertests.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_paymentservertests.Tpo qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_paymentservertests.Po
-#	$(AM_V_CXX)source='qt/test/moc_paymentservertests.cpp' object='qt/test/qt_test_test_OGC_qt-moc_paymentservertests.obj' libtool=no \
+qt/test/qt_test_test_OG_qt-moc_paymentservertests.obj: qt/test/moc_paymentservertests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OG_qt-moc_paymentservertests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_paymentservertests.Tpo -c -o qt/test/qt_test_test_OG_qt-moc_paymentservertests.obj `if test -f 'qt/test/moc_paymentservertests.cpp'; then $(CYGPATH_W) 'qt/test/moc_paymentservertests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_paymentservertests.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_paymentservertests.Tpo qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_paymentservertests.Po
+#	$(AM_V_CXX)source='qt/test/moc_paymentservertests.cpp' object='qt/test/qt_test_test_OG_qt-moc_paymentservertests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OGC_qt-moc_paymentservertests.obj `if test -f 'qt/test/moc_paymentservertests.cpp'; then $(CYGPATH_W) 'qt/test/moc_paymentservertests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_paymentservertests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OG_qt-moc_paymentservertests.obj `if test -f 'qt/test/moc_paymentservertests.cpp'; then $(CYGPATH_W) 'qt/test/moc_paymentservertests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_paymentservertests.cpp'; fi`
 
-qt/test/qt_test_test_OGC_qt-moc_wallettests.o: qt/test/moc_wallettests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OGC_qt-moc_wallettests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_wallettests.Tpo -c -o qt/test/qt_test_test_OGC_qt-moc_wallettests.o `test -f 'qt/test/moc_wallettests.cpp' || echo '$(srcdir)/'`qt/test/moc_wallettests.cpp
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_wallettests.Tpo qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_wallettests.Po
-#	$(AM_V_CXX)source='qt/test/moc_wallettests.cpp' object='qt/test/qt_test_test_OGC_qt-moc_wallettests.o' libtool=no \
+qt/test/qt_test_test_OG_qt-moc_wallettests.o: qt/test/moc_wallettests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OG_qt-moc_wallettests.o -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_wallettests.Tpo -c -o qt/test/qt_test_test_OG_qt-moc_wallettests.o `test -f 'qt/test/moc_wallettests.cpp' || echo '$(srcdir)/'`qt/test/moc_wallettests.cpp
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_wallettests.Tpo qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_wallettests.Po
+#	$(AM_V_CXX)source='qt/test/moc_wallettests.cpp' object='qt/test/qt_test_test_OG_qt-moc_wallettests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OGC_qt-moc_wallettests.o `test -f 'qt/test/moc_wallettests.cpp' || echo '$(srcdir)/'`qt/test/moc_wallettests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OG_qt-moc_wallettests.o `test -f 'qt/test/moc_wallettests.cpp' || echo '$(srcdir)/'`qt/test/moc_wallettests.cpp
 
-qt/test/qt_test_test_OGC_qt-moc_wallettests.obj: qt/test/moc_wallettests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OGC_qt-moc_wallettests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_wallettests.Tpo -c -o qt/test/qt_test_test_OGC_qt-moc_wallettests.obj `if test -f 'qt/test/moc_wallettests.cpp'; then $(CYGPATH_W) 'qt/test/moc_wallettests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_wallettests.cpp'; fi`
-	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_wallettests.Tpo qt/test/$(DEPDIR)/qt_test_test_OGC_qt-moc_wallettests.Po
-#	$(AM_V_CXX)source='qt/test/moc_wallettests.cpp' object='qt/test/qt_test_test_OGC_qt-moc_wallettests.obj' libtool=no \
+qt/test/qt_test_test_OG_qt-moc_wallettests.obj: qt/test/moc_wallettests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -MT qt/test/qt_test_test_OG_qt-moc_wallettests.obj -MD -MP -MF qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_wallettests.Tpo -c -o qt/test/qt_test_test_OG_qt-moc_wallettests.obj `if test -f 'qt/test/moc_wallettests.cpp'; then $(CYGPATH_W) 'qt/test/moc_wallettests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_wallettests.cpp'; fi`
+	$(AM_V_at)$(am__mv) qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_wallettests.Tpo qt/test/$(DEPDIR)/qt_test_test_OG_qt-moc_wallettests.Po
+#	$(AM_V_CXX)source='qt/test/moc_wallettests.cpp' object='qt/test/qt_test_test_OG_qt-moc_wallettests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OGC_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OGC_qt-moc_wallettests.obj `if test -f 'qt/test/moc_wallettests.cpp'; then $(CYGPATH_W) 'qt/test/moc_wallettests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_wallettests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_test_test_OG_qt_CPPFLAGS) $(CPPFLAGS) $(qt_test_test_OG_qt_CXXFLAGS) $(CXXFLAGS) -c -o qt/test/qt_test_test_OG_qt-moc_wallettests.obj `if test -f 'qt/test/moc_wallettests.cpp'; then $(CYGPATH_W) 'qt/test/moc_wallettests.cpp'; else $(CYGPATH_W) '$(srcdir)/qt/test/moc_wallettests.cpp'; fi`
 
-test/test_test_OGC-arith_uint256_tests.o: test/arith_uint256_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-arith_uint256_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-arith_uint256_tests.Tpo -c -o test/test_test_OGC-arith_uint256_tests.o `test -f 'test/arith_uint256_tests.cpp' || echo '$(srcdir)/'`test/arith_uint256_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-arith_uint256_tests.Tpo test/$(DEPDIR)/test_test_OGC-arith_uint256_tests.Po
-#	$(AM_V_CXX)source='test/arith_uint256_tests.cpp' object='test/test_test_OGC-arith_uint256_tests.o' libtool=no \
+test/test_test_OG-arith_uint256_tests.o: test/arith_uint256_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-arith_uint256_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-arith_uint256_tests.Tpo -c -o test/test_test_OG-arith_uint256_tests.o `test -f 'test/arith_uint256_tests.cpp' || echo '$(srcdir)/'`test/arith_uint256_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-arith_uint256_tests.Tpo test/$(DEPDIR)/test_test_OG-arith_uint256_tests.Po
+#	$(AM_V_CXX)source='test/arith_uint256_tests.cpp' object='test/test_test_OG-arith_uint256_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-arith_uint256_tests.o `test -f 'test/arith_uint256_tests.cpp' || echo '$(srcdir)/'`test/arith_uint256_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-arith_uint256_tests.o `test -f 'test/arith_uint256_tests.cpp' || echo '$(srcdir)/'`test/arith_uint256_tests.cpp
 
-test/test_test_OGC-arith_uint256_tests.obj: test/arith_uint256_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-arith_uint256_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-arith_uint256_tests.Tpo -c -o test/test_test_OGC-arith_uint256_tests.obj `if test -f 'test/arith_uint256_tests.cpp'; then $(CYGPATH_W) 'test/arith_uint256_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/arith_uint256_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-arith_uint256_tests.Tpo test/$(DEPDIR)/test_test_OGC-arith_uint256_tests.Po
-#	$(AM_V_CXX)source='test/arith_uint256_tests.cpp' object='test/test_test_OGC-arith_uint256_tests.obj' libtool=no \
+test/test_test_OG-arith_uint256_tests.obj: test/arith_uint256_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-arith_uint256_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-arith_uint256_tests.Tpo -c -o test/test_test_OG-arith_uint256_tests.obj `if test -f 'test/arith_uint256_tests.cpp'; then $(CYGPATH_W) 'test/arith_uint256_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/arith_uint256_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-arith_uint256_tests.Tpo test/$(DEPDIR)/test_test_OG-arith_uint256_tests.Po
+#	$(AM_V_CXX)source='test/arith_uint256_tests.cpp' object='test/test_test_OG-arith_uint256_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-arith_uint256_tests.obj `if test -f 'test/arith_uint256_tests.cpp'; then $(CYGPATH_W) 'test/arith_uint256_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/arith_uint256_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-arith_uint256_tests.obj `if test -f 'test/arith_uint256_tests.cpp'; then $(CYGPATH_W) 'test/arith_uint256_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/arith_uint256_tests.cpp'; fi`
 
-test/test_test_OGC-addrman_tests.o: test/addrman_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-addrman_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-addrman_tests.Tpo -c -o test/test_test_OGC-addrman_tests.o `test -f 'test/addrman_tests.cpp' || echo '$(srcdir)/'`test/addrman_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-addrman_tests.Tpo test/$(DEPDIR)/test_test_OGC-addrman_tests.Po
-#	$(AM_V_CXX)source='test/addrman_tests.cpp' object='test/test_test_OGC-addrman_tests.o' libtool=no \
+test/test_test_OG-addrman_tests.o: test/addrman_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-addrman_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-addrman_tests.Tpo -c -o test/test_test_OG-addrman_tests.o `test -f 'test/addrman_tests.cpp' || echo '$(srcdir)/'`test/addrman_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-addrman_tests.Tpo test/$(DEPDIR)/test_test_OG-addrman_tests.Po
+#	$(AM_V_CXX)source='test/addrman_tests.cpp' object='test/test_test_OG-addrman_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-addrman_tests.o `test -f 'test/addrman_tests.cpp' || echo '$(srcdir)/'`test/addrman_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-addrman_tests.o `test -f 'test/addrman_tests.cpp' || echo '$(srcdir)/'`test/addrman_tests.cpp
 
-test/test_test_OGC-addrman_tests.obj: test/addrman_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-addrman_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-addrman_tests.Tpo -c -o test/test_test_OGC-addrman_tests.obj `if test -f 'test/addrman_tests.cpp'; then $(CYGPATH_W) 'test/addrman_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/addrman_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-addrman_tests.Tpo test/$(DEPDIR)/test_test_OGC-addrman_tests.Po
-#	$(AM_V_CXX)source='test/addrman_tests.cpp' object='test/test_test_OGC-addrman_tests.obj' libtool=no \
+test/test_test_OG-addrman_tests.obj: test/addrman_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-addrman_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-addrman_tests.Tpo -c -o test/test_test_OG-addrman_tests.obj `if test -f 'test/addrman_tests.cpp'; then $(CYGPATH_W) 'test/addrman_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/addrman_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-addrman_tests.Tpo test/$(DEPDIR)/test_test_OG-addrman_tests.Po
+#	$(AM_V_CXX)source='test/addrman_tests.cpp' object='test/test_test_OG-addrman_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-addrman_tests.obj `if test -f 'test/addrman_tests.cpp'; then $(CYGPATH_W) 'test/addrman_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/addrman_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-addrman_tests.obj `if test -f 'test/addrman_tests.cpp'; then $(CYGPATH_W) 'test/addrman_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/addrman_tests.cpp'; fi`
 
-test/test_test_OGC-amount_tests.o: test/amount_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-amount_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-amount_tests.Tpo -c -o test/test_test_OGC-amount_tests.o `test -f 'test/amount_tests.cpp' || echo '$(srcdir)/'`test/amount_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-amount_tests.Tpo test/$(DEPDIR)/test_test_OGC-amount_tests.Po
-#	$(AM_V_CXX)source='test/amount_tests.cpp' object='test/test_test_OGC-amount_tests.o' libtool=no \
+test/test_test_OG-amount_tests.o: test/amount_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-amount_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-amount_tests.Tpo -c -o test/test_test_OG-amount_tests.o `test -f 'test/amount_tests.cpp' || echo '$(srcdir)/'`test/amount_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-amount_tests.Tpo test/$(DEPDIR)/test_test_OG-amount_tests.Po
+#	$(AM_V_CXX)source='test/amount_tests.cpp' object='test/test_test_OG-amount_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-amount_tests.o `test -f 'test/amount_tests.cpp' || echo '$(srcdir)/'`test/amount_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-amount_tests.o `test -f 'test/amount_tests.cpp' || echo '$(srcdir)/'`test/amount_tests.cpp
 
-test/test_test_OGC-amount_tests.obj: test/amount_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-amount_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-amount_tests.Tpo -c -o test/test_test_OGC-amount_tests.obj `if test -f 'test/amount_tests.cpp'; then $(CYGPATH_W) 'test/amount_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/amount_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-amount_tests.Tpo test/$(DEPDIR)/test_test_OGC-amount_tests.Po
-#	$(AM_V_CXX)source='test/amount_tests.cpp' object='test/test_test_OGC-amount_tests.obj' libtool=no \
+test/test_test_OG-amount_tests.obj: test/amount_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-amount_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-amount_tests.Tpo -c -o test/test_test_OG-amount_tests.obj `if test -f 'test/amount_tests.cpp'; then $(CYGPATH_W) 'test/amount_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/amount_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-amount_tests.Tpo test/$(DEPDIR)/test_test_OG-amount_tests.Po
+#	$(AM_V_CXX)source='test/amount_tests.cpp' object='test/test_test_OG-amount_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-amount_tests.obj `if test -f 'test/amount_tests.cpp'; then $(CYGPATH_W) 'test/amount_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/amount_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-amount_tests.obj `if test -f 'test/amount_tests.cpp'; then $(CYGPATH_W) 'test/amount_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/amount_tests.cpp'; fi`
 
-test/test_test_OGC-allocator_tests.o: test/allocator_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-allocator_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-allocator_tests.Tpo -c -o test/test_test_OGC-allocator_tests.o `test -f 'test/allocator_tests.cpp' || echo '$(srcdir)/'`test/allocator_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-allocator_tests.Tpo test/$(DEPDIR)/test_test_OGC-allocator_tests.Po
-#	$(AM_V_CXX)source='test/allocator_tests.cpp' object='test/test_test_OGC-allocator_tests.o' libtool=no \
+test/test_test_OG-allocator_tests.o: test/allocator_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-allocator_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-allocator_tests.Tpo -c -o test/test_test_OG-allocator_tests.o `test -f 'test/allocator_tests.cpp' || echo '$(srcdir)/'`test/allocator_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-allocator_tests.Tpo test/$(DEPDIR)/test_test_OG-allocator_tests.Po
+#	$(AM_V_CXX)source='test/allocator_tests.cpp' object='test/test_test_OG-allocator_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-allocator_tests.o `test -f 'test/allocator_tests.cpp' || echo '$(srcdir)/'`test/allocator_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-allocator_tests.o `test -f 'test/allocator_tests.cpp' || echo '$(srcdir)/'`test/allocator_tests.cpp
 
-test/test_test_OGC-allocator_tests.obj: test/allocator_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-allocator_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-allocator_tests.Tpo -c -o test/test_test_OGC-allocator_tests.obj `if test -f 'test/allocator_tests.cpp'; then $(CYGPATH_W) 'test/allocator_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/allocator_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-allocator_tests.Tpo test/$(DEPDIR)/test_test_OGC-allocator_tests.Po
-#	$(AM_V_CXX)source='test/allocator_tests.cpp' object='test/test_test_OGC-allocator_tests.obj' libtool=no \
+test/test_test_OG-allocator_tests.obj: test/allocator_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-allocator_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-allocator_tests.Tpo -c -o test/test_test_OG-allocator_tests.obj `if test -f 'test/allocator_tests.cpp'; then $(CYGPATH_W) 'test/allocator_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/allocator_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-allocator_tests.Tpo test/$(DEPDIR)/test_test_OG-allocator_tests.Po
+#	$(AM_V_CXX)source='test/allocator_tests.cpp' object='test/test_test_OG-allocator_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-allocator_tests.obj `if test -f 'test/allocator_tests.cpp'; then $(CYGPATH_W) 'test/allocator_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/allocator_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-allocator_tests.obj `if test -f 'test/allocator_tests.cpp'; then $(CYGPATH_W) 'test/allocator_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/allocator_tests.cpp'; fi`
 
-test/test_test_OGC-base32_tests.o: test/base32_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-base32_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-base32_tests.Tpo -c -o test/test_test_OGC-base32_tests.o `test -f 'test/base32_tests.cpp' || echo '$(srcdir)/'`test/base32_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-base32_tests.Tpo test/$(DEPDIR)/test_test_OGC-base32_tests.Po
-#	$(AM_V_CXX)source='test/base32_tests.cpp' object='test/test_test_OGC-base32_tests.o' libtool=no \
+test/test_test_OG-base32_tests.o: test/base32_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-base32_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-base32_tests.Tpo -c -o test/test_test_OG-base32_tests.o `test -f 'test/base32_tests.cpp' || echo '$(srcdir)/'`test/base32_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-base32_tests.Tpo test/$(DEPDIR)/test_test_OG-base32_tests.Po
+#	$(AM_V_CXX)source='test/base32_tests.cpp' object='test/test_test_OG-base32_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-base32_tests.o `test -f 'test/base32_tests.cpp' || echo '$(srcdir)/'`test/base32_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-base32_tests.o `test -f 'test/base32_tests.cpp' || echo '$(srcdir)/'`test/base32_tests.cpp
 
-test/test_test_OGC-base32_tests.obj: test/base32_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-base32_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-base32_tests.Tpo -c -o test/test_test_OGC-base32_tests.obj `if test -f 'test/base32_tests.cpp'; then $(CYGPATH_W) 'test/base32_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base32_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-base32_tests.Tpo test/$(DEPDIR)/test_test_OGC-base32_tests.Po
-#	$(AM_V_CXX)source='test/base32_tests.cpp' object='test/test_test_OGC-base32_tests.obj' libtool=no \
+test/test_test_OG-base32_tests.obj: test/base32_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-base32_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-base32_tests.Tpo -c -o test/test_test_OG-base32_tests.obj `if test -f 'test/base32_tests.cpp'; then $(CYGPATH_W) 'test/base32_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base32_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-base32_tests.Tpo test/$(DEPDIR)/test_test_OG-base32_tests.Po
+#	$(AM_V_CXX)source='test/base32_tests.cpp' object='test/test_test_OG-base32_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-base32_tests.obj `if test -f 'test/base32_tests.cpp'; then $(CYGPATH_W) 'test/base32_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base32_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-base32_tests.obj `if test -f 'test/base32_tests.cpp'; then $(CYGPATH_W) 'test/base32_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base32_tests.cpp'; fi`
 
-test/test_test_OGC-base58_tests.o: test/base58_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-base58_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-base58_tests.Tpo -c -o test/test_test_OGC-base58_tests.o `test -f 'test/base58_tests.cpp' || echo '$(srcdir)/'`test/base58_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-base58_tests.Tpo test/$(DEPDIR)/test_test_OGC-base58_tests.Po
-#	$(AM_V_CXX)source='test/base58_tests.cpp' object='test/test_test_OGC-base58_tests.o' libtool=no \
+test/test_test_OG-base58_tests.o: test/base58_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-base58_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-base58_tests.Tpo -c -o test/test_test_OG-base58_tests.o `test -f 'test/base58_tests.cpp' || echo '$(srcdir)/'`test/base58_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-base58_tests.Tpo test/$(DEPDIR)/test_test_OG-base58_tests.Po
+#	$(AM_V_CXX)source='test/base58_tests.cpp' object='test/test_test_OG-base58_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-base58_tests.o `test -f 'test/base58_tests.cpp' || echo '$(srcdir)/'`test/base58_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-base58_tests.o `test -f 'test/base58_tests.cpp' || echo '$(srcdir)/'`test/base58_tests.cpp
 
-test/test_test_OGC-base58_tests.obj: test/base58_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-base58_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-base58_tests.Tpo -c -o test/test_test_OGC-base58_tests.obj `if test -f 'test/base58_tests.cpp'; then $(CYGPATH_W) 'test/base58_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base58_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-base58_tests.Tpo test/$(DEPDIR)/test_test_OGC-base58_tests.Po
-#	$(AM_V_CXX)source='test/base58_tests.cpp' object='test/test_test_OGC-base58_tests.obj' libtool=no \
+test/test_test_OG-base58_tests.obj: test/base58_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-base58_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-base58_tests.Tpo -c -o test/test_test_OG-base58_tests.obj `if test -f 'test/base58_tests.cpp'; then $(CYGPATH_W) 'test/base58_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base58_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-base58_tests.Tpo test/$(DEPDIR)/test_test_OG-base58_tests.Po
+#	$(AM_V_CXX)source='test/base58_tests.cpp' object='test/test_test_OG-base58_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-base58_tests.obj `if test -f 'test/base58_tests.cpp'; then $(CYGPATH_W) 'test/base58_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base58_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-base58_tests.obj `if test -f 'test/base58_tests.cpp'; then $(CYGPATH_W) 'test/base58_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base58_tests.cpp'; fi`
 
-test/test_test_OGC-base64_tests.o: test/base64_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-base64_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-base64_tests.Tpo -c -o test/test_test_OGC-base64_tests.o `test -f 'test/base64_tests.cpp' || echo '$(srcdir)/'`test/base64_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-base64_tests.Tpo test/$(DEPDIR)/test_test_OGC-base64_tests.Po
-#	$(AM_V_CXX)source='test/base64_tests.cpp' object='test/test_test_OGC-base64_tests.o' libtool=no \
+test/test_test_OG-base64_tests.o: test/base64_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-base64_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-base64_tests.Tpo -c -o test/test_test_OG-base64_tests.o `test -f 'test/base64_tests.cpp' || echo '$(srcdir)/'`test/base64_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-base64_tests.Tpo test/$(DEPDIR)/test_test_OG-base64_tests.Po
+#	$(AM_V_CXX)source='test/base64_tests.cpp' object='test/test_test_OG-base64_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-base64_tests.o `test -f 'test/base64_tests.cpp' || echo '$(srcdir)/'`test/base64_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-base64_tests.o `test -f 'test/base64_tests.cpp' || echo '$(srcdir)/'`test/base64_tests.cpp
 
-test/test_test_OGC-base64_tests.obj: test/base64_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-base64_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-base64_tests.Tpo -c -o test/test_test_OGC-base64_tests.obj `if test -f 'test/base64_tests.cpp'; then $(CYGPATH_W) 'test/base64_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base64_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-base64_tests.Tpo test/$(DEPDIR)/test_test_OGC-base64_tests.Po
-#	$(AM_V_CXX)source='test/base64_tests.cpp' object='test/test_test_OGC-base64_tests.obj' libtool=no \
+test/test_test_OG-base64_tests.obj: test/base64_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-base64_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-base64_tests.Tpo -c -o test/test_test_OG-base64_tests.obj `if test -f 'test/base64_tests.cpp'; then $(CYGPATH_W) 'test/base64_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base64_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-base64_tests.Tpo test/$(DEPDIR)/test_test_OG-base64_tests.Po
+#	$(AM_V_CXX)source='test/base64_tests.cpp' object='test/test_test_OG-base64_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-base64_tests.obj `if test -f 'test/base64_tests.cpp'; then $(CYGPATH_W) 'test/base64_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base64_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-base64_tests.obj `if test -f 'test/base64_tests.cpp'; then $(CYGPATH_W) 'test/base64_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/base64_tests.cpp'; fi`
 
-test/test_test_OGC-bip32_tests.o: test/bip32_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-bip32_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-bip32_tests.Tpo -c -o test/test_test_OGC-bip32_tests.o `test -f 'test/bip32_tests.cpp' || echo '$(srcdir)/'`test/bip32_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-bip32_tests.Tpo test/$(DEPDIR)/test_test_OGC-bip32_tests.Po
-#	$(AM_V_CXX)source='test/bip32_tests.cpp' object='test/test_test_OGC-bip32_tests.o' libtool=no \
+test/test_test_OG-bip32_tests.o: test/bip32_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-bip32_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-bip32_tests.Tpo -c -o test/test_test_OG-bip32_tests.o `test -f 'test/bip32_tests.cpp' || echo '$(srcdir)/'`test/bip32_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-bip32_tests.Tpo test/$(DEPDIR)/test_test_OG-bip32_tests.Po
+#	$(AM_V_CXX)source='test/bip32_tests.cpp' object='test/test_test_OG-bip32_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-bip32_tests.o `test -f 'test/bip32_tests.cpp' || echo '$(srcdir)/'`test/bip32_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-bip32_tests.o `test -f 'test/bip32_tests.cpp' || echo '$(srcdir)/'`test/bip32_tests.cpp
 
-test/test_test_OGC-bip32_tests.obj: test/bip32_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-bip32_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-bip32_tests.Tpo -c -o test/test_test_OGC-bip32_tests.obj `if test -f 'test/bip32_tests.cpp'; then $(CYGPATH_W) 'test/bip32_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/bip32_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-bip32_tests.Tpo test/$(DEPDIR)/test_test_OGC-bip32_tests.Po
-#	$(AM_V_CXX)source='test/bip32_tests.cpp' object='test/test_test_OGC-bip32_tests.obj' libtool=no \
+test/test_test_OG-bip32_tests.obj: test/bip32_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-bip32_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-bip32_tests.Tpo -c -o test/test_test_OG-bip32_tests.obj `if test -f 'test/bip32_tests.cpp'; then $(CYGPATH_W) 'test/bip32_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/bip32_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-bip32_tests.Tpo test/$(DEPDIR)/test_test_OG-bip32_tests.Po
+#	$(AM_V_CXX)source='test/bip32_tests.cpp' object='test/test_test_OG-bip32_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-bip32_tests.obj `if test -f 'test/bip32_tests.cpp'; then $(CYGPATH_W) 'test/bip32_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/bip32_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-bip32_tests.obj `if test -f 'test/bip32_tests.cpp'; then $(CYGPATH_W) 'test/bip32_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/bip32_tests.cpp'; fi`
 
-test/test_test_OGC-bloom_tests.o: test/bloom_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-bloom_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-bloom_tests.Tpo -c -o test/test_test_OGC-bloom_tests.o `test -f 'test/bloom_tests.cpp' || echo '$(srcdir)/'`test/bloom_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-bloom_tests.Tpo test/$(DEPDIR)/test_test_OGC-bloom_tests.Po
-#	$(AM_V_CXX)source='test/bloom_tests.cpp' object='test/test_test_OGC-bloom_tests.o' libtool=no \
+test/test_test_OG-bloom_tests.o: test/bloom_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-bloom_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-bloom_tests.Tpo -c -o test/test_test_OG-bloom_tests.o `test -f 'test/bloom_tests.cpp' || echo '$(srcdir)/'`test/bloom_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-bloom_tests.Tpo test/$(DEPDIR)/test_test_OG-bloom_tests.Po
+#	$(AM_V_CXX)source='test/bloom_tests.cpp' object='test/test_test_OG-bloom_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-bloom_tests.o `test -f 'test/bloom_tests.cpp' || echo '$(srcdir)/'`test/bloom_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-bloom_tests.o `test -f 'test/bloom_tests.cpp' || echo '$(srcdir)/'`test/bloom_tests.cpp
 
-test/test_test_OGC-bloom_tests.obj: test/bloom_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-bloom_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-bloom_tests.Tpo -c -o test/test_test_OGC-bloom_tests.obj `if test -f 'test/bloom_tests.cpp'; then $(CYGPATH_W) 'test/bloom_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/bloom_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-bloom_tests.Tpo test/$(DEPDIR)/test_test_OGC-bloom_tests.Po
-#	$(AM_V_CXX)source='test/bloom_tests.cpp' object='test/test_test_OGC-bloom_tests.obj' libtool=no \
+test/test_test_OG-bloom_tests.obj: test/bloom_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-bloom_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-bloom_tests.Tpo -c -o test/test_test_OG-bloom_tests.obj `if test -f 'test/bloom_tests.cpp'; then $(CYGPATH_W) 'test/bloom_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/bloom_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-bloom_tests.Tpo test/$(DEPDIR)/test_test_OG-bloom_tests.Po
+#	$(AM_V_CXX)source='test/bloom_tests.cpp' object='test/test_test_OG-bloom_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-bloom_tests.obj `if test -f 'test/bloom_tests.cpp'; then $(CYGPATH_W) 'test/bloom_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/bloom_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-bloom_tests.obj `if test -f 'test/bloom_tests.cpp'; then $(CYGPATH_W) 'test/bloom_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/bloom_tests.cpp'; fi`
 
-test/test_test_OGC-bswap_tests.o: test/bswap_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-bswap_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-bswap_tests.Tpo -c -o test/test_test_OGC-bswap_tests.o `test -f 'test/bswap_tests.cpp' || echo '$(srcdir)/'`test/bswap_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-bswap_tests.Tpo test/$(DEPDIR)/test_test_OGC-bswap_tests.Po
-#	$(AM_V_CXX)source='test/bswap_tests.cpp' object='test/test_test_OGC-bswap_tests.o' libtool=no \
+test/test_test_OG-bswap_tests.o: test/bswap_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-bswap_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-bswap_tests.Tpo -c -o test/test_test_OG-bswap_tests.o `test -f 'test/bswap_tests.cpp' || echo '$(srcdir)/'`test/bswap_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-bswap_tests.Tpo test/$(DEPDIR)/test_test_OG-bswap_tests.Po
+#	$(AM_V_CXX)source='test/bswap_tests.cpp' object='test/test_test_OG-bswap_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-bswap_tests.o `test -f 'test/bswap_tests.cpp' || echo '$(srcdir)/'`test/bswap_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-bswap_tests.o `test -f 'test/bswap_tests.cpp' || echo '$(srcdir)/'`test/bswap_tests.cpp
 
-test/test_test_OGC-bswap_tests.obj: test/bswap_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-bswap_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-bswap_tests.Tpo -c -o test/test_test_OGC-bswap_tests.obj `if test -f 'test/bswap_tests.cpp'; then $(CYGPATH_W) 'test/bswap_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/bswap_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-bswap_tests.Tpo test/$(DEPDIR)/test_test_OGC-bswap_tests.Po
-#	$(AM_V_CXX)source='test/bswap_tests.cpp' object='test/test_test_OGC-bswap_tests.obj' libtool=no \
+test/test_test_OG-bswap_tests.obj: test/bswap_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-bswap_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-bswap_tests.Tpo -c -o test/test_test_OG-bswap_tests.obj `if test -f 'test/bswap_tests.cpp'; then $(CYGPATH_W) 'test/bswap_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/bswap_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-bswap_tests.Tpo test/$(DEPDIR)/test_test_OG-bswap_tests.Po
+#	$(AM_V_CXX)source='test/bswap_tests.cpp' object='test/test_test_OG-bswap_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-bswap_tests.obj `if test -f 'test/bswap_tests.cpp'; then $(CYGPATH_W) 'test/bswap_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/bswap_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-bswap_tests.obj `if test -f 'test/bswap_tests.cpp'; then $(CYGPATH_W) 'test/bswap_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/bswap_tests.cpp'; fi`
 
-test/test_test_OGC-checkqueue_tests.o: test/checkqueue_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-checkqueue_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-checkqueue_tests.Tpo -c -o test/test_test_OGC-checkqueue_tests.o `test -f 'test/checkqueue_tests.cpp' || echo '$(srcdir)/'`test/checkqueue_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-checkqueue_tests.Tpo test/$(DEPDIR)/test_test_OGC-checkqueue_tests.Po
-#	$(AM_V_CXX)source='test/checkqueue_tests.cpp' object='test/test_test_OGC-checkqueue_tests.o' libtool=no \
+test/test_test_OG-checkqueue_tests.o: test/checkqueue_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-checkqueue_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-checkqueue_tests.Tpo -c -o test/test_test_OG-checkqueue_tests.o `test -f 'test/checkqueue_tests.cpp' || echo '$(srcdir)/'`test/checkqueue_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-checkqueue_tests.Tpo test/$(DEPDIR)/test_test_OG-checkqueue_tests.Po
+#	$(AM_V_CXX)source='test/checkqueue_tests.cpp' object='test/test_test_OG-checkqueue_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-checkqueue_tests.o `test -f 'test/checkqueue_tests.cpp' || echo '$(srcdir)/'`test/checkqueue_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-checkqueue_tests.o `test -f 'test/checkqueue_tests.cpp' || echo '$(srcdir)/'`test/checkqueue_tests.cpp
 
-test/test_test_OGC-checkqueue_tests.obj: test/checkqueue_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-checkqueue_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-checkqueue_tests.Tpo -c -o test/test_test_OGC-checkqueue_tests.obj `if test -f 'test/checkqueue_tests.cpp'; then $(CYGPATH_W) 'test/checkqueue_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/checkqueue_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-checkqueue_tests.Tpo test/$(DEPDIR)/test_test_OGC-checkqueue_tests.Po
-#	$(AM_V_CXX)source='test/checkqueue_tests.cpp' object='test/test_test_OGC-checkqueue_tests.obj' libtool=no \
+test/test_test_OG-checkqueue_tests.obj: test/checkqueue_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-checkqueue_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-checkqueue_tests.Tpo -c -o test/test_test_OG-checkqueue_tests.obj `if test -f 'test/checkqueue_tests.cpp'; then $(CYGPATH_W) 'test/checkqueue_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/checkqueue_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-checkqueue_tests.Tpo test/$(DEPDIR)/test_test_OG-checkqueue_tests.Po
+#	$(AM_V_CXX)source='test/checkqueue_tests.cpp' object='test/test_test_OG-checkqueue_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-checkqueue_tests.obj `if test -f 'test/checkqueue_tests.cpp'; then $(CYGPATH_W) 'test/checkqueue_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/checkqueue_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-checkqueue_tests.obj `if test -f 'test/checkqueue_tests.cpp'; then $(CYGPATH_W) 'test/checkqueue_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/checkqueue_tests.cpp'; fi`
 
-test/test_test_OGC-coins_tests.o: test/coins_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-coins_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-coins_tests.Tpo -c -o test/test_test_OGC-coins_tests.o `test -f 'test/coins_tests.cpp' || echo '$(srcdir)/'`test/coins_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-coins_tests.Tpo test/$(DEPDIR)/test_test_OGC-coins_tests.Po
-#	$(AM_V_CXX)source='test/coins_tests.cpp' object='test/test_test_OGC-coins_tests.o' libtool=no \
+test/test_test_OG-coins_tests.o: test/coins_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-coins_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-coins_tests.Tpo -c -o test/test_test_OG-coins_tests.o `test -f 'test/coins_tests.cpp' || echo '$(srcdir)/'`test/coins_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-coins_tests.Tpo test/$(DEPDIR)/test_test_OG-coins_tests.Po
+#	$(AM_V_CXX)source='test/coins_tests.cpp' object='test/test_test_OG-coins_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-coins_tests.o `test -f 'test/coins_tests.cpp' || echo '$(srcdir)/'`test/coins_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-coins_tests.o `test -f 'test/coins_tests.cpp' || echo '$(srcdir)/'`test/coins_tests.cpp
 
-test/test_test_OGC-coins_tests.obj: test/coins_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-coins_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-coins_tests.Tpo -c -o test/test_test_OGC-coins_tests.obj `if test -f 'test/coins_tests.cpp'; then $(CYGPATH_W) 'test/coins_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/coins_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-coins_tests.Tpo test/$(DEPDIR)/test_test_OGC-coins_tests.Po
-#	$(AM_V_CXX)source='test/coins_tests.cpp' object='test/test_test_OGC-coins_tests.obj' libtool=no \
+test/test_test_OG-coins_tests.obj: test/coins_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-coins_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-coins_tests.Tpo -c -o test/test_test_OG-coins_tests.obj `if test -f 'test/coins_tests.cpp'; then $(CYGPATH_W) 'test/coins_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/coins_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-coins_tests.Tpo test/$(DEPDIR)/test_test_OG-coins_tests.Po
+#	$(AM_V_CXX)source='test/coins_tests.cpp' object='test/test_test_OG-coins_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-coins_tests.obj `if test -f 'test/coins_tests.cpp'; then $(CYGPATH_W) 'test/coins_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/coins_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-coins_tests.obj `if test -f 'test/coins_tests.cpp'; then $(CYGPATH_W) 'test/coins_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/coins_tests.cpp'; fi`
 
-test/test_test_OGC-compress_tests.o: test/compress_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-compress_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-compress_tests.Tpo -c -o test/test_test_OGC-compress_tests.o `test -f 'test/compress_tests.cpp' || echo '$(srcdir)/'`test/compress_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-compress_tests.Tpo test/$(DEPDIR)/test_test_OGC-compress_tests.Po
-#	$(AM_V_CXX)source='test/compress_tests.cpp' object='test/test_test_OGC-compress_tests.o' libtool=no \
+test/test_test_OG-compress_tests.o: test/compress_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-compress_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-compress_tests.Tpo -c -o test/test_test_OG-compress_tests.o `test -f 'test/compress_tests.cpp' || echo '$(srcdir)/'`test/compress_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-compress_tests.Tpo test/$(DEPDIR)/test_test_OG-compress_tests.Po
+#	$(AM_V_CXX)source='test/compress_tests.cpp' object='test/test_test_OG-compress_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-compress_tests.o `test -f 'test/compress_tests.cpp' || echo '$(srcdir)/'`test/compress_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-compress_tests.o `test -f 'test/compress_tests.cpp' || echo '$(srcdir)/'`test/compress_tests.cpp
 
-test/test_test_OGC-compress_tests.obj: test/compress_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-compress_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-compress_tests.Tpo -c -o test/test_test_OGC-compress_tests.obj `if test -f 'test/compress_tests.cpp'; then $(CYGPATH_W) 'test/compress_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/compress_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-compress_tests.Tpo test/$(DEPDIR)/test_test_OGC-compress_tests.Po
-#	$(AM_V_CXX)source='test/compress_tests.cpp' object='test/test_test_OGC-compress_tests.obj' libtool=no \
+test/test_test_OG-compress_tests.obj: test/compress_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-compress_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-compress_tests.Tpo -c -o test/test_test_OG-compress_tests.obj `if test -f 'test/compress_tests.cpp'; then $(CYGPATH_W) 'test/compress_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/compress_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-compress_tests.Tpo test/$(DEPDIR)/test_test_OG-compress_tests.Po
+#	$(AM_V_CXX)source='test/compress_tests.cpp' object='test/test_test_OG-compress_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-compress_tests.obj `if test -f 'test/compress_tests.cpp'; then $(CYGPATH_W) 'test/compress_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/compress_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-compress_tests.obj `if test -f 'test/compress_tests.cpp'; then $(CYGPATH_W) 'test/compress_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/compress_tests.cpp'; fi`
 
-test/test_test_OGC-crypto_tests.o: test/crypto_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-crypto_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-crypto_tests.Tpo -c -o test/test_test_OGC-crypto_tests.o `test -f 'test/crypto_tests.cpp' || echo '$(srcdir)/'`test/crypto_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-crypto_tests.Tpo test/$(DEPDIR)/test_test_OGC-crypto_tests.Po
-#	$(AM_V_CXX)source='test/crypto_tests.cpp' object='test/test_test_OGC-crypto_tests.o' libtool=no \
+test/test_test_OG-crypto_tests.o: test/crypto_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-crypto_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-crypto_tests.Tpo -c -o test/test_test_OG-crypto_tests.o `test -f 'test/crypto_tests.cpp' || echo '$(srcdir)/'`test/crypto_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-crypto_tests.Tpo test/$(DEPDIR)/test_test_OG-crypto_tests.Po
+#	$(AM_V_CXX)source='test/crypto_tests.cpp' object='test/test_test_OG-crypto_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-crypto_tests.o `test -f 'test/crypto_tests.cpp' || echo '$(srcdir)/'`test/crypto_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-crypto_tests.o `test -f 'test/crypto_tests.cpp' || echo '$(srcdir)/'`test/crypto_tests.cpp
 
-test/test_test_OGC-crypto_tests.obj: test/crypto_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-crypto_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-crypto_tests.Tpo -c -o test/test_test_OGC-crypto_tests.obj `if test -f 'test/crypto_tests.cpp'; then $(CYGPATH_W) 'test/crypto_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/crypto_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-crypto_tests.Tpo test/$(DEPDIR)/test_test_OGC-crypto_tests.Po
-#	$(AM_V_CXX)source='test/crypto_tests.cpp' object='test/test_test_OGC-crypto_tests.obj' libtool=no \
+test/test_test_OG-crypto_tests.obj: test/crypto_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-crypto_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-crypto_tests.Tpo -c -o test/test_test_OG-crypto_tests.obj `if test -f 'test/crypto_tests.cpp'; then $(CYGPATH_W) 'test/crypto_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/crypto_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-crypto_tests.Tpo test/$(DEPDIR)/test_test_OG-crypto_tests.Po
+#	$(AM_V_CXX)source='test/crypto_tests.cpp' object='test/test_test_OG-crypto_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-crypto_tests.obj `if test -f 'test/crypto_tests.cpp'; then $(CYGPATH_W) 'test/crypto_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/crypto_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-crypto_tests.obj `if test -f 'test/crypto_tests.cpp'; then $(CYGPATH_W) 'test/crypto_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/crypto_tests.cpp'; fi`
 
-test/test_test_OGC-cuckoocache_tests.o: test/cuckoocache_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-cuckoocache_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-cuckoocache_tests.Tpo -c -o test/test_test_OGC-cuckoocache_tests.o `test -f 'test/cuckoocache_tests.cpp' || echo '$(srcdir)/'`test/cuckoocache_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-cuckoocache_tests.Tpo test/$(DEPDIR)/test_test_OGC-cuckoocache_tests.Po
-#	$(AM_V_CXX)source='test/cuckoocache_tests.cpp' object='test/test_test_OGC-cuckoocache_tests.o' libtool=no \
+test/test_test_OG-cuckoocache_tests.o: test/cuckoocache_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-cuckoocache_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-cuckoocache_tests.Tpo -c -o test/test_test_OG-cuckoocache_tests.o `test -f 'test/cuckoocache_tests.cpp' || echo '$(srcdir)/'`test/cuckoocache_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-cuckoocache_tests.Tpo test/$(DEPDIR)/test_test_OG-cuckoocache_tests.Po
+#	$(AM_V_CXX)source='test/cuckoocache_tests.cpp' object='test/test_test_OG-cuckoocache_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-cuckoocache_tests.o `test -f 'test/cuckoocache_tests.cpp' || echo '$(srcdir)/'`test/cuckoocache_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-cuckoocache_tests.o `test -f 'test/cuckoocache_tests.cpp' || echo '$(srcdir)/'`test/cuckoocache_tests.cpp
 
-test/test_test_OGC-cuckoocache_tests.obj: test/cuckoocache_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-cuckoocache_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-cuckoocache_tests.Tpo -c -o test/test_test_OGC-cuckoocache_tests.obj `if test -f 'test/cuckoocache_tests.cpp'; then $(CYGPATH_W) 'test/cuckoocache_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/cuckoocache_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-cuckoocache_tests.Tpo test/$(DEPDIR)/test_test_OGC-cuckoocache_tests.Po
-#	$(AM_V_CXX)source='test/cuckoocache_tests.cpp' object='test/test_test_OGC-cuckoocache_tests.obj' libtool=no \
+test/test_test_OG-cuckoocache_tests.obj: test/cuckoocache_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-cuckoocache_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-cuckoocache_tests.Tpo -c -o test/test_test_OG-cuckoocache_tests.obj `if test -f 'test/cuckoocache_tests.cpp'; then $(CYGPATH_W) 'test/cuckoocache_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/cuckoocache_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-cuckoocache_tests.Tpo test/$(DEPDIR)/test_test_OG-cuckoocache_tests.Po
+#	$(AM_V_CXX)source='test/cuckoocache_tests.cpp' object='test/test_test_OG-cuckoocache_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-cuckoocache_tests.obj `if test -f 'test/cuckoocache_tests.cpp'; then $(CYGPATH_W) 'test/cuckoocache_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/cuckoocache_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-cuckoocache_tests.obj `if test -f 'test/cuckoocache_tests.cpp'; then $(CYGPATH_W) 'test/cuckoocache_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/cuckoocache_tests.cpp'; fi`
 
-test/test_test_OGC-DoS_tests.o: test/DoS_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-DoS_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-DoS_tests.Tpo -c -o test/test_test_OGC-DoS_tests.o `test -f 'test/DoS_tests.cpp' || echo '$(srcdir)/'`test/DoS_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-DoS_tests.Tpo test/$(DEPDIR)/test_test_OGC-DoS_tests.Po
-#	$(AM_V_CXX)source='test/DoS_tests.cpp' object='test/test_test_OGC-DoS_tests.o' libtool=no \
+test/test_test_OG-DoS_tests.o: test/DoS_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-DoS_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-DoS_tests.Tpo -c -o test/test_test_OG-DoS_tests.o `test -f 'test/DoS_tests.cpp' || echo '$(srcdir)/'`test/DoS_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-DoS_tests.Tpo test/$(DEPDIR)/test_test_OG-DoS_tests.Po
+#	$(AM_V_CXX)source='test/DoS_tests.cpp' object='test/test_test_OG-DoS_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-DoS_tests.o `test -f 'test/DoS_tests.cpp' || echo '$(srcdir)/'`test/DoS_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-DoS_tests.o `test -f 'test/DoS_tests.cpp' || echo '$(srcdir)/'`test/DoS_tests.cpp
 
-test/test_test_OGC-DoS_tests.obj: test/DoS_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-DoS_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-DoS_tests.Tpo -c -o test/test_test_OGC-DoS_tests.obj `if test -f 'test/DoS_tests.cpp'; then $(CYGPATH_W) 'test/DoS_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/DoS_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-DoS_tests.Tpo test/$(DEPDIR)/test_test_OGC-DoS_tests.Po
-#	$(AM_V_CXX)source='test/DoS_tests.cpp' object='test/test_test_OGC-DoS_tests.obj' libtool=no \
+test/test_test_OG-DoS_tests.obj: test/DoS_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-DoS_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-DoS_tests.Tpo -c -o test/test_test_OG-DoS_tests.obj `if test -f 'test/DoS_tests.cpp'; then $(CYGPATH_W) 'test/DoS_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/DoS_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-DoS_tests.Tpo test/$(DEPDIR)/test_test_OG-DoS_tests.Po
+#	$(AM_V_CXX)source='test/DoS_tests.cpp' object='test/test_test_OG-DoS_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-DoS_tests.obj `if test -f 'test/DoS_tests.cpp'; then $(CYGPATH_W) 'test/DoS_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/DoS_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-DoS_tests.obj `if test -f 'test/DoS_tests.cpp'; then $(CYGPATH_W) 'test/DoS_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/DoS_tests.cpp'; fi`
 
-test/test_test_OGC-getarg_tests.o: test/getarg_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-getarg_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-getarg_tests.Tpo -c -o test/test_test_OGC-getarg_tests.o `test -f 'test/getarg_tests.cpp' || echo '$(srcdir)/'`test/getarg_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-getarg_tests.Tpo test/$(DEPDIR)/test_test_OGC-getarg_tests.Po
-#	$(AM_V_CXX)source='test/getarg_tests.cpp' object='test/test_test_OGC-getarg_tests.o' libtool=no \
+test/test_test_OG-getarg_tests.o: test/getarg_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-getarg_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-getarg_tests.Tpo -c -o test/test_test_OG-getarg_tests.o `test -f 'test/getarg_tests.cpp' || echo '$(srcdir)/'`test/getarg_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-getarg_tests.Tpo test/$(DEPDIR)/test_test_OG-getarg_tests.Po
+#	$(AM_V_CXX)source='test/getarg_tests.cpp' object='test/test_test_OG-getarg_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-getarg_tests.o `test -f 'test/getarg_tests.cpp' || echo '$(srcdir)/'`test/getarg_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-getarg_tests.o `test -f 'test/getarg_tests.cpp' || echo '$(srcdir)/'`test/getarg_tests.cpp
 
-test/test_test_OGC-getarg_tests.obj: test/getarg_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-getarg_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-getarg_tests.Tpo -c -o test/test_test_OGC-getarg_tests.obj `if test -f 'test/getarg_tests.cpp'; then $(CYGPATH_W) 'test/getarg_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/getarg_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-getarg_tests.Tpo test/$(DEPDIR)/test_test_OGC-getarg_tests.Po
-#	$(AM_V_CXX)source='test/getarg_tests.cpp' object='test/test_test_OGC-getarg_tests.obj' libtool=no \
+test/test_test_OG-getarg_tests.obj: test/getarg_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-getarg_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-getarg_tests.Tpo -c -o test/test_test_OG-getarg_tests.obj `if test -f 'test/getarg_tests.cpp'; then $(CYGPATH_W) 'test/getarg_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/getarg_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-getarg_tests.Tpo test/$(DEPDIR)/test_test_OG-getarg_tests.Po
+#	$(AM_V_CXX)source='test/getarg_tests.cpp' object='test/test_test_OG-getarg_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-getarg_tests.obj `if test -f 'test/getarg_tests.cpp'; then $(CYGPATH_W) 'test/getarg_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/getarg_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-getarg_tests.obj `if test -f 'test/getarg_tests.cpp'; then $(CYGPATH_W) 'test/getarg_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/getarg_tests.cpp'; fi`
 
-test/test_test_OGC-hash_tests.o: test/hash_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-hash_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-hash_tests.Tpo -c -o test/test_test_OGC-hash_tests.o `test -f 'test/hash_tests.cpp' || echo '$(srcdir)/'`test/hash_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-hash_tests.Tpo test/$(DEPDIR)/test_test_OGC-hash_tests.Po
-#	$(AM_V_CXX)source='test/hash_tests.cpp' object='test/test_test_OGC-hash_tests.o' libtool=no \
+test/test_test_OG-hash_tests.o: test/hash_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-hash_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-hash_tests.Tpo -c -o test/test_test_OG-hash_tests.o `test -f 'test/hash_tests.cpp' || echo '$(srcdir)/'`test/hash_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-hash_tests.Tpo test/$(DEPDIR)/test_test_OG-hash_tests.Po
+#	$(AM_V_CXX)source='test/hash_tests.cpp' object='test/test_test_OG-hash_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-hash_tests.o `test -f 'test/hash_tests.cpp' || echo '$(srcdir)/'`test/hash_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-hash_tests.o `test -f 'test/hash_tests.cpp' || echo '$(srcdir)/'`test/hash_tests.cpp
 
-test/test_test_OGC-hash_tests.obj: test/hash_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-hash_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-hash_tests.Tpo -c -o test/test_test_OGC-hash_tests.obj `if test -f 'test/hash_tests.cpp'; then $(CYGPATH_W) 'test/hash_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/hash_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-hash_tests.Tpo test/$(DEPDIR)/test_test_OGC-hash_tests.Po
-#	$(AM_V_CXX)source='test/hash_tests.cpp' object='test/test_test_OGC-hash_tests.obj' libtool=no \
+test/test_test_OG-hash_tests.obj: test/hash_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-hash_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-hash_tests.Tpo -c -o test/test_test_OG-hash_tests.obj `if test -f 'test/hash_tests.cpp'; then $(CYGPATH_W) 'test/hash_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/hash_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-hash_tests.Tpo test/$(DEPDIR)/test_test_OG-hash_tests.Po
+#	$(AM_V_CXX)source='test/hash_tests.cpp' object='test/test_test_OG-hash_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-hash_tests.obj `if test -f 'test/hash_tests.cpp'; then $(CYGPATH_W) 'test/hash_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/hash_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-hash_tests.obj `if test -f 'test/hash_tests.cpp'; then $(CYGPATH_W) 'test/hash_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/hash_tests.cpp'; fi`
 
-test/test_test_OGC-key_tests.o: test/key_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-key_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-key_tests.Tpo -c -o test/test_test_OGC-key_tests.o `test -f 'test/key_tests.cpp' || echo '$(srcdir)/'`test/key_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-key_tests.Tpo test/$(DEPDIR)/test_test_OGC-key_tests.Po
-#	$(AM_V_CXX)source='test/key_tests.cpp' object='test/test_test_OGC-key_tests.o' libtool=no \
+test/test_test_OG-key_tests.o: test/key_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-key_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-key_tests.Tpo -c -o test/test_test_OG-key_tests.o `test -f 'test/key_tests.cpp' || echo '$(srcdir)/'`test/key_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-key_tests.Tpo test/$(DEPDIR)/test_test_OG-key_tests.Po
+#	$(AM_V_CXX)source='test/key_tests.cpp' object='test/test_test_OG-key_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-key_tests.o `test -f 'test/key_tests.cpp' || echo '$(srcdir)/'`test/key_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-key_tests.o `test -f 'test/key_tests.cpp' || echo '$(srcdir)/'`test/key_tests.cpp
 
-test/test_test_OGC-key_tests.obj: test/key_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-key_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-key_tests.Tpo -c -o test/test_test_OGC-key_tests.obj `if test -f 'test/key_tests.cpp'; then $(CYGPATH_W) 'test/key_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/key_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-key_tests.Tpo test/$(DEPDIR)/test_test_OGC-key_tests.Po
-#	$(AM_V_CXX)source='test/key_tests.cpp' object='test/test_test_OGC-key_tests.obj' libtool=no \
+test/test_test_OG-key_tests.obj: test/key_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-key_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-key_tests.Tpo -c -o test/test_test_OG-key_tests.obj `if test -f 'test/key_tests.cpp'; then $(CYGPATH_W) 'test/key_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/key_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-key_tests.Tpo test/$(DEPDIR)/test_test_OG-key_tests.Po
+#	$(AM_V_CXX)source='test/key_tests.cpp' object='test/test_test_OG-key_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-key_tests.obj `if test -f 'test/key_tests.cpp'; then $(CYGPATH_W) 'test/key_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/key_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-key_tests.obj `if test -f 'test/key_tests.cpp'; then $(CYGPATH_W) 'test/key_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/key_tests.cpp'; fi`
 
-test/test_test_OGC-limitedmap_tests.o: test/limitedmap_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-limitedmap_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-limitedmap_tests.Tpo -c -o test/test_test_OGC-limitedmap_tests.o `test -f 'test/limitedmap_tests.cpp' || echo '$(srcdir)/'`test/limitedmap_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-limitedmap_tests.Tpo test/$(DEPDIR)/test_test_OGC-limitedmap_tests.Po
-#	$(AM_V_CXX)source='test/limitedmap_tests.cpp' object='test/test_test_OGC-limitedmap_tests.o' libtool=no \
+test/test_test_OG-limitedmap_tests.o: test/limitedmap_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-limitedmap_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-limitedmap_tests.Tpo -c -o test/test_test_OG-limitedmap_tests.o `test -f 'test/limitedmap_tests.cpp' || echo '$(srcdir)/'`test/limitedmap_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-limitedmap_tests.Tpo test/$(DEPDIR)/test_test_OG-limitedmap_tests.Po
+#	$(AM_V_CXX)source='test/limitedmap_tests.cpp' object='test/test_test_OG-limitedmap_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-limitedmap_tests.o `test -f 'test/limitedmap_tests.cpp' || echo '$(srcdir)/'`test/limitedmap_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-limitedmap_tests.o `test -f 'test/limitedmap_tests.cpp' || echo '$(srcdir)/'`test/limitedmap_tests.cpp
 
-test/test_test_OGC-limitedmap_tests.obj: test/limitedmap_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-limitedmap_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-limitedmap_tests.Tpo -c -o test/test_test_OGC-limitedmap_tests.obj `if test -f 'test/limitedmap_tests.cpp'; then $(CYGPATH_W) 'test/limitedmap_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/limitedmap_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-limitedmap_tests.Tpo test/$(DEPDIR)/test_test_OGC-limitedmap_tests.Po
-#	$(AM_V_CXX)source='test/limitedmap_tests.cpp' object='test/test_test_OGC-limitedmap_tests.obj' libtool=no \
+test/test_test_OG-limitedmap_tests.obj: test/limitedmap_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-limitedmap_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-limitedmap_tests.Tpo -c -o test/test_test_OG-limitedmap_tests.obj `if test -f 'test/limitedmap_tests.cpp'; then $(CYGPATH_W) 'test/limitedmap_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/limitedmap_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-limitedmap_tests.Tpo test/$(DEPDIR)/test_test_OG-limitedmap_tests.Po
+#	$(AM_V_CXX)source='test/limitedmap_tests.cpp' object='test/test_test_OG-limitedmap_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-limitedmap_tests.obj `if test -f 'test/limitedmap_tests.cpp'; then $(CYGPATH_W) 'test/limitedmap_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/limitedmap_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-limitedmap_tests.obj `if test -f 'test/limitedmap_tests.cpp'; then $(CYGPATH_W) 'test/limitedmap_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/limitedmap_tests.cpp'; fi`
 
-test/test_test_OGC-dbwrapper_tests.o: test/dbwrapper_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-dbwrapper_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-dbwrapper_tests.Tpo -c -o test/test_test_OGC-dbwrapper_tests.o `test -f 'test/dbwrapper_tests.cpp' || echo '$(srcdir)/'`test/dbwrapper_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-dbwrapper_tests.Tpo test/$(DEPDIR)/test_test_OGC-dbwrapper_tests.Po
-#	$(AM_V_CXX)source='test/dbwrapper_tests.cpp' object='test/test_test_OGC-dbwrapper_tests.o' libtool=no \
+test/test_test_OG-dbwrapper_tests.o: test/dbwrapper_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-dbwrapper_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-dbwrapper_tests.Tpo -c -o test/test_test_OG-dbwrapper_tests.o `test -f 'test/dbwrapper_tests.cpp' || echo '$(srcdir)/'`test/dbwrapper_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-dbwrapper_tests.Tpo test/$(DEPDIR)/test_test_OG-dbwrapper_tests.Po
+#	$(AM_V_CXX)source='test/dbwrapper_tests.cpp' object='test/test_test_OG-dbwrapper_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-dbwrapper_tests.o `test -f 'test/dbwrapper_tests.cpp' || echo '$(srcdir)/'`test/dbwrapper_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-dbwrapper_tests.o `test -f 'test/dbwrapper_tests.cpp' || echo '$(srcdir)/'`test/dbwrapper_tests.cpp
 
-test/test_test_OGC-dbwrapper_tests.obj: test/dbwrapper_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-dbwrapper_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-dbwrapper_tests.Tpo -c -o test/test_test_OGC-dbwrapper_tests.obj `if test -f 'test/dbwrapper_tests.cpp'; then $(CYGPATH_W) 'test/dbwrapper_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/dbwrapper_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-dbwrapper_tests.Tpo test/$(DEPDIR)/test_test_OGC-dbwrapper_tests.Po
-#	$(AM_V_CXX)source='test/dbwrapper_tests.cpp' object='test/test_test_OGC-dbwrapper_tests.obj' libtool=no \
+test/test_test_OG-dbwrapper_tests.obj: test/dbwrapper_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-dbwrapper_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-dbwrapper_tests.Tpo -c -o test/test_test_OG-dbwrapper_tests.obj `if test -f 'test/dbwrapper_tests.cpp'; then $(CYGPATH_W) 'test/dbwrapper_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/dbwrapper_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-dbwrapper_tests.Tpo test/$(DEPDIR)/test_test_OG-dbwrapper_tests.Po
+#	$(AM_V_CXX)source='test/dbwrapper_tests.cpp' object='test/test_test_OG-dbwrapper_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-dbwrapper_tests.obj `if test -f 'test/dbwrapper_tests.cpp'; then $(CYGPATH_W) 'test/dbwrapper_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/dbwrapper_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-dbwrapper_tests.obj `if test -f 'test/dbwrapper_tests.cpp'; then $(CYGPATH_W) 'test/dbwrapper_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/dbwrapper_tests.cpp'; fi`
 
-test/test_test_OGC-main_tests.o: test/main_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-main_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-main_tests.Tpo -c -o test/test_test_OGC-main_tests.o `test -f 'test/main_tests.cpp' || echo '$(srcdir)/'`test/main_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-main_tests.Tpo test/$(DEPDIR)/test_test_OGC-main_tests.Po
-#	$(AM_V_CXX)source='test/main_tests.cpp' object='test/test_test_OGC-main_tests.o' libtool=no \
+test/test_test_OG-main_tests.o: test/main_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-main_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-main_tests.Tpo -c -o test/test_test_OG-main_tests.o `test -f 'test/main_tests.cpp' || echo '$(srcdir)/'`test/main_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-main_tests.Tpo test/$(DEPDIR)/test_test_OG-main_tests.Po
+#	$(AM_V_CXX)source='test/main_tests.cpp' object='test/test_test_OG-main_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-main_tests.o `test -f 'test/main_tests.cpp' || echo '$(srcdir)/'`test/main_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-main_tests.o `test -f 'test/main_tests.cpp' || echo '$(srcdir)/'`test/main_tests.cpp
 
-test/test_test_OGC-main_tests.obj: test/main_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-main_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-main_tests.Tpo -c -o test/test_test_OGC-main_tests.obj `if test -f 'test/main_tests.cpp'; then $(CYGPATH_W) 'test/main_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/main_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-main_tests.Tpo test/$(DEPDIR)/test_test_OGC-main_tests.Po
-#	$(AM_V_CXX)source='test/main_tests.cpp' object='test/test_test_OGC-main_tests.obj' libtool=no \
+test/test_test_OG-main_tests.obj: test/main_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-main_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-main_tests.Tpo -c -o test/test_test_OG-main_tests.obj `if test -f 'test/main_tests.cpp'; then $(CYGPATH_W) 'test/main_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/main_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-main_tests.Tpo test/$(DEPDIR)/test_test_OG-main_tests.Po
+#	$(AM_V_CXX)source='test/main_tests.cpp' object='test/test_test_OG-main_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-main_tests.obj `if test -f 'test/main_tests.cpp'; then $(CYGPATH_W) 'test/main_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/main_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-main_tests.obj `if test -f 'test/main_tests.cpp'; then $(CYGPATH_W) 'test/main_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/main_tests.cpp'; fi`
 
-test/test_test_OGC-mempool_tests.o: test/mempool_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-mempool_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-mempool_tests.Tpo -c -o test/test_test_OGC-mempool_tests.o `test -f 'test/mempool_tests.cpp' || echo '$(srcdir)/'`test/mempool_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-mempool_tests.Tpo test/$(DEPDIR)/test_test_OGC-mempool_tests.Po
-#	$(AM_V_CXX)source='test/mempool_tests.cpp' object='test/test_test_OGC-mempool_tests.o' libtool=no \
+test/test_test_OG-mempool_tests.o: test/mempool_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-mempool_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-mempool_tests.Tpo -c -o test/test_test_OG-mempool_tests.o `test -f 'test/mempool_tests.cpp' || echo '$(srcdir)/'`test/mempool_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-mempool_tests.Tpo test/$(DEPDIR)/test_test_OG-mempool_tests.Po
+#	$(AM_V_CXX)source='test/mempool_tests.cpp' object='test/test_test_OG-mempool_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-mempool_tests.o `test -f 'test/mempool_tests.cpp' || echo '$(srcdir)/'`test/mempool_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-mempool_tests.o `test -f 'test/mempool_tests.cpp' || echo '$(srcdir)/'`test/mempool_tests.cpp
 
-test/test_test_OGC-mempool_tests.obj: test/mempool_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-mempool_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-mempool_tests.Tpo -c -o test/test_test_OGC-mempool_tests.obj `if test -f 'test/mempool_tests.cpp'; then $(CYGPATH_W) 'test/mempool_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/mempool_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-mempool_tests.Tpo test/$(DEPDIR)/test_test_OGC-mempool_tests.Po
-#	$(AM_V_CXX)source='test/mempool_tests.cpp' object='test/test_test_OGC-mempool_tests.obj' libtool=no \
+test/test_test_OG-mempool_tests.obj: test/mempool_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-mempool_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-mempool_tests.Tpo -c -o test/test_test_OG-mempool_tests.obj `if test -f 'test/mempool_tests.cpp'; then $(CYGPATH_W) 'test/mempool_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/mempool_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-mempool_tests.Tpo test/$(DEPDIR)/test_test_OG-mempool_tests.Po
+#	$(AM_V_CXX)source='test/mempool_tests.cpp' object='test/test_test_OG-mempool_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-mempool_tests.obj `if test -f 'test/mempool_tests.cpp'; then $(CYGPATH_W) 'test/mempool_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/mempool_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-mempool_tests.obj `if test -f 'test/mempool_tests.cpp'; then $(CYGPATH_W) 'test/mempool_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/mempool_tests.cpp'; fi`
 
-test/test_test_OGC-merkle_tests.o: test/merkle_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-merkle_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-merkle_tests.Tpo -c -o test/test_test_OGC-merkle_tests.o `test -f 'test/merkle_tests.cpp' || echo '$(srcdir)/'`test/merkle_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-merkle_tests.Tpo test/$(DEPDIR)/test_test_OGC-merkle_tests.Po
-#	$(AM_V_CXX)source='test/merkle_tests.cpp' object='test/test_test_OGC-merkle_tests.o' libtool=no \
+test/test_test_OG-merkle_tests.o: test/merkle_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-merkle_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-merkle_tests.Tpo -c -o test/test_test_OG-merkle_tests.o `test -f 'test/merkle_tests.cpp' || echo '$(srcdir)/'`test/merkle_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-merkle_tests.Tpo test/$(DEPDIR)/test_test_OG-merkle_tests.Po
+#	$(AM_V_CXX)source='test/merkle_tests.cpp' object='test/test_test_OG-merkle_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-merkle_tests.o `test -f 'test/merkle_tests.cpp' || echo '$(srcdir)/'`test/merkle_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-merkle_tests.o `test -f 'test/merkle_tests.cpp' || echo '$(srcdir)/'`test/merkle_tests.cpp
 
-test/test_test_OGC-merkle_tests.obj: test/merkle_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-merkle_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-merkle_tests.Tpo -c -o test/test_test_OGC-merkle_tests.obj `if test -f 'test/merkle_tests.cpp'; then $(CYGPATH_W) 'test/merkle_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/merkle_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-merkle_tests.Tpo test/$(DEPDIR)/test_test_OGC-merkle_tests.Po
-#	$(AM_V_CXX)source='test/merkle_tests.cpp' object='test/test_test_OGC-merkle_tests.obj' libtool=no \
+test/test_test_OG-merkle_tests.obj: test/merkle_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-merkle_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-merkle_tests.Tpo -c -o test/test_test_OG-merkle_tests.obj `if test -f 'test/merkle_tests.cpp'; then $(CYGPATH_W) 'test/merkle_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/merkle_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-merkle_tests.Tpo test/$(DEPDIR)/test_test_OG-merkle_tests.Po
+#	$(AM_V_CXX)source='test/merkle_tests.cpp' object='test/test_test_OG-merkle_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-merkle_tests.obj `if test -f 'test/merkle_tests.cpp'; then $(CYGPATH_W) 'test/merkle_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/merkle_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-merkle_tests.obj `if test -f 'test/merkle_tests.cpp'; then $(CYGPATH_W) 'test/merkle_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/merkle_tests.cpp'; fi`
 
-test/test_test_OGC-miner_tests.o: test/miner_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-miner_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-miner_tests.Tpo -c -o test/test_test_OGC-miner_tests.o `test -f 'test/miner_tests.cpp' || echo '$(srcdir)/'`test/miner_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-miner_tests.Tpo test/$(DEPDIR)/test_test_OGC-miner_tests.Po
-#	$(AM_V_CXX)source='test/miner_tests.cpp' object='test/test_test_OGC-miner_tests.o' libtool=no \
+test/test_test_OG-miner_tests.o: test/miner_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-miner_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-miner_tests.Tpo -c -o test/test_test_OG-miner_tests.o `test -f 'test/miner_tests.cpp' || echo '$(srcdir)/'`test/miner_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-miner_tests.Tpo test/$(DEPDIR)/test_test_OG-miner_tests.Po
+#	$(AM_V_CXX)source='test/miner_tests.cpp' object='test/test_test_OG-miner_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-miner_tests.o `test -f 'test/miner_tests.cpp' || echo '$(srcdir)/'`test/miner_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-miner_tests.o `test -f 'test/miner_tests.cpp' || echo '$(srcdir)/'`test/miner_tests.cpp
 
-test/test_test_OGC-miner_tests.obj: test/miner_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-miner_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-miner_tests.Tpo -c -o test/test_test_OGC-miner_tests.obj `if test -f 'test/miner_tests.cpp'; then $(CYGPATH_W) 'test/miner_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/miner_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-miner_tests.Tpo test/$(DEPDIR)/test_test_OGC-miner_tests.Po
-#	$(AM_V_CXX)source='test/miner_tests.cpp' object='test/test_test_OGC-miner_tests.obj' libtool=no \
+test/test_test_OG-miner_tests.obj: test/miner_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-miner_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-miner_tests.Tpo -c -o test/test_test_OG-miner_tests.obj `if test -f 'test/miner_tests.cpp'; then $(CYGPATH_W) 'test/miner_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/miner_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-miner_tests.Tpo test/$(DEPDIR)/test_test_OG-miner_tests.Po
+#	$(AM_V_CXX)source='test/miner_tests.cpp' object='test/test_test_OG-miner_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-miner_tests.obj `if test -f 'test/miner_tests.cpp'; then $(CYGPATH_W) 'test/miner_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/miner_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-miner_tests.obj `if test -f 'test/miner_tests.cpp'; then $(CYGPATH_W) 'test/miner_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/miner_tests.cpp'; fi`
 
-test/test_test_OGC-multisig_tests.o: test/multisig_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-multisig_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-multisig_tests.Tpo -c -o test/test_test_OGC-multisig_tests.o `test -f 'test/multisig_tests.cpp' || echo '$(srcdir)/'`test/multisig_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-multisig_tests.Tpo test/$(DEPDIR)/test_test_OGC-multisig_tests.Po
-#	$(AM_V_CXX)source='test/multisig_tests.cpp' object='test/test_test_OGC-multisig_tests.o' libtool=no \
+test/test_test_OG-multisig_tests.o: test/multisig_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-multisig_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-multisig_tests.Tpo -c -o test/test_test_OG-multisig_tests.o `test -f 'test/multisig_tests.cpp' || echo '$(srcdir)/'`test/multisig_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-multisig_tests.Tpo test/$(DEPDIR)/test_test_OG-multisig_tests.Po
+#	$(AM_V_CXX)source='test/multisig_tests.cpp' object='test/test_test_OG-multisig_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-multisig_tests.o `test -f 'test/multisig_tests.cpp' || echo '$(srcdir)/'`test/multisig_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-multisig_tests.o `test -f 'test/multisig_tests.cpp' || echo '$(srcdir)/'`test/multisig_tests.cpp
 
-test/test_test_OGC-multisig_tests.obj: test/multisig_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-multisig_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-multisig_tests.Tpo -c -o test/test_test_OGC-multisig_tests.obj `if test -f 'test/multisig_tests.cpp'; then $(CYGPATH_W) 'test/multisig_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/multisig_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-multisig_tests.Tpo test/$(DEPDIR)/test_test_OGC-multisig_tests.Po
-#	$(AM_V_CXX)source='test/multisig_tests.cpp' object='test/test_test_OGC-multisig_tests.obj' libtool=no \
+test/test_test_OG-multisig_tests.obj: test/multisig_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-multisig_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-multisig_tests.Tpo -c -o test/test_test_OG-multisig_tests.obj `if test -f 'test/multisig_tests.cpp'; then $(CYGPATH_W) 'test/multisig_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/multisig_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-multisig_tests.Tpo test/$(DEPDIR)/test_test_OG-multisig_tests.Po
+#	$(AM_V_CXX)source='test/multisig_tests.cpp' object='test/test_test_OG-multisig_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-multisig_tests.obj `if test -f 'test/multisig_tests.cpp'; then $(CYGPATH_W) 'test/multisig_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/multisig_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-multisig_tests.obj `if test -f 'test/multisig_tests.cpp'; then $(CYGPATH_W) 'test/multisig_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/multisig_tests.cpp'; fi`
 
-test/test_test_OGC-net_tests.o: test/net_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-net_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-net_tests.Tpo -c -o test/test_test_OGC-net_tests.o `test -f 'test/net_tests.cpp' || echo '$(srcdir)/'`test/net_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-net_tests.Tpo test/$(DEPDIR)/test_test_OGC-net_tests.Po
-#	$(AM_V_CXX)source='test/net_tests.cpp' object='test/test_test_OGC-net_tests.o' libtool=no \
+test/test_test_OG-net_tests.o: test/net_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-net_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-net_tests.Tpo -c -o test/test_test_OG-net_tests.o `test -f 'test/net_tests.cpp' || echo '$(srcdir)/'`test/net_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-net_tests.Tpo test/$(DEPDIR)/test_test_OG-net_tests.Po
+#	$(AM_V_CXX)source='test/net_tests.cpp' object='test/test_test_OG-net_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-net_tests.o `test -f 'test/net_tests.cpp' || echo '$(srcdir)/'`test/net_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-net_tests.o `test -f 'test/net_tests.cpp' || echo '$(srcdir)/'`test/net_tests.cpp
 
-test/test_test_OGC-net_tests.obj: test/net_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-net_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-net_tests.Tpo -c -o test/test_test_OGC-net_tests.obj `if test -f 'test/net_tests.cpp'; then $(CYGPATH_W) 'test/net_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/net_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-net_tests.Tpo test/$(DEPDIR)/test_test_OGC-net_tests.Po
-#	$(AM_V_CXX)source='test/net_tests.cpp' object='test/test_test_OGC-net_tests.obj' libtool=no \
+test/test_test_OG-net_tests.obj: test/net_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-net_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-net_tests.Tpo -c -o test/test_test_OG-net_tests.obj `if test -f 'test/net_tests.cpp'; then $(CYGPATH_W) 'test/net_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/net_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-net_tests.Tpo test/$(DEPDIR)/test_test_OG-net_tests.Po
+#	$(AM_V_CXX)source='test/net_tests.cpp' object='test/test_test_OG-net_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-net_tests.obj `if test -f 'test/net_tests.cpp'; then $(CYGPATH_W) 'test/net_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/net_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-net_tests.obj `if test -f 'test/net_tests.cpp'; then $(CYGPATH_W) 'test/net_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/net_tests.cpp'; fi`
 
-test/test_test_OGC-netbase_tests.o: test/netbase_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-netbase_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-netbase_tests.Tpo -c -o test/test_test_OGC-netbase_tests.o `test -f 'test/netbase_tests.cpp' || echo '$(srcdir)/'`test/netbase_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-netbase_tests.Tpo test/$(DEPDIR)/test_test_OGC-netbase_tests.Po
-#	$(AM_V_CXX)source='test/netbase_tests.cpp' object='test/test_test_OGC-netbase_tests.o' libtool=no \
+test/test_test_OG-netbase_tests.o: test/netbase_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-netbase_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-netbase_tests.Tpo -c -o test/test_test_OG-netbase_tests.o `test -f 'test/netbase_tests.cpp' || echo '$(srcdir)/'`test/netbase_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-netbase_tests.Tpo test/$(DEPDIR)/test_test_OG-netbase_tests.Po
+#	$(AM_V_CXX)source='test/netbase_tests.cpp' object='test/test_test_OG-netbase_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-netbase_tests.o `test -f 'test/netbase_tests.cpp' || echo '$(srcdir)/'`test/netbase_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-netbase_tests.o `test -f 'test/netbase_tests.cpp' || echo '$(srcdir)/'`test/netbase_tests.cpp
 
-test/test_test_OGC-netbase_tests.obj: test/netbase_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-netbase_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-netbase_tests.Tpo -c -o test/test_test_OGC-netbase_tests.obj `if test -f 'test/netbase_tests.cpp'; then $(CYGPATH_W) 'test/netbase_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/netbase_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-netbase_tests.Tpo test/$(DEPDIR)/test_test_OGC-netbase_tests.Po
-#	$(AM_V_CXX)source='test/netbase_tests.cpp' object='test/test_test_OGC-netbase_tests.obj' libtool=no \
+test/test_test_OG-netbase_tests.obj: test/netbase_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-netbase_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-netbase_tests.Tpo -c -o test/test_test_OG-netbase_tests.obj `if test -f 'test/netbase_tests.cpp'; then $(CYGPATH_W) 'test/netbase_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/netbase_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-netbase_tests.Tpo test/$(DEPDIR)/test_test_OG-netbase_tests.Po
+#	$(AM_V_CXX)source='test/netbase_tests.cpp' object='test/test_test_OG-netbase_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-netbase_tests.obj `if test -f 'test/netbase_tests.cpp'; then $(CYGPATH_W) 'test/netbase_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/netbase_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-netbase_tests.obj `if test -f 'test/netbase_tests.cpp'; then $(CYGPATH_W) 'test/netbase_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/netbase_tests.cpp'; fi`
 
-test/test_test_OGC-pmt_tests.o: test/pmt_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-pmt_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-pmt_tests.Tpo -c -o test/test_test_OGC-pmt_tests.o `test -f 'test/pmt_tests.cpp' || echo '$(srcdir)/'`test/pmt_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-pmt_tests.Tpo test/$(DEPDIR)/test_test_OGC-pmt_tests.Po
-#	$(AM_V_CXX)source='test/pmt_tests.cpp' object='test/test_test_OGC-pmt_tests.o' libtool=no \
+test/test_test_OG-pmt_tests.o: test/pmt_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-pmt_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-pmt_tests.Tpo -c -o test/test_test_OG-pmt_tests.o `test -f 'test/pmt_tests.cpp' || echo '$(srcdir)/'`test/pmt_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-pmt_tests.Tpo test/$(DEPDIR)/test_test_OG-pmt_tests.Po
+#	$(AM_V_CXX)source='test/pmt_tests.cpp' object='test/test_test_OG-pmt_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-pmt_tests.o `test -f 'test/pmt_tests.cpp' || echo '$(srcdir)/'`test/pmt_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-pmt_tests.o `test -f 'test/pmt_tests.cpp' || echo '$(srcdir)/'`test/pmt_tests.cpp
 
-test/test_test_OGC-pmt_tests.obj: test/pmt_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-pmt_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-pmt_tests.Tpo -c -o test/test_test_OGC-pmt_tests.obj `if test -f 'test/pmt_tests.cpp'; then $(CYGPATH_W) 'test/pmt_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/pmt_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-pmt_tests.Tpo test/$(DEPDIR)/test_test_OGC-pmt_tests.Po
-#	$(AM_V_CXX)source='test/pmt_tests.cpp' object='test/test_test_OGC-pmt_tests.obj' libtool=no \
+test/test_test_OG-pmt_tests.obj: test/pmt_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-pmt_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-pmt_tests.Tpo -c -o test/test_test_OG-pmt_tests.obj `if test -f 'test/pmt_tests.cpp'; then $(CYGPATH_W) 'test/pmt_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/pmt_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-pmt_tests.Tpo test/$(DEPDIR)/test_test_OG-pmt_tests.Po
+#	$(AM_V_CXX)source='test/pmt_tests.cpp' object='test/test_test_OG-pmt_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-pmt_tests.obj `if test -f 'test/pmt_tests.cpp'; then $(CYGPATH_W) 'test/pmt_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/pmt_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-pmt_tests.obj `if test -f 'test/pmt_tests.cpp'; then $(CYGPATH_W) 'test/pmt_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/pmt_tests.cpp'; fi`
 
-test/test_test_OGC-policyestimator_tests.o: test/policyestimator_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-policyestimator_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-policyestimator_tests.Tpo -c -o test/test_test_OGC-policyestimator_tests.o `test -f 'test/policyestimator_tests.cpp' || echo '$(srcdir)/'`test/policyestimator_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-policyestimator_tests.Tpo test/$(DEPDIR)/test_test_OGC-policyestimator_tests.Po
-#	$(AM_V_CXX)source='test/policyestimator_tests.cpp' object='test/test_test_OGC-policyestimator_tests.o' libtool=no \
+test/test_test_OG-policyestimator_tests.o: test/policyestimator_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-policyestimator_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-policyestimator_tests.Tpo -c -o test/test_test_OG-policyestimator_tests.o `test -f 'test/policyestimator_tests.cpp' || echo '$(srcdir)/'`test/policyestimator_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-policyestimator_tests.Tpo test/$(DEPDIR)/test_test_OG-policyestimator_tests.Po
+#	$(AM_V_CXX)source='test/policyestimator_tests.cpp' object='test/test_test_OG-policyestimator_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-policyestimator_tests.o `test -f 'test/policyestimator_tests.cpp' || echo '$(srcdir)/'`test/policyestimator_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-policyestimator_tests.o `test -f 'test/policyestimator_tests.cpp' || echo '$(srcdir)/'`test/policyestimator_tests.cpp
 
-test/test_test_OGC-policyestimator_tests.obj: test/policyestimator_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-policyestimator_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-policyestimator_tests.Tpo -c -o test/test_test_OGC-policyestimator_tests.obj `if test -f 'test/policyestimator_tests.cpp'; then $(CYGPATH_W) 'test/policyestimator_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/policyestimator_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-policyestimator_tests.Tpo test/$(DEPDIR)/test_test_OGC-policyestimator_tests.Po
-#	$(AM_V_CXX)source='test/policyestimator_tests.cpp' object='test/test_test_OGC-policyestimator_tests.obj' libtool=no \
+test/test_test_OG-policyestimator_tests.obj: test/policyestimator_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-policyestimator_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-policyestimator_tests.Tpo -c -o test/test_test_OG-policyestimator_tests.obj `if test -f 'test/policyestimator_tests.cpp'; then $(CYGPATH_W) 'test/policyestimator_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/policyestimator_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-policyestimator_tests.Tpo test/$(DEPDIR)/test_test_OG-policyestimator_tests.Po
+#	$(AM_V_CXX)source='test/policyestimator_tests.cpp' object='test/test_test_OG-policyestimator_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-policyestimator_tests.obj `if test -f 'test/policyestimator_tests.cpp'; then $(CYGPATH_W) 'test/policyestimator_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/policyestimator_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-policyestimator_tests.obj `if test -f 'test/policyestimator_tests.cpp'; then $(CYGPATH_W) 'test/policyestimator_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/policyestimator_tests.cpp'; fi`
 
-test/test_test_OGC-pow_tests.o: test/pow_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-pow_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-pow_tests.Tpo -c -o test/test_test_OGC-pow_tests.o `test -f 'test/pow_tests.cpp' || echo '$(srcdir)/'`test/pow_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-pow_tests.Tpo test/$(DEPDIR)/test_test_OGC-pow_tests.Po
-#	$(AM_V_CXX)source='test/pow_tests.cpp' object='test/test_test_OGC-pow_tests.o' libtool=no \
+test/test_test_OG-pow_tests.o: test/pow_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-pow_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-pow_tests.Tpo -c -o test/test_test_OG-pow_tests.o `test -f 'test/pow_tests.cpp' || echo '$(srcdir)/'`test/pow_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-pow_tests.Tpo test/$(DEPDIR)/test_test_OG-pow_tests.Po
+#	$(AM_V_CXX)source='test/pow_tests.cpp' object='test/test_test_OG-pow_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-pow_tests.o `test -f 'test/pow_tests.cpp' || echo '$(srcdir)/'`test/pow_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-pow_tests.o `test -f 'test/pow_tests.cpp' || echo '$(srcdir)/'`test/pow_tests.cpp
 
-test/test_test_OGC-pow_tests.obj: test/pow_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-pow_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-pow_tests.Tpo -c -o test/test_test_OGC-pow_tests.obj `if test -f 'test/pow_tests.cpp'; then $(CYGPATH_W) 'test/pow_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/pow_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-pow_tests.Tpo test/$(DEPDIR)/test_test_OGC-pow_tests.Po
-#	$(AM_V_CXX)source='test/pow_tests.cpp' object='test/test_test_OGC-pow_tests.obj' libtool=no \
+test/test_test_OG-pow_tests.obj: test/pow_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-pow_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-pow_tests.Tpo -c -o test/test_test_OG-pow_tests.obj `if test -f 'test/pow_tests.cpp'; then $(CYGPATH_W) 'test/pow_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/pow_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-pow_tests.Tpo test/$(DEPDIR)/test_test_OG-pow_tests.Po
+#	$(AM_V_CXX)source='test/pow_tests.cpp' object='test/test_test_OG-pow_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-pow_tests.obj `if test -f 'test/pow_tests.cpp'; then $(CYGPATH_W) 'test/pow_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/pow_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-pow_tests.obj `if test -f 'test/pow_tests.cpp'; then $(CYGPATH_W) 'test/pow_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/pow_tests.cpp'; fi`
 
-test/test_test_OGC-prevector_tests.o: test/prevector_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-prevector_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-prevector_tests.Tpo -c -o test/test_test_OGC-prevector_tests.o `test -f 'test/prevector_tests.cpp' || echo '$(srcdir)/'`test/prevector_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-prevector_tests.Tpo test/$(DEPDIR)/test_test_OGC-prevector_tests.Po
-#	$(AM_V_CXX)source='test/prevector_tests.cpp' object='test/test_test_OGC-prevector_tests.o' libtool=no \
+test/test_test_OG-prevector_tests.o: test/prevector_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-prevector_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-prevector_tests.Tpo -c -o test/test_test_OG-prevector_tests.o `test -f 'test/prevector_tests.cpp' || echo '$(srcdir)/'`test/prevector_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-prevector_tests.Tpo test/$(DEPDIR)/test_test_OG-prevector_tests.Po
+#	$(AM_V_CXX)source='test/prevector_tests.cpp' object='test/test_test_OG-prevector_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-prevector_tests.o `test -f 'test/prevector_tests.cpp' || echo '$(srcdir)/'`test/prevector_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-prevector_tests.o `test -f 'test/prevector_tests.cpp' || echo '$(srcdir)/'`test/prevector_tests.cpp
 
-test/test_test_OGC-prevector_tests.obj: test/prevector_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-prevector_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-prevector_tests.Tpo -c -o test/test_test_OGC-prevector_tests.obj `if test -f 'test/prevector_tests.cpp'; then $(CYGPATH_W) 'test/prevector_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/prevector_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-prevector_tests.Tpo test/$(DEPDIR)/test_test_OGC-prevector_tests.Po
-#	$(AM_V_CXX)source='test/prevector_tests.cpp' object='test/test_test_OGC-prevector_tests.obj' libtool=no \
+test/test_test_OG-prevector_tests.obj: test/prevector_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-prevector_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-prevector_tests.Tpo -c -o test/test_test_OG-prevector_tests.obj `if test -f 'test/prevector_tests.cpp'; then $(CYGPATH_W) 'test/prevector_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/prevector_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-prevector_tests.Tpo test/$(DEPDIR)/test_test_OG-prevector_tests.Po
+#	$(AM_V_CXX)source='test/prevector_tests.cpp' object='test/test_test_OG-prevector_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-prevector_tests.obj `if test -f 'test/prevector_tests.cpp'; then $(CYGPATH_W) 'test/prevector_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/prevector_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-prevector_tests.obj `if test -f 'test/prevector_tests.cpp'; then $(CYGPATH_W) 'test/prevector_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/prevector_tests.cpp'; fi`
 
-test/test_test_OGC-raii_event_tests.o: test/raii_event_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-raii_event_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-raii_event_tests.Tpo -c -o test/test_test_OGC-raii_event_tests.o `test -f 'test/raii_event_tests.cpp' || echo '$(srcdir)/'`test/raii_event_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-raii_event_tests.Tpo test/$(DEPDIR)/test_test_OGC-raii_event_tests.Po
-#	$(AM_V_CXX)source='test/raii_event_tests.cpp' object='test/test_test_OGC-raii_event_tests.o' libtool=no \
+test/test_test_OG-raii_event_tests.o: test/raii_event_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-raii_event_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-raii_event_tests.Tpo -c -o test/test_test_OG-raii_event_tests.o `test -f 'test/raii_event_tests.cpp' || echo '$(srcdir)/'`test/raii_event_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-raii_event_tests.Tpo test/$(DEPDIR)/test_test_OG-raii_event_tests.Po
+#	$(AM_V_CXX)source='test/raii_event_tests.cpp' object='test/test_test_OG-raii_event_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-raii_event_tests.o `test -f 'test/raii_event_tests.cpp' || echo '$(srcdir)/'`test/raii_event_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-raii_event_tests.o `test -f 'test/raii_event_tests.cpp' || echo '$(srcdir)/'`test/raii_event_tests.cpp
 
-test/test_test_OGC-raii_event_tests.obj: test/raii_event_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-raii_event_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-raii_event_tests.Tpo -c -o test/test_test_OGC-raii_event_tests.obj `if test -f 'test/raii_event_tests.cpp'; then $(CYGPATH_W) 'test/raii_event_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/raii_event_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-raii_event_tests.Tpo test/$(DEPDIR)/test_test_OGC-raii_event_tests.Po
-#	$(AM_V_CXX)source='test/raii_event_tests.cpp' object='test/test_test_OGC-raii_event_tests.obj' libtool=no \
+test/test_test_OG-raii_event_tests.obj: test/raii_event_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-raii_event_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-raii_event_tests.Tpo -c -o test/test_test_OG-raii_event_tests.obj `if test -f 'test/raii_event_tests.cpp'; then $(CYGPATH_W) 'test/raii_event_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/raii_event_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-raii_event_tests.Tpo test/$(DEPDIR)/test_test_OG-raii_event_tests.Po
+#	$(AM_V_CXX)source='test/raii_event_tests.cpp' object='test/test_test_OG-raii_event_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-raii_event_tests.obj `if test -f 'test/raii_event_tests.cpp'; then $(CYGPATH_W) 'test/raii_event_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/raii_event_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-raii_event_tests.obj `if test -f 'test/raii_event_tests.cpp'; then $(CYGPATH_W) 'test/raii_event_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/raii_event_tests.cpp'; fi`
 
-test/test_test_OGC-random_tests.o: test/random_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-random_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-random_tests.Tpo -c -o test/test_test_OGC-random_tests.o `test -f 'test/random_tests.cpp' || echo '$(srcdir)/'`test/random_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-random_tests.Tpo test/$(DEPDIR)/test_test_OGC-random_tests.Po
-#	$(AM_V_CXX)source='test/random_tests.cpp' object='test/test_test_OGC-random_tests.o' libtool=no \
+test/test_test_OG-random_tests.o: test/random_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-random_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-random_tests.Tpo -c -o test/test_test_OG-random_tests.o `test -f 'test/random_tests.cpp' || echo '$(srcdir)/'`test/random_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-random_tests.Tpo test/$(DEPDIR)/test_test_OG-random_tests.Po
+#	$(AM_V_CXX)source='test/random_tests.cpp' object='test/test_test_OG-random_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-random_tests.o `test -f 'test/random_tests.cpp' || echo '$(srcdir)/'`test/random_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-random_tests.o `test -f 'test/random_tests.cpp' || echo '$(srcdir)/'`test/random_tests.cpp
 
-test/test_test_OGC-random_tests.obj: test/random_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-random_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-random_tests.Tpo -c -o test/test_test_OGC-random_tests.obj `if test -f 'test/random_tests.cpp'; then $(CYGPATH_W) 'test/random_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/random_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-random_tests.Tpo test/$(DEPDIR)/test_test_OGC-random_tests.Po
-#	$(AM_V_CXX)source='test/random_tests.cpp' object='test/test_test_OGC-random_tests.obj' libtool=no \
+test/test_test_OG-random_tests.obj: test/random_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-random_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-random_tests.Tpo -c -o test/test_test_OG-random_tests.obj `if test -f 'test/random_tests.cpp'; then $(CYGPATH_W) 'test/random_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/random_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-random_tests.Tpo test/$(DEPDIR)/test_test_OG-random_tests.Po
+#	$(AM_V_CXX)source='test/random_tests.cpp' object='test/test_test_OG-random_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-random_tests.obj `if test -f 'test/random_tests.cpp'; then $(CYGPATH_W) 'test/random_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/random_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-random_tests.obj `if test -f 'test/random_tests.cpp'; then $(CYGPATH_W) 'test/random_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/random_tests.cpp'; fi`
 
-test/test_test_OGC-reverselock_tests.o: test/reverselock_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-reverselock_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-reverselock_tests.Tpo -c -o test/test_test_OGC-reverselock_tests.o `test -f 'test/reverselock_tests.cpp' || echo '$(srcdir)/'`test/reverselock_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-reverselock_tests.Tpo test/$(DEPDIR)/test_test_OGC-reverselock_tests.Po
-#	$(AM_V_CXX)source='test/reverselock_tests.cpp' object='test/test_test_OGC-reverselock_tests.o' libtool=no \
+test/test_test_OG-reverselock_tests.o: test/reverselock_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-reverselock_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-reverselock_tests.Tpo -c -o test/test_test_OG-reverselock_tests.o `test -f 'test/reverselock_tests.cpp' || echo '$(srcdir)/'`test/reverselock_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-reverselock_tests.Tpo test/$(DEPDIR)/test_test_OG-reverselock_tests.Po
+#	$(AM_V_CXX)source='test/reverselock_tests.cpp' object='test/test_test_OG-reverselock_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-reverselock_tests.o `test -f 'test/reverselock_tests.cpp' || echo '$(srcdir)/'`test/reverselock_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-reverselock_tests.o `test -f 'test/reverselock_tests.cpp' || echo '$(srcdir)/'`test/reverselock_tests.cpp
 
-test/test_test_OGC-reverselock_tests.obj: test/reverselock_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-reverselock_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-reverselock_tests.Tpo -c -o test/test_test_OGC-reverselock_tests.obj `if test -f 'test/reverselock_tests.cpp'; then $(CYGPATH_W) 'test/reverselock_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/reverselock_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-reverselock_tests.Tpo test/$(DEPDIR)/test_test_OGC-reverselock_tests.Po
-#	$(AM_V_CXX)source='test/reverselock_tests.cpp' object='test/test_test_OGC-reverselock_tests.obj' libtool=no \
+test/test_test_OG-reverselock_tests.obj: test/reverselock_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-reverselock_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-reverselock_tests.Tpo -c -o test/test_test_OG-reverselock_tests.obj `if test -f 'test/reverselock_tests.cpp'; then $(CYGPATH_W) 'test/reverselock_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/reverselock_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-reverselock_tests.Tpo test/$(DEPDIR)/test_test_OG-reverselock_tests.Po
+#	$(AM_V_CXX)source='test/reverselock_tests.cpp' object='test/test_test_OG-reverselock_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-reverselock_tests.obj `if test -f 'test/reverselock_tests.cpp'; then $(CYGPATH_W) 'test/reverselock_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/reverselock_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-reverselock_tests.obj `if test -f 'test/reverselock_tests.cpp'; then $(CYGPATH_W) 'test/reverselock_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/reverselock_tests.cpp'; fi`
 
-test/test_test_OGC-rpc_tests.o: test/rpc_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-rpc_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-rpc_tests.Tpo -c -o test/test_test_OGC-rpc_tests.o `test -f 'test/rpc_tests.cpp' || echo '$(srcdir)/'`test/rpc_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-rpc_tests.Tpo test/$(DEPDIR)/test_test_OGC-rpc_tests.Po
-#	$(AM_V_CXX)source='test/rpc_tests.cpp' object='test/test_test_OGC-rpc_tests.o' libtool=no \
+test/test_test_OG-rpc_tests.o: test/rpc_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-rpc_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-rpc_tests.Tpo -c -o test/test_test_OG-rpc_tests.o `test -f 'test/rpc_tests.cpp' || echo '$(srcdir)/'`test/rpc_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-rpc_tests.Tpo test/$(DEPDIR)/test_test_OG-rpc_tests.Po
+#	$(AM_V_CXX)source='test/rpc_tests.cpp' object='test/test_test_OG-rpc_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-rpc_tests.o `test -f 'test/rpc_tests.cpp' || echo '$(srcdir)/'`test/rpc_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-rpc_tests.o `test -f 'test/rpc_tests.cpp' || echo '$(srcdir)/'`test/rpc_tests.cpp
 
-test/test_test_OGC-rpc_tests.obj: test/rpc_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-rpc_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-rpc_tests.Tpo -c -o test/test_test_OGC-rpc_tests.obj `if test -f 'test/rpc_tests.cpp'; then $(CYGPATH_W) 'test/rpc_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/rpc_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-rpc_tests.Tpo test/$(DEPDIR)/test_test_OGC-rpc_tests.Po
-#	$(AM_V_CXX)source='test/rpc_tests.cpp' object='test/test_test_OGC-rpc_tests.obj' libtool=no \
+test/test_test_OG-rpc_tests.obj: test/rpc_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-rpc_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-rpc_tests.Tpo -c -o test/test_test_OG-rpc_tests.obj `if test -f 'test/rpc_tests.cpp'; then $(CYGPATH_W) 'test/rpc_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/rpc_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-rpc_tests.Tpo test/$(DEPDIR)/test_test_OG-rpc_tests.Po
+#	$(AM_V_CXX)source='test/rpc_tests.cpp' object='test/test_test_OG-rpc_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-rpc_tests.obj `if test -f 'test/rpc_tests.cpp'; then $(CYGPATH_W) 'test/rpc_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/rpc_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-rpc_tests.obj `if test -f 'test/rpc_tests.cpp'; then $(CYGPATH_W) 'test/rpc_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/rpc_tests.cpp'; fi`
 
-test/test_test_OGC-sanity_tests.o: test/sanity_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-sanity_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-sanity_tests.Tpo -c -o test/test_test_OGC-sanity_tests.o `test -f 'test/sanity_tests.cpp' || echo '$(srcdir)/'`test/sanity_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-sanity_tests.Tpo test/$(DEPDIR)/test_test_OGC-sanity_tests.Po
-#	$(AM_V_CXX)source='test/sanity_tests.cpp' object='test/test_test_OGC-sanity_tests.o' libtool=no \
+test/test_test_OG-sanity_tests.o: test/sanity_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-sanity_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-sanity_tests.Tpo -c -o test/test_test_OG-sanity_tests.o `test -f 'test/sanity_tests.cpp' || echo '$(srcdir)/'`test/sanity_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-sanity_tests.Tpo test/$(DEPDIR)/test_test_OG-sanity_tests.Po
+#	$(AM_V_CXX)source='test/sanity_tests.cpp' object='test/test_test_OG-sanity_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-sanity_tests.o `test -f 'test/sanity_tests.cpp' || echo '$(srcdir)/'`test/sanity_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-sanity_tests.o `test -f 'test/sanity_tests.cpp' || echo '$(srcdir)/'`test/sanity_tests.cpp
 
-test/test_test_OGC-sanity_tests.obj: test/sanity_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-sanity_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-sanity_tests.Tpo -c -o test/test_test_OGC-sanity_tests.obj `if test -f 'test/sanity_tests.cpp'; then $(CYGPATH_W) 'test/sanity_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sanity_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-sanity_tests.Tpo test/$(DEPDIR)/test_test_OGC-sanity_tests.Po
-#	$(AM_V_CXX)source='test/sanity_tests.cpp' object='test/test_test_OGC-sanity_tests.obj' libtool=no \
+test/test_test_OG-sanity_tests.obj: test/sanity_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-sanity_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-sanity_tests.Tpo -c -o test/test_test_OG-sanity_tests.obj `if test -f 'test/sanity_tests.cpp'; then $(CYGPATH_W) 'test/sanity_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sanity_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-sanity_tests.Tpo test/$(DEPDIR)/test_test_OG-sanity_tests.Po
+#	$(AM_V_CXX)source='test/sanity_tests.cpp' object='test/test_test_OG-sanity_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-sanity_tests.obj `if test -f 'test/sanity_tests.cpp'; then $(CYGPATH_W) 'test/sanity_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sanity_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-sanity_tests.obj `if test -f 'test/sanity_tests.cpp'; then $(CYGPATH_W) 'test/sanity_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sanity_tests.cpp'; fi`
 
-test/test_test_OGC-scheduler_tests.o: test/scheduler_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-scheduler_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-scheduler_tests.Tpo -c -o test/test_test_OGC-scheduler_tests.o `test -f 'test/scheduler_tests.cpp' || echo '$(srcdir)/'`test/scheduler_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-scheduler_tests.Tpo test/$(DEPDIR)/test_test_OGC-scheduler_tests.Po
-#	$(AM_V_CXX)source='test/scheduler_tests.cpp' object='test/test_test_OGC-scheduler_tests.o' libtool=no \
+test/test_test_OG-scheduler_tests.o: test/scheduler_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-scheduler_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-scheduler_tests.Tpo -c -o test/test_test_OG-scheduler_tests.o `test -f 'test/scheduler_tests.cpp' || echo '$(srcdir)/'`test/scheduler_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-scheduler_tests.Tpo test/$(DEPDIR)/test_test_OG-scheduler_tests.Po
+#	$(AM_V_CXX)source='test/scheduler_tests.cpp' object='test/test_test_OG-scheduler_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-scheduler_tests.o `test -f 'test/scheduler_tests.cpp' || echo '$(srcdir)/'`test/scheduler_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-scheduler_tests.o `test -f 'test/scheduler_tests.cpp' || echo '$(srcdir)/'`test/scheduler_tests.cpp
 
-test/test_test_OGC-scheduler_tests.obj: test/scheduler_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-scheduler_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-scheduler_tests.Tpo -c -o test/test_test_OGC-scheduler_tests.obj `if test -f 'test/scheduler_tests.cpp'; then $(CYGPATH_W) 'test/scheduler_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scheduler_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-scheduler_tests.Tpo test/$(DEPDIR)/test_test_OGC-scheduler_tests.Po
-#	$(AM_V_CXX)source='test/scheduler_tests.cpp' object='test/test_test_OGC-scheduler_tests.obj' libtool=no \
+test/test_test_OG-scheduler_tests.obj: test/scheduler_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-scheduler_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-scheduler_tests.Tpo -c -o test/test_test_OG-scheduler_tests.obj `if test -f 'test/scheduler_tests.cpp'; then $(CYGPATH_W) 'test/scheduler_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scheduler_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-scheduler_tests.Tpo test/$(DEPDIR)/test_test_OG-scheduler_tests.Po
+#	$(AM_V_CXX)source='test/scheduler_tests.cpp' object='test/test_test_OG-scheduler_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-scheduler_tests.obj `if test -f 'test/scheduler_tests.cpp'; then $(CYGPATH_W) 'test/scheduler_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scheduler_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-scheduler_tests.obj `if test -f 'test/scheduler_tests.cpp'; then $(CYGPATH_W) 'test/scheduler_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scheduler_tests.cpp'; fi`
 
-test/test_test_OGC-script_P2SH_tests.o: test/script_P2SH_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-script_P2SH_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-script_P2SH_tests.Tpo -c -o test/test_test_OGC-script_P2SH_tests.o `test -f 'test/script_P2SH_tests.cpp' || echo '$(srcdir)/'`test/script_P2SH_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-script_P2SH_tests.Tpo test/$(DEPDIR)/test_test_OGC-script_P2SH_tests.Po
-#	$(AM_V_CXX)source='test/script_P2SH_tests.cpp' object='test/test_test_OGC-script_P2SH_tests.o' libtool=no \
+test/test_test_OG-script_P2SH_tests.o: test/script_P2SH_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-script_P2SH_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-script_P2SH_tests.Tpo -c -o test/test_test_OG-script_P2SH_tests.o `test -f 'test/script_P2SH_tests.cpp' || echo '$(srcdir)/'`test/script_P2SH_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-script_P2SH_tests.Tpo test/$(DEPDIR)/test_test_OG-script_P2SH_tests.Po
+#	$(AM_V_CXX)source='test/script_P2SH_tests.cpp' object='test/test_test_OG-script_P2SH_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-script_P2SH_tests.o `test -f 'test/script_P2SH_tests.cpp' || echo '$(srcdir)/'`test/script_P2SH_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-script_P2SH_tests.o `test -f 'test/script_P2SH_tests.cpp' || echo '$(srcdir)/'`test/script_P2SH_tests.cpp
 
-test/test_test_OGC-script_P2SH_tests.obj: test/script_P2SH_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-script_P2SH_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-script_P2SH_tests.Tpo -c -o test/test_test_OGC-script_P2SH_tests.obj `if test -f 'test/script_P2SH_tests.cpp'; then $(CYGPATH_W) 'test/script_P2SH_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_P2SH_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-script_P2SH_tests.Tpo test/$(DEPDIR)/test_test_OGC-script_P2SH_tests.Po
-#	$(AM_V_CXX)source='test/script_P2SH_tests.cpp' object='test/test_test_OGC-script_P2SH_tests.obj' libtool=no \
+test/test_test_OG-script_P2SH_tests.obj: test/script_P2SH_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-script_P2SH_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-script_P2SH_tests.Tpo -c -o test/test_test_OG-script_P2SH_tests.obj `if test -f 'test/script_P2SH_tests.cpp'; then $(CYGPATH_W) 'test/script_P2SH_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_P2SH_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-script_P2SH_tests.Tpo test/$(DEPDIR)/test_test_OG-script_P2SH_tests.Po
+#	$(AM_V_CXX)source='test/script_P2SH_tests.cpp' object='test/test_test_OG-script_P2SH_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-script_P2SH_tests.obj `if test -f 'test/script_P2SH_tests.cpp'; then $(CYGPATH_W) 'test/script_P2SH_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_P2SH_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-script_P2SH_tests.obj `if test -f 'test/script_P2SH_tests.cpp'; then $(CYGPATH_W) 'test/script_P2SH_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_P2SH_tests.cpp'; fi`
 
-test/test_test_OGC-script_tests.o: test/script_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-script_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-script_tests.Tpo -c -o test/test_test_OGC-script_tests.o `test -f 'test/script_tests.cpp' || echo '$(srcdir)/'`test/script_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-script_tests.Tpo test/$(DEPDIR)/test_test_OGC-script_tests.Po
-#	$(AM_V_CXX)source='test/script_tests.cpp' object='test/test_test_OGC-script_tests.o' libtool=no \
+test/test_test_OG-script_tests.o: test/script_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-script_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-script_tests.Tpo -c -o test/test_test_OG-script_tests.o `test -f 'test/script_tests.cpp' || echo '$(srcdir)/'`test/script_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-script_tests.Tpo test/$(DEPDIR)/test_test_OG-script_tests.Po
+#	$(AM_V_CXX)source='test/script_tests.cpp' object='test/test_test_OG-script_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-script_tests.o `test -f 'test/script_tests.cpp' || echo '$(srcdir)/'`test/script_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-script_tests.o `test -f 'test/script_tests.cpp' || echo '$(srcdir)/'`test/script_tests.cpp
 
-test/test_test_OGC-script_tests.obj: test/script_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-script_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-script_tests.Tpo -c -o test/test_test_OGC-script_tests.obj `if test -f 'test/script_tests.cpp'; then $(CYGPATH_W) 'test/script_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-script_tests.Tpo test/$(DEPDIR)/test_test_OGC-script_tests.Po
-#	$(AM_V_CXX)source='test/script_tests.cpp' object='test/test_test_OGC-script_tests.obj' libtool=no \
+test/test_test_OG-script_tests.obj: test/script_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-script_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-script_tests.Tpo -c -o test/test_test_OG-script_tests.obj `if test -f 'test/script_tests.cpp'; then $(CYGPATH_W) 'test/script_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-script_tests.Tpo test/$(DEPDIR)/test_test_OG-script_tests.Po
+#	$(AM_V_CXX)source='test/script_tests.cpp' object='test/test_test_OG-script_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-script_tests.obj `if test -f 'test/script_tests.cpp'; then $(CYGPATH_W) 'test/script_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-script_tests.obj `if test -f 'test/script_tests.cpp'; then $(CYGPATH_W) 'test/script_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_tests.cpp'; fi`
 
-test/test_test_OGC-script_standard_tests.o: test/script_standard_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-script_standard_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-script_standard_tests.Tpo -c -o test/test_test_OGC-script_standard_tests.o `test -f 'test/script_standard_tests.cpp' || echo '$(srcdir)/'`test/script_standard_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-script_standard_tests.Tpo test/$(DEPDIR)/test_test_OGC-script_standard_tests.Po
-#	$(AM_V_CXX)source='test/script_standard_tests.cpp' object='test/test_test_OGC-script_standard_tests.o' libtool=no \
+test/test_test_OG-script_standard_tests.o: test/script_standard_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-script_standard_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-script_standard_tests.Tpo -c -o test/test_test_OG-script_standard_tests.o `test -f 'test/script_standard_tests.cpp' || echo '$(srcdir)/'`test/script_standard_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-script_standard_tests.Tpo test/$(DEPDIR)/test_test_OG-script_standard_tests.Po
+#	$(AM_V_CXX)source='test/script_standard_tests.cpp' object='test/test_test_OG-script_standard_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-script_standard_tests.o `test -f 'test/script_standard_tests.cpp' || echo '$(srcdir)/'`test/script_standard_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-script_standard_tests.o `test -f 'test/script_standard_tests.cpp' || echo '$(srcdir)/'`test/script_standard_tests.cpp
 
-test/test_test_OGC-script_standard_tests.obj: test/script_standard_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-script_standard_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-script_standard_tests.Tpo -c -o test/test_test_OGC-script_standard_tests.obj `if test -f 'test/script_standard_tests.cpp'; then $(CYGPATH_W) 'test/script_standard_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_standard_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-script_standard_tests.Tpo test/$(DEPDIR)/test_test_OGC-script_standard_tests.Po
-#	$(AM_V_CXX)source='test/script_standard_tests.cpp' object='test/test_test_OGC-script_standard_tests.obj' libtool=no \
+test/test_test_OG-script_standard_tests.obj: test/script_standard_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-script_standard_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-script_standard_tests.Tpo -c -o test/test_test_OG-script_standard_tests.obj `if test -f 'test/script_standard_tests.cpp'; then $(CYGPATH_W) 'test/script_standard_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_standard_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-script_standard_tests.Tpo test/$(DEPDIR)/test_test_OG-script_standard_tests.Po
+#	$(AM_V_CXX)source='test/script_standard_tests.cpp' object='test/test_test_OG-script_standard_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-script_standard_tests.obj `if test -f 'test/script_standard_tests.cpp'; then $(CYGPATH_W) 'test/script_standard_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_standard_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-script_standard_tests.obj `if test -f 'test/script_standard_tests.cpp'; then $(CYGPATH_W) 'test/script_standard_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/script_standard_tests.cpp'; fi`
 
-test/test_test_OGC-scriptnum_tests.o: test/scriptnum_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-scriptnum_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-scriptnum_tests.Tpo -c -o test/test_test_OGC-scriptnum_tests.o `test -f 'test/scriptnum_tests.cpp' || echo '$(srcdir)/'`test/scriptnum_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-scriptnum_tests.Tpo test/$(DEPDIR)/test_test_OGC-scriptnum_tests.Po
-#	$(AM_V_CXX)source='test/scriptnum_tests.cpp' object='test/test_test_OGC-scriptnum_tests.o' libtool=no \
+test/test_test_OG-scriptnum_tests.o: test/scriptnum_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-scriptnum_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-scriptnum_tests.Tpo -c -o test/test_test_OG-scriptnum_tests.o `test -f 'test/scriptnum_tests.cpp' || echo '$(srcdir)/'`test/scriptnum_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-scriptnum_tests.Tpo test/$(DEPDIR)/test_test_OG-scriptnum_tests.Po
+#	$(AM_V_CXX)source='test/scriptnum_tests.cpp' object='test/test_test_OG-scriptnum_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-scriptnum_tests.o `test -f 'test/scriptnum_tests.cpp' || echo '$(srcdir)/'`test/scriptnum_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-scriptnum_tests.o `test -f 'test/scriptnum_tests.cpp' || echo '$(srcdir)/'`test/scriptnum_tests.cpp
 
-test/test_test_OGC-scriptnum_tests.obj: test/scriptnum_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-scriptnum_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-scriptnum_tests.Tpo -c -o test/test_test_OGC-scriptnum_tests.obj `if test -f 'test/scriptnum_tests.cpp'; then $(CYGPATH_W) 'test/scriptnum_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scriptnum_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-scriptnum_tests.Tpo test/$(DEPDIR)/test_test_OGC-scriptnum_tests.Po
-#	$(AM_V_CXX)source='test/scriptnum_tests.cpp' object='test/test_test_OGC-scriptnum_tests.obj' libtool=no \
+test/test_test_OG-scriptnum_tests.obj: test/scriptnum_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-scriptnum_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-scriptnum_tests.Tpo -c -o test/test_test_OG-scriptnum_tests.obj `if test -f 'test/scriptnum_tests.cpp'; then $(CYGPATH_W) 'test/scriptnum_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scriptnum_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-scriptnum_tests.Tpo test/$(DEPDIR)/test_test_OG-scriptnum_tests.Po
+#	$(AM_V_CXX)source='test/scriptnum_tests.cpp' object='test/test_test_OG-scriptnum_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-scriptnum_tests.obj `if test -f 'test/scriptnum_tests.cpp'; then $(CYGPATH_W) 'test/scriptnum_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scriptnum_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-scriptnum_tests.obj `if test -f 'test/scriptnum_tests.cpp'; then $(CYGPATH_W) 'test/scriptnum_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scriptnum_tests.cpp'; fi`
 
-test/test_test_OGC-scrypt_tests.o: test/scrypt_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-scrypt_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-scrypt_tests.Tpo -c -o test/test_test_OGC-scrypt_tests.o `test -f 'test/scrypt_tests.cpp' || echo '$(srcdir)/'`test/scrypt_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-scrypt_tests.Tpo test/$(DEPDIR)/test_test_OGC-scrypt_tests.Po
-#	$(AM_V_CXX)source='test/scrypt_tests.cpp' object='test/test_test_OGC-scrypt_tests.o' libtool=no \
+test/test_test_OG-scrypt_tests.o: test/scrypt_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-scrypt_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-scrypt_tests.Tpo -c -o test/test_test_OG-scrypt_tests.o `test -f 'test/scrypt_tests.cpp' || echo '$(srcdir)/'`test/scrypt_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-scrypt_tests.Tpo test/$(DEPDIR)/test_test_OG-scrypt_tests.Po
+#	$(AM_V_CXX)source='test/scrypt_tests.cpp' object='test/test_test_OG-scrypt_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-scrypt_tests.o `test -f 'test/scrypt_tests.cpp' || echo '$(srcdir)/'`test/scrypt_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-scrypt_tests.o `test -f 'test/scrypt_tests.cpp' || echo '$(srcdir)/'`test/scrypt_tests.cpp
 
-test/test_test_OGC-scrypt_tests.obj: test/scrypt_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-scrypt_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-scrypt_tests.Tpo -c -o test/test_test_OGC-scrypt_tests.obj `if test -f 'test/scrypt_tests.cpp'; then $(CYGPATH_W) 'test/scrypt_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scrypt_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-scrypt_tests.Tpo test/$(DEPDIR)/test_test_OGC-scrypt_tests.Po
-#	$(AM_V_CXX)source='test/scrypt_tests.cpp' object='test/test_test_OGC-scrypt_tests.obj' libtool=no \
+test/test_test_OG-scrypt_tests.obj: test/scrypt_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-scrypt_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-scrypt_tests.Tpo -c -o test/test_test_OG-scrypt_tests.obj `if test -f 'test/scrypt_tests.cpp'; then $(CYGPATH_W) 'test/scrypt_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scrypt_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-scrypt_tests.Tpo test/$(DEPDIR)/test_test_OG-scrypt_tests.Po
+#	$(AM_V_CXX)source='test/scrypt_tests.cpp' object='test/test_test_OG-scrypt_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-scrypt_tests.obj `if test -f 'test/scrypt_tests.cpp'; then $(CYGPATH_W) 'test/scrypt_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scrypt_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-scrypt_tests.obj `if test -f 'test/scrypt_tests.cpp'; then $(CYGPATH_W) 'test/scrypt_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/scrypt_tests.cpp'; fi`
 
-test/test_test_OGC-serialize_tests.o: test/serialize_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-serialize_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-serialize_tests.Tpo -c -o test/test_test_OGC-serialize_tests.o `test -f 'test/serialize_tests.cpp' || echo '$(srcdir)/'`test/serialize_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-serialize_tests.Tpo test/$(DEPDIR)/test_test_OGC-serialize_tests.Po
-#	$(AM_V_CXX)source='test/serialize_tests.cpp' object='test/test_test_OGC-serialize_tests.o' libtool=no \
+test/test_test_OG-serialize_tests.o: test/serialize_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-serialize_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-serialize_tests.Tpo -c -o test/test_test_OG-serialize_tests.o `test -f 'test/serialize_tests.cpp' || echo '$(srcdir)/'`test/serialize_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-serialize_tests.Tpo test/$(DEPDIR)/test_test_OG-serialize_tests.Po
+#	$(AM_V_CXX)source='test/serialize_tests.cpp' object='test/test_test_OG-serialize_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-serialize_tests.o `test -f 'test/serialize_tests.cpp' || echo '$(srcdir)/'`test/serialize_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-serialize_tests.o `test -f 'test/serialize_tests.cpp' || echo '$(srcdir)/'`test/serialize_tests.cpp
 
-test/test_test_OGC-serialize_tests.obj: test/serialize_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-serialize_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-serialize_tests.Tpo -c -o test/test_test_OGC-serialize_tests.obj `if test -f 'test/serialize_tests.cpp'; then $(CYGPATH_W) 'test/serialize_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/serialize_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-serialize_tests.Tpo test/$(DEPDIR)/test_test_OGC-serialize_tests.Po
-#	$(AM_V_CXX)source='test/serialize_tests.cpp' object='test/test_test_OGC-serialize_tests.obj' libtool=no \
+test/test_test_OG-serialize_tests.obj: test/serialize_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-serialize_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-serialize_tests.Tpo -c -o test/test_test_OG-serialize_tests.obj `if test -f 'test/serialize_tests.cpp'; then $(CYGPATH_W) 'test/serialize_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/serialize_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-serialize_tests.Tpo test/$(DEPDIR)/test_test_OG-serialize_tests.Po
+#	$(AM_V_CXX)source='test/serialize_tests.cpp' object='test/test_test_OG-serialize_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-serialize_tests.obj `if test -f 'test/serialize_tests.cpp'; then $(CYGPATH_W) 'test/serialize_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/serialize_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-serialize_tests.obj `if test -f 'test/serialize_tests.cpp'; then $(CYGPATH_W) 'test/serialize_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/serialize_tests.cpp'; fi`
 
-test/test_test_OGC-sighash_tests.o: test/sighash_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-sighash_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-sighash_tests.Tpo -c -o test/test_test_OGC-sighash_tests.o `test -f 'test/sighash_tests.cpp' || echo '$(srcdir)/'`test/sighash_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-sighash_tests.Tpo test/$(DEPDIR)/test_test_OGC-sighash_tests.Po
-#	$(AM_V_CXX)source='test/sighash_tests.cpp' object='test/test_test_OGC-sighash_tests.o' libtool=no \
+test/test_test_OG-sighash_tests.o: test/sighash_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-sighash_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-sighash_tests.Tpo -c -o test/test_test_OG-sighash_tests.o `test -f 'test/sighash_tests.cpp' || echo '$(srcdir)/'`test/sighash_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-sighash_tests.Tpo test/$(DEPDIR)/test_test_OG-sighash_tests.Po
+#	$(AM_V_CXX)source='test/sighash_tests.cpp' object='test/test_test_OG-sighash_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-sighash_tests.o `test -f 'test/sighash_tests.cpp' || echo '$(srcdir)/'`test/sighash_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-sighash_tests.o `test -f 'test/sighash_tests.cpp' || echo '$(srcdir)/'`test/sighash_tests.cpp
 
-test/test_test_OGC-sighash_tests.obj: test/sighash_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-sighash_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-sighash_tests.Tpo -c -o test/test_test_OGC-sighash_tests.obj `if test -f 'test/sighash_tests.cpp'; then $(CYGPATH_W) 'test/sighash_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sighash_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-sighash_tests.Tpo test/$(DEPDIR)/test_test_OGC-sighash_tests.Po
-#	$(AM_V_CXX)source='test/sighash_tests.cpp' object='test/test_test_OGC-sighash_tests.obj' libtool=no \
+test/test_test_OG-sighash_tests.obj: test/sighash_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-sighash_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-sighash_tests.Tpo -c -o test/test_test_OG-sighash_tests.obj `if test -f 'test/sighash_tests.cpp'; then $(CYGPATH_W) 'test/sighash_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sighash_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-sighash_tests.Tpo test/$(DEPDIR)/test_test_OG-sighash_tests.Po
+#	$(AM_V_CXX)source='test/sighash_tests.cpp' object='test/test_test_OG-sighash_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-sighash_tests.obj `if test -f 'test/sighash_tests.cpp'; then $(CYGPATH_W) 'test/sighash_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sighash_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-sighash_tests.obj `if test -f 'test/sighash_tests.cpp'; then $(CYGPATH_W) 'test/sighash_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sighash_tests.cpp'; fi`
 
-test/test_test_OGC-sigopcount_tests.o: test/sigopcount_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-sigopcount_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-sigopcount_tests.Tpo -c -o test/test_test_OGC-sigopcount_tests.o `test -f 'test/sigopcount_tests.cpp' || echo '$(srcdir)/'`test/sigopcount_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-sigopcount_tests.Tpo test/$(DEPDIR)/test_test_OGC-sigopcount_tests.Po
-#	$(AM_V_CXX)source='test/sigopcount_tests.cpp' object='test/test_test_OGC-sigopcount_tests.o' libtool=no \
+test/test_test_OG-sigopcount_tests.o: test/sigopcount_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-sigopcount_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-sigopcount_tests.Tpo -c -o test/test_test_OG-sigopcount_tests.o `test -f 'test/sigopcount_tests.cpp' || echo '$(srcdir)/'`test/sigopcount_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-sigopcount_tests.Tpo test/$(DEPDIR)/test_test_OG-sigopcount_tests.Po
+#	$(AM_V_CXX)source='test/sigopcount_tests.cpp' object='test/test_test_OG-sigopcount_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-sigopcount_tests.o `test -f 'test/sigopcount_tests.cpp' || echo '$(srcdir)/'`test/sigopcount_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-sigopcount_tests.o `test -f 'test/sigopcount_tests.cpp' || echo '$(srcdir)/'`test/sigopcount_tests.cpp
 
-test/test_test_OGC-sigopcount_tests.obj: test/sigopcount_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-sigopcount_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-sigopcount_tests.Tpo -c -o test/test_test_OGC-sigopcount_tests.obj `if test -f 'test/sigopcount_tests.cpp'; then $(CYGPATH_W) 'test/sigopcount_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sigopcount_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-sigopcount_tests.Tpo test/$(DEPDIR)/test_test_OGC-sigopcount_tests.Po
-#	$(AM_V_CXX)source='test/sigopcount_tests.cpp' object='test/test_test_OGC-sigopcount_tests.obj' libtool=no \
+test/test_test_OG-sigopcount_tests.obj: test/sigopcount_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-sigopcount_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-sigopcount_tests.Tpo -c -o test/test_test_OG-sigopcount_tests.obj `if test -f 'test/sigopcount_tests.cpp'; then $(CYGPATH_W) 'test/sigopcount_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sigopcount_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-sigopcount_tests.Tpo test/$(DEPDIR)/test_test_OG-sigopcount_tests.Po
+#	$(AM_V_CXX)source='test/sigopcount_tests.cpp' object='test/test_test_OG-sigopcount_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-sigopcount_tests.obj `if test -f 'test/sigopcount_tests.cpp'; then $(CYGPATH_W) 'test/sigopcount_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sigopcount_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-sigopcount_tests.obj `if test -f 'test/sigopcount_tests.cpp'; then $(CYGPATH_W) 'test/sigopcount_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/sigopcount_tests.cpp'; fi`
 
-test/test_test_OGC-skiplist_tests.o: test/skiplist_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-skiplist_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-skiplist_tests.Tpo -c -o test/test_test_OGC-skiplist_tests.o `test -f 'test/skiplist_tests.cpp' || echo '$(srcdir)/'`test/skiplist_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-skiplist_tests.Tpo test/$(DEPDIR)/test_test_OGC-skiplist_tests.Po
-#	$(AM_V_CXX)source='test/skiplist_tests.cpp' object='test/test_test_OGC-skiplist_tests.o' libtool=no \
+test/test_test_OG-skiplist_tests.o: test/skiplist_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-skiplist_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-skiplist_tests.Tpo -c -o test/test_test_OG-skiplist_tests.o `test -f 'test/skiplist_tests.cpp' || echo '$(srcdir)/'`test/skiplist_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-skiplist_tests.Tpo test/$(DEPDIR)/test_test_OG-skiplist_tests.Po
+#	$(AM_V_CXX)source='test/skiplist_tests.cpp' object='test/test_test_OG-skiplist_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-skiplist_tests.o `test -f 'test/skiplist_tests.cpp' || echo '$(srcdir)/'`test/skiplist_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-skiplist_tests.o `test -f 'test/skiplist_tests.cpp' || echo '$(srcdir)/'`test/skiplist_tests.cpp
 
-test/test_test_OGC-skiplist_tests.obj: test/skiplist_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-skiplist_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-skiplist_tests.Tpo -c -o test/test_test_OGC-skiplist_tests.obj `if test -f 'test/skiplist_tests.cpp'; then $(CYGPATH_W) 'test/skiplist_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/skiplist_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-skiplist_tests.Tpo test/$(DEPDIR)/test_test_OGC-skiplist_tests.Po
-#	$(AM_V_CXX)source='test/skiplist_tests.cpp' object='test/test_test_OGC-skiplist_tests.obj' libtool=no \
+test/test_test_OG-skiplist_tests.obj: test/skiplist_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-skiplist_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-skiplist_tests.Tpo -c -o test/test_test_OG-skiplist_tests.obj `if test -f 'test/skiplist_tests.cpp'; then $(CYGPATH_W) 'test/skiplist_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/skiplist_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-skiplist_tests.Tpo test/$(DEPDIR)/test_test_OG-skiplist_tests.Po
+#	$(AM_V_CXX)source='test/skiplist_tests.cpp' object='test/test_test_OG-skiplist_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-skiplist_tests.obj `if test -f 'test/skiplist_tests.cpp'; then $(CYGPATH_W) 'test/skiplist_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/skiplist_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-skiplist_tests.obj `if test -f 'test/skiplist_tests.cpp'; then $(CYGPATH_W) 'test/skiplist_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/skiplist_tests.cpp'; fi`
 
-test/test_test_OGC-streams_tests.o: test/streams_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-streams_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-streams_tests.Tpo -c -o test/test_test_OGC-streams_tests.o `test -f 'test/streams_tests.cpp' || echo '$(srcdir)/'`test/streams_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-streams_tests.Tpo test/$(DEPDIR)/test_test_OGC-streams_tests.Po
-#	$(AM_V_CXX)source='test/streams_tests.cpp' object='test/test_test_OGC-streams_tests.o' libtool=no \
+test/test_test_OG-streams_tests.o: test/streams_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-streams_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-streams_tests.Tpo -c -o test/test_test_OG-streams_tests.o `test -f 'test/streams_tests.cpp' || echo '$(srcdir)/'`test/streams_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-streams_tests.Tpo test/$(DEPDIR)/test_test_OG-streams_tests.Po
+#	$(AM_V_CXX)source='test/streams_tests.cpp' object='test/test_test_OG-streams_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-streams_tests.o `test -f 'test/streams_tests.cpp' || echo '$(srcdir)/'`test/streams_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-streams_tests.o `test -f 'test/streams_tests.cpp' || echo '$(srcdir)/'`test/streams_tests.cpp
 
-test/test_test_OGC-streams_tests.obj: test/streams_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-streams_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-streams_tests.Tpo -c -o test/test_test_OGC-streams_tests.obj `if test -f 'test/streams_tests.cpp'; then $(CYGPATH_W) 'test/streams_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/streams_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-streams_tests.Tpo test/$(DEPDIR)/test_test_OGC-streams_tests.Po
-#	$(AM_V_CXX)source='test/streams_tests.cpp' object='test/test_test_OGC-streams_tests.obj' libtool=no \
+test/test_test_OG-streams_tests.obj: test/streams_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-streams_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-streams_tests.Tpo -c -o test/test_test_OG-streams_tests.obj `if test -f 'test/streams_tests.cpp'; then $(CYGPATH_W) 'test/streams_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/streams_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-streams_tests.Tpo test/$(DEPDIR)/test_test_OG-streams_tests.Po
+#	$(AM_V_CXX)source='test/streams_tests.cpp' object='test/test_test_OG-streams_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-streams_tests.obj `if test -f 'test/streams_tests.cpp'; then $(CYGPATH_W) 'test/streams_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/streams_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-streams_tests.obj `if test -f 'test/streams_tests.cpp'; then $(CYGPATH_W) 'test/streams_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/streams_tests.cpp'; fi`
 
-test/test_test_OGC-test_bitcoin.o: test/test_bitcoin.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-test_bitcoin.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-test_bitcoin.Tpo -c -o test/test_test_OGC-test_bitcoin.o `test -f 'test/test_bitcoin.cpp' || echo '$(srcdir)/'`test/test_bitcoin.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-test_bitcoin.Tpo test/$(DEPDIR)/test_test_OGC-test_bitcoin.Po
-#	$(AM_V_CXX)source='test/test_bitcoin.cpp' object='test/test_test_OGC-test_bitcoin.o' libtool=no \
+test/test_test_OG-test_bitcoin.o: test/test_bitcoin.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-test_bitcoin.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-test_bitcoin.Tpo -c -o test/test_test_OG-test_bitcoin.o `test -f 'test/test_bitcoin.cpp' || echo '$(srcdir)/'`test/test_bitcoin.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-test_bitcoin.Tpo test/$(DEPDIR)/test_test_OG-test_bitcoin.Po
+#	$(AM_V_CXX)source='test/test_bitcoin.cpp' object='test/test_test_OG-test_bitcoin.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-test_bitcoin.o `test -f 'test/test_bitcoin.cpp' || echo '$(srcdir)/'`test/test_bitcoin.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-test_bitcoin.o `test -f 'test/test_bitcoin.cpp' || echo '$(srcdir)/'`test/test_bitcoin.cpp
 
-test/test_test_OGC-test_bitcoin.obj: test/test_bitcoin.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-test_bitcoin.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-test_bitcoin.Tpo -c -o test/test_test_OGC-test_bitcoin.obj `if test -f 'test/test_bitcoin.cpp'; then $(CYGPATH_W) 'test/test_bitcoin.cpp'; else $(CYGPATH_W) '$(srcdir)/test/test_bitcoin.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-test_bitcoin.Tpo test/$(DEPDIR)/test_test_OGC-test_bitcoin.Po
-#	$(AM_V_CXX)source='test/test_bitcoin.cpp' object='test/test_test_OGC-test_bitcoin.obj' libtool=no \
+test/test_test_OG-test_bitcoin.obj: test/test_bitcoin.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-test_bitcoin.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-test_bitcoin.Tpo -c -o test/test_test_OG-test_bitcoin.obj `if test -f 'test/test_bitcoin.cpp'; then $(CYGPATH_W) 'test/test_bitcoin.cpp'; else $(CYGPATH_W) '$(srcdir)/test/test_bitcoin.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-test_bitcoin.Tpo test/$(DEPDIR)/test_test_OG-test_bitcoin.Po
+#	$(AM_V_CXX)source='test/test_bitcoin.cpp' object='test/test_test_OG-test_bitcoin.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-test_bitcoin.obj `if test -f 'test/test_bitcoin.cpp'; then $(CYGPATH_W) 'test/test_bitcoin.cpp'; else $(CYGPATH_W) '$(srcdir)/test/test_bitcoin.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-test_bitcoin.obj `if test -f 'test/test_bitcoin.cpp'; then $(CYGPATH_W) 'test/test_bitcoin.cpp'; else $(CYGPATH_W) '$(srcdir)/test/test_bitcoin.cpp'; fi`
 
-test/test_test_OGC-test_bitcoin_main.o: test/test_bitcoin_main.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-test_bitcoin_main.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-test_bitcoin_main.Tpo -c -o test/test_test_OGC-test_bitcoin_main.o `test -f 'test/test_bitcoin_main.cpp' || echo '$(srcdir)/'`test/test_bitcoin_main.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-test_bitcoin_main.Tpo test/$(DEPDIR)/test_test_OGC-test_bitcoin_main.Po
-#	$(AM_V_CXX)source='test/test_bitcoin_main.cpp' object='test/test_test_OGC-test_bitcoin_main.o' libtool=no \
+test/test_test_OG-test_bitcoin_main.o: test/test_bitcoin_main.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-test_bitcoin_main.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-test_bitcoin_main.Tpo -c -o test/test_test_OG-test_bitcoin_main.o `test -f 'test/test_bitcoin_main.cpp' || echo '$(srcdir)/'`test/test_bitcoin_main.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-test_bitcoin_main.Tpo test/$(DEPDIR)/test_test_OG-test_bitcoin_main.Po
+#	$(AM_V_CXX)source='test/test_bitcoin_main.cpp' object='test/test_test_OG-test_bitcoin_main.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-test_bitcoin_main.o `test -f 'test/test_bitcoin_main.cpp' || echo '$(srcdir)/'`test/test_bitcoin_main.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-test_bitcoin_main.o `test -f 'test/test_bitcoin_main.cpp' || echo '$(srcdir)/'`test/test_bitcoin_main.cpp
 
-test/test_test_OGC-test_bitcoin_main.obj: test/test_bitcoin_main.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-test_bitcoin_main.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-test_bitcoin_main.Tpo -c -o test/test_test_OGC-test_bitcoin_main.obj `if test -f 'test/test_bitcoin_main.cpp'; then $(CYGPATH_W) 'test/test_bitcoin_main.cpp'; else $(CYGPATH_W) '$(srcdir)/test/test_bitcoin_main.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-test_bitcoin_main.Tpo test/$(DEPDIR)/test_test_OGC-test_bitcoin_main.Po
-#	$(AM_V_CXX)source='test/test_bitcoin_main.cpp' object='test/test_test_OGC-test_bitcoin_main.obj' libtool=no \
+test/test_test_OG-test_bitcoin_main.obj: test/test_bitcoin_main.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-test_bitcoin_main.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-test_bitcoin_main.Tpo -c -o test/test_test_OG-test_bitcoin_main.obj `if test -f 'test/test_bitcoin_main.cpp'; then $(CYGPATH_W) 'test/test_bitcoin_main.cpp'; else $(CYGPATH_W) '$(srcdir)/test/test_bitcoin_main.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-test_bitcoin_main.Tpo test/$(DEPDIR)/test_test_OG-test_bitcoin_main.Po
+#	$(AM_V_CXX)source='test/test_bitcoin_main.cpp' object='test/test_test_OG-test_bitcoin_main.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-test_bitcoin_main.obj `if test -f 'test/test_bitcoin_main.cpp'; then $(CYGPATH_W) 'test/test_bitcoin_main.cpp'; else $(CYGPATH_W) '$(srcdir)/test/test_bitcoin_main.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-test_bitcoin_main.obj `if test -f 'test/test_bitcoin_main.cpp'; then $(CYGPATH_W) 'test/test_bitcoin_main.cpp'; else $(CYGPATH_W) '$(srcdir)/test/test_bitcoin_main.cpp'; fi`
 
-test/test_test_OGC-timedata_tests.o: test/timedata_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-timedata_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-timedata_tests.Tpo -c -o test/test_test_OGC-timedata_tests.o `test -f 'test/timedata_tests.cpp' || echo '$(srcdir)/'`test/timedata_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-timedata_tests.Tpo test/$(DEPDIR)/test_test_OGC-timedata_tests.Po
-#	$(AM_V_CXX)source='test/timedata_tests.cpp' object='test/test_test_OGC-timedata_tests.o' libtool=no \
+test/test_test_OG-timedata_tests.o: test/timedata_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-timedata_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-timedata_tests.Tpo -c -o test/test_test_OG-timedata_tests.o `test -f 'test/timedata_tests.cpp' || echo '$(srcdir)/'`test/timedata_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-timedata_tests.Tpo test/$(DEPDIR)/test_test_OG-timedata_tests.Po
+#	$(AM_V_CXX)source='test/timedata_tests.cpp' object='test/test_test_OG-timedata_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-timedata_tests.o `test -f 'test/timedata_tests.cpp' || echo '$(srcdir)/'`test/timedata_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-timedata_tests.o `test -f 'test/timedata_tests.cpp' || echo '$(srcdir)/'`test/timedata_tests.cpp
 
-test/test_test_OGC-timedata_tests.obj: test/timedata_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-timedata_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-timedata_tests.Tpo -c -o test/test_test_OGC-timedata_tests.obj `if test -f 'test/timedata_tests.cpp'; then $(CYGPATH_W) 'test/timedata_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/timedata_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-timedata_tests.Tpo test/$(DEPDIR)/test_test_OGC-timedata_tests.Po
-#	$(AM_V_CXX)source='test/timedata_tests.cpp' object='test/test_test_OGC-timedata_tests.obj' libtool=no \
+test/test_test_OG-timedata_tests.obj: test/timedata_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-timedata_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-timedata_tests.Tpo -c -o test/test_test_OG-timedata_tests.obj `if test -f 'test/timedata_tests.cpp'; then $(CYGPATH_W) 'test/timedata_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/timedata_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-timedata_tests.Tpo test/$(DEPDIR)/test_test_OG-timedata_tests.Po
+#	$(AM_V_CXX)source='test/timedata_tests.cpp' object='test/test_test_OG-timedata_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-timedata_tests.obj `if test -f 'test/timedata_tests.cpp'; then $(CYGPATH_W) 'test/timedata_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/timedata_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-timedata_tests.obj `if test -f 'test/timedata_tests.cpp'; then $(CYGPATH_W) 'test/timedata_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/timedata_tests.cpp'; fi`
 
-test/test_test_OGC-torcontrol_tests.o: test/torcontrol_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-torcontrol_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-torcontrol_tests.Tpo -c -o test/test_test_OGC-torcontrol_tests.o `test -f 'test/torcontrol_tests.cpp' || echo '$(srcdir)/'`test/torcontrol_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-torcontrol_tests.Tpo test/$(DEPDIR)/test_test_OGC-torcontrol_tests.Po
-#	$(AM_V_CXX)source='test/torcontrol_tests.cpp' object='test/test_test_OGC-torcontrol_tests.o' libtool=no \
+test/test_test_OG-torcontrol_tests.o: test/torcontrol_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-torcontrol_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-torcontrol_tests.Tpo -c -o test/test_test_OG-torcontrol_tests.o `test -f 'test/torcontrol_tests.cpp' || echo '$(srcdir)/'`test/torcontrol_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-torcontrol_tests.Tpo test/$(DEPDIR)/test_test_OG-torcontrol_tests.Po
+#	$(AM_V_CXX)source='test/torcontrol_tests.cpp' object='test/test_test_OG-torcontrol_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-torcontrol_tests.o `test -f 'test/torcontrol_tests.cpp' || echo '$(srcdir)/'`test/torcontrol_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-torcontrol_tests.o `test -f 'test/torcontrol_tests.cpp' || echo '$(srcdir)/'`test/torcontrol_tests.cpp
 
-test/test_test_OGC-torcontrol_tests.obj: test/torcontrol_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-torcontrol_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-torcontrol_tests.Tpo -c -o test/test_test_OGC-torcontrol_tests.obj `if test -f 'test/torcontrol_tests.cpp'; then $(CYGPATH_W) 'test/torcontrol_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/torcontrol_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-torcontrol_tests.Tpo test/$(DEPDIR)/test_test_OGC-torcontrol_tests.Po
-#	$(AM_V_CXX)source='test/torcontrol_tests.cpp' object='test/test_test_OGC-torcontrol_tests.obj' libtool=no \
+test/test_test_OG-torcontrol_tests.obj: test/torcontrol_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-torcontrol_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-torcontrol_tests.Tpo -c -o test/test_test_OG-torcontrol_tests.obj `if test -f 'test/torcontrol_tests.cpp'; then $(CYGPATH_W) 'test/torcontrol_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/torcontrol_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-torcontrol_tests.Tpo test/$(DEPDIR)/test_test_OG-torcontrol_tests.Po
+#	$(AM_V_CXX)source='test/torcontrol_tests.cpp' object='test/test_test_OG-torcontrol_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-torcontrol_tests.obj `if test -f 'test/torcontrol_tests.cpp'; then $(CYGPATH_W) 'test/torcontrol_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/torcontrol_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-torcontrol_tests.obj `if test -f 'test/torcontrol_tests.cpp'; then $(CYGPATH_W) 'test/torcontrol_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/torcontrol_tests.cpp'; fi`
 
-test/test_test_OGC-transaction_tests.o: test/transaction_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-transaction_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-transaction_tests.Tpo -c -o test/test_test_OGC-transaction_tests.o `test -f 'test/transaction_tests.cpp' || echo '$(srcdir)/'`test/transaction_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-transaction_tests.Tpo test/$(DEPDIR)/test_test_OGC-transaction_tests.Po
-#	$(AM_V_CXX)source='test/transaction_tests.cpp' object='test/test_test_OGC-transaction_tests.o' libtool=no \
+test/test_test_OG-transaction_tests.o: test/transaction_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-transaction_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-transaction_tests.Tpo -c -o test/test_test_OG-transaction_tests.o `test -f 'test/transaction_tests.cpp' || echo '$(srcdir)/'`test/transaction_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-transaction_tests.Tpo test/$(DEPDIR)/test_test_OG-transaction_tests.Po
+#	$(AM_V_CXX)source='test/transaction_tests.cpp' object='test/test_test_OG-transaction_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-transaction_tests.o `test -f 'test/transaction_tests.cpp' || echo '$(srcdir)/'`test/transaction_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-transaction_tests.o `test -f 'test/transaction_tests.cpp' || echo '$(srcdir)/'`test/transaction_tests.cpp
 
-test/test_test_OGC-transaction_tests.obj: test/transaction_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-transaction_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-transaction_tests.Tpo -c -o test/test_test_OGC-transaction_tests.obj `if test -f 'test/transaction_tests.cpp'; then $(CYGPATH_W) 'test/transaction_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/transaction_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-transaction_tests.Tpo test/$(DEPDIR)/test_test_OGC-transaction_tests.Po
-#	$(AM_V_CXX)source='test/transaction_tests.cpp' object='test/test_test_OGC-transaction_tests.obj' libtool=no \
+test/test_test_OG-transaction_tests.obj: test/transaction_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-transaction_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-transaction_tests.Tpo -c -o test/test_test_OG-transaction_tests.obj `if test -f 'test/transaction_tests.cpp'; then $(CYGPATH_W) 'test/transaction_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/transaction_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-transaction_tests.Tpo test/$(DEPDIR)/test_test_OG-transaction_tests.Po
+#	$(AM_V_CXX)source='test/transaction_tests.cpp' object='test/test_test_OG-transaction_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-transaction_tests.obj `if test -f 'test/transaction_tests.cpp'; then $(CYGPATH_W) 'test/transaction_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/transaction_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-transaction_tests.obj `if test -f 'test/transaction_tests.cpp'; then $(CYGPATH_W) 'test/transaction_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/transaction_tests.cpp'; fi`
 
-test/test_test_OGC-txvalidationcache_tests.o: test/txvalidationcache_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-txvalidationcache_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-txvalidationcache_tests.Tpo -c -o test/test_test_OGC-txvalidationcache_tests.o `test -f 'test/txvalidationcache_tests.cpp' || echo '$(srcdir)/'`test/txvalidationcache_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-txvalidationcache_tests.Tpo test/$(DEPDIR)/test_test_OGC-txvalidationcache_tests.Po
-#	$(AM_V_CXX)source='test/txvalidationcache_tests.cpp' object='test/test_test_OGC-txvalidationcache_tests.o' libtool=no \
+test/test_test_OG-txvalidationcache_tests.o: test/txvalidationcache_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-txvalidationcache_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-txvalidationcache_tests.Tpo -c -o test/test_test_OG-txvalidationcache_tests.o `test -f 'test/txvalidationcache_tests.cpp' || echo '$(srcdir)/'`test/txvalidationcache_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-txvalidationcache_tests.Tpo test/$(DEPDIR)/test_test_OG-txvalidationcache_tests.Po
+#	$(AM_V_CXX)source='test/txvalidationcache_tests.cpp' object='test/test_test_OG-txvalidationcache_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-txvalidationcache_tests.o `test -f 'test/txvalidationcache_tests.cpp' || echo '$(srcdir)/'`test/txvalidationcache_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-txvalidationcache_tests.o `test -f 'test/txvalidationcache_tests.cpp' || echo '$(srcdir)/'`test/txvalidationcache_tests.cpp
 
-test/test_test_OGC-txvalidationcache_tests.obj: test/txvalidationcache_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-txvalidationcache_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-txvalidationcache_tests.Tpo -c -o test/test_test_OGC-txvalidationcache_tests.obj `if test -f 'test/txvalidationcache_tests.cpp'; then $(CYGPATH_W) 'test/txvalidationcache_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/txvalidationcache_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-txvalidationcache_tests.Tpo test/$(DEPDIR)/test_test_OGC-txvalidationcache_tests.Po
-#	$(AM_V_CXX)source='test/txvalidationcache_tests.cpp' object='test/test_test_OGC-txvalidationcache_tests.obj' libtool=no \
+test/test_test_OG-txvalidationcache_tests.obj: test/txvalidationcache_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-txvalidationcache_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-txvalidationcache_tests.Tpo -c -o test/test_test_OG-txvalidationcache_tests.obj `if test -f 'test/txvalidationcache_tests.cpp'; then $(CYGPATH_W) 'test/txvalidationcache_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/txvalidationcache_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-txvalidationcache_tests.Tpo test/$(DEPDIR)/test_test_OG-txvalidationcache_tests.Po
+#	$(AM_V_CXX)source='test/txvalidationcache_tests.cpp' object='test/test_test_OG-txvalidationcache_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-txvalidationcache_tests.obj `if test -f 'test/txvalidationcache_tests.cpp'; then $(CYGPATH_W) 'test/txvalidationcache_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/txvalidationcache_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-txvalidationcache_tests.obj `if test -f 'test/txvalidationcache_tests.cpp'; then $(CYGPATH_W) 'test/txvalidationcache_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/txvalidationcache_tests.cpp'; fi`
 
-test/test_test_OGC-versionbits_tests.o: test/versionbits_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-versionbits_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-versionbits_tests.Tpo -c -o test/test_test_OGC-versionbits_tests.o `test -f 'test/versionbits_tests.cpp' || echo '$(srcdir)/'`test/versionbits_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-versionbits_tests.Tpo test/$(DEPDIR)/test_test_OGC-versionbits_tests.Po
-#	$(AM_V_CXX)source='test/versionbits_tests.cpp' object='test/test_test_OGC-versionbits_tests.o' libtool=no \
+test/test_test_OG-versionbits_tests.o: test/versionbits_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-versionbits_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-versionbits_tests.Tpo -c -o test/test_test_OG-versionbits_tests.o `test -f 'test/versionbits_tests.cpp' || echo '$(srcdir)/'`test/versionbits_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-versionbits_tests.Tpo test/$(DEPDIR)/test_test_OG-versionbits_tests.Po
+#	$(AM_V_CXX)source='test/versionbits_tests.cpp' object='test/test_test_OG-versionbits_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-versionbits_tests.o `test -f 'test/versionbits_tests.cpp' || echo '$(srcdir)/'`test/versionbits_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-versionbits_tests.o `test -f 'test/versionbits_tests.cpp' || echo '$(srcdir)/'`test/versionbits_tests.cpp
 
-test/test_test_OGC-versionbits_tests.obj: test/versionbits_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-versionbits_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-versionbits_tests.Tpo -c -o test/test_test_OGC-versionbits_tests.obj `if test -f 'test/versionbits_tests.cpp'; then $(CYGPATH_W) 'test/versionbits_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/versionbits_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-versionbits_tests.Tpo test/$(DEPDIR)/test_test_OGC-versionbits_tests.Po
-#	$(AM_V_CXX)source='test/versionbits_tests.cpp' object='test/test_test_OGC-versionbits_tests.obj' libtool=no \
+test/test_test_OG-versionbits_tests.obj: test/versionbits_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-versionbits_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-versionbits_tests.Tpo -c -o test/test_test_OG-versionbits_tests.obj `if test -f 'test/versionbits_tests.cpp'; then $(CYGPATH_W) 'test/versionbits_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/versionbits_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-versionbits_tests.Tpo test/$(DEPDIR)/test_test_OG-versionbits_tests.Po
+#	$(AM_V_CXX)source='test/versionbits_tests.cpp' object='test/test_test_OG-versionbits_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-versionbits_tests.obj `if test -f 'test/versionbits_tests.cpp'; then $(CYGPATH_W) 'test/versionbits_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/versionbits_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-versionbits_tests.obj `if test -f 'test/versionbits_tests.cpp'; then $(CYGPATH_W) 'test/versionbits_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/versionbits_tests.cpp'; fi`
 
-test/test_test_OGC-uint256_tests.o: test/uint256_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-uint256_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-uint256_tests.Tpo -c -o test/test_test_OGC-uint256_tests.o `test -f 'test/uint256_tests.cpp' || echo '$(srcdir)/'`test/uint256_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-uint256_tests.Tpo test/$(DEPDIR)/test_test_OGC-uint256_tests.Po
-#	$(AM_V_CXX)source='test/uint256_tests.cpp' object='test/test_test_OGC-uint256_tests.o' libtool=no \
+test/test_test_OG-uint256_tests.o: test/uint256_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-uint256_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-uint256_tests.Tpo -c -o test/test_test_OG-uint256_tests.o `test -f 'test/uint256_tests.cpp' || echo '$(srcdir)/'`test/uint256_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-uint256_tests.Tpo test/$(DEPDIR)/test_test_OG-uint256_tests.Po
+#	$(AM_V_CXX)source='test/uint256_tests.cpp' object='test/test_test_OG-uint256_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-uint256_tests.o `test -f 'test/uint256_tests.cpp' || echo '$(srcdir)/'`test/uint256_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-uint256_tests.o `test -f 'test/uint256_tests.cpp' || echo '$(srcdir)/'`test/uint256_tests.cpp
 
-test/test_test_OGC-uint256_tests.obj: test/uint256_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-uint256_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-uint256_tests.Tpo -c -o test/test_test_OGC-uint256_tests.obj `if test -f 'test/uint256_tests.cpp'; then $(CYGPATH_W) 'test/uint256_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/uint256_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-uint256_tests.Tpo test/$(DEPDIR)/test_test_OGC-uint256_tests.Po
-#	$(AM_V_CXX)source='test/uint256_tests.cpp' object='test/test_test_OGC-uint256_tests.obj' libtool=no \
+test/test_test_OG-uint256_tests.obj: test/uint256_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-uint256_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-uint256_tests.Tpo -c -o test/test_test_OG-uint256_tests.obj `if test -f 'test/uint256_tests.cpp'; then $(CYGPATH_W) 'test/uint256_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/uint256_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-uint256_tests.Tpo test/$(DEPDIR)/test_test_OG-uint256_tests.Po
+#	$(AM_V_CXX)source='test/uint256_tests.cpp' object='test/test_test_OG-uint256_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-uint256_tests.obj `if test -f 'test/uint256_tests.cpp'; then $(CYGPATH_W) 'test/uint256_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/uint256_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-uint256_tests.obj `if test -f 'test/uint256_tests.cpp'; then $(CYGPATH_W) 'test/uint256_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/uint256_tests.cpp'; fi`
 
-test/test_test_OGC-univalue_tests.o: test/univalue_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-univalue_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-univalue_tests.Tpo -c -o test/test_test_OGC-univalue_tests.o `test -f 'test/univalue_tests.cpp' || echo '$(srcdir)/'`test/univalue_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-univalue_tests.Tpo test/$(DEPDIR)/test_test_OGC-univalue_tests.Po
-#	$(AM_V_CXX)source='test/univalue_tests.cpp' object='test/test_test_OGC-univalue_tests.o' libtool=no \
+test/test_test_OG-univalue_tests.o: test/univalue_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-univalue_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-univalue_tests.Tpo -c -o test/test_test_OG-univalue_tests.o `test -f 'test/univalue_tests.cpp' || echo '$(srcdir)/'`test/univalue_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-univalue_tests.Tpo test/$(DEPDIR)/test_test_OG-univalue_tests.Po
+#	$(AM_V_CXX)source='test/univalue_tests.cpp' object='test/test_test_OG-univalue_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-univalue_tests.o `test -f 'test/univalue_tests.cpp' || echo '$(srcdir)/'`test/univalue_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-univalue_tests.o `test -f 'test/univalue_tests.cpp' || echo '$(srcdir)/'`test/univalue_tests.cpp
 
-test/test_test_OGC-univalue_tests.obj: test/univalue_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-univalue_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-univalue_tests.Tpo -c -o test/test_test_OGC-univalue_tests.obj `if test -f 'test/univalue_tests.cpp'; then $(CYGPATH_W) 'test/univalue_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/univalue_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-univalue_tests.Tpo test/$(DEPDIR)/test_test_OGC-univalue_tests.Po
-#	$(AM_V_CXX)source='test/univalue_tests.cpp' object='test/test_test_OGC-univalue_tests.obj' libtool=no \
+test/test_test_OG-univalue_tests.obj: test/univalue_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-univalue_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-univalue_tests.Tpo -c -o test/test_test_OG-univalue_tests.obj `if test -f 'test/univalue_tests.cpp'; then $(CYGPATH_W) 'test/univalue_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/univalue_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-univalue_tests.Tpo test/$(DEPDIR)/test_test_OG-univalue_tests.Po
+#	$(AM_V_CXX)source='test/univalue_tests.cpp' object='test/test_test_OG-univalue_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-univalue_tests.obj `if test -f 'test/univalue_tests.cpp'; then $(CYGPATH_W) 'test/univalue_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/univalue_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-univalue_tests.obj `if test -f 'test/univalue_tests.cpp'; then $(CYGPATH_W) 'test/univalue_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/univalue_tests.cpp'; fi`
 
-test/test_test_OGC-util_tests.o: test/util_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-util_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC-util_tests.Tpo -c -o test/test_test_OGC-util_tests.o `test -f 'test/util_tests.cpp' || echo '$(srcdir)/'`test/util_tests.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-util_tests.Tpo test/$(DEPDIR)/test_test_OGC-util_tests.Po
-#	$(AM_V_CXX)source='test/util_tests.cpp' object='test/test_test_OGC-util_tests.o' libtool=no \
+test/test_test_OG-util_tests.o: test/util_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-util_tests.o -MD -MP -MF test/$(DEPDIR)/test_test_OG-util_tests.Tpo -c -o test/test_test_OG-util_tests.o `test -f 'test/util_tests.cpp' || echo '$(srcdir)/'`test/util_tests.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-util_tests.Tpo test/$(DEPDIR)/test_test_OG-util_tests.Po
+#	$(AM_V_CXX)source='test/util_tests.cpp' object='test/test_test_OG-util_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-util_tests.o `test -f 'test/util_tests.cpp' || echo '$(srcdir)/'`test/util_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-util_tests.o `test -f 'test/util_tests.cpp' || echo '$(srcdir)/'`test/util_tests.cpp
 
-test/test_test_OGC-util_tests.obj: test/util_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC-util_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC-util_tests.Tpo -c -o test/test_test_OGC-util_tests.obj `if test -f 'test/util_tests.cpp'; then $(CYGPATH_W) 'test/util_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/util_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC-util_tests.Tpo test/$(DEPDIR)/test_test_OGC-util_tests.Po
-#	$(AM_V_CXX)source='test/util_tests.cpp' object='test/test_test_OGC-util_tests.obj' libtool=no \
+test/test_test_OG-util_tests.obj: test/util_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG-util_tests.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG-util_tests.Tpo -c -o test/test_test_OG-util_tests.obj `if test -f 'test/util_tests.cpp'; then $(CYGPATH_W) 'test/util_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/util_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG-util_tests.Tpo test/$(DEPDIR)/test_test_OG-util_tests.Po
+#	$(AM_V_CXX)source='test/util_tests.cpp' object='test/test_test_OG-util_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC-util_tests.obj `if test -f 'test/util_tests.cpp'; then $(CYGPATH_W) 'test/util_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/util_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG-util_tests.obj `if test -f 'test/util_tests.cpp'; then $(CYGPATH_W) 'test/util_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/test/util_tests.cpp'; fi`
 
-wallet/test/test_test_OGC-wallet_test_fixture.o: wallet/test/wallet_test_fixture.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT wallet/test/test_test_OGC-wallet_test_fixture.o -MD -MP -MF wallet/test/$(DEPDIR)/test_test_OGC-wallet_test_fixture.Tpo -c -o wallet/test/test_test_OGC-wallet_test_fixture.o `test -f 'wallet/test/wallet_test_fixture.cpp' || echo '$(srcdir)/'`wallet/test/wallet_test_fixture.cpp
-	$(AM_V_at)$(am__mv) wallet/test/$(DEPDIR)/test_test_OGC-wallet_test_fixture.Tpo wallet/test/$(DEPDIR)/test_test_OGC-wallet_test_fixture.Po
-#	$(AM_V_CXX)source='wallet/test/wallet_test_fixture.cpp' object='wallet/test/test_test_OGC-wallet_test_fixture.o' libtool=no \
+wallet/test/test_test_OG-wallet_test_fixture.o: wallet/test/wallet_test_fixture.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT wallet/test/test_test_OG-wallet_test_fixture.o -MD -MP -MF wallet/test/$(DEPDIR)/test_test_OG-wallet_test_fixture.Tpo -c -o wallet/test/test_test_OG-wallet_test_fixture.o `test -f 'wallet/test/wallet_test_fixture.cpp' || echo '$(srcdir)/'`wallet/test/wallet_test_fixture.cpp
+	$(AM_V_at)$(am__mv) wallet/test/$(DEPDIR)/test_test_OG-wallet_test_fixture.Tpo wallet/test/$(DEPDIR)/test_test_OG-wallet_test_fixture.Po
+#	$(AM_V_CXX)source='wallet/test/wallet_test_fixture.cpp' object='wallet/test/test_test_OG-wallet_test_fixture.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o wallet/test/test_test_OGC-wallet_test_fixture.o `test -f 'wallet/test/wallet_test_fixture.cpp' || echo '$(srcdir)/'`wallet/test/wallet_test_fixture.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o wallet/test/test_test_OG-wallet_test_fixture.o `test -f 'wallet/test/wallet_test_fixture.cpp' || echo '$(srcdir)/'`wallet/test/wallet_test_fixture.cpp
 
-wallet/test/test_test_OGC-wallet_test_fixture.obj: wallet/test/wallet_test_fixture.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT wallet/test/test_test_OGC-wallet_test_fixture.obj -MD -MP -MF wallet/test/$(DEPDIR)/test_test_OGC-wallet_test_fixture.Tpo -c -o wallet/test/test_test_OGC-wallet_test_fixture.obj `if test -f 'wallet/test/wallet_test_fixture.cpp'; then $(CYGPATH_W) 'wallet/test/wallet_test_fixture.cpp'; else $(CYGPATH_W) '$(srcdir)/wallet/test/wallet_test_fixture.cpp'; fi`
-	$(AM_V_at)$(am__mv) wallet/test/$(DEPDIR)/test_test_OGC-wallet_test_fixture.Tpo wallet/test/$(DEPDIR)/test_test_OGC-wallet_test_fixture.Po
-#	$(AM_V_CXX)source='wallet/test/wallet_test_fixture.cpp' object='wallet/test/test_test_OGC-wallet_test_fixture.obj' libtool=no \
+wallet/test/test_test_OG-wallet_test_fixture.obj: wallet/test/wallet_test_fixture.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT wallet/test/test_test_OG-wallet_test_fixture.obj -MD -MP -MF wallet/test/$(DEPDIR)/test_test_OG-wallet_test_fixture.Tpo -c -o wallet/test/test_test_OG-wallet_test_fixture.obj `if test -f 'wallet/test/wallet_test_fixture.cpp'; then $(CYGPATH_W) 'wallet/test/wallet_test_fixture.cpp'; else $(CYGPATH_W) '$(srcdir)/wallet/test/wallet_test_fixture.cpp'; fi`
+	$(AM_V_at)$(am__mv) wallet/test/$(DEPDIR)/test_test_OG-wallet_test_fixture.Tpo wallet/test/$(DEPDIR)/test_test_OG-wallet_test_fixture.Po
+#	$(AM_V_CXX)source='wallet/test/wallet_test_fixture.cpp' object='wallet/test/test_test_OG-wallet_test_fixture.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o wallet/test/test_test_OGC-wallet_test_fixture.obj `if test -f 'wallet/test/wallet_test_fixture.cpp'; then $(CYGPATH_W) 'wallet/test/wallet_test_fixture.cpp'; else $(CYGPATH_W) '$(srcdir)/wallet/test/wallet_test_fixture.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o wallet/test/test_test_OG-wallet_test_fixture.obj `if test -f 'wallet/test/wallet_test_fixture.cpp'; then $(CYGPATH_W) 'wallet/test/wallet_test_fixture.cpp'; else $(CYGPATH_W) '$(srcdir)/wallet/test/wallet_test_fixture.cpp'; fi`
 
-wallet/test/test_test_OGC-accounting_tests.o: wallet/test/accounting_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT wallet/test/test_test_OGC-accounting_tests.o -MD -MP -MF wallet/test/$(DEPDIR)/test_test_OGC-accounting_tests.Tpo -c -o wallet/test/test_test_OGC-accounting_tests.o `test -f 'wallet/test/accounting_tests.cpp' || echo '$(srcdir)/'`wallet/test/accounting_tests.cpp
-	$(AM_V_at)$(am__mv) wallet/test/$(DEPDIR)/test_test_OGC-accounting_tests.Tpo wallet/test/$(DEPDIR)/test_test_OGC-accounting_tests.Po
-#	$(AM_V_CXX)source='wallet/test/accounting_tests.cpp' object='wallet/test/test_test_OGC-accounting_tests.o' libtool=no \
+wallet/test/test_test_OG-accounting_tests.o: wallet/test/accounting_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT wallet/test/test_test_OG-accounting_tests.o -MD -MP -MF wallet/test/$(DEPDIR)/test_test_OG-accounting_tests.Tpo -c -o wallet/test/test_test_OG-accounting_tests.o `test -f 'wallet/test/accounting_tests.cpp' || echo '$(srcdir)/'`wallet/test/accounting_tests.cpp
+	$(AM_V_at)$(am__mv) wallet/test/$(DEPDIR)/test_test_OG-accounting_tests.Tpo wallet/test/$(DEPDIR)/test_test_OG-accounting_tests.Po
+#	$(AM_V_CXX)source='wallet/test/accounting_tests.cpp' object='wallet/test/test_test_OG-accounting_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o wallet/test/test_test_OGC-accounting_tests.o `test -f 'wallet/test/accounting_tests.cpp' || echo '$(srcdir)/'`wallet/test/accounting_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o wallet/test/test_test_OG-accounting_tests.o `test -f 'wallet/test/accounting_tests.cpp' || echo '$(srcdir)/'`wallet/test/accounting_tests.cpp
 
-wallet/test/test_test_OGC-accounting_tests.obj: wallet/test/accounting_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT wallet/test/test_test_OGC-accounting_tests.obj -MD -MP -MF wallet/test/$(DEPDIR)/test_test_OGC-accounting_tests.Tpo -c -o wallet/test/test_test_OGC-accounting_tests.obj `if test -f 'wallet/test/accounting_tests.cpp'; then $(CYGPATH_W) 'wallet/test/accounting_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/wallet/test/accounting_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) wallet/test/$(DEPDIR)/test_test_OGC-accounting_tests.Tpo wallet/test/$(DEPDIR)/test_test_OGC-accounting_tests.Po
-#	$(AM_V_CXX)source='wallet/test/accounting_tests.cpp' object='wallet/test/test_test_OGC-accounting_tests.obj' libtool=no \
+wallet/test/test_test_OG-accounting_tests.obj: wallet/test/accounting_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT wallet/test/test_test_OG-accounting_tests.obj -MD -MP -MF wallet/test/$(DEPDIR)/test_test_OG-accounting_tests.Tpo -c -o wallet/test/test_test_OG-accounting_tests.obj `if test -f 'wallet/test/accounting_tests.cpp'; then $(CYGPATH_W) 'wallet/test/accounting_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/wallet/test/accounting_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) wallet/test/$(DEPDIR)/test_test_OG-accounting_tests.Tpo wallet/test/$(DEPDIR)/test_test_OG-accounting_tests.Po
+#	$(AM_V_CXX)source='wallet/test/accounting_tests.cpp' object='wallet/test/test_test_OG-accounting_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o wallet/test/test_test_OGC-accounting_tests.obj `if test -f 'wallet/test/accounting_tests.cpp'; then $(CYGPATH_W) 'wallet/test/accounting_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/wallet/test/accounting_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o wallet/test/test_test_OG-accounting_tests.obj `if test -f 'wallet/test/accounting_tests.cpp'; then $(CYGPATH_W) 'wallet/test/accounting_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/wallet/test/accounting_tests.cpp'; fi`
 
-wallet/test/test_test_OGC-wallet_tests.o: wallet/test/wallet_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT wallet/test/test_test_OGC-wallet_tests.o -MD -MP -MF wallet/test/$(DEPDIR)/test_test_OGC-wallet_tests.Tpo -c -o wallet/test/test_test_OGC-wallet_tests.o `test -f 'wallet/test/wallet_tests.cpp' || echo '$(srcdir)/'`wallet/test/wallet_tests.cpp
-	$(AM_V_at)$(am__mv) wallet/test/$(DEPDIR)/test_test_OGC-wallet_tests.Tpo wallet/test/$(DEPDIR)/test_test_OGC-wallet_tests.Po
-#	$(AM_V_CXX)source='wallet/test/wallet_tests.cpp' object='wallet/test/test_test_OGC-wallet_tests.o' libtool=no \
+wallet/test/test_test_OG-wallet_tests.o: wallet/test/wallet_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT wallet/test/test_test_OG-wallet_tests.o -MD -MP -MF wallet/test/$(DEPDIR)/test_test_OG-wallet_tests.Tpo -c -o wallet/test/test_test_OG-wallet_tests.o `test -f 'wallet/test/wallet_tests.cpp' || echo '$(srcdir)/'`wallet/test/wallet_tests.cpp
+	$(AM_V_at)$(am__mv) wallet/test/$(DEPDIR)/test_test_OG-wallet_tests.Tpo wallet/test/$(DEPDIR)/test_test_OG-wallet_tests.Po
+#	$(AM_V_CXX)source='wallet/test/wallet_tests.cpp' object='wallet/test/test_test_OG-wallet_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o wallet/test/test_test_OGC-wallet_tests.o `test -f 'wallet/test/wallet_tests.cpp' || echo '$(srcdir)/'`wallet/test/wallet_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o wallet/test/test_test_OG-wallet_tests.o `test -f 'wallet/test/wallet_tests.cpp' || echo '$(srcdir)/'`wallet/test/wallet_tests.cpp
 
-wallet/test/test_test_OGC-wallet_tests.obj: wallet/test/wallet_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT wallet/test/test_test_OGC-wallet_tests.obj -MD -MP -MF wallet/test/$(DEPDIR)/test_test_OGC-wallet_tests.Tpo -c -o wallet/test/test_test_OGC-wallet_tests.obj `if test -f 'wallet/test/wallet_tests.cpp'; then $(CYGPATH_W) 'wallet/test/wallet_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/wallet/test/wallet_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) wallet/test/$(DEPDIR)/test_test_OGC-wallet_tests.Tpo wallet/test/$(DEPDIR)/test_test_OGC-wallet_tests.Po
-#	$(AM_V_CXX)source='wallet/test/wallet_tests.cpp' object='wallet/test/test_test_OGC-wallet_tests.obj' libtool=no \
+wallet/test/test_test_OG-wallet_tests.obj: wallet/test/wallet_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT wallet/test/test_test_OG-wallet_tests.obj -MD -MP -MF wallet/test/$(DEPDIR)/test_test_OG-wallet_tests.Tpo -c -o wallet/test/test_test_OG-wallet_tests.obj `if test -f 'wallet/test/wallet_tests.cpp'; then $(CYGPATH_W) 'wallet/test/wallet_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/wallet/test/wallet_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) wallet/test/$(DEPDIR)/test_test_OG-wallet_tests.Tpo wallet/test/$(DEPDIR)/test_test_OG-wallet_tests.Po
+#	$(AM_V_CXX)source='wallet/test/wallet_tests.cpp' object='wallet/test/test_test_OG-wallet_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o wallet/test/test_test_OGC-wallet_tests.obj `if test -f 'wallet/test/wallet_tests.cpp'; then $(CYGPATH_W) 'wallet/test/wallet_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/wallet/test/wallet_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o wallet/test/test_test_OG-wallet_tests.obj `if test -f 'wallet/test/wallet_tests.cpp'; then $(CYGPATH_W) 'wallet/test/wallet_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/wallet/test/wallet_tests.cpp'; fi`
 
-wallet/test/test_test_OGC-crypto_tests.o: wallet/test/crypto_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT wallet/test/test_test_OGC-crypto_tests.o -MD -MP -MF wallet/test/$(DEPDIR)/test_test_OGC-crypto_tests.Tpo -c -o wallet/test/test_test_OGC-crypto_tests.o `test -f 'wallet/test/crypto_tests.cpp' || echo '$(srcdir)/'`wallet/test/crypto_tests.cpp
-	$(AM_V_at)$(am__mv) wallet/test/$(DEPDIR)/test_test_OGC-crypto_tests.Tpo wallet/test/$(DEPDIR)/test_test_OGC-crypto_tests.Po
-#	$(AM_V_CXX)source='wallet/test/crypto_tests.cpp' object='wallet/test/test_test_OGC-crypto_tests.o' libtool=no \
+wallet/test/test_test_OG-crypto_tests.o: wallet/test/crypto_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT wallet/test/test_test_OG-crypto_tests.o -MD -MP -MF wallet/test/$(DEPDIR)/test_test_OG-crypto_tests.Tpo -c -o wallet/test/test_test_OG-crypto_tests.o `test -f 'wallet/test/crypto_tests.cpp' || echo '$(srcdir)/'`wallet/test/crypto_tests.cpp
+	$(AM_V_at)$(am__mv) wallet/test/$(DEPDIR)/test_test_OG-crypto_tests.Tpo wallet/test/$(DEPDIR)/test_test_OG-crypto_tests.Po
+#	$(AM_V_CXX)source='wallet/test/crypto_tests.cpp' object='wallet/test/test_test_OG-crypto_tests.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o wallet/test/test_test_OGC-crypto_tests.o `test -f 'wallet/test/crypto_tests.cpp' || echo '$(srcdir)/'`wallet/test/crypto_tests.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o wallet/test/test_test_OG-crypto_tests.o `test -f 'wallet/test/crypto_tests.cpp' || echo '$(srcdir)/'`wallet/test/crypto_tests.cpp
 
-wallet/test/test_test_OGC-crypto_tests.obj: wallet/test/crypto_tests.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -MT wallet/test/test_test_OGC-crypto_tests.obj -MD -MP -MF wallet/test/$(DEPDIR)/test_test_OGC-crypto_tests.Tpo -c -o wallet/test/test_test_OGC-crypto_tests.obj `if test -f 'wallet/test/crypto_tests.cpp'; then $(CYGPATH_W) 'wallet/test/crypto_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/wallet/test/crypto_tests.cpp'; fi`
-	$(AM_V_at)$(am__mv) wallet/test/$(DEPDIR)/test_test_OGC-crypto_tests.Tpo wallet/test/$(DEPDIR)/test_test_OGC-crypto_tests.Po
-#	$(AM_V_CXX)source='wallet/test/crypto_tests.cpp' object='wallet/test/test_test_OGC-crypto_tests.obj' libtool=no \
+wallet/test/test_test_OG-crypto_tests.obj: wallet/test/crypto_tests.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -MT wallet/test/test_test_OG-crypto_tests.obj -MD -MP -MF wallet/test/$(DEPDIR)/test_test_OG-crypto_tests.Tpo -c -o wallet/test/test_test_OG-crypto_tests.obj `if test -f 'wallet/test/crypto_tests.cpp'; then $(CYGPATH_W) 'wallet/test/crypto_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/wallet/test/crypto_tests.cpp'; fi`
+	$(AM_V_at)$(am__mv) wallet/test/$(DEPDIR)/test_test_OG-crypto_tests.Tpo wallet/test/$(DEPDIR)/test_test_OG-crypto_tests.Po
+#	$(AM_V_CXX)source='wallet/test/crypto_tests.cpp' object='wallet/test/test_test_OG-crypto_tests.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_CXXFLAGS) $(CXXFLAGS) -c -o wallet/test/test_test_OGC-crypto_tests.obj `if test -f 'wallet/test/crypto_tests.cpp'; then $(CYGPATH_W) 'wallet/test/crypto_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/wallet/test/crypto_tests.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_CXXFLAGS) $(CXXFLAGS) -c -o wallet/test/test_test_OG-crypto_tests.obj `if test -f 'wallet/test/crypto_tests.cpp'; then $(CYGPATH_W) 'wallet/test/crypto_tests.cpp'; else $(CYGPATH_W) '$(srcdir)/wallet/test/crypto_tests.cpp'; fi`
 
-test/test_test_OGC_fuzzy-test_bitcoin_fuzzy.o: test/test_bitcoin_fuzzy.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_fuzzy_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_fuzzy_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC_fuzzy-test_bitcoin_fuzzy.o -MD -MP -MF test/$(DEPDIR)/test_test_OGC_fuzzy-test_bitcoin_fuzzy.Tpo -c -o test/test_test_OGC_fuzzy-test_bitcoin_fuzzy.o `test -f 'test/test_bitcoin_fuzzy.cpp' || echo '$(srcdir)/'`test/test_bitcoin_fuzzy.cpp
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC_fuzzy-test_bitcoin_fuzzy.Tpo test/$(DEPDIR)/test_test_OGC_fuzzy-test_bitcoin_fuzzy.Po
-#	$(AM_V_CXX)source='test/test_bitcoin_fuzzy.cpp' object='test/test_test_OGC_fuzzy-test_bitcoin_fuzzy.o' libtool=no \
+test/test_test_OG_fuzzy-test_bitcoin_fuzzy.o: test/test_bitcoin_fuzzy.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_fuzzy_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_fuzzy_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG_fuzzy-test_bitcoin_fuzzy.o -MD -MP -MF test/$(DEPDIR)/test_test_OG_fuzzy-test_bitcoin_fuzzy.Tpo -c -o test/test_test_OG_fuzzy-test_bitcoin_fuzzy.o `test -f 'test/test_bitcoin_fuzzy.cpp' || echo '$(srcdir)/'`test/test_bitcoin_fuzzy.cpp
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG_fuzzy-test_bitcoin_fuzzy.Tpo test/$(DEPDIR)/test_test_OG_fuzzy-test_bitcoin_fuzzy.Po
+#	$(AM_V_CXX)source='test/test_bitcoin_fuzzy.cpp' object='test/test_test_OG_fuzzy-test_bitcoin_fuzzy.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_fuzzy_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_fuzzy_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC_fuzzy-test_bitcoin_fuzzy.o `test -f 'test/test_bitcoin_fuzzy.cpp' || echo '$(srcdir)/'`test/test_bitcoin_fuzzy.cpp
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_fuzzy_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_fuzzy_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG_fuzzy-test_bitcoin_fuzzy.o `test -f 'test/test_bitcoin_fuzzy.cpp' || echo '$(srcdir)/'`test/test_bitcoin_fuzzy.cpp
 
-test/test_test_OGC_fuzzy-test_bitcoin_fuzzy.obj: test/test_bitcoin_fuzzy.cpp
-	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_fuzzy_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_fuzzy_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OGC_fuzzy-test_bitcoin_fuzzy.obj -MD -MP -MF test/$(DEPDIR)/test_test_OGC_fuzzy-test_bitcoin_fuzzy.Tpo -c -o test/test_test_OGC_fuzzy-test_bitcoin_fuzzy.obj `if test -f 'test/test_bitcoin_fuzzy.cpp'; then $(CYGPATH_W) 'test/test_bitcoin_fuzzy.cpp'; else $(CYGPATH_W) '$(srcdir)/test/test_bitcoin_fuzzy.cpp'; fi`
-	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OGC_fuzzy-test_bitcoin_fuzzy.Tpo test/$(DEPDIR)/test_test_OGC_fuzzy-test_bitcoin_fuzzy.Po
-#	$(AM_V_CXX)source='test/test_bitcoin_fuzzy.cpp' object='test/test_test_OGC_fuzzy-test_bitcoin_fuzzy.obj' libtool=no \
+test/test_test_OG_fuzzy-test_bitcoin_fuzzy.obj: test/test_bitcoin_fuzzy.cpp
+	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_fuzzy_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_fuzzy_CXXFLAGS) $(CXXFLAGS) -MT test/test_test_OG_fuzzy-test_bitcoin_fuzzy.obj -MD -MP -MF test/$(DEPDIR)/test_test_OG_fuzzy-test_bitcoin_fuzzy.Tpo -c -o test/test_test_OG_fuzzy-test_bitcoin_fuzzy.obj `if test -f 'test/test_bitcoin_fuzzy.cpp'; then $(CYGPATH_W) 'test/test_bitcoin_fuzzy.cpp'; else $(CYGPATH_W) '$(srcdir)/test/test_bitcoin_fuzzy.cpp'; fi`
+	$(AM_V_at)$(am__mv) test/$(DEPDIR)/test_test_OG_fuzzy-test_bitcoin_fuzzy.Tpo test/$(DEPDIR)/test_test_OG_fuzzy-test_bitcoin_fuzzy.Po
+#	$(AM_V_CXX)source='test/test_bitcoin_fuzzy.cpp' object='test/test_test_OG_fuzzy-test_bitcoin_fuzzy.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OGC_fuzzy_CPPFLAGS) $(CPPFLAGS) $(test_test_OGC_fuzzy_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OGC_fuzzy-test_bitcoin_fuzzy.obj `if test -f 'test/test_bitcoin_fuzzy.cpp'; then $(CYGPATH_W) 'test/test_bitcoin_fuzzy.cpp'; else $(CYGPATH_W) '$(srcdir)/test/test_bitcoin_fuzzy.cpp'; fi`
+#	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(test_test_OG_fuzzy_CPPFLAGS) $(CPPFLAGS) $(test_test_OG_fuzzy_CXXFLAGS) $(CXXFLAGS) -c -o test/test_test_OG_fuzzy-test_bitcoin_fuzzy.obj `if test -f 'test/test_bitcoin_fuzzy.cpp'; then $(CYGPATH_W) 'test/test_bitcoin_fuzzy.cpp'; else $(CYGPATH_W) '$(srcdir)/test/test_bitcoin_fuzzy.cpp'; fi`
 
 .cpp.o:
 	$(AM_V_CXX)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
@@ -9250,33 +9250,33 @@ test/test_test_OGC_fuzzy-test_bitcoin_fuzzy.obj: test/test_bitcoin_fuzzy.cpp
 #	DEPDIR=$(DEPDIR) $(OBJCXXDEPMODE) $(depcomp) \
 #	$(AM_V_OBJCXX_no)$(LTOBJCXXCOMPILE) -c -o $@ $<
 
-qt/qt_OGC_qt-macdockiconhandler.o: qt/macdockiconhandler.mm
-	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_OGC_qt-macdockiconhandler.o -MD -MP -MF qt/$(DEPDIR)/qt_OGC_qt-macdockiconhandler.Tpo -c -o qt/qt_OGC_qt-macdockiconhandler.o `test -f 'qt/macdockiconhandler.mm' || echo '$(srcdir)/'`qt/macdockiconhandler.mm
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_OGC_qt-macdockiconhandler.Tpo qt/$(DEPDIR)/qt_OGC_qt-macdockiconhandler.Po
-#	$(AM_V_OBJCXX)source='qt/macdockiconhandler.mm' object='qt/qt_OGC_qt-macdockiconhandler.o' libtool=no \
+qt/qt_OG_qt-macdockiconhandler.o: qt/macdockiconhandler.mm
+	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_OG_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_OG_qt-macdockiconhandler.o -MD -MP -MF qt/$(DEPDIR)/qt_OG_qt-macdockiconhandler.Tpo -c -o qt/qt_OG_qt-macdockiconhandler.o `test -f 'qt/macdockiconhandler.mm' || echo '$(srcdir)/'`qt/macdockiconhandler.mm
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_OG_qt-macdockiconhandler.Tpo qt/$(DEPDIR)/qt_OG_qt-macdockiconhandler.Po
+#	$(AM_V_OBJCXX)source='qt/macdockiconhandler.mm' object='qt/qt_OG_qt-macdockiconhandler.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(OBJCXXDEPMODE) $(depcomp) \
-#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_OGC_qt-macdockiconhandler.o `test -f 'qt/macdockiconhandler.mm' || echo '$(srcdir)/'`qt/macdockiconhandler.mm
+#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_OG_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_OG_qt-macdockiconhandler.o `test -f 'qt/macdockiconhandler.mm' || echo '$(srcdir)/'`qt/macdockiconhandler.mm
 
-qt/qt_OGC_qt-macdockiconhandler.obj: qt/macdockiconhandler.mm
-	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_OGC_qt-macdockiconhandler.obj -MD -MP -MF qt/$(DEPDIR)/qt_OGC_qt-macdockiconhandler.Tpo -c -o qt/qt_OGC_qt-macdockiconhandler.obj `if test -f 'qt/macdockiconhandler.mm'; then $(CYGPATH_W) 'qt/macdockiconhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macdockiconhandler.mm'; fi`
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_OGC_qt-macdockiconhandler.Tpo qt/$(DEPDIR)/qt_OGC_qt-macdockiconhandler.Po
-#	$(AM_V_OBJCXX)source='qt/macdockiconhandler.mm' object='qt/qt_OGC_qt-macdockiconhandler.obj' libtool=no \
+qt/qt_OG_qt-macdockiconhandler.obj: qt/macdockiconhandler.mm
+	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_OG_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_OG_qt-macdockiconhandler.obj -MD -MP -MF qt/$(DEPDIR)/qt_OG_qt-macdockiconhandler.Tpo -c -o qt/qt_OG_qt-macdockiconhandler.obj `if test -f 'qt/macdockiconhandler.mm'; then $(CYGPATH_W) 'qt/macdockiconhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macdockiconhandler.mm'; fi`
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_OG_qt-macdockiconhandler.Tpo qt/$(DEPDIR)/qt_OG_qt-macdockiconhandler.Po
+#	$(AM_V_OBJCXX)source='qt/macdockiconhandler.mm' object='qt/qt_OG_qt-macdockiconhandler.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(OBJCXXDEPMODE) $(depcomp) \
-#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_OGC_qt-macdockiconhandler.obj `if test -f 'qt/macdockiconhandler.mm'; then $(CYGPATH_W) 'qt/macdockiconhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macdockiconhandler.mm'; fi`
+#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_OG_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_OG_qt-macdockiconhandler.obj `if test -f 'qt/macdockiconhandler.mm'; then $(CYGPATH_W) 'qt/macdockiconhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macdockiconhandler.mm'; fi`
 
-qt/qt_OGC_qt-macnotificationhandler.o: qt/macnotificationhandler.mm
-	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_OGC_qt-macnotificationhandler.o -MD -MP -MF qt/$(DEPDIR)/qt_OGC_qt-macnotificationhandler.Tpo -c -o qt/qt_OGC_qt-macnotificationhandler.o `test -f 'qt/macnotificationhandler.mm' || echo '$(srcdir)/'`qt/macnotificationhandler.mm
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_OGC_qt-macnotificationhandler.Tpo qt/$(DEPDIR)/qt_OGC_qt-macnotificationhandler.Po
-#	$(AM_V_OBJCXX)source='qt/macnotificationhandler.mm' object='qt/qt_OGC_qt-macnotificationhandler.o' libtool=no \
+qt/qt_OG_qt-macnotificationhandler.o: qt/macnotificationhandler.mm
+	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_OG_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_OG_qt-macnotificationhandler.o -MD -MP -MF qt/$(DEPDIR)/qt_OG_qt-macnotificationhandler.Tpo -c -o qt/qt_OG_qt-macnotificationhandler.o `test -f 'qt/macnotificationhandler.mm' || echo '$(srcdir)/'`qt/macnotificationhandler.mm
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_OG_qt-macnotificationhandler.Tpo qt/$(DEPDIR)/qt_OG_qt-macnotificationhandler.Po
+#	$(AM_V_OBJCXX)source='qt/macnotificationhandler.mm' object='qt/qt_OG_qt-macnotificationhandler.o' libtool=no \
 #	DEPDIR=$(DEPDIR) $(OBJCXXDEPMODE) $(depcomp) \
-#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_OGC_qt-macnotificationhandler.o `test -f 'qt/macnotificationhandler.mm' || echo '$(srcdir)/'`qt/macnotificationhandler.mm
+#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_OG_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_OG_qt-macnotificationhandler.o `test -f 'qt/macnotificationhandler.mm' || echo '$(srcdir)/'`qt/macnotificationhandler.mm
 
-qt/qt_OGC_qt-macnotificationhandler.obj: qt/macnotificationhandler.mm
-	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_OGC_qt-macnotificationhandler.obj -MD -MP -MF qt/$(DEPDIR)/qt_OGC_qt-macnotificationhandler.Tpo -c -o qt/qt_OGC_qt-macnotificationhandler.obj `if test -f 'qt/macnotificationhandler.mm'; then $(CYGPATH_W) 'qt/macnotificationhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macnotificationhandler.mm'; fi`
-	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_OGC_qt-macnotificationhandler.Tpo qt/$(DEPDIR)/qt_OGC_qt-macnotificationhandler.Po
-#	$(AM_V_OBJCXX)source='qt/macnotificationhandler.mm' object='qt/qt_OGC_qt-macnotificationhandler.obj' libtool=no \
+qt/qt_OG_qt-macnotificationhandler.obj: qt/macnotificationhandler.mm
+	$(AM_V_OBJCXX)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_OG_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -MT qt/qt_OG_qt-macnotificationhandler.obj -MD -MP -MF qt/$(DEPDIR)/qt_OG_qt-macnotificationhandler.Tpo -c -o qt/qt_OG_qt-macnotificationhandler.obj `if test -f 'qt/macnotificationhandler.mm'; then $(CYGPATH_W) 'qt/macnotificationhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macnotificationhandler.mm'; fi`
+	$(AM_V_at)$(am__mv) qt/$(DEPDIR)/qt_OG_qt-macnotificationhandler.Tpo qt/$(DEPDIR)/qt_OG_qt-macnotificationhandler.Po
+#	$(AM_V_OBJCXX)source='qt/macnotificationhandler.mm' object='qt/qt_OG_qt-macnotificationhandler.obj' libtool=no \
 #	DEPDIR=$(DEPDIR) $(OBJCXXDEPMODE) $(depcomp) \
-#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_OGC_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_OGC_qt-macnotificationhandler.obj `if test -f 'qt/macnotificationhandler.mm'; then $(CYGPATH_W) 'qt/macnotificationhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macnotificationhandler.mm'; fi`
+#	$(AM_V_OBJCXX_no)$(OBJCXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(qt_OG_qt_CPPFLAGS) $(CPPFLAGS) $(AM_OBJCXXFLAGS) $(OBJCXXFLAGS) -c -o qt/qt_OG_qt-macnotificationhandler.obj `if test -f 'qt/macnotificationhandler.mm'; then $(CYGPATH_W) 'qt/macnotificationhandler.mm'; else $(CYGPATH_W) '$(srcdir)/qt/macnotificationhandler.mm'; fi`
 
 mostlyclean-libtool:
 	-rm -f *.lo
@@ -9554,16 +9554,16 @@ recheck: all
 	        am__force_recheck=am--force-recheck \
 	        TEST_LOGS="$$log_list"; \
 	exit $$?
-test/test_OGC.log: test/test_OGC$(EXEEXT)
-	@p='test/test_OGC$(EXEEXT)'; \
-	b='test/test_OGC'; \
+test/test_OG.log: test/test_OG$(EXEEXT)
+	@p='test/test_OG$(EXEEXT)'; \
+	b='test/test_OG'; \
 	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
 	"$$tst" $(AM_TESTS_FD_REDIRECT)
-qt/test/test_OGC-qt.log: qt/test/test_OGC-qt$(EXEEXT)
-	@p='qt/test/test_OGC-qt$(EXEEXT)'; \
-	b='qt/test/test_OGC-qt'; \
+qt/test/test_OG-qt.log: qt/test/test_OG-qt$(EXEEXT)
+	@p='qt/test/test_OG-qt$(EXEEXT)'; \
+	b='qt/test/test_OG-qt'; \
 	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
@@ -9920,7 +9920,7 @@ bitcoin_bench_clean : FORCE
 # Most files will depend on the forms and moc files as includes. Generate them
 # before anything else.
 $(QT_MOC): $(QT_FORMS_H)
-$(qt_libbitcoinqt_a_OBJECTS) $(qt_OGC_qt_OBJECTS) : | $(QT_MOC)
+$(qt_libbitcoinqt_a_OBJECTS) $(qt_OG_qt_OBJECTS) : | $(QT_MOC)
 
 #Generating these with a half-written protobuf header leads to wacky results.
 #This makes sure it's done.
@@ -9950,9 +9950,9 @@ $(QT_QRC_CPP): $(QT_QRC) $(QT_FORMS_H) $(RES_ICONS) $(RES_IMAGES) $(RES_MOVIES) 
 	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 
 bitcoin_qt_clean: FORCE
-	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_OGC_qt_OBJECTS) qt/OGC-qt$(EXEEXT) $(LIBBITCOINQT)
+	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_OG_qt_OBJECTS) qt/OG-qt$(EXEEXT) $(LIBBITCOINQT)
 
-bitcoin_qt : qt/OGC-qt$(EXEEXT)
+bitcoin_qt : qt/OG-qt$(EXEEXT)
 
 ui_%.h: %.ui
 	@test -f $(UIC)
@@ -9972,9 +9972,9 @@ moc_%.cpp: %.h
 	@$(MKDIR_P) $(@D)
 	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(LRELEASE) -silent $< -qm $@
 
-test_bitcoin_qt : qt/test/test_OGC-qt$(EXEEXT)
+test_bitcoin_qt : qt/test/test_OG-qt$(EXEEXT)
 
-test_bitcoin_qt_check : qt/test/test_OGC-qt$(EXEEXT) FORCE
+test_bitcoin_qt_check : qt/test/test_OG-qt$(EXEEXT) FORCE
 	$(MAKE) check-TESTS TESTS=$^
 
 test_bitcoin_qt_clean: FORCE

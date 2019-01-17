@@ -13,7 +13,7 @@ Construct a linear, no-fork, best version of the blockchain.
 
 ### [Qos](/contrib/qos) ###
 
-A Linux bash script that will set up traffic control (tc) to limit the outgoing bandwidth for connections to the OG network. This means one can have an always-on OGCd instance running, and another local OGCd/OGC-qt instance which connects to this node and receives blocks from it.
+A Linux bash script that will set up traffic control (tc) to limit the outgoing bandwidth for connections to the OG network. This means one can have an always-on OGd instance running, and another local OGd/OG-qt instance which connects to this node and receives blocks from it.
 
 ### [Seeds](/contrib/seeds) ###
 Utility to generate the pnSeed[] array that is compiled into the client.
@@ -22,8 +22,8 @@ Build Tools and Keys
 ---------------------
 
 ### [Debian](/contrib/debian) ###
-Contains files used to package OGCd/OGC-qt
-for Debian-based Linux systems. If you compile OGCd/OGC-qt yourself, there are some useful files here.
+Contains files used to package OGd/OG-qt
+for Debian-based Linux systems. If you compile OGd/OG-qt yourself, there are some useful files here.
 
 ### [Gitian-descriptors](/contrib/gitian-descriptors) ###
 Notes on getting Gitian builds up and running using KVM.
@@ -35,7 +35,7 @@ PGP keys used for signing OG Core [Gitian release](/doc/release-process.md) resu
 Scripts and notes for Mac builds. 
 
 ### [RPM](/contrib/rpm) ###
-RPM spec file for building OGC-core on RPM based distributions
+RPM spec file for building OG-core on RPM based distributions
 
 ### [Gitian-build](/contrib/gitian-build.sh) ###
 Script for running full Gitian builds.

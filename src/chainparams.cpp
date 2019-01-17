@@ -126,8 +126,8 @@ public:
         // Note that of those with the service bits flag, most only support a subset of possible options
         vSeeds.emplace_back("seed-a.og.bitwall.ca", true);
         //vSeeds.emplace_back("dnsseed.thrasher.io", true);
-        //vSeeds.emplace_back("dnsseed.OGCtools.com", true);
-        //vSeeds.emplace_back("dnsseed.OGCpool.org", true);
+        //vSeeds.emplace_back("dnsseed.OGtools.com", true);
+        //vSeeds.emplace_back("dnsseed.OGpool.org", true);
         //vSeeds.emplace_back("dnsseed.koin-project.com", false);
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,55);
@@ -228,8 +228,8 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.emplace_back("testnet-seed.OGCtools.com", true);
-        vSeeds.emplace_back("seed-b.OGC.loshan.co.uk", true);
+        vSeeds.emplace_back("testnet-seed.OGtools.com", true);
+        vSeeds.emplace_back("seed-b.OG.loshan.co.uk", true);
         vSeeds.emplace_back("dnsseed-testnet.thrasher.io", true);
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);

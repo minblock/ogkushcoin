@@ -143,7 +143,7 @@
     </message>
     <message>
         <source>Send coins to a OG address</source>
-        <translation>Enviar monedas a una dirección OGC</translation>
+        <translation>Enviar monedas a una dirección OG</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -206,8 +206,8 @@
         <translation>Barra de pestañas</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and OGC: URIs)</source>
-        <translation>Pide pagos (genera codigos QR and OGC: URls)</translation>
+        <source>Request payments (generates QR codes and OG: URIs)</source>
+        <translation>Pide pagos (genera codigos QR and OG: URls)</translation>
     </message>
     <message>
         <source>Error</source>
@@ -773,7 +773,7 @@
     </message>
     <message>
         <source>OG Core</source>
-        <translation>OGC core</translation>
+        <translation>OG core</translation>
     </message>
     <message>
         <source>Error loading block database</source>

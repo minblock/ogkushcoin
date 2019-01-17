@@ -43,11 +43,11 @@
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation>Choisissez une adresse où envoyer les OGCoins</translation>
+        <translation>Choisissez une adresse où envoyer les OGoins</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation>Choisissez une adresse où recevoir les OGCoins</translation>
+        <translation>Choisissez une adresse où recevoir les OGoins</translation>
     </message>
     <message>
         <source>C&amp;hoose</source>
@@ -310,16 +310,16 @@
         <translation>Barre d'outils des onglets</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and OGC: URIs)</source>
-        <translation>Demander des paiements (générer QR codes et OGC: URIs)</translation>
+        <source>Request payments (generates QR codes and OG: URIs)</source>
+        <translation>Demander des paiements (générer QR codes et OG: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
         <translation>Montrer la liste des adresses d'envois utilisées et les étiquettes</translation>
     </message>
     <message>
-        <source>Open a OGC: URI or payment request</source>
-        <translation>Ouvrir un OGC: URI ou demande de paiement</translation>
+        <source>Open a OG: URI or payment request</source>
+        <translation>Ouvrir un OG: URI ou demande de paiement</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>

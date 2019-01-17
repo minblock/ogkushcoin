@@ -406,7 +406,7 @@
         <translation>Раздели</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and OGC: URIs)</source>
+        <source>Request payments (generates QR codes and OG: URIs)</source>
         <translation>Изискване на плащания(генерира QR кодове и OG: URIs)</translation>
     </message>
     <message>
@@ -418,7 +418,7 @@
         <translation>Покажи списък с използваните адреси и имена.</translation>
     </message>
     <message>
-        <source>Open a OGC: URI or payment request</source>
+        <source>Open a OG: URI or payment request</source>
         <translation>Отворете OG: URI  или заявка за плащане</translation>
     </message>
     <message>
@@ -1086,7 +1086,7 @@
         <translation>Възникна грешка по време назаявката за плащане</translation>
     </message>
     <message>
-        <source>Cannot start OGC: click-to-pay handler</source>
+        <source>Cannot start OG: click-to-pay handler</source>
         <translation>OG не можe да се стартира: click-to-pay handler</translation>
     </message>
     <message>

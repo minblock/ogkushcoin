@@ -347,7 +347,7 @@
 #define LT_OBJDIR ".libs/"
 
 /* Define to the address where bug reports for this package should be sent. */
-#define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+#define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 
 /* Define to the full name of this package. */
 #define PACKAGE_NAME "OG Core"
@@ -356,7 +356,7 @@
 #define PACKAGE_STRING "OG Core 0.15.1"
 
 /* Define to the one symbol short name of this package. */
-#define PACKAGE_TARNAME "OGC"
+#define PACKAGE_TARNAME "OG"
 
 /* Define to the home page for this package. */
 #define PACKAGE_URL "https://og.bitwall.ca/"

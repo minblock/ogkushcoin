@@ -26,7 +26,7 @@ Table of Contents
 - [Installing Gitian](#installing-gitian)
 - [Setting up the Gitian image](#setting-up-the-gitian-image)
 - [Getting and building the inputs](#getting-and-building-the-inputs)
-- [Building OG Core](#building-OGC-core)
+- [Building OG Core](#building-OG-core)
 - [Building an alternative repository](#building-an-alternative-repository)
 - [Signing externally](#signing-externally)
 - [Uploading signatures](#uploading-signatures)
@@ -310,11 +310,11 @@ cd ..
 
 **Note**: When sudo asks for a password, enter the password for the user *debian* not for *root*.
 
-Clone the git repositories for OGC and Gitian.
+Clone the git repositories for OG and Gitian.
 
 ```bash
 git clone https://github.com/devrandom/gitian-builder.git
-git clone https://github.com/minblock/OGC
+git clone https://github.com/minblock/OG
 git clone https://github.com/minblock/gitian.sigs.ltc.git
 ```
 
@@ -344,7 +344,7 @@ Getting and building the inputs
 At this point you have two options, you can either use the automated script (found in [contrib/gitian-build.sh](/contrib/gitian-build.sh)) or you could manually do everything by following this guide. If you're using the automated script, then run it with the "--setup" command. Afterwards, run it with the "--build" command (example: "contrib/gitian-build.sh -b signer 0.13.0"). Otherwise ignore this.
 
 Follow the instructions in [doc/release-process.md](release-process.md#fetch-and-create-inputs-first-time-or-when-dependency-versions-change)
-in the OGC repository under 'Fetch and create inputs' to install sources which require
+in the OG repository under 'Fetch and create inputs' to install sources which require
 manual intervention. Also optionally follow the next step: 'Seed the Gitian sources cache
 and offline git repositories' which will fetch the remaining files required for building
 offline.
@@ -353,7 +353,7 @@ Building OG Core
 ----------------
 
 To build OG Core (for Linux, OS X and Windows) just follow the steps under 'perform
-Gitian builds' in [doc/release-process.md](release-process.md#perform-gitian-builds) in the OGC repository.
+Gitian builds' in [doc/release-process.md](release-process.md#perform-gitian-builds) in the OG repository.
 
 This may take some time as it will build all the dependencies needed for each descriptor.
 These dependencies will be cached after a successful build to avoid rebuilding them when possible.
@@ -367,12 +367,12 @@ tail -f var/build.log
 
 Output from `gbuild` will look something like
 
-    Initialized empty Git repository in /home/debian/gitian-builder/inputs/OGC/.git/
+    Initialized empty Git repository in /home/debian/gitian-builder/inputs/OG/.git/
     remote: Counting objects: 57959, done.
     remote: Total 57959 (delta 0), reused 0 (delta 0), pack-reused 57958
     Receiving objects: 100% (57959/57959), 53.76 MiB | 484.00 KiB/s, done.
     Resolving deltas: 100% (41590/41590), done.
-    From https://github.com/minblock/OGC
+    From https://github.com/minblock/OG
     ... (new tags, new branch etc)
     --- Building for trusty amd64 ---
     Stopping target if it is up
@@ -398,18 +398,18 @@ and inputs.
 
 For example:
 ```bash
-URL=https://github.com/thrasher-/OGC.git
+URL=https://github.com/thrasher-/OG.git
 COMMIT=2014_03_windows_unicode_path
-./bin/gbuild --commit OGC=${COMMIT} --url OGC=${URL} ../OGC/contrib/gitian-descriptors/gitian-linux.yml
-./bin/gbuild --commit OGC=${COMMIT} --url OGC=${URL} ../OGC/contrib/gitian-descriptors/gitian-win.yml
-./bin/gbuild --commit OGC=${COMMIT} --url OGC=${URL} ../OGC/contrib/gitian-descriptors/gitian-osx.yml
+./bin/gbuild --commit OG=${COMMIT} --url OG=${URL} ../OG/contrib/gitian-descriptors/gitian-linux.yml
+./bin/gbuild --commit OG=${COMMIT} --url OG=${URL} ../OG/contrib/gitian-descriptors/gitian-win.yml
+./bin/gbuild --commit OG=${COMMIT} --url OG=${URL} ../OG/contrib/gitian-descriptors/gitian-osx.yml
 ```
 
 Building fully offline
 -----------------------
 
 For building fully offline including attaching signatures to unsigned builds, the detached-sigs repository
-and the OGC git repository with the desired tag must both be available locally, and then gbuild must be
+and the OG git repository with the desired tag must both be available locally, and then gbuild must be
 told where to find them. It also requires an apt-cacher-ng which is fully-populated but set to offline mode, or
 manually disabling gitian-builder's use of apt-get to update the VM build environment.
 
@@ -428,7 +428,7 @@ cd /path/to/gitian-builder
 LXC_ARCH=amd64 LXC_SUITE=trusty on-target -u root apt-get update
 LXC_ARCH=amd64 LXC_SUITE=trusty on-target -u root \
   -e DEBIAN_FRONTEND=noninteractive apt-get --no-install-recommends -y install \
-  $( sed -ne '/^packages:/,/[^-] .*/ {/^- .*/{s/"//g;s/- //;p}}' ../OGC/contrib/gitian-descriptors/*|sort|uniq )
+  $( sed -ne '/^packages:/,/[^-] .*/ {/^- .*/{s/"//g;s/- //;p}}' ../OG/contrib/gitian-descriptors/*|sort|uniq )
 LXC_ARCH=amd64 LXC_SUITE=trusty on-target -u root apt-get -q -y purge grub
 LXC_ARCH=amd64 LXC_SUITE=trusty on-target -u root -e DEBIAN_FRONTEND=noninteractive apt-get -y dist-upgrade
 ```
@@ -448,12 +448,12 @@ Then when building, override the remote URLs that gbuild would otherwise pull fr
 ```bash
 
 cd /some/root/path/
-git clone https://github.com/minblock/OGC-detached-sigs.git
+git clone https://github.com/minblock/OG-detached-sigs.git
 
-BTCPATH=/some/root/path/OGC
-SIGPATH=/some/root/path/OGC-detached-sigs
+BTCPATH=/some/root/path/OG
+SIGPATH=/some/root/path/OG-detached-sigs
 
-./bin/gbuild --url OGC=${BTCPATH},signature=${SIGPATH} ../OGC/contrib/gitian-descriptors/gitian-win-signer.yml
+./bin/gbuild --url OG=${BTCPATH},signature=${SIGPATH} ../OG/contrib/gitian-descriptors/gitian-win-signer.yml
 ```
 
 Signing externally
@@ -468,9 +468,9 @@ When you execute `gsign` you will get an error from GPG, which can be ignored. C
 in `gitian.sigs` to your signing machine and do
 
 ```bash
-    gpg --detach-sign ${VERSION}-linux/${SIGNER}/OGC-linux-build.assert
-    gpg --detach-sign ${VERSION}-win/${SIGNER}/OGC-win-build.assert
-    gpg --detach-sign ${VERSION}-osx-unsigned/${SIGNER}/OGC-osx-build.assert
+    gpg --detach-sign ${VERSION}-linux/${SIGNER}/OG-linux-build.assert
+    gpg --detach-sign ${VERSION}-win/${SIGNER}/OG-win-build.assert
+    gpg --detach-sign ${VERSION}-osx-unsigned/${SIGNER}/OG-osx-build.assert
 ```
 
 This will create the `.sig` files that can be committed together with the `.assert` files to assert your

@@ -429,7 +429,7 @@ $config_links
 Configuration commands:
 $config_commands
 
-Report bugs to <https://github.com/minblock/OGC/issues>.
+Report bugs to <https://github.com/minblock/OG/issues>.
 OG Core home page: <https://og.bitwall.ca/>."
 
 ac_cs_config="--disable-shared --with-pic --with-bignum=no --enable-module-recovery --disable-jni"
@@ -442,7 +442,7 @@ Copyright (C) 2012 Free Software Foundation, Inc.
 This config.status script is free software; the Free Software Foundation
 gives unlimited permission to copy, distribute and modify it."
 
-ac_pwd='/home/spanky/OGC'
+ac_pwd='/home/spanky/OG'
 srcdir='.'
 INSTALL='/usr/bin/install -c'
 MKDIR_P='/bin/mkdir -p'
@@ -792,7 +792,7 @@ if test -n "${ZSH_VERSION+set}"; then
 fi
 
 
-    PACKAGE='OGC'
+    PACKAGE='OG'
     VERSION='0.15.1'
     RM='rm -f'
     ofile='libtool'
@@ -910,10 +910,10 @@ S["HARDENED_CPPFLAGS"]=" -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2"
 S["HARDENED_CXXFLAGS"]=" -Wstack-protector -fstack-protector-all"
 S["ERROR_CXXFLAGS"]=""
 S["RELDFLAGS"]=""
-S["BITCOIN_TX_NAME"]="OGC-tx"
-S["BITCOIN_CLI_NAME"]="OGC-cli"
-S["BITCOIN_GUI_NAME"]="OGC-qt"
-S["BITCOIN_DAEMON_NAME"]="OGCd"
+S["BITCOIN_TX_NAME"]="OG-tx"
+S["BITCOIN_CLI_NAME"]="OG-cli"
+S["BITCOIN_GUI_NAME"]="OG-qt"
+S["BITCOIN_DAEMON_NAME"]="OGd"
 S["COPYRIGHT_HOLDERS_FINAL"]="The OG Core developers"
 S["COPYRIGHT_HOLDERS_SUBSTITUTION"]="OG Core"
 S["COPYRIGHT_HOLDERS"]="The %s developers"
@@ -1138,14 +1138,14 @@ S["mkdir_p"]="$(MKDIR_P)"
 S["MKDIR_P"]="/bin/mkdir -p"
 S["INSTALL_STRIP_PROGRAM"]="$(install_sh) -c -s"
 S["STRIP"]="/usr/bin/strip"
-S["install_sh"]="${SHELL} /home/spanky/OGC/build-aux/install-sh"
-S["MAKEINFO"]="${SHELL} /home/spanky/OGC/build-aux/missing makeinfo"
-S["AUTOHEADER"]="${SHELL} /home/spanky/OGC/build-aux/missing autoheader"
-S["AUTOMAKE"]="${SHELL} /home/spanky/OGC/build-aux/missing automake-1.15"
-S["AUTOCONF"]="${SHELL} /home/spanky/OGC/build-aux/missing autoconf"
-S["ACLOCAL"]="${SHELL} /home/spanky/OGC/build-aux/missing aclocal-1.15"
+S["install_sh"]="${SHELL} /home/spanky/OG/build-aux/install-sh"
+S["MAKEINFO"]="${SHELL} /home/spanky/OG/build-aux/missing makeinfo"
+S["AUTOHEADER"]="${SHELL} /home/spanky/OG/build-aux/missing autoheader"
+S["AUTOMAKE"]="${SHELL} /home/spanky/OG/build-aux/missing automake-1.15"
+S["AUTOCONF"]="${SHELL} /home/spanky/OG/build-aux/missing autoconf"
+S["ACLOCAL"]="${SHELL} /home/spanky/OG/build-aux/missing aclocal-1.15"
 S["VERSION"]="0.15.1"
-S["PACKAGE"]="OGC"
+S["PACKAGE"]="OG"
 S["CYGPATH_W"]="echo"
 S["am__isrc"]=""
 S["INSTALL_DATA"]="${INSTALL} -m 644"
@@ -1192,10 +1192,10 @@ S["program_transform_name"]="s,x,x,"
 S["prefix"]="/usr/local"
 S["exec_prefix"]="${prefix}"
 S["PACKAGE_URL"]="https://og.bitwall.ca/"
-S["PACKAGE_BUGREPORT"]="https://github.com/minblock/OGC/issues"
+S["PACKAGE_BUGREPORT"]="https://github.com/minblock/OG/issues"
 S["PACKAGE_STRING"]="OG Core 0.15.1"
 S["PACKAGE_VERSION"]="0.15.1"
-S["PACKAGE_TARNAME"]="OGC"
+S["PACKAGE_TARNAME"]="OG"
 S["PACKAGE_NAME"]="OG Core"
 S["PATH_SEPARATOR"]=":"
 S["SHELL"]="/bin/bash"
@@ -1241,10 +1241,10 @@ if test -n "$CONFIG_HEADERS"; then
 cat >"$ac_tmp/defines.awk" <<\_ACAWK ||
 BEGIN {
 D["PACKAGE_NAME"]=" \"OG Core\""
-D["PACKAGE_TARNAME"]=" \"OGC\""
+D["PACKAGE_TARNAME"]=" \"OG\""
 D["PACKAGE_VERSION"]=" \"0.15.1\""
 D["PACKAGE_STRING"]=" \"OG Core 0.15.1\""
-D["PACKAGE_BUGREPORT"]=" \"https://github.com/minblock/OGC/issues\""
+D["PACKAGE_BUGREPORT"]=" \"https://github.com/minblock/OG/issues\""
 D["PACKAGE_URL"]=" \"https://og.bitwall.ca/\""
 D["HAVE_CXX11"]=" 1"
 D["STDC_HEADERS"]=" 1"

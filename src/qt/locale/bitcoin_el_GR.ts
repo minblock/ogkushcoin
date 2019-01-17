@@ -239,7 +239,7 @@
     </message>
     <message>
         <source>Send coins to a OG address</source>
-        <translation>Στείλε νομίσματα σε μια διεύθυνση OGC</translation>
+        <translation>Στείλε νομίσματα σε μια διεύθυνση OG</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -314,8 +314,8 @@
         <translation>Εργαλειοθήκη καρτελών</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and OGC: URIs)</source>
-        <translation>Αίτηση πληρωμών (δημιουργεί QR codes και διευθύνσεις OGC: )</translation>
+        <source>Request payments (generates QR codes and OG: URIs)</source>
+        <translation>Αίτηση πληρωμών (δημιουργεί QR codes και διευθύνσεις OG: )</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -326,8 +326,8 @@
         <translation>Προβολή της λίστας των χρησιμοποιημένων διευθύνσεων και ετικετών λήψεως</translation>
     </message>
     <message>
-        <source>Open a OGC: URI or payment request</source>
-        <translation>Άνοιγμα OGC: URI αίτησης πληρωμής</translation>
+        <source>Open a OG: URI or payment request</source>
+        <translation>Άνοιγμα OG: URI αίτησης πληρωμής</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>

@@ -31,14 +31,14 @@ NOTE: Building with Qt4 is still supported, however, could result in a broken UI
 Build OG Core
 ------------------------
 
-1. Clone the OGC source code and cd into `OGC`
+1. Clone the OG source code and cd into `OG`
 
-        git clone https://github.com/minblock/OGC
-        cd OGC
+        git clone https://github.com/minblock/OG
+        cd OG
 
-2.  Build OGC-core:
+2.  Build OG-core:
 
-    Configure and build the headless OGC binaries as well as the GUI (if Qt is found).
+    Configure and build the headless OG binaries as well as the GUI (if Qt is found).
 
     You can disable the GUI build by passing `--without-gui` to configure.
 
@@ -57,15 +57,15 @@ Build OG Core
 Running
 -------
 
-OG Core is now available at `./src/OGCd`
+OG Core is now available at `./src/OGd`
 
 Before running, it's recommended you create an RPC configuration file.
 
-    echo -e "rpcuser=OGCrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/OG/OGC.conf"
+    echo -e "rpcuser=OGrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/OG/OG.conf"
 
-    chmod 600 "/Users/${USER}/Library/Application Support/OG/OGC.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/OG/OG.conf"
 
-The first time you run OGCd, it will start downloading the blockchain. This process could take several hours.
+The first time you run OGd, it will start downloading the blockchain. This process could take several hours.
 
 You can monitor the download process by looking at the debug.log file:
 
@@ -74,20 +74,20 @@ You can monitor the download process by looking at the debug.log file:
 Other commands:
 -------
 
-    ./src/OGCd -daemon # Starts the OGC daemon.
-    ./src/OGC-cli --help # Outputs a list of command-line options.
-    ./src/OGC-cli help # Outputs a list of RPC commands when the daemon is running.
+    ./src/OGd -daemon # Starts the OG daemon.
+    ./src/OG-cli --help # Outputs a list of command-line options.
+    ./src/OG-cli help # Outputs a list of RPC commands when the daemon is running.
 
 Using Qt Creator as IDE
 ------------------------
-You can use Qt Creator as an IDE, for OGC development.
+You can use Qt Creator as an IDE, for OG development.
 Download and install the community edition of [Qt Creator](https://www.qt.io/download/).
 Uncheck everything except Qt Creator during the installation process.
 
 1. Make sure you installed everything through Homebrew mentioned above
 2. Do a proper ./configure --enable-debug
 3. In Qt Creator do "New Project" -> Import Project -> Import Existing Project
-4. Enter "OGC-qt" as project name, enter src/qt as location
+4. Enter "OG-qt" as project name, enter src/qt as location
 5. Leave the file selection as it is
 6. Confirm the "summary page"
 7. In the "Projects" tab select "Manage Kits..."

@@ -258,7 +258,7 @@
         <translation>Thanh công cụ (toolbar)</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and OGC: URIs)</source>
+        <source>Request payments (generates QR codes and OG: URIs)</source>
         <translation>Yêu cầu thanh toán(tạo mã QR và địa chỉ OG: URLs)</translation>
     </message>
     <message>
@@ -270,8 +270,8 @@
         <translation>Hiện thỉ danh sách các địa chỉ và nhãn đã dùng để nhận.</translation>
     </message>
     <message>
-        <source>Open a OGC: URI or payment request</source>
-        <translation>Mở OGC:URL hoặc yêu cầu thanh toán</translation>
+        <source>Open a OG: URI or payment request</source>
+        <translation>Mở OG:URL hoặc yêu cầu thanh toán</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>

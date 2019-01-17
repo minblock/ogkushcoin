@@ -531,7 +531,7 @@ std::string HelpMessage(HelpMessageMode mode)
 
 std::string LicenseInfo()
 {
-    const std::string URL_SOURCE_CODE = "<https://github.com/minblock/OGC>";
+    const std::string URL_SOURCE_CODE = "<https://github.com/minblock/OG>";
     const std::string URL_WEBSITE = "<https://og.bitwall.ca>";
 
     return CopyrightHolders(strprintf(_("Copyright (C) %i-%i"), 2011, COPYRIGHT_YEAR) + " ") + "\n" +

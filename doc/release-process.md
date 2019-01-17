@@ -5,7 +5,7 @@ Before every release candidate:
 
 * Update translations (ping wumpus on IRC) see [translation_process.md](https://github.com/bitcoin/bitcoin/blob/master/doc/translation_process.md#synchronising-translations).
 
-* Update manpages, see [gen-manpages.sh](https://github.com/minblock/OGC/blob/master/contrib/devtools/README.md#gen-manpagessh).
+* Update manpages, see [gen-manpages.sh](https://github.com/minblock/OG/blob/master/contrib/devtools/README.md#gen-manpagessh).
 
 Before every minor and major release:
 
@@ -34,9 +34,9 @@ Check out the source code in the following directory hierarchy.
 
     cd /path/to/your/toplevel/build
     git clone https://github.com/minblock/gitian.sigs.ltc.git
-    git clone https://github.com/minblock/OGC-detached-sigs.git
+    git clone https://github.com/minblock/OG-detached-sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
-    git clone https://github.com/minblock/OGC.git
+    git clone https://github.com/minblock/OG.git
 
 ### OG maintainers/release engineers, suggestion for writing release notes
 
@@ -61,7 +61,7 @@ If you're using the automated script (found in [contrib/gitian-build.sh](/contri
 
 Setup Gitian descriptors:
 
-    pushd ./OGC
+    pushd ./OG
     export SIGNER=(your Gitian key, ie bluematt, sipa, etc)
     export VERSION=(new version, e.g. 0.8.0)
     git fetch
@@ -95,7 +95,7 @@ Create the OS X SDK tarball, see the [OS X readme](README_osx.md) for details, a
 By default, Gitian will fetch source files as needed. To cache them ahead of time:
 
     pushd ./gitian-builder
-    make -C ../OGC/depends download SOURCES_PATH=`pwd`/cache/common
+    make -C ../OG/depends download SOURCES_PATH=`pwd`/cache/common
     popd
 
 Only missing files will be fetched, so this is safe to re-run for each build.
@@ -103,7 +103,7 @@ Only missing files will be fetched, so this is safe to re-run for each build.
 NOTE: Offline builds must use the --url flag to ensure Gitian fetches only from local URLs. For example:
 
     pushd ./gitian-builder
-    ./bin/gbuild --url OGC=/path/to/OGC,signature=/path/to/sigs {rest of arguments}
+    ./bin/gbuild --url OG=/path/to/OG,signature=/path/to/sigs {rest of arguments}
     popd
 
 The gbuild invocations below <b>DO NOT DO THIS</b> by default.
@@ -111,42 +111,42 @@ The gbuild invocations below <b>DO NOT DO THIS</b> by default.
 ### Build and sign OG Core for Linux, Windows, and OS X:
 
     pushd ./gitian-builder
-    ./bin/gbuild --num-make 2 --memory 3000 --commit OGC=v${VERSION} ../OGC/contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs.ltc/ ../OGC/contrib/gitian-descriptors/gitian-linux.yml
-    mv build/out/OGC-*.tar.gz build/out/src/OGC-*.tar.gz ../
+    ./bin/gbuild --num-make 2 --memory 3000 --commit OG=v${VERSION} ../OG/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs.ltc/ ../OG/contrib/gitian-descriptors/gitian-linux.yml
+    mv build/out/OG-*.tar.gz build/out/src/OG-*.tar.gz ../
 
-    ./bin/gbuild --num-make 2 --memory 3000 --commit OGC=v${VERSION} ../OGC/contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs.ltc/ ../OGC/contrib/gitian-descriptors/gitian-win.yml
-    mv build/out/OGC-*-win-unsigned.tar.gz inputs/OGC-win-unsigned.tar.gz
-    mv build/out/OGC-*.zip build/out/OGC-*.exe ../
+    ./bin/gbuild --num-make 2 --memory 3000 --commit OG=v${VERSION} ../OG/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs.ltc/ ../OG/contrib/gitian-descriptors/gitian-win.yml
+    mv build/out/OG-*-win-unsigned.tar.gz inputs/OG-win-unsigned.tar.gz
+    mv build/out/OG-*.zip build/out/OG-*.exe ../
 
-    ./bin/gbuild --num-make 2 --memory 3000 --commit OGC=v${VERSION} ../OGC/contrib/gitian-descriptors/gitian-osx.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs.ltc/ ../OGC/contrib/gitian-descriptors/gitian-osx.yml
-    mv build/out/OGC-*-osx-unsigned.tar.gz inputs/OGC-osx-unsigned.tar.gz
-    mv build/out/OGC-*.tar.gz build/out/OGC-*.dmg ../
+    ./bin/gbuild --num-make 2 --memory 3000 --commit OG=v${VERSION} ../OG/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs.ltc/ ../OG/contrib/gitian-descriptors/gitian-osx.yml
+    mv build/out/OG-*-osx-unsigned.tar.gz inputs/OG-osx-unsigned.tar.gz
+    mv build/out/OG-*.tar.gz build/out/OG-*.dmg ../
     popd
 
 Build output expected:
 
-  1. source tarball (`OGC-${VERSION}.tar.gz`)
-  2. linux 32-bit and 64-bit dist tarballs (`OGC-${VERSION}-linux[32|64].tar.gz`)
-  3. windows 32-bit and 64-bit unsigned installers and dist zips (`OGC-${VERSION}-win[32|64]-setup-unsigned.exe`, `OGC-${VERSION}-win[32|64].zip`)
-  4. OS X unsigned installer and dist tarball (`OGC-${VERSION}-osx-unsigned.dmg`, `OGC-${VERSION}-osx64.tar.gz`)
+  1. source tarball (`OG-${VERSION}.tar.gz`)
+  2. linux 32-bit and 64-bit dist tarballs (`OG-${VERSION}-linux[32|64].tar.gz`)
+  3. windows 32-bit and 64-bit unsigned installers and dist zips (`OG-${VERSION}-win[32|64]-setup-unsigned.exe`, `OG-${VERSION}-win[32|64].zip`)
+  4. OS X unsigned installer and dist tarball (`OG-${VERSION}-osx-unsigned.dmg`, `OG-${VERSION}-osx64.tar.gz`)
   5. Gitian signatures (in `gitian.sigs.ltc/${VERSION}-<linux|{win,osx}-unsigned>/(your Gitian key)/`)
 
 ### Verify other gitian builders signatures to your own. (Optional)
 
 Add other gitian builders keys to your gpg keyring, and/or refresh keys.
 
-    gpg --import OGC/contrib/gitian-keys/*.pgp
+    gpg --import OG/contrib/gitian-keys/*.pgp
     gpg --refresh-keys
 
 Verify the signatures
 
     pushd ./gitian-builder
-    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-linux ../OGC/contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-win-unsigned ../OGC/contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-osx-unsigned ../OGC/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-linux ../OG/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-win-unsigned ../OG/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-osx-unsigned ../OG/contrib/gitian-descriptors/gitian-osx.yml
     popd
 
 ### Next steps:
@@ -167,22 +167,22 @@ Codesigner only: Create Windows/OS X detached signatures:
 
 Codesigner only: Sign the osx binary:
 
-    transfer OGC-osx-unsigned.tar.gz to osx for signing
-    tar xf OGC-osx-unsigned.tar.gz
+    transfer OG-osx-unsigned.tar.gz to osx for signing
+    tar xf OG-osx-unsigned.tar.gz
     ./detached-sig-create.sh -s "Key ID"
     Enter the keychain password and authorize the signature
     Move signature-osx.tar.gz back to the gitian host
 
 Codesigner only: Sign the windows binaries:
 
-    tar xf OGC-win-unsigned.tar.gz
+    tar xf OG-win-unsigned.tar.gz
     ./detached-sig-create.sh -key /path/to/codesign.key
     Enter the passphrase for the key when prompted
     signature-win.tar.gz will be created
 
 Codesigner only: Commit the detached codesign payloads:
 
-    cd ~/OGC-detached-sigs
+    cd ~/OG-detached-sigs
     checkout the appropriate branch for this release series
     rm -rf *
     tar xf signature-osx.tar.gz
@@ -195,25 +195,25 @@ Codesigner only: Commit the detached codesign payloads:
 Non-codesigners: wait for Windows/OS X detached signatures:
 
 - Once the Windows/OS X builds each have 3 matching signatures, they will be signed with their respective release keys.
-- Detached signatures will then be committed to the [OGC-detached-sigs](https://github.com/minblock/OGC-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
+- Detached signatures will then be committed to the [OG-detached-sigs](https://github.com/minblock/OG-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
 
 Create (and optionally verify) the signed OS X binary:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ../OGC/contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs.ltc/ ../OGC/contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-osx-signed ../OGC/contrib/gitian-descriptors/gitian-osx-signer.yml
-    mv build/out/OGC-osx-signed.dmg ../OGC-${VERSION}-osx.dmg
+    ./bin/gbuild -i --commit signature=v${VERSION} ../OG/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs.ltc/ ../OG/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-osx-signed ../OG/contrib/gitian-descriptors/gitian-osx-signer.yml
+    mv build/out/OG-osx-signed.dmg ../OG-${VERSION}-osx.dmg
     popd
 
 Create (and optionally verify) the signed Windows binaries:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ../OGC/contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs.ltc/ ../OGC/contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-win-signed ../OGC/contrib/gitian-descriptors/gitian-win-signer.yml
-    mv build/out/OGC-*win64-setup.exe ../OGC-${VERSION}-win64-setup.exe
-    mv build/out/OGC-*win32-setup.exe ../OGC-${VERSION}-win32-setup.exe
+    ./bin/gbuild -i --commit signature=v${VERSION} ../OG/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs.ltc/ ../OG/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-win-signed ../OG/contrib/gitian-descriptors/gitian-win-signer.yml
+    mv build/out/OG-*win64-setup.exe ../OG-${VERSION}-win64-setup.exe
+    mv build/out/OG-*win32-setup.exe ../OG-${VERSION}-win32-setup.exe
     popd
 
 Commit your signature for the signed OS X/Windows binaries:
@@ -235,17 +235,17 @@ sha256sum * > SHA256SUMS
 
 The list of files should be:
 ```
-OGC-${VERSION}-aarch64-linux-gnu.tar.gz
-OGC-${VERSION}-arm-linux-gnueabihf.tar.gz
-OGC-${VERSION}-i686-pc-linux-gnu.tar.gz
-OGC-${VERSION}-x86_64-linux-gnu.tar.gz
-OGC-${VERSION}-osx64.tar.gz
-OGC-${VERSION}-osx.dmg
-OGC-${VERSION}.tar.gz
-OGC-${VERSION}-win32-setup.exe
-OGC-${VERSION}-win32.zip
-OGC-${VERSION}-win64-setup.exe
-OGC-${VERSION}-win64.zip
+OG-${VERSION}-aarch64-linux-gnu.tar.gz
+OG-${VERSION}-arm-linux-gnueabihf.tar.gz
+OG-${VERSION}-i686-pc-linux-gnu.tar.gz
+OG-${VERSION}-x86_64-linux-gnu.tar.gz
+OG-${VERSION}-osx64.tar.gz
+OG-${VERSION}-osx.dmg
+OG-${VERSION}.tar.gz
+OG-${VERSION}-win32-setup.exe
+OG-${VERSION}-win32.zip
+OG-${VERSION}-win64-setup.exe
+OG-${VERSION}-win64.zip
 ```
 The `*-debug*` files generated by the gitian build contain debug symbols
 for troubleshooting by developers. It is assumed that anyone that is interested
@@ -269,16 +269,16 @@ Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spur
 
 - Announce the release:
 
-  - OGC-dev and OGC-dev mailing list
+  - OG-dev and OG-dev mailing list
 
   - blog.og.bitwall.ca blog post
 
-  - Update title of #OGC and #OGC-dev on Freenode IRC
+  - Update title of #OG and #OG-dev on Freenode IRC
 
   - Optionally twitter, reddit /r/OG, ... but this will usually sort out itself
 
   - Archive release notes for the new version to `doc/release-notes/` (branch `master` and branch of the release)
 
-  - Create a [new GitHub release](https://github.com/minblock/OGC/releases/new) with a link to the archived release notes.
+  - Create a [new GitHub release](https://github.com/minblock/OG/releases/new) with a link to the archived release notes.
 
   - Celebrate

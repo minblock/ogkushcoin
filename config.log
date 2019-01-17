@@ -165,10 +165,10 @@ configure:5037: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | /* end confdefs.h.  */
@@ -191,10 +191,10 @@ configure:5075: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | /* end confdefs.h.  */
@@ -212,10 +212,10 @@ configure:5090: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | /* end confdefs.h.  */
@@ -233,10 +233,10 @@ configure:5106: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | /* end confdefs.h.  */
@@ -396,10 +396,10 @@ configure:9461: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | /* end confdefs.h.  */
@@ -416,10 +416,10 @@ configure:9520: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | /* end confdefs.h.  */
@@ -527,10 +527,10 @@ configure:14043: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -559,10 +559,10 @@ configure:14102: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -682,10 +682,10 @@ configure:18849: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -717,10 +717,10 @@ configure:18886: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -752,10 +752,10 @@ configure:18923: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -787,10 +787,10 @@ configure:18960: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -837,10 +837,10 @@ configure:20925: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -872,10 +872,10 @@ configure:20988: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -948,10 +948,10 @@ configure:22105: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -1032,10 +1032,10 @@ configure:22627: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -1075,10 +1075,10 @@ configure:22663: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -1118,10 +1118,10 @@ configure:22699: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -1188,10 +1188,10 @@ configure:22952: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -1259,10 +1259,10 @@ configure:22952: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -1465,10 +1465,10 @@ configure:23414: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -1545,10 +1545,10 @@ configure:23440: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -1633,10 +1633,10 @@ configure:23467: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -1715,10 +1715,10 @@ configure:23569: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -1799,10 +1799,10 @@ configure:23569: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -1883,10 +1883,10 @@ configure:23569: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -1967,10 +1967,10 @@ configure:23569: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -2051,10 +2051,10 @@ configure:23569: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -2135,10 +2135,10 @@ configure:23569: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -2219,10 +2219,10 @@ configure:23569: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -2303,10 +2303,10 @@ configure:23569: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -2387,10 +2387,10 @@ configure:23569: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -2471,10 +2471,10 @@ configure:23569: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -2555,10 +2555,10 @@ configure:23569: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -2639,10 +2639,10 @@ configure:23569: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -2723,10 +2723,10 @@ configure:23569: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -2807,10 +2807,10 @@ configure:23569: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -2891,10 +2891,10 @@ configure:23569: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -2975,10 +2975,10 @@ configure:23569: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -3059,10 +3059,10 @@ configure:23569: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -3143,10 +3143,10 @@ configure:23569: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -3237,10 +3237,10 @@ configure:23715: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -3343,10 +3343,10 @@ configure:23715: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -3418,10 +3418,10 @@ configure:23715: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -3524,10 +3524,10 @@ configure:23715: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -3599,10 +3599,10 @@ configure:23715: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -3705,10 +3705,10 @@ configure:23715: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -3780,10 +3780,10 @@ configure:23715: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -3886,10 +3886,10 @@ configure:23715: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -3979,10 +3979,10 @@ configure:25301: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -4065,10 +4065,10 @@ configure:26190: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -4242,10 +4242,10 @@ configure:28859: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "OG Core"
-| #define PACKAGE_TARNAME "OGC"
+| #define PACKAGE_TARNAME "OG"
 | #define PACKAGE_VERSION "0.15.1"
 | #define PACKAGE_STRING "OG Core 0.15.1"
-| #define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+| #define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 | #define PACKAGE_URL "https://og.bitwall.ca/"
 | #define HAVE_CXX11 1
 | #define STDC_HEADERS 1
@@ -4394,9 +4394,9 @@ configure:29897: result: yes
 configure:30133: checking for protoc
 configure:30151: found /usr/bin/protoc
 configure:30163: result: /usr/bin/protoc
-configure:30197: checking whether to build OGCd
+configure:30197: checking whether to build OGd
 configure:30207: result: yes
-configure:30210: checking whether to build utils (OGC-cli OGC-tx)
+configure:30210: checking whether to build utils (OG-cli OG-tx)
 configure:30220: result: yes
 configure:30223: checking whether to build libraries
 configure:30240: result: yes
@@ -4411,9 +4411,9 @@ configure:30366: result: yes
 configure:30369: checking whether to build GUI with support for QR codes
 configure:30375: result: no
 configure:30392: WARNING: "xgettext is required to update qt translations"
-configure:30396: checking whether to build test_OGC-qt
+configure:30396: checking whether to build test_OG-qt
 configure:30399: result: yes
-configure:30417: checking whether to build test_OGC
+configure:30417: checking whether to build test_OG
 configure:30420: result: yes
 configure:30429: checking whether to enable sse2 instructions
 configure:30440: result: no
@@ -4450,9 +4450,9 @@ config.status:1413: creating doc/Doxyfile
 config.status:1413: creating src/config/bitcoin-config.h
 config.status:1673: executing depfiles commands
 config.status:1673: executing libtool commands
-configure:33459: === configuring in src/univalue (/home/spanky/OGC/src/univalue)
+configure:33459: === configuring in src/univalue (/home/spanky/OG/src/univalue)
 configure:33522: running /bin/bash ./configure --disable-option-checking '--prefix=/usr/local'  '--disable-shared' '--with-pic' '--with-bignum=no' '--enable-module-recovery' '--disable-jni' --cache-file=/dev/null --srcdir=.
-configure:33459: === configuring in src/secp256k1 (/home/spanky/OGC/src/secp256k1)
+configure:33459: === configuring in src/secp256k1 (/home/spanky/OG/src/secp256k1)
 configure:33522: running /bin/bash ./configure --disable-option-checking '--prefix=/usr/local'  '--disable-shared' '--with-pic' '--with-bignum=no' '--enable-module-recovery' '--disable-jni' --cache-file=/dev/null --srcdir=.
 configure:33541: result: Fixing libtool for -rpath problems.
 
@@ -4772,7 +4772,7 @@ pkg_cv_ZMQ_LIBS=-lzmq
 ## Output variables. ##
 ## ----------------- ##
 
-ACLOCAL='${SHELL} /home/spanky/OGC/build-aux/missing aclocal-1.15'
+ACLOCAL='${SHELL} /home/spanky/OG/build-aux/missing aclocal-1.15'
 AMDEPBACKSLASH='\'
 AMDEP_FALSE='#'
 AMDEP_TRUE=''
@@ -4783,17 +4783,17 @@ AM_DEFAULT_VERBOSITY='0'
 AM_V='$(V)'
 AR='/usr/bin/ar'
 ARFLAGS='cr'
-AUTOCONF='${SHELL} /home/spanky/OGC/build-aux/missing autoconf'
-AUTOHEADER='${SHELL} /home/spanky/OGC/build-aux/missing autoheader'
-AUTOMAKE='${SHELL} /home/spanky/OGC/build-aux/missing automake-1.15'
+AUTOCONF='${SHELL} /home/spanky/OG/build-aux/missing autoconf'
+AUTOHEADER='${SHELL} /home/spanky/OG/build-aux/missing autoheader'
+AUTOMAKE='${SHELL} /home/spanky/OG/build-aux/missing automake-1.15'
 AWK='mawk'
 BDB_CFLAGS=''
 BDB_CPPFLAGS=''
 BDB_LIBS='-ldb_cxx-4.8'
-BITCOIN_CLI_NAME='OGC-cli'
-BITCOIN_DAEMON_NAME='OGCd'
-BITCOIN_GUI_NAME='OGC-qt'
-BITCOIN_TX_NAME='OGC-tx'
+BITCOIN_CLI_NAME='OG-cli'
+BITCOIN_DAEMON_NAME='OGd'
+BITCOIN_GUI_NAME='OG-qt'
+BITCOIN_TX_NAME='OG-tx'
 BOOST_CHRONO_LIB='-lboost_chrono'
 BOOST_CPPFLAGS='-DBOOST_SP_USE_STD_ATOMIC -DBOOST_AC_USE_STD_ATOMIC -pthread -I/usr/include'
 BOOST_FILESYSTEM_LIB='-lboost_filesystem'
@@ -4915,7 +4915,7 @@ LUPDATE='/usr/lib/x86_64-linux-gnu/qt5/bin/lupdate'
 MAINT=''
 MAINTAINER_MODE_FALSE='#'
 MAINTAINER_MODE_TRUE=''
-MAKEINFO='${SHELL} /home/spanky/OGC/build-aux/missing makeinfo'
+MAKEINFO='${SHELL} /home/spanky/OG/build-aux/missing makeinfo'
 MAKENSIS=''
 MANIFEST_TOOL=':'
 MINIUPNPC_CPPFLAGS=''
@@ -4933,11 +4933,11 @@ OBJDUMP='objdump'
 OBJEXT='o'
 OTOOL64=''
 OTOOL=''
-PACKAGE='OGC'
-PACKAGE_BUGREPORT='https://github.com/minblock/OGC/issues'
+PACKAGE='OG'
+PACKAGE_BUGREPORT='https://github.com/minblock/OG/issues'
 PACKAGE_NAME='OG Core'
 PACKAGE_STRING='OG Core 0.15.1'
-PACKAGE_TARNAME='OGC'
+PACKAGE_TARNAME='OG'
 PACKAGE_URL='https://og.bitwall.ca/'
 PACKAGE_VERSION='0.15.1'
 PATH_SEPARATOR=':'
@@ -5057,7 +5057,7 @@ host_vendor='pc'
 htmldir='${docdir}'
 includedir='${prefix}/include'
 infodir='${datarootdir}/info'
-install_sh='${SHELL} /home/spanky/OGC/build-aux/install-sh'
+install_sh='${SHELL} /home/spanky/OG/build-aux/install-sh'
 libdir='${exec_prefix}/lib'
 libexecdir='${exec_prefix}/libexec'
 localedir='${datarootdir}/locale'
@@ -5082,10 +5082,10 @@ target_alias=''
 
 /* confdefs.h */
 #define PACKAGE_NAME "OG Core"
-#define PACKAGE_TARNAME "OGC"
+#define PACKAGE_TARNAME "OG"
 #define PACKAGE_VERSION "0.15.1"
 #define PACKAGE_STRING "OG Core 0.15.1"
-#define PACKAGE_BUGREPORT "https://github.com/minblock/OGC/issues"
+#define PACKAGE_BUGREPORT "https://github.com/minblock/OG/issues"
 #define PACKAGE_URL "https://og.bitwall.ca/"
 #define HAVE_CXX11 1
 #define STDC_HEADERS 1
