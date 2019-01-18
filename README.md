@@ -16,11 +16,9 @@ software which enables the use of this currency.
 
 OGCoin uses scrypt as a proof-of-work algorithm designed to study and patent new Marijuana strains. 
 
-2.5 minute block targets, subsidy halves in 840k blocks (~4 years), ~42 million total coins. 2 Million premined amount for fundraising. Each block that is mined needs atleast 2000 confirmations before your OGCoins can be used.
+2.5 minute block targets, subsidy halves in 840k blocks (~4 years), ~42 million total coins. 2 Million premined amount for fundraising. Each block that is mined needs atleast 2000 confirmations before your OGC's can be used.
 
-The rest is the same as Bitcoin.
-50 coins per block
-2016 blocks to retarget difficulty
+The rest is the same as Bitcoin. 50 coins per block, 2016 blocks to retarget difficulty.
 
 For more information, as well as an immediately useable, binary version of
 the OG Core software, see [https://og.bitwall.ca](https://og.bitwall.ca).
