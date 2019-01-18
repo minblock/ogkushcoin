@@ -130,8 +130,8 @@ public:
         //vSeeds.emplace_back("dnsseed.OGpool.org", true);
         //vSeeds.emplace_back("dnsseed.koin-project.com", false);
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,116);     // OG addresses start with 'O' 
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,38);      // Segwit Addressess start with 'G'
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,20);     // OG addresses start with '9' 
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,73);      // Segregated witnesses addressess start with 'W'
         base58Prefixes[SCRIPT_ADDRESS2] = std::vector<unsigned char>(1,15);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,176);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xB2, 0x1E};
@@ -182,10 +182,10 @@ public:
     CTestNetParams() {
         strNetworkID = "test";
         consensus.nSubsidyHalvingInterval = 840000;
-        consensus.BIP34Height = 76;
-        consensus.BIP34Hash = uint256S("8075c771ed8b495ffd943980a95f702ab34fce3c8c54e379548bda33cc8c0573");
-        consensus.BIP65Height = 76; // 8075c771ed8b495ffd943980a95f702ab34fce3c8c54e379548bda33cc8c0573
-        consensus.BIP66Height = 76; // 8075c771ed8b495ffd943980a95f702ab34fce3c8c54e379548bda33cc8c0573
+        consensus.BIP34Height = 0;
+        consensus.BIP34Hash = uint256S("da76e83b6c5c87cd78d7b36e33173d40d54207d0aec1dff7ffea7a7fc9cd464d");
+        consensus.BIP65Height = 0; // da76e83b6c5c87cd78d7b36e33173d40d54207d0aec1dff7ffea7a7fc9cd464d
+        consensus.BIP66Height = 0; // da76e83b6c5c87cd78d7b36e33173d40d54207d0aec1dff7ffea7a7fc9cd464d
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 3.5 * 24 * 60 * 60; // 3.5 days
         consensus.nPowTargetSpacing = 2.5 * 60;
@@ -208,16 +208,16 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1517356801; // January 31st, 2018
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000007d006a402163e");
+        consensus.nMinimumChainWork = uint256S("0x00");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0xa0afbded94d4be233e191525dc2d467af5c7eab3143c852c3cd549831022aad6"); //343833
+        consensus.defaultAssumeValid = uint256S("0xda76e83b6c5c87cd78d7b36e33173d40d54207d0aec1dff7ffea7a7fc9cd464d"); //0
 
         pchMessageStart[0] = 0xfd;
         pchMessageStart[1] = 0xd2;
         pchMessageStart[2] = 0xc8;
         pchMessageStart[3] = 0xf1;
-        nDefaultPort = 21336;
+        nDefaultPort = 2336;
         nPruneAfterHeight = 1000;
 
         genesis = CreateGenesisBlock(1486949366, 793157, 0x1e0ffff0, 1, 50 * COIN);
@@ -232,8 +232,8 @@ public:
         vSeeds.emplace_back("seed-b.OG.loshan.co.uk", true);
         vSeeds.emplace_back("dnsseed-testnet.thrasher.io", true);
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,5); //testnet wallets begin with "3"
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196); //testnet segwit addresses begin with "5"
         base58Prefixes[SCRIPT_ADDRESS2] = std::vector<unsigned char>(1,58);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,239);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
