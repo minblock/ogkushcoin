@@ -5,7 +5,7 @@ Setup
 ---------------------
 OG Core is the original OG client and it builds the backbone of the network. It downloads and, by default, stores the entire history of OG transactions (which is currently more than 7 GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
 
-To download OG Core, visit [og.bitwall.ca](https://og.bitwall.ca).
+To download OG Core, visit [og.org](https://og.org).
 
 Running
 ---------------------
@@ -15,12 +15,12 @@ The following are some helpful notes on how to run OG on your native platform.
 
 Unpack the files into a directory and run:
 
-- `bin/OG-qt` (GUI) or
-- `bin/OGd` (headless)
+- `bin/og-qt` (GUI) or
+- `bin/ogd` (headless)
 
 ### Windows
 
-Unpack the files into a directory, and then run OG-qt.exe.
+Unpack the files into a directory, and then run og-qt.exe.
 
 ### OS X
 
@@ -28,15 +28,16 @@ Drag OG-Core to your applications folder, and then run OG-Core.
 
 ### Need Help?
 
-* See the documentation at the [OG Wiki](https://OG.info/)
+* See the documentation at the [OG Wiki](https://og.info/)
 for help and more information.
-* Ask for help on [#OG](http://webchat.freenode.net?channels=OG) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=OG).
-* Ask for help on the [OGTalk](https://OGtalk.io/) forums.
+* Ask for help on [#og](http://webchat.freenode.net?channels=og) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=og).
+* Ask for help on the [OGTalk](https://ogtalk.io/) forums.
 
 Building
 ---------------------
 The following are developer notes on how to build OG on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
+- [Dependencies](dependencies.md)
 - [OS X Build Notes](build-osx.md)
 - [Unix Build Notes](build-unix.md)
 - [Windows Build Notes](build-windows.md)
@@ -50,7 +51,6 @@ The OG repo's [root README](/README.md) contains relevant information on the dev
 - [Developer Notes](developer-notes.md)
 - [Release Notes](release-notes.md)
 - [Release Process](release-process.md)
-- [Source Code Documentation (External Link)](https://dev.visucore.com/OG/doxygen/)
 - [Translation Process](translation_process.md)
 - [Translation Strings Policy](translation_strings_policy.md)
 - [Travis CI](travis-ci.md)
@@ -61,8 +61,8 @@ The OG repo's [root README](/README.md) contains relevant information on the dev
 - [Benchmarking](benchmarking.md)
 
 ### Resources
-* Discuss on the [OGTalk](https://OGtalk.io/) forums.
-* Discuss general OG development on #OG-dev on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=OG-dev).
+* Discuss on the [OGTalk](https://ogtalk.io/) forums.
+* Discuss general OG development on #og-dev on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=og-dev).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

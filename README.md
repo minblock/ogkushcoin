@@ -1,27 +1,21 @@
 OG Core integration/staging tree
 =====================================
 
-[![Build Status](https://travis-ci.org/minblock/og.svg?branch=master)](https://travis-ci.org/minblock/og)
+[![Build Status](https://travis-ci.org/og-project/og.svg?branch=master)](https://travis-ci.org/og-project/og)
 
-https://og.bitwall.ca
+https://og.org
 
-What is OG Coin?
+What is OG?
 ----------------
 
-OG Coin is an experimental digital currency that enables instant payments to
-anyone, anywhere in the world. OG Coin uses peer-to-peer technology to operate
+OG is an experimental digital currency that enables instant payments to
+anyone, anywhere in the world. OG uses peer-to-peer technology to operate
 with no central authority: managing transactions and issuing money are carried
 out collectively by the network. OG Core is the name of open source
 software which enables the use of this currency.
 
-OGKush Coin uses scrypt as a proof-of-work algorithm designed to study and patent new Marijuana strains. 
-
-2.5 minute block targets, subsidy halves in 840k blocks (~4 years), ~42 million total coins. 2 Million premined amount for fundraising. Each block that is mined needs atleast 2000 confirmations before your OGC's can be used.
-
-The rest is the same as Bitcoin. 50 coins per block, 2016 blocks to retarget difficulty.
-
 For more information, as well as an immediately useable, binary version of
-the OG Core software, see [https://og.bitwall.ca](https://og.bitwall.ca).
+the OG Core software, see [https://og.org](https://og.org).
 
 License
 -------
@@ -33,16 +27,16 @@ Development Process
 -------------------
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/minblock/og/tags) are created
+completely stable. [Tags](https://github.com/og-project/og/tags) are created
 regularly to indicate new official, stable release versions of OG Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).
 
-The developer [mailing list](https://groups.google.com/forum/#!forum/OGKushcoin-dev)
+The developer [mailing list](https://groups.google.com/forum/#!forum/og-dev)
 should be used to discuss complicated or controversial changes before working
 on a patch set.
 
-Developer IRC can be found on Freenode at #OGKushcoin-dev.
+Developer IRC can be found on Freenode at #og-dev.
 
 Testing
 -------
@@ -76,7 +70,7 @@ Translations
 ------------
 
 We only accept translation fixes that are submitted through [Bitcoin Core's Transifex page](https://www.transifex.com/projects/p/bitcoin/).
-Translations are converted to OG Coin periodically.
+Translations are converted to OG periodically.
 
 Translations are periodically pulled from Transifex and merged into the git repository. See the
 [translation process](doc/translation_process.md) for details on how this works.

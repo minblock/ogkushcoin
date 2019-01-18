@@ -44,11 +44,11 @@ related to the DNS seed operation.
 If these expectations cannot be satisfied the operator should
 discontinue providing services and contact the active OG
 Core development team as well as posting on
-[OG-dev](https://groups.google.com/forum/#!forum/OG-dev).
+[og-dev](https://groups.google.com/forum/#!forum/og-dev).
 
 Behavior outside of these expectations may be reasonable in some
 situations but should be discussed in public in advance.
 
 See also
 ----------
-- [OG-seeder](https://github.com/pooler/OG-seeder) is a reference implementation of a DNS seed.
+- [og-seeder](https://github.com/pooler/og-seeder) is a reference implementation of a DNS seed.

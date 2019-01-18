@@ -1,10 +1,10 @@
-// Copyright (c) 2014-2016 The Bitcoin Core developers
+// Copyright (c) 2014-2017 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "networkstyle.h"
+#include <qt/networkstyle.h>
 
-#include "guiconstants.h"
+#include <qt/guiconstants.h>
 
 #include <QApplication>
 
@@ -31,7 +31,7 @@ NetworkStyle::NetworkStyle(const QString &_appName, const int iconColorHueShift,
     if (std::char_traits<char>::length(_titleAddText) == 0) {
         pixmap.load(":/icons/bitcoin");
     } else {
-        pixmap.load(":/icons/OG_splash");
+        pixmap.load(":/icons/og_splash");
     }
 
     if(iconColorHueShift != 0 && iconColorSaturationReduction != 0)
@@ -46,10 +46,10 @@ NetworkStyle::NetworkStyle(const QString &_appName, const int iconColorHueShift,
         {
             QRgb *scL = reinterpret_cast< QRgb *>( img.scanLine( y ) );
 
-            // loop through gram
+            // loop through pixels
             for(int x=0;x<img.width();x++)
             {
-                // preserve alpha because QColor::getHsl doesen't return the alpha value
+                // preserve alpha because QColor::getHsl doesn't return the alpha value
                 a = qAlpha(scL[x]);
                 QColor col(scL[x]);
 
