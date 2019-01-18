@@ -16,11 +16,7 @@ software which enables the use of this currency.
 
 OGCoin uses scrypt as a proof-of-work algorithm designed to study and patent new Marijuana strains. 
 
-2.5 minute block targets
-subsidy halves in 840k blocks (~4 years)
-~42 million total coins
-2 Million premined amount for fundraising
-2000 Confirmations per mined block
+2.5 minute block targets, subsidy halves in 840k blocks (~4 years), ~42 million total coins. 2 Million premined amount for fundraising. Each block that is mined needs atleast 2000 confirmations before your OGCoins can be used.
 
 The rest is the same as Bitcoin.
 50 coins per block
