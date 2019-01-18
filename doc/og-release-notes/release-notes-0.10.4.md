@@ -8,7 +8,7 @@ recommended to upgrade to this version as soon as possible.
 
 Please report bugs using the issue tracker at github:
 
-  <https://github.com/og-project/og/issues>
+  <https://github.com/minblock/og/issues>
 
 Upgrading and downgrading
 =========================

@@ -7,7 +7,7 @@ It is recommended to upgrade to this version.
 
 Please report bugs using the issue tracker at github:
 
-  <https://github.com/og-project/og/issues>
+  <https://github.com/minblock/og/issues>
 
 Compatibility
 ==============

@@ -28,7 +28,7 @@ packages:
 - "python-setuptools"
 - "fonts-tuffy"
 remotes:
-- "url": "https://github.com/og-project/og.git"
+- "url": "https://github.com/minblock/og.git"
   "dir": "og"
 files:
 - "MacOSX10.11.sdk.tar.gz"

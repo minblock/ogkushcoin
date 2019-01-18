@@ -7,7 +7,7 @@ architectures:
 packages:
 - "faketime"
 remotes:
-- "url": "https://github.com/og-project/og-detached-sigs.git"
+- "url": "https://github.com/minblock/og-detached-sigs.git"
   "dir": "signature"
 files:
 - "og-osx-unsigned.tar.gz"

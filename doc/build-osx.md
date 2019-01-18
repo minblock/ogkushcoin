@@ -49,7 +49,7 @@ Build OG Core
 
 1. Clone the og source code and cd into `og`
 
-        git clone https://github.com/og-project/og
+        git clone https://github.com/minblock/og
         cd og
 
 2.  Build og-core:

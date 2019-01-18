@@ -7,7 +7,7 @@ performance improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at GitHub:
 
-  <https://github.com/og-project/og/issues>
+  <https://github.com/minblock/og/issues>
 
 To receive security and update notifications, please subscribe to:
 

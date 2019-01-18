@@ -25,7 +25,7 @@ python27
 
 Download the source code:
 ```
-git clone https://github.com/og-project/og
+git clone https://github.com/minblock/og
 ```
 
 See [dependencies.md](dependencies.md) for a complete overview.
