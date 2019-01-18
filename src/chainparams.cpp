@@ -130,8 +130,8 @@ public:
         //vSeeds.emplace_back("dnsseed.OGpool.org", true);
         //vSeeds.emplace_back("dnsseed.koin-project.com", false);
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,116);     // OG addresses start with 'O' 
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,38);      // Segwit Addressess start with 'G'
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,20);     // OG addresses start with '9' 
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,73);      // Segregated witnesses addressess start with 'W'
         base58Prefixes[SCRIPT_ADDRESS2] = std::vector<unsigned char>(1,15);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,176);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xB2, 0x1E};
@@ -232,8 +232,8 @@ public:
         vSeeds.emplace_back("seed-b.OG.loshan.co.uk", true);
         vSeeds.emplace_back("dnsseed-testnet.thrasher.io", true);
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,5); //testnet wallets begin with "3"
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196); //testnet segwit addresses begin with "5"
         base58Prefixes[SCRIPT_ADDRESS2] = std::vector<unsigned char>(1,58);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,239);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
