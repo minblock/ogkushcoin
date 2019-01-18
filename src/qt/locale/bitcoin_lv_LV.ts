@@ -39,11 +39,11 @@
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation>Izvēlies adresi uz kuru sūtīt OGCoins</translation>
+        <translation>Izvēlies adresi uz kuru sūtīt OGKush</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation>Izvēlies adresi ar kuru saņemt OGCoins</translation>
+        <translation>Izvēlies adresi ar kuru saņemt OGKush</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>

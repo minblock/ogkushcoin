@@ -14,7 +14,7 @@ with no central authority: managing transactions and issuing money are carried
 out collectively by the network. OG Core is the name of open source
 software which enables the use of this currency.
 
-OGCoin uses scrypt as a proof-of-work algorithm designed to study and patent new Marijuana strains. 
+OGKush Coin uses scrypt as a proof-of-work algorithm designed to study and patent new Marijuana strains. 
 
 2.5 minute block targets, subsidy halves in 840k blocks (~4 years), ~42 million total coins. 2 Million premined amount for fundraising. Each block that is mined needs atleast 2000 confirmations before your OGC's can be used.
 
