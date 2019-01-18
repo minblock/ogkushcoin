@@ -70,7 +70,7 @@ def connect_JSON(config):
     testnet = config.get('testnet', '0')
     testnet = (int(testnet) > 0)  # 0/1 in config file, convert to True/False
     if not 'rpcport' in config:
-        config['rpcport'] = 35566 if testnet else 2338
+        config['rpcport'] = 2336 if testnet else 2336
     connect = "http://%s:%s@127.0.0.1:%s"%(config['rpcuser'], config['rpcpassword'], config['rpcport'])
     try:
         result = ServiceProxy(connect)
@@ -224,9 +224,9 @@ def main():
 
     parser = optparse.OptionParser(usage="%prog [options]")
     parser.add_option("--from", dest="fromaddresses", default=None,
-                      help="addresses to get OGoins from")
+                      help="addresses to get OGCoins from")
     parser.add_option("--to", dest="to", default=None,
-                      help="address to get send OGoins to")
+                      help="address to get send OGCoins to")
     parser.add_option("--amount", dest="amount", default=None,
                       help="amount to send")
     parser.add_option("--fee", dest="fee", default="0.0",

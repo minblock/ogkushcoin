@@ -184,7 +184,7 @@ Low-level RPC changes
 - #11334 `19d63e8` Remove custom fee radio group and remove nCustomFeeRadio setting (achow101)
 - #11198 `7310f1f` Fix display of package name on 'open config file' tooltip (esotericnonsense)
 - #11015 `6642558` Add delay before filtering transactions (lclc)
-- #12338 `6a62c74` Backup former GUI settings on `-resetguisettings` (laanwj)
+- #12336 `6a62c74` Backup former GUI settings on `-resetguisettings` (laanwj)
 - #11335 `8d13b42` Replace save|restoreWindowGeometry with Qt functions (MeshCollider)
 - #11237 `2e31b1d` Fixing division by zero in time remaining (MeshCollider)
 - #11247 `47c02a8` Use IsMine to validate custom change address (MarcoFalke)

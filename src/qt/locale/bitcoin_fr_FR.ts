@@ -43,11 +43,11 @@
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation>Choisissez une adresse où envoyer les OGoins</translation>
+        <translation>Choisissez une adresse où envoyer les OGCoins</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation>Choisissez une adresse où recevoir les OGoins</translation>
+        <translation>Choisissez une adresse où recevoir les OGCoins</translation>
     </message>
     <message>
         <source>C&amp;hoose</source>
