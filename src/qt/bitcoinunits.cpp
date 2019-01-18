@@ -41,8 +41,8 @@ QString BitcoinUnits::longName(int unit)
     switch(unit)
     {
     case BTC: return QString("OGC");
-    case mBTC: return QString("ounce");
-    case uBTC: return QString("gram");
+    case mBTC: return QString("OZ");
+    case uBTC: return QString("G");
     default: return QString("???");
     }
 }
@@ -61,8 +61,8 @@ QString BitcoinUnits::description(int unit)
     switch(unit)
     {
     case BTC: return QString("OGKushCoins");
-    case mBTC: return QString("Ounce (1 / 1" THIN_SP_UTF8 "000)");
-    case uBTC: return QString("Gram (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case mBTC: return QString("Ounces (1 / 1" THIN_SP_UTF8 "000)");
+    case uBTC: return QString("Grams (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     default: return QString("???");
     }
 }
