@@ -32,6 +32,10 @@
     </context>
 <context>
     <name>Intro</name>
+    <message>
+        <source>OG</source>
+        <translation>OG</translation>
+    </message>
     </context>
 <context>
     <name>ModalOverlay</name>

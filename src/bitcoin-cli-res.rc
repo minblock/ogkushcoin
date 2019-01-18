@@ -17,13 +17,13 @@ BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
             VALUE "CompanyName",        "OG"
-            VALUE "FileDescription",    "OG-cli (JSON-RPC client for " PACKAGE_NAME ")"
+            VALUE "FileDescription",    "og-cli (JSON-RPC client for " PACKAGE_NAME ")"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "OG-cli"
+            VALUE "InternalName",       "og-cli"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "OG-cli.exe"
-            VALUE "ProductName",        "OG-cli"
+            VALUE "OriginalFilename",   "og-cli.exe"
+            VALUE "ProductName",        "og-cli"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

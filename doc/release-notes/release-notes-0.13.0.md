@@ -775,7 +775,7 @@ Thanks to everyone who directly contributed to this release:
 - Andrés G. Aragoneses
 - Bob McElrath
 - BtcDrak
-- calebOGden
+- calebogden
 - Cédric Félizard
 - Chirag Davé
 - Chris Moore

@@ -48,7 +48,7 @@ PROJECT_BRIEF          = "P2P Digital Currency"
 
 # With the PROJECT_LOGO tag one can specify a logo or an icon that is included
 # in the documentation. The maximum height of the logo should not exceed 55
-# gram and the maximum width should not exceed 200 gram. Doxygen will copy
+# pixels and the maximum width should not exceed 200 pixels. Doxygen will copy
 # the logo to the output directory.
 
 PROJECT_LOGO           = doc/bitcoin_logo_doxygen.png
@@ -85,7 +85,7 @@ ALLOW_UNICODE_NAMES    = NO
 # Chinese-Traditional, Croatian, Czech, Danish, Dutch, English (United States),
 # Esperanto, Farsi (Persian), Finnish, French, German, Greek, Hungarian,
 # Indonesian, Italian, Japanese, Japanese-en (Japanese with English messages),
-# Corean, Corean-en (Corean with English messages), Latvian, Lithuanian,
+# Korean, Korean-en (Korean with English messages), Latvian, Lithuanian,
 # Macedonian, Norwegian, Persian (Farsi), Polish, Portuguese, Romanian, Russian,
 # Serbian, Serbian-Cyrillic, Slovak, Slovene, Spanish, Swedish, Turkish,
 # Ukrainian and Vietnamese.
@@ -1464,7 +1464,7 @@ GENERATE_TREEVIEW      = NO
 ENUM_VALUES_PER_LINE   = 4
 
 # If the treeview is enabled (see GENERATE_TREEVIEW) then this tag can be used
-# to set the initial width (in gram) of the frame in which the tree is shown.
+# to set the initial width (in pixels) of the frame in which the tree is shown.
 # Minimum value: 0, maximum value: 1500, default value: 250.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
@@ -1499,7 +1499,7 @@ FORMULA_TRANSPARENT    = YES
 
 # Enable the USE_MATHJAX option to render LaTeX formulas using MathJax (see
 # http://www.mathjax.org) which uses client side Javascript for the rendering
-# instead of using pre-rendered OZ. Use this if you do not have LaTeX
+# instead of using pre-rendered bitmaps. Use this if you do not have LaTeX
 # installed or if you want to formulas look prettier in the HTML output. When
 # enabled you may also need to install MathJax separately and configure the path
 # to it using the MATHJAX_RELPATH option.
@@ -1653,7 +1653,7 @@ LATEX_OUTPUT           = latex
 # invoked.
 #
 # Note that when enabling USE_PDFLATEX this option is only used for generating
-# OZ for formulas in the HTML output, but not in the Makefile that is
+# bitmaps for formulas in the HTML output, but not in the Makefile that is
 # written to the output directory.
 # The default file is: latex.
 # This tag requires that the tag GENERATE_LATEX is set to YES.

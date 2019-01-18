@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-# Copyright (c) 2014-2016 The Bitcoin Core developers
+# Copyright (c) 2014-2017 The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Base class for RPC testing."""
 
-from collections import deque
 from enum import Enum
 import logging
 import optparse
@@ -14,7 +13,6 @@ import shutil
 import sys
 import tempfile
 import time
-import traceback
 
 from .authproxy import JSONRPCException
 from . import coverage
@@ -26,8 +24,8 @@ from .util import (
     check_json_precision,
     connect_nodes_bi,
     disconnect_nodes,
+    get_datadir_path,
     initialize_datadir,
-    log_filename,
     p2p_port,
     set_node_times,
     sync_blocks,
@@ -43,10 +41,10 @@ TEST_EXIT_PASSED = 0
 TEST_EXIT_FAILED = 1
 TEST_EXIT_SKIPPED = 77
 
-class BitcoinTestFramework(object):
-    """Base class for a OG test script.
+class BitcoinTestFramework():
+    """Base class for a og test script.
 
-    Individual OG test scripts should subclass this class and override the set_test_params() and run_test() methods.
+    Individual og test scripts should subclass this class and override the set_test_params() and run_test() methods.
 
     Individual tests can also override the following methods to customize the test setup:
 
@@ -64,6 +62,7 @@ class BitcoinTestFramework(object):
         self.setup_clean_chain = False
         self.nodes = []
         self.mocktime = 0
+        self.supports_cli = False
         self.set_test_params()
 
         assert hasattr(self, "num_nodes"), "Test must set self.num_nodes in set_test_params()"
@@ -73,11 +72,11 @@ class BitcoinTestFramework(object):
 
         parser = optparse.OptionParser(usage="%prog [options]")
         parser.add_option("--nocleanup", dest="nocleanup", default=False, action="store_true",
-                          help="Leave OGds and test.* datadir on exit or error")
+                          help="Leave ogds and test.* datadir on exit or error")
         parser.add_option("--noshutdown", dest="noshutdown", default=False, action="store_true",
-                          help="Don't stop OGds after the test execution")
+                          help="Don't stop ogds after the test execution")
         parser.add_option("--srcdir", dest="srcdir", default=os.path.normpath(os.path.dirname(os.path.realpath(__file__)) + "/../../../src"),
-                          help="Source directory containing OGd/OG-cli (default: %default)")
+                          help="Source directory containing ogd/og-cli (default: %default)")
         parser.add_option("--cachedir", dest="cachedir", default=os.path.normpath(os.path.dirname(os.path.realpath(__file__)) + "/../../cache"),
                           help="Directory for caching pregenerated datadirs")
         parser.add_option("--tmpdir", dest="tmpdir", help="Root directory for datadirs")
@@ -93,6 +92,8 @@ class BitcoinTestFramework(object):
                           help="Location of the test framework config file")
         parser.add_option("--pdbonfailure", dest="pdbonfailure", default=False, action="store_true",
                           help="Attach a python debugger if test fails")
+        parser.add_option("--usecli", dest="usecli", default=False, action="store_true",
+                          help="use og-cli instead of RPC for all commands")
         self.add_options(parser)
         (self.options, self.args) = parser.parse_args()
 
@@ -115,6 +116,8 @@ class BitcoinTestFramework(object):
         success = TestStatus.FAILED
 
         try:
+            if self.options.usecli and not self.supports_cli:
+                raise SkipTest("--usecli specified but test does not support using CLI")
             self.setup_chain()
             self.setup_network()
             self.run_test()
@@ -142,39 +145,28 @@ class BitcoinTestFramework(object):
             if self.nodes:
                 self.stop_nodes()
         else:
-            self.log.info("Note: OGds were not stopped and may still be running")
+            for node in self.nodes:
+                node.cleanup_on_exit = False
+            self.log.info("Note: ogds were not stopped and may still be running")
 
         if not self.options.nocleanup and not self.options.noshutdown and success != TestStatus.FAILED:
             self.log.info("Cleaning up")
             shutil.rmtree(self.options.tmpdir)
         else:
             self.log.warning("Not cleaning up dir %s" % self.options.tmpdir)
-            if os.getenv("PYTHON_DEBUG", ""):
-                # Dump the end of the debug logs, to aid in debugging rare
-                # travis failures.
-                import glob
-                filenames = [self.options.tmpdir + "/test_framework.log"]
-                filenames += glob.glob(self.options.tmpdir + "/node*/regtest/debug.log")
-                MAX_LINES_TO_PRINT = 1000
-                for fn in filenames:
-                    try:
-                        with open(fn, 'r') as f:
-                            print("From", fn, ":")
-                            print("".join(deque(f, MAX_LINES_TO_PRINT)))
-                    except OSError:
-                        print("Opening file %s failed." % fn)
-                        traceback.print_exc()
 
         if success == TestStatus.PASSED:
             self.log.info("Tests successful")
-            sys.exit(TEST_EXIT_PASSED)
+            exit_code = TEST_EXIT_PASSED
         elif success == TestStatus.SKIPPED:
             self.log.info("Test skipped")
-            sys.exit(TEST_EXIT_SKIPPED)
+            exit_code = TEST_EXIT_SKIPPED
         else:
             self.log.error("Test failed. Test logging available at %s/test_framework.log", self.options.tmpdir)
-            logging.shutdown()
-            sys.exit(TEST_EXIT_FAILED)
+            self.log.error("Hint: Call {} '{}' to consolidate all logs".format(os.path.normpath(os.path.dirname(os.path.realpath(__file__)) + "/../combine_logs.py"), self.options.tmpdir))
+            exit_code = TEST_EXIT_FAILED
+        logging.shutdown()
+        sys.exit(exit_code)
 
     # Methods to override in subclass test scripts.
     def set_test_params(self):
@@ -228,28 +220,28 @@ class BitcoinTestFramework(object):
         assert_equal(len(extra_args), num_nodes)
         assert_equal(len(binary), num_nodes)
         for i in range(num_nodes):
-            self.nodes.append(TestNode(i, self.options.tmpdir, extra_args[i], rpchost, timewait=timewait, binary=binary[i], stderr=None, mocktime=self.mocktime, coverage_dir=self.options.coveragedir))
+            self.nodes.append(TestNode(i, self.options.tmpdir, extra_args[i], rpchost, timewait=timewait, binary=binary[i], stderr=None, mocktime=self.mocktime, coverage_dir=self.options.coveragedir, use_cli=self.options.usecli))
 
-    def start_node(self, i, extra_args=None, stderr=None):
-        """Start a OGd"""
+    def start_node(self, i, *args, **kwargs):
+        """Start a ogd"""
 
         node = self.nodes[i]
 
-        node.start(extra_args, stderr)
+        node.start(*args, **kwargs)
         node.wait_for_rpc_connection()
 
         if self.options.coveragedir is not None:
             coverage.write_all_rpc_commands(self.options.coveragedir, node.rpc)
 
-    def start_nodes(self, extra_args=None):
-        """Start multiple OGds"""
+    def start_nodes(self, extra_args=None, *args, **kwargs):
+        """Start multiple ogds"""
 
         if extra_args is None:
             extra_args = [None] * self.num_nodes
         assert_equal(len(extra_args), self.num_nodes)
         try:
             for i, node in enumerate(self.nodes):
-                node.start(extra_args[i])
+                node.start(extra_args[i], *args, **kwargs)
             for node in self.nodes:
                 node.wait_for_rpc_connection()
         except:
@@ -262,12 +254,12 @@ class BitcoinTestFramework(object):
                 coverage.write_all_rpc_commands(self.options.coveragedir, node.rpc)
 
     def stop_node(self, i):
-        """Stop a bitcoind test node"""
+        """Stop a ogd test node"""
         self.nodes[i].stop_node()
         self.nodes[i].wait_until_stopped()
 
     def stop_nodes(self):
-        """Stop multiple bitcoind test nodes"""
+        """Stop multiple ogd test nodes"""
         for node in self.nodes:
             # Issue RPC to stop nodes
             node.stop_node()
@@ -276,13 +268,18 @@ class BitcoinTestFramework(object):
             # Wait for nodes to stop
             node.wait_until_stopped()
 
-    def assert_start_raises_init_error(self, i, extra_args=None, expected_msg=None):
+    def restart_node(self, i, extra_args=None):
+        """Stop and start a test node"""
+        self.stop_node(i)
+        self.start_node(i, extra_args)
+
+    def assert_start_raises_init_error(self, i, extra_args=None, expected_msg=None, *args, **kwargs):
         with tempfile.SpooledTemporaryFile(max_size=2**16) as log_stderr:
             try:
-                self.start_node(i, extra_args, stderr=log_stderr)
+                self.start_node(i, extra_args, stderr=log_stderr, *args, **kwargs)
                 self.stop_node(i)
             except Exception as e:
-                assert 'OGd exited' in str(e)  # node must have shutdown
+                assert 'ogd exited' in str(e)  # node must have shutdown
                 self.nodes[i].running = False
                 self.nodes[i].process = None
                 if expected_msg is not None:
@@ -292,9 +289,9 @@ class BitcoinTestFramework(object):
                         raise AssertionError("Expected error \"" + expected_msg + "\" not found in:\n" + stderr)
             else:
                 if expected_msg is None:
-                    assert_msg = "OGd should have exited with an error"
+                    assert_msg = "ogd should have exited with an error"
                 else:
-                    assert_msg = "OGd should have exited with expected error " + expected_msg
+                    assert_msg = "ogd should have exited with expected error " + expected_msg
                 raise AssertionError(assert_msg)
 
     def wait_for_node_exit(self, i, timeout):
@@ -362,7 +359,7 @@ class BitcoinTestFramework(object):
         self.log.addHandler(ch)
 
         if self.options.trace_rpc:
-            rpc_logger = logging.getLogger("OGRPC")
+            rpc_logger = logging.getLogger("BitcoinRPC")
             rpc_logger.setLevel(logging.DEBUG)
             rpc_handler = logging.StreamHandler(sys.stdout)
             rpc_handler.setLevel(logging.DEBUG)
@@ -377,7 +374,7 @@ class BitcoinTestFramework(object):
         assert self.num_nodes <= MAX_NODES
         create_cache = False
         for i in range(MAX_NODES):
-            if not os.path.isdir(os.path.join(self.options.cachedir, 'node' + str(i))):
+            if not os.path.isdir(get_datadir_path(self.options.cachedir, i)):
                 create_cache = True
                 break
 
@@ -386,13 +383,13 @@ class BitcoinTestFramework(object):
 
             # find and delete old cache directories if any exist
             for i in range(MAX_NODES):
-                if os.path.isdir(os.path.join(self.options.cachedir, "node" + str(i))):
-                    shutil.rmtree(os.path.join(self.options.cachedir, "node" + str(i)))
+                if os.path.isdir(get_datadir_path(self.options.cachedir, i)):
+                    shutil.rmtree(get_datadir_path(self.options.cachedir, i))
 
             # Create cache directories, run bitcoinds:
             for i in range(MAX_NODES):
                 datadir = initialize_datadir(self.options.cachedir, i)
-                args = [os.getenv("OGD", "OGd"), "-server", "-keypool=1", "-datadir=" + datadir, "-discover=0"]
+                args = [os.getenv("OGKUSHD", "ogd"), "-server", "-keypool=1", "-datadir=" + datadir, "-discover=0"]
                 if i > 0:
                     args.append("-connect=127.0.0.1:" + str(p2p_port(0)))
                 self.nodes.append(TestNode(i, self.options.cachedir, extra_args=[], rpchost=None, timewait=None, binary=None, stderr=None, mocktime=self.mocktime, coverage_dir=None))
@@ -410,7 +407,6 @@ class BitcoinTestFramework(object):
             #
             # blocks are created with timestamps 10 minutes apart
             # starting from 2010 minutes in the past
-
             self.enable_mocktime()
             block_time = self.mocktime - (201 * 10 * 60)
             for i in range(2):
@@ -426,15 +422,18 @@ class BitcoinTestFramework(object):
             self.stop_nodes()
             self.nodes = []
             self.disable_mocktime()
+
+            def cache_path(n, *paths):
+                return os.path.join(get_datadir_path(self.options.cachedir, n), "regtest", *paths)
+
             for i in range(MAX_NODES):
-                os.remove(log_filename(self.options.cachedir, i, "debug.log"))
-                os.remove(log_filename(self.options.cachedir, i, "db.log"))
-                os.remove(log_filename(self.options.cachedir, i, "peers.dat"))
-                os.remove(log_filename(self.options.cachedir, i, "fee_estimates.dat"))
+                for entry in os.listdir(cache_path(i)):
+                    if entry not in ['wallets', 'chainstate', 'blocks']:
+                        os.remove(cache_path(i, entry))
 
         for i in range(self.num_nodes):
-            from_dir = os.path.join(self.options.cachedir, "node" + str(i))
-            to_dir = os.path.join(self.options.tmpdir, "node" + str(i))
+            from_dir = get_datadir_path(self.options.cachedir, i)
+            to_dir = get_datadir_path(self.options.tmpdir, i)
             shutil.copytree(from_dir, to_dir)
             initialize_datadir(self.options.tmpdir, i)  # Overwrite port/rpcport in bitcoin.conf
 
@@ -449,7 +448,7 @@ class BitcoinTestFramework(object):
 class ComparisonTestFramework(BitcoinTestFramework):
     """Test framework for doing p2p comparison testing
 
-    Sets up some OGd binaries:
+    Sets up some ogd binaries:
     - 1 binary: test binary
     - 2 binaries: 1 test binary, 1 ref binary
     - n>2 binaries: 1 test binary, n-1 ref binaries"""
@@ -460,11 +459,11 @@ class ComparisonTestFramework(BitcoinTestFramework):
 
     def add_options(self, parser):
         parser.add_option("--testbinary", dest="testbinary",
-                          default=os.getenv("OGD", "OGd"),
-                          help="OGd binary to test")
+                          default=os.getenv("OGKUSHD", "ogd"),
+                          help="ogd binary to test")
         parser.add_option("--refbinary", dest="refbinary",
-                          default=os.getenv("OGD", "OGd"),
-                          help="OGd binary to use for reference nodes (if any)")
+                          default=os.getenv("OGKUSHD", "ogd"),
+                          help="ogd binary to use for reference nodes (if any)")
 
     def setup_network(self):
         extra_args = [['-whitelist=127.0.0.1']] * self.num_nodes
