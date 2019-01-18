@@ -2987,10 +2987,10 @@ ac_configure="$SHELL $ac_aux_dir/configure"  # Please don't use this var.
 
 
 
-BITCOIN_DAEMON_NAME=ogd
-BITCOIN_GUI_NAME=og-qt
-BITCOIN_CLI_NAME=og-cli
-BITCOIN_TX_NAME=og-tx
+BITCOIN_DAEMON_NAME=OGd
+BITCOIN_GUI_NAME=OG-qt
+BITCOIN_CLI_NAME=OG-cli
+BITCOIN_TX_NAME=OG-tx
 
 
 if test "x${ARFLAGS+set}" != "xset"; then

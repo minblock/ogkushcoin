@@ -77,9 +77,9 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
-@BUILD_BITCOIND_TRUE@am__append_1 = ogd.1
-@ENABLE_QT_TRUE@am__append_2 = og-qt.1
-@BUILD_BITCOIN_UTILS_TRUE@am__append_3 = og-cli.1 og-tx.1
+@BUILD_BITCOIND_TRUE@am__append_1 = OGd.1
+@ENABLE_QT_TRUE@am__append_2 = OG-qt.1
+@BUILD_BITCOIN_UTILS_TRUE@am__append_3 = OG-cli.1 OG-tx.1
 subdir = doc/man
 DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
 	$(dist_man1_MANS)

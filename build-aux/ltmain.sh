@@ -377,20 +377,20 @@ progname=$func_basename_result
 case $progpath in
   [\\/]*|[A-Za-z]:\\*) ;;
   *[\\/]*)
-     progdir=$func_dirname_result
-     progdir=`cd "$progdir" && pwd`
-     progpath="$progdir/$progname"
+     prOGdir=$func_dirname_result
+     prOGdir=`cd "$prOGdir" && pwd`
+     progpath="$prOGdir/$progname"
      ;;
   *)
      save_IFS="$IFS"
      IFS=${PATH_SEPARATOR-:}
-     for progdir in $PATH; do
+     for prOGdir in $PATH; do
        IFS="$save_IFS"
-       test -x "$progdir/$progname" && break
+       test -x "$prOGdir/$progname" && break
      done
      IFS="$save_IFS"
-     test -n "$progdir" || progdir=`pwd`
-     progpath="$progdir/$progname"
+     test -n "$prOGdir" || prOGdir=`pwd`
+     progpath="$prOGdir/$progname"
      ;;
 esac
 
@@ -2601,12 +2601,12 @@ func_mode_execute ()
 	if func_ltwrapper_script_p "$file"; then
 	  func_source "$file"
 	  # Transform arg to wrapped name.
-	  file="$progdir/$program"
+	  file="$prOGdir/$program"
 	elif func_ltwrapper_executable_p "$file"; then
 	  func_ltwrapper_scriptname "$file"
 	  func_source "$func_ltwrapper_scriptname_result"
 	  # Transform arg to wrapped name.
-	  file="$progdir/$program"
+	  file="$prOGdir/$program"
 	fi
 	;;
       esac
@@ -3958,20 +3958,20 @@ func_exec_program_core ()
   *-*-mingw | *-*-os2* | *-cegcc*)
     $ECHO "\
       if test -n \"\$lt_option_debug\"; then
-        \$ECHO \"${outputname}:${output}:\${LINENO}: newargv[0]: \$progdir\\\\\$program\" 1>&2
+        \$ECHO \"${outputname}:${output}:\${LINENO}: newargv[0]: \$prOGdir\\\\\$program\" 1>&2
         func_lt_dump_args \${1+\"\$@\"} 1>&2
       fi
-      exec \"\$progdir\\\\\$program\" \${1+\"\$@\"}
+      exec \"\$prOGdir\\\\\$program\" \${1+\"\$@\"}
 "
     ;;
 
   *)
     $ECHO "\
       if test -n \"\$lt_option_debug\"; then
-        \$ECHO \"${outputname}:${output}:\${LINENO}: newargv[0]: \$progdir/\$program\" 1>&2
+        \$ECHO \"${outputname}:${output}:\${LINENO}: newargv[0]: \$prOGdir/\$program\" 1>&2
         func_lt_dump_args \${1+\"\$@\"} 1>&2
       fi
-      exec \"\$progdir/\$program\" \${1+\"\$@\"}
+      exec \"\$prOGdir/\$program\" \${1+\"\$@\"}
 "
     ;;
   esac
@@ -4046,18 +4046,18 @@ func_exec_program ()
 	if test "$fast_install" = yes; then
 	  $ECHO "\
   program=lt-'$outputname'$exeext
-  progdir=\"\$thisdir/$objdir\"
+  prOGdir=\"\$thisdir/$objdir\"
 
-  if test ! -f \"\$progdir/\$program\" ||
-     { file=\`ls -1dt \"\$progdir/\$program\" \"\$progdir/../\$program\" 2>/dev/null | ${SED} 1q\`; \\
-       test \"X\$file\" != \"X\$progdir/\$program\"; }; then
+  if test ! -f \"\$prOGdir/\$program\" ||
+     { file=\`ls -1dt \"\$prOGdir/\$program\" \"\$prOGdir/../\$program\" 2>/dev/null | ${SED} 1q\`; \\
+       test \"X\$file\" != \"X\$prOGdir/\$program\"; }; then
 
     file=\"\$\$-\$program\"
 
-    if test ! -d \"\$progdir\"; then
-      $MKDIR \"\$progdir\"
+    if test ! -d \"\$prOGdir\"; then
+      $MKDIR \"\$prOGdir\"
     else
-      $RM \"\$progdir/\$file\"
+      $RM \"\$prOGdir/\$file\"
     fi"
 
 	  $ECHO "\
@@ -4067,26 +4067,26 @@ func_exec_program ()
       if relink_command_output=\`eval \$relink_command 2>&1\`; then :
       else
 	$ECHO \"\$relink_command_output\" >&2
-	$RM \"\$progdir/\$file\"
+	$RM \"\$prOGdir/\$file\"
 	exit 1
       fi
     fi
 
-    $MV \"\$progdir/\$file\" \"\$progdir/\$program\" 2>/dev/null ||
-    { $RM \"\$progdir/\$program\";
-      $MV \"\$progdir/\$file\" \"\$progdir/\$program\"; }
-    $RM \"\$progdir/\$file\"
+    $MV \"\$prOGdir/\$file\" \"\$prOGdir/\$program\" 2>/dev/null ||
+    { $RM \"\$prOGdir/\$program\";
+      $MV \"\$prOGdir/\$file\" \"\$prOGdir/\$program\"; }
+    $RM \"\$prOGdir/\$file\"
   fi"
 	else
 	  $ECHO "\
   program='$outputname'
-  progdir=\"\$thisdir/$objdir\"
+  prOGdir=\"\$thisdir/$objdir\"
 "
 	fi
 
 	$ECHO "\
 
-  if test -f \"\$progdir/\$program\"; then"
+  if test -f \"\$prOGdir/\$program\"; then"
 
 	# fixup the dll searchpath if we need to.
 	#
@@ -4121,7 +4121,7 @@ func_exec_program ()
     fi
   else
     # The program doesn't exist.
-    \$ECHO \"\$0: error: \\\`\$progdir/\$program' does not exist\" 1>&2
+    \$ECHO \"\$0: error: \\\`\$prOGdir/\$program' does not exist\" 1>&2
     \$ECHO \"This script is just a wrapper for \$program.\" 1>&2
     \$ECHO \"See the $PACKAGE documentation for more information.\" 1>&2
     exit 1
@@ -8979,7 +8979,7 @@ EOF
 	if test "$fast_install" != no; then
 	  link_command="$finalize_var$compile_command$finalize_rpath"
 	  if test "$fast_install" = yes; then
-	    relink_command=`$ECHO "$compile_var$compile_command$compile_rpath" | $SED 's%@OUTPUT@%\$progdir/\$file%g'`
+	    relink_command=`$ECHO "$compile_var$compile_command$compile_rpath" | $SED 's%@OUTPUT@%\$prOGdir/\$file%g'`
 	  else
 	    # fast_install is set to needless
 	    relink_command=
