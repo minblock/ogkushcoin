@@ -103,10 +103,10 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 999999999999ULL; // January 12, 2020
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000361caebe4");
+        consensus.nMinimumChainWork = uint256S("0x00");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0xcfdf50e9441ed126691c9fec46c072b9f4b1eeadd5056eec4be49c472aa05feb"); //5758
+        consensus.defaultAssumeValid = uint256S("0x03e08f919837c10f8a75086c8d376e3fb6400691b3514740c1e112d45b0fa08d"); //0
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -129,12 +129,12 @@ public:
         // Note that of those with the service bits flag, most only support a subset of possible options
         vSeeds.emplace_back("seed-a.og.bitwall.ca", true);
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,55); 
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,5); //3
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
-        base58Prefixes[SCRIPT_ADDRESS2] = std::vector<unsigned char>(1,15); //7
+        base58Prefixes[SCRIPT_ADDRESS2] = std::vector<unsigned char>(1,15); //G
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,176);
-        base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xB2, 0x1E};
-        base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x88, 0xAD, 0xE4};
+        base58Prefixes[EXT_PUBLIC_KEY] = {0x00, 0x88, 0xB2, 0x1E};
+        base58Prefixes[EXT_SECRET_KEY] = {0x00, 0x88, 0xAD, 0xE4};
 
         bech32_hrp = "ogc";
 
@@ -146,8 +146,8 @@ public:
 
         checkpointData = {
             {
-                {  1500, uint256S("0x568701c98a298f50db69440c7bc5ef7b96eda42562fff7d7e726af222d5cb482")},
-                {  4032, uint256S("0xfbc21ce299cfc05524f332e4aab3f4b1e035ab21f1bc9e127cc105c06355eb04")},
+                {  0, uint256S("0x03e08f919837c10f8a75086c8d376e3fb6400691b3514740c1e112d45b0fa08d")},
+
             }
         };
 
@@ -201,10 +201,10 @@ public:
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0xda76e83b6c5c87cd78d7b36e33173d40d54207d0aec1dff7ffea7a7fc9cd464d"); //0
 
-        pchMessageStart[0] = 0xfd;
-        pchMessageStart[1] = 0xd2;
-        pchMessageStart[2] = 0xc8;
-        pchMessageStart[3] = 0xf1;
+        pchMessageStart[0] = 0x04;
+        pchMessageStart[1] = 0x02;
+        pchMessageStart[2] = 0x00;
+        pchMessageStart[3] = 0x03;
         nDefaultPort = 22336;
         nPruneAfterHeight = 1000;
 
