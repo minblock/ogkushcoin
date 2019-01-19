@@ -1,9 +1,7 @@
 OG Core integration/staging tree
 =====================================
 
-[![Build Status](https://travis-ci.org/minblock/og.svg?branch=master)](https://travis-ci.org/minblock/OG)
-
-https://og.bitwall.ca
+[![Build Status](https://travis-ci.org/minblock/og.svg?branch=master)](https://travis-ci.org/minblock/og)
 
 What is OG Coin?
 ----------------
