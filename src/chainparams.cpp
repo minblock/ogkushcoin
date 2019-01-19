@@ -94,29 +94,29 @@ public:
 
         // Deployment of BIP68, BIP112, and BIP113.
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 0; // January 18, 2019
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 999999999999ULL; // January 18, 2019
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 0; // January 12, 2019
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1548979200; // February 1st, 2019
 
         // Deployment of SegWit (BIP141, BIP143, and BIP147)
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 1;
-        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 0; // January 18, 2019
-        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 999999999999ULL; // January 18, 2019
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 0; // January 12, 2019
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1578787200; // January 12, 2020
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x00");
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000361caebe4");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x03e08f919837c10f8a75086c8d376e3fb6400691b3514740c1e112d45b0fa08d"); //0
+        consensus.defaultAssumeValid = uint256S("0xcfdf50e9441ed126691c9fec46c072b9f4b1eeadd5056eec4be49c472aa05feb"); //5758
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        pchMessageStart[0] = 0x3d;
-        pchMessageStart[1] = 0x74;
-        pchMessageStart[2] = 0x56;
-        pchMessageStart[3] = 0x65;
+        pchMessageStart[0] = 0x4d;
+        pchMessageStart[1] = 0x65;
+        pchMessageStart[2] = 0x65;
+        pchMessageStart[3] = 0x74;
         nDefaultPort = 2337;
         nPruneAfterHeight = 100000;
 
@@ -129,9 +129,9 @@ public:
         // Note that of those with the service bits flag, most only support a subset of possible options
         vSeeds.emplace_back("seed-a.og.bitwall.ca", true);
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,20);     // OG addresses start with '9' 
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,73);      // Segregated witnesses addressess start with 'W'
-        base58Prefixes[SCRIPT_ADDRESS2] = std::vector<unsigned char>(1,15);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,55); 
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
+        base58Prefixes[SCRIPT_ADDRESS2] = std::vector<unsigned char>(1,15); //7
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,176);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xB2, 0x1E};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x88, 0xAD, 0xE4};
