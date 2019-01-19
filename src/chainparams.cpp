@@ -129,9 +129,9 @@ public:
         // Note that of those with the service bits flag, most only support a subset of possible options
         vSeeds.emplace_back("seed-a.og.bitwall.ca", true);
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,5); //3
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,5); //Legacy 3
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
-        base58Prefixes[SCRIPT_ADDRESS2] = std::vector<unsigned char>(1,15); //G
+        base58Prefixes[SCRIPT_ADDRESS2] = std::vector<unsigned char>(1,38); //Segwit G
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,176);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x00, 0x88, 0xB2, 0x1E};
         base58Prefixes[EXT_SECRET_KEY] = {0x00, 0x88, 0xAD, 0xE4};
