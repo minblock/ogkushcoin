@@ -113,10 +113,10 @@ public:
          * a large 32-bit integer with any alignment.
          */
 
-        pchMessageStart[0] = 0x57; //W
-        pchMessageStart[1] = 0x45; //E
-        pchMessageStart[2] = 0x45; //E
-        pchMessageStart[3] = 0x44; //D
+        pchMessageStart[0] = 0x4d; 
+        pchMessageStart[1] = 0x64; 
+        pchMessageStart[2] = 0x66; 
+        pchMessageStart[3] = 0x75; 
         nDefaultPort = 2337;
         nPruneAfterHeight = 100000;
 
