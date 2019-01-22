@@ -7,7 +7,7 @@ architectures:
 packages:
 - "faketime"
 remotes:
-- "url": "https://github.com/ogkush-project/ogkush-detached-sigs.git"
+- "url": "https://github.com/minblock/ogkush-detached-sigs.git"
   "dir": "signature"
 files:
 - "ogkush-osx-unsigned.tar.gz"

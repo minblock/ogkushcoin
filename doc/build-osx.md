@@ -49,7 +49,7 @@ Build OGKush Core
 
 1. Clone the ogkush source code and cd into `ogkush`
 
-        git clone https://github.com/ogkush-project/ogkush
+        git clone https://github.com/minblock/ogkush
         cd ogkush
 
 2.  Build ogkush-core:

@@ -8,7 +8,7 @@ recommended to upgrade to this version as soon as possible.
 
 Please report bugs using the issue tracker at github:
 
-  <https://github.com/ogkush-project/ogkush/issues>
+  <https://github.com/minblock/ogkush/issues>
 
 Upgrading and downgrading
 =========================

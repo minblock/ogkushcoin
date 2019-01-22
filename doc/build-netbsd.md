@@ -25,7 +25,7 @@ python27
 
 Download the source code:
 ```
-git clone https://github.com/ogkush-project/ogkush
+git clone https://github.com/minblock/ogkush
 ```
 
 See [dependencies.md](dependencies.md) for a complete overview.

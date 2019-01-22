@@ -1,7 +1,7 @@
 OGKush Core integration/staging tree
 =====================================
 
-[![Build Status](https://travis-ci.org/ogkush-project/ogkush.svg?branch=master)](https://travis-ci.org/ogkush-project/ogkush)
+[![Build Status](https://travis-ci.org/minblock/ogkush.svg?branch=master)](https://travis-ci.org/minblock/ogkush)
 
 https://ogkush.org
 
@@ -27,7 +27,7 @@ Development Process
 -------------------
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/ogkush-project/ogkush/tags) are created
+completely stable. [Tags](https://github.com/minblock/ogkush/tags) are created
 regularly to indicate new official, stable release versions of OGKush Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).
