@@ -506,7 +506,7 @@ std::string HelpMessage(HelpMessageMode mode)
 
 std::string LicenseInfo()
 {
-    const std::string URL_SOURCE_CODE = "<https://github.com/ogkush-project/ogkush>";
+    const std::string URL_SOURCE_CODE = "<https://github.com/minblock/ogkush>";
     const std::string URL_WEBSITE = "<https://ogkush.org>";
 
     return CopyrightHolders(strprintf(_("Copyright (C) %i-%i"), 2011, COPYRIGHT_YEAR) + " ") + "\n" +
