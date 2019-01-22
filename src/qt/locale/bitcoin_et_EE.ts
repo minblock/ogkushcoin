@@ -130,8 +130,8 @@
         <translation>Kõvakettal olevate plokkide reindekseerimine...</translation>
     </message>
     <message>
-        <source>OG</source>
-        <translation>OG</translation>
+        <source>OGKush</source>
+        <translation>OGKush</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -273,8 +273,8 @@
         <translation>Tere tulemast</translation>
     </message>
     <message>
-        <source>OG</source>
-        <translation>OG</translation>
+        <source>OGKush</source>
+        <translation>OGKush</translation>
     </message>
     <message>
         <source>Error</source>
@@ -768,8 +768,8 @@
         <translation>Valikud:</translation>
     </message>
     <message>
-        <source>OG Core</source>
-        <translation>OG Core</translation>
+        <source>OGKush Core</source>
+        <translation>OGKush Core</translation>
     </message>
     <message>
         <source>Information</source>

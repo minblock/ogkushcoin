@@ -62,12 +62,12 @@
         <translation>Prijímajúce adresy</translation>
     </message>
     <message>
-        <source>These are your OG addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Toto sú Vaše OG adresy pre posielanie platieb. Vždy skontrolujte sumu a prijímaciu adresu pred poslaním mincí.</translation>
+        <source>These are your OGKush addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Toto sú Vaše OGKush adresy pre posielanie platieb. Vždy skontrolujte sumu a prijímaciu adresu pred poslaním mincí.</translation>
     </message>
     <message>
-        <source>These are your OG addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Toto sú vaše OG adresy pre prijímanie platieb. Odporúča sa použiť vždy novú prijímaciu adresu pre každú transakciu.</translation>
+        <source>These are your OGKush addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Toto sú vaše OGKush adresy pre prijímanie platieb. Odporúča sa použiť vždy novú prijímaciu adresu pre každú transakciu.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -184,8 +184,8 @@
         <translation>Peňaženka zašifrovaná</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ogs from being stolen by malware infecting your computer.</source>
-        <translation>%1 sa teraz zavrie, aby sa ukončil proces šifrovania. Zašifrovanie peňaženky neochráni úplne pred krádežou ogov škodlivými programami, ktoré prenikli do vášho počítača.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ogkushs from being stolen by malware infecting your computer.</source>
+        <translation>%1 sa teraz zavrie, aby sa ukončil proces šifrovania. Zašifrovanie peňaženky neochráni úplne pred krádežou ogkushov škodlivými programami, ktoré prenikli do vášho počítača.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -342,8 +342,8 @@
         <translation>Preindexúvam bloky na disku...</translation>
     </message>
     <message>
-        <source>Send coins to a OG address</source>
-        <translation>Poslať ogs na adresu</translation>
+        <source>Send coins to a OGKush address</source>
+        <translation>Poslať ogkushs na adresu</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -366,8 +366,8 @@
         <translation>O&amp;veriť správu...</translation>
     </message>
     <message>
-        <source>OG</source>
-        <translation>OG</translation>
+        <source>OGKush</source>
+        <translation>OGKush</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -394,12 +394,12 @@
         <translation>Zašifruj súkromné kľúče ktoré patria do vašej peňaženky</translation>
     </message>
     <message>
-        <source>Sign messages with your OG addresses to prove you own them</source>
-        <translation>Podpísať správu s vašou adresou OG aby ste preukázali že ju vlastníte</translation>
+        <source>Sign messages with your OGKush addresses to prove you own them</source>
+        <translation>Podpísať správu s vašou adresou OGKush aby ste preukázali že ju vlastníte</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified OG addresses</source>
-        <translation>Overiť či správa bola podpísaná uvedenou OG adresou</translation>
+        <source>Verify messages to ensure they were signed with specified OGKush addresses</source>
+        <translation>Overiť či správa bola podpísaná uvedenou OGKush adresou</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -418,8 +418,8 @@
         <translation>Lišta záložiek</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and og: URIs)</source>
-        <translation>Vyžiadať platby (vygeneruje QR kódy a og: URI)</translation>
+        <source>Request payments (generates QR codes and ogkush: URIs)</source>
+        <translation>Vyžiadať platby (vygeneruje QR kódy a ogkush: URI)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -430,16 +430,16 @@
         <translation>Zobraziť zoznam použitých prijímacích adries a ich popisov</translation>
     </message>
     <message>
-        <source>Open a og: URI or payment request</source>
-        <translation>Otvoriť og URI alebo výzvu k platbe</translation>
+        <source>Open a ogkush: URI or payment request</source>
+        <translation>Otvoriť ogkush URI alebo výzvu k platbe</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Možnosti príkazového riadku</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to OG network</source>
-        <translation><numerusform>%n aktívne pripojenie do siete OG</numerusform><numerusform>%n aktívne pripojenia do siete OG</numerusform><numerusform>%n aktívnych pripojení do siete OG</numerusform><numerusform>%n aktívnych pripojení do siete OG</numerusform></translation>
+        <source>%n active connection(s) to OGKush network</source>
+        <translation><numerusform>%n aktívne pripojenie do siete OGKush</numerusform><numerusform>%n aktívne pripojenia do siete OGKush</numerusform><numerusform>%n aktívnych pripojení do siete OGKush</numerusform><numerusform>%n aktívnych pripojení do siete OGKush</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -482,8 +482,8 @@
         <translation>Aktualizovaný</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible OG command-line options</source>
-        <translation>Ukáž %1 zoznam možných nastavení OGu pomocou príkazového riadku</translation>
+        <source>Show the %1 help message to get a list with possible OGKush command-line options</source>
+        <translation>Ukáž %1 zoznam možných nastavení OGKushu pomocou príkazového riadku</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -552,8 +552,8 @@
         <translation>Peňaženka je &lt;b&gt;zašifrovaná&lt;/b&gt; a momentálne &lt;b&gt;zamknutá&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. OG can no longer continue safely and will quit.</source>
-        <translation>Vyskytla sa kritická chyba. OG nemôže ďalej bezpečne pokračovať a ukončí sa.</translation>
+        <source>A fatal error occurred. OGKush can no longer continue safely and will quit.</source>
+        <translation>Vyskytla sa kritická chyba. OGKush nemôže ďalej bezpečne pokračovať a ukončí sa.</translation>
     </message>
 </context>
 <context>
@@ -746,8 +746,8 @@
         <translation>Upraviť odosielaciu adresu</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid OG address.</source>
-        <translation>Vložená adresa "%1" nieje platnou adresou OG.</translation>
+        <source>The entered address "%1" is not a valid OGKush address.</source>
+        <translation>Vložená adresa "%1" nieje platnou adresou OGKush.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -875,8 +875,8 @@
         <translation>Použiť vlastný dátový adresár:</translation>
     </message>
     <message>
-        <source>OG</source>
-        <translation>OG</translation>
+        <source>OGKush</source>
+        <translation>OGKush</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -887,7 +887,7 @@
         <translation>Približne %1 GB dát bude uložených v tejto zložke.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the OG block chain.</source>
+        <source>%1 will download and store a copy of the OGKush block chain.</source>
         <translation>%1 bude sťahovať kopiu reťazca blokov.</translation>
     </message>
     <message>
@@ -918,12 +918,12 @@
         <translation>Forma</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the og network, as detailed below.</source>
-        <translation>Nedávne transakcie nemusia byť ešte viditeľné preto môže byť zostatok vo vašej peňaženke nesprávny. Táto informácia bude správna keď sa dokončí synchronizovanie peňaženky so sieťou og, ako je rozpísané nižšie.</translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the ogkush network, as detailed below.</source>
+        <translation>Nedávne transakcie nemusia byť ešte viditeľné preto môže byť zostatok vo vašej peňaženke nesprávny. Táto informácia bude správna keď sa dokončí synchronizovanie peňaženky so sieťou ogkush, ako je rozpísané nižšie.</translation>
     </message>
     <message>
-        <source>Attempting to spend ogs that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>Pokus o minutie ogov, ktoré sú ovplyvnené ešte nezobrazenými transakciami, nebude sieťou akceptovaný.</translation>
+        <source>Attempting to spend ogkushs that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Pokus o minutie ogkushov, ktoré sú ovplyvnené ešte nezobrazenými transakciami, nebude sieťou akceptovaný.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1092,8 +1092,8 @@
         <translation>&amp;Minúť nepotvrdený výdavok</translation>
     </message>
     <message>
-        <source>Automatically open the OG client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automaticky otvorit port pre OG na routeri. Toto funguje len ak router podporuje UPnP a je táto podpora aktivovaná.</translation>
+        <source>Automatically open the OGKush client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automaticky otvorit port pre OGKush na routeri. Toto funguje len ak router podporuje UPnP a je táto podpora aktivovaná.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1108,8 +1108,8 @@
         <translation>Povoliť prichá&amp;dzajúce spojenia</translation>
     </message>
     <message>
-        <source>Connect to the OG network through a SOCKS5 proxy.</source>
-        <translation>Pripojiť do siete OG cez proxy server SOCKS5.</translation>
+        <source>Connect to the OGKush network through a SOCKS5 proxy.</source>
+        <translation>Pripojiť do siete OGKush cez proxy server SOCKS5.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1144,8 +1144,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the OG network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Pripojiť k OGovej sieti cez separované SOCKS5 proxy pre skrytú službu Tor.</translation>
+        <source>Connect to the OGKush network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Pripojiť k OGKushovej sieti cez separované SOCKS5 proxy pre skrytú službu Tor.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1181,7 +1181,7 @@
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Zvoľte ako deliť og pri zobrazovaní pri platbách a užívateľskom rozhraní.</translation>
+        <translation>Zvoľte ako deliť ogkush pri zobrazovaní pri platbách a užívateľskom rozhraní.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1251,8 +1251,8 @@
         <translation>Forma</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the OG network after a connection is established, but this process has not completed yet.</source>
-        <translation>Zobrazené informácie môžu byť neaktuálne. Vaša peňaženka sa automaticky synchronizuje so sieťou OG po nadviazaní spojenia, ale tento proces ešte nie je ukončený.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the OGKush network after a connection is established, but this process has not completed yet.</source>
+        <translation>Zobrazené informácie môžu byť neaktuálne. Vaša peňaženka sa automaticky synchronizuje so sieťou OGKush po nadviazaní spojenia, ale tento proces ešte nie je ukončený.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1326,8 +1326,8 @@
         <translation>Chyba pri vyžiadaní platby</translation>
     </message>
     <message>
-        <source>Cannot start og: click-to-pay handler</source>
-        <translation>Nemôžeme spustiť OG: obsluha click-to-pay</translation>
+        <source>Cannot start ogkush: click-to-pay handler</source>
+        <translation>Nemôžeme spustiť OGKush: obsluha click-to-pay</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -1342,8 +1342,8 @@
         <translation>Neplatná adresa platby %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid OG address or malformed URI parameters.</source>
-        <translation>URI sa nedá analyzovať! To môže byť spôsobené neplatnou OG adresou alebo zle nastavenými vlastnosťami URI.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid OGKush address or malformed URI parameters.</source>
+        <translation>URI sa nedá analyzovať! To môže byť spôsobené neplatnou OGKush adresou alebo zle nastavenými vlastnosťami URI.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1444,8 +1444,8 @@
         <translation>Suma</translation>
     </message>
     <message>
-        <source>Enter a OG address (e.g. %1)</source>
-        <translation>Zadajte og adresu (napr. %1)</translation>
+        <source>Enter a OGKush address (e.g. %1)</source>
+        <translation>Zadajte ogkush adresu (napr. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1869,8 +1869,8 @@
         <translation>&amp;Správa:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the OG network.</source>
-        <translation>Pridať voliteľnú správu k výzve na zaplatenie, ktorá sa zobrazí keď bude výzva otvorená. Poznámka: Správa nebude poslaná s platbou cez sieť OG.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the OGKush network.</source>
+        <translation>Pridať voliteľnú správu k výzve na zaplatenie, ktorá sa zobrazí keď bude výzva otvorená. Poznámka: Správa nebude poslaná s platbou cez sieť OGKush.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2031,7 +2031,7 @@
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>Poslať OGs</translation>
+        <translation>Poslať OGKushs</translation>
     </message>
     <message>
         <source>Coin Control Features</source>
@@ -2114,7 +2114,7 @@
         <translation>Skryť</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for og transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for ogkush transactions than the network can process.</source>
         <translation>Zaplatenie len minimálneho poplatku je v poriadku, pokiaľ existuje menej transakcií ako miesta v blokoch. Uvedomte si však, že ak bude vyšší dopyt po transakciách ako dokáže sieť spracovať, môže byť vaša transakcia odsúvaná a nepotvrdená donekonečna.</translation>
     </message>
     <message>
@@ -2286,8 +2286,8 @@
         <translation><numerusform>Odhadovaný začiatok potvrdzovania po %n bloku.</numerusform><numerusform>Odhadovaný začiatok potvrdzovania po %n blokoch.</numerusform><numerusform>Odhadovaný začiatok potvrdzovania po %n blokoch.</numerusform><numerusform>Odhadovaný začiatok potvrdzovania po %n blokoch.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid OG address</source>
-        <translation>Varovanie: Neplatná OG adresa</translation>
+        <source>Warning: Invalid OGKush address</source>
+        <translation>Varovanie: Neplatná OGKush adresa</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2329,7 +2329,7 @@
         <translation>Toto je normálna platba.</translation>
     </message>
     <message>
-        <source>The OG address to send the payment to</source>
+        <source>The OGKush address to send the payment to</source>
         <translation>Zvoľte adresu kam poslať platbu</translation>
     </message>
     <message>
@@ -2349,8 +2349,8 @@
         <translation>Odstrániť túto položku</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less ogs than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Poplatok sa odpočíta od čiastky, ktorú odosielate. Príjemca dostane menej ogov ako zadáte. Ak je vybraných viacero príjemcov, poplatok je rozdelený rovným dielom.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less ogkushs than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Poplatok sa odpočíta od čiastky, ktorú odosielate. Príjemca dostane menej ogkushov ako zadáte. Ak je vybraných viacero príjemcov, poplatok je rozdelený rovným dielom.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2377,8 +2377,8 @@
         <translation>Vložte popis pre túto adresu aby sa uložila do zoznamu použitých adries</translation>
     </message>
     <message>
-        <source>A message that was attached to the og: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the OG network.</source>
-        <translation>Správa ktorá bola pripojená k og: URI a ktorá bude uložená s transakcou pre Vaše potreby. Poznámka: Táto správa nebude poslaná cez sieť OG.</translation>
+        <source>A message that was attached to the ogkush: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the OGKush network.</source>
+        <translation>Správa ktorá bola pripojená k ogkush: URI a ktorá bude uložená s transakcou pre Vaše potreby. Poznámka: Táto správa nebude poslaná cez sieť OGKush.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2422,12 +2422,12 @@
         <translation>&amp;Podpísať Správu</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive ogs sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive ogkushs sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>Môžete podpísať správy svojou adresou a dokázať, že viete prijímať mince zaslané na túto adresu. Buďte však opatrní a podpíšte len podrobné prehlásenia, s ktorými plne súhlasíte, nakoľko útoky typu "phishing" Vás môžu lákať k podpísaniu nejasných alebo príliš všeobecných tvrdení čím prevezmú vašu identitu.</translation>
     </message>
     <message>
-        <source>The OG address to sign the message with</source>
-        <translation>OG adresa pre podpísanie správy s</translation>
+        <source>The OGKush address to sign the message with</source>
+        <translation>OGKush adresa pre podpísanie správy s</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2458,7 +2458,7 @@
         <translation>Kopírovať tento podpis do systémovej schránky</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this OG address</source>
+        <source>Sign the message to prove you own this OGKush address</source>
         <translation>Podpíšte správu aby ste dokázali že vlastníte túto adresu</translation>
     </message>
     <message>
@@ -2482,12 +2482,12 @@
         <translation>Vložte adresu príjemcu, správu (uistite sa, že presne kopírujete ukončenia riadkov, medzery, odrážky, atď.) a podpis pre potvrdenie správy. Buďte opatrní a nedomýšľajte si viac než je uvedené v samotnej podpísanej správe a môžete sa tak vyhnúť podvodu MITM útokom. Toto len potvrdzuje, že podpisujúca strana môže prijímať na tejto adrese, nepotvrdzuje to vlastníctvo žiadnej transakcie!</translation>
     </message>
     <message>
-        <source>The OG address the message was signed with</source>
-        <translation>Adresa OG, ktorou bola podpísaná správa</translation>
+        <source>The OGKush address the message was signed with</source>
+        <translation>Adresa OGKush, ktorou bola podpísaná správa</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified OG address</source>
-        <translation>Overím správy sa uistiť že bola podpísaná označenou OG adresou</translation>
+        <source>Verify the message to ensure it was signed with the specified OGKush address</source>
+        <translation>Overím správy sa uistiť že bola podpísaná označenou OGKush adresou</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -3179,8 +3179,8 @@
         <translation>Nepodarilo sa spustiť HTTP server. Pre viac detailov zobrazte debug log.</translation>
     </message>
     <message>
-        <source>OG Core</source>
-        <translation>OG Core</translation>
+        <source>OGKush Core</source>
+        <translation>OGKush Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

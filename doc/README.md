@@ -1,41 +1,41 @@
-OG Core
+OGKush Core
 =============
 
 Setup
 ---------------------
-OG Core is the original OG client and it builds the backbone of the network. It downloads and, by default, stores the entire history of OG transactions (which is currently more than 7 GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
+OGKush Core is the original OGKush client and it builds the backbone of the network. It downloads and, by default, stores the entire history of OGKush transactions (which is currently more than 7 GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
 
-To download OG Core, visit [og.org](https://og.org).
+To download OGKush Core, visit [ogkush.org](https://ogkush.org).
 
 Running
 ---------------------
-The following are some helpful notes on how to run OG on your native platform.
+The following are some helpful notes on how to run OGKush on your native platform.
 
 ### Unix
 
 Unpack the files into a directory and run:
 
-- `bin/og-qt` (GUI) or
-- `bin/ogd` (headless)
+- `bin/ogkush-qt` (GUI) or
+- `bin/ogkushd` (headless)
 
 ### Windows
 
-Unpack the files into a directory, and then run og-qt.exe.
+Unpack the files into a directory, and then run ogkush-qt.exe.
 
 ### OS X
 
-Drag OG-Core to your applications folder, and then run OG-Core.
+Drag OGKush-Core to your applications folder, and then run OGKush-Core.
 
 ### Need Help?
 
-* See the documentation at the [OG Wiki](https://og.info/)
+* See the documentation at the [OGKush Wiki](https://ogkush.info/)
 for help and more information.
-* Ask for help on [#og](http://webchat.freenode.net?channels=og) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=og).
-* Ask for help on the [OGTalk](https://ogtalk.io/) forums.
+* Ask for help on [#ogkush](http://webchat.freenode.net?channels=ogkush) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=ogkush).
+* Ask for help on the [OGKushTalk](https://ogkushtalk.io/) forums.
 
 Building
 ---------------------
-The following are developer notes on how to build OG on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build OGKush on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [Dependencies](dependencies.md)
 - [OS X Build Notes](build-osx.md)
@@ -46,7 +46,7 @@ The following are developer notes on how to build OG on your native platform. Th
 
 Development
 ---------------------
-The OG repo's [root README](/README.md) contains relevant information on the development process and automated testing.
+The OGKush repo's [root README](/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Release Notes](release-notes.md)
@@ -61,8 +61,8 @@ The OG repo's [root README](/README.md) contains relevant information on the dev
 - [Benchmarking](benchmarking.md)
 
 ### Resources
-* Discuss on the [OGTalk](https://ogtalk.io/) forums.
-* Discuss general OG development on #og-dev on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=og-dev).
+* Discuss on the [OGKushTalk](https://ogkushtalk.io/) forums.
+* Discuss general OGKush development on #ogkush-dev on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=ogkush-dev).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

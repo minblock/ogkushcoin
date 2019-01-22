@@ -1508,7 +1508,7 @@ void ThreadMapPort()
             }
         }
 
-        std::string strDesc = "OG " + FormatFullVersion();
+        std::string strDesc = "OGKush " + FormatFullVersion();
 
         try {
             while (true) {

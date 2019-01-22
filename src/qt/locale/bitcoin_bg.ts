@@ -62,12 +62,12 @@
         <translation>Получаване на адреси</translation>
     </message>
     <message>
-        <source>These are your OG addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your OGKush addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Това са адресите на получателите на плащания. Винаги проверявайте размера на сумата и адреса на получателя, преди да изпратите монети.</translation>
     </message>
     <message>
-        <source>These are your OG addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Това са Вашите OG адреси,благодарение на които ще получавате плащания.Препоръчително е да използвате нови адреси за получаване на всяка транзакция.</translation>
+        <source>These are your OGKush addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Това са Вашите OGKush адреси,благодарение на които ще получавате плащания.Препоръчително е да използвате нови адреси за получаване на всяка транзакция.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -330,7 +330,7 @@
         <translation>Повторно индексиране на блоковете на диска...</translation>
     </message>
     <message>
-        <source>Send coins to a OG address</source>
+        <source>Send coins to a OGKush address</source>
         <translation>Изпращане към Биткоин адрес</translation>
     </message>
     <message>
@@ -354,7 +354,7 @@
         <translation>&amp;Проверка на съобщение...</translation>
     </message>
     <message>
-        <source>OG</source>
+        <source>OGKush</source>
         <translation>Биткоин</translation>
     </message>
     <message>
@@ -382,12 +382,12 @@
         <translation>Шифроване на личните ключове,които принадлежат на портфейла Ви.</translation>
     </message>
     <message>
-        <source>Sign messages with your OG addresses to prove you own them</source>
-        <translation>Пишете съобщения със своя OG адрес за да докажете,че е ваш.</translation>
+        <source>Sign messages with your OGKush addresses to prove you own them</source>
+        <translation>Пишете съобщения със своя OGKush адрес за да докажете,че е ваш.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified OG addresses</source>
-        <translation>Потвърждаване на съобщения  за да се знае,че са написани с дадените OG адреси.</translation>
+        <source>Verify messages to ensure they were signed with specified OGKush addresses</source>
+        <translation>Потвърждаване на съобщения  за да се знае,че са написани с дадените OGKush адреси.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -406,8 +406,8 @@
         <translation>Раздели</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and og: URIs)</source>
-        <translation>Изискване на плащания(генерира QR кодове и OG: URIs)</translation>
+        <source>Request payments (generates QR codes and ogkush: URIs)</source>
+        <translation>Изискване на плащания(генерира QR кодове и OGKush: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -418,8 +418,8 @@
         <translation>Покажи списък с използваните адреси и имена.</translation>
     </message>
     <message>
-        <source>Open a og: URI or payment request</source>
-        <translation>Отворете OG: URI  или заявка за плащане</translation>
+        <source>Open a ogkush: URI or payment request</source>
+        <translation>Отворете OGKush: URI  или заявка за плащане</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -462,8 +462,8 @@
         <translation>Синхронизиран</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible OG command-line options</source>
-        <translation>Покажи %1 помощно съобщение за да получиш лист с възможни OG команди</translation>
+        <source>Show the %1 help message to get a list with possible OGKush command-line options</source>
+        <translation>Покажи %1 помощно съобщение за да получиш лист с възможни OGKush команди</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -524,8 +524,8 @@
         <translation>Портфейлът е &lt;b&gt;криптиран&lt;/b&gt; и &lt;b&gt;заключен&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. OG can no longer continue safely and will quit.</source>
-        <translation>Възникна фатална грешка. OG не може да продължи безопасно и ще се изключи.</translation>
+        <source>A fatal error occurred. OGKush can no longer continue safely and will quit.</source>
+        <translation>Възникна фатална грешка. OGKush не може да продължи безопасно и ще се изключи.</translation>
     </message>
 </context>
 <context>
@@ -710,7 +710,7 @@
         <translation>Редактиране на адрес за изпращане</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid OG address.</source>
+        <source>The entered address "%1" is not a valid OGKush address.</source>
         <translation>"%1" не е валиден Биткоин адрес.</translation>
     </message>
     <message>
@@ -827,7 +827,7 @@
         <translation>Използване на директория ръчно</translation>
     </message>
     <message>
-        <source>OG</source>
+        <source>OGKush</source>
         <translation>Биткоин</translation>
     </message>
     <message>
@@ -932,16 +932,16 @@
         <translation>&amp;Похарчете непотвърденото ресто</translation>
     </message>
     <message>
-        <source>Automatically open the OG client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Автоматично отваряне на входящия OG порт. Работи само с рутери поддържащи UPnP.</translation>
+        <source>Automatically open the OGKush client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Автоматично отваряне на входящия OGKush порт. Работи само с рутери поддържащи UPnP.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Отваряне на входящия порт чрез &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the OG network through a SOCKS5 proxy.</source>
-        <translation>Свързване с OG мрежата чрез SOCKS5  прокси.</translation>
+        <source>Connect to the OGKush network through a SOCKS5 proxy.</source>
+        <translation>Свързване с OGKush мрежата чрез SOCKS5  прокси.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1039,7 +1039,7 @@
         <translation>Формуляр</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the OG network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the OGKush network after a connection is established, but this process has not completed yet.</source>
         <translation>Текущата информация на екрана може да не е актуална. Вашият портфейл ще се синхронизира автоматично с мрежата на Биткоин, щом поне една връзката с нея се установи; този процес все още не е приключил.</translation>
     </message>
     <message>
@@ -1094,8 +1094,8 @@
         <translation>Възникна грешка по време назаявката за плащане</translation>
     </message>
     <message>
-        <source>Cannot start og: click-to-pay handler</source>
-        <translation>OG не можe да се стартира: click-to-pay handler</translation>
+        <source>Cannot start ogkush: click-to-pay handler</source>
+        <translation>OGKush не можe да се стартира: click-to-pay handler</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -1176,8 +1176,8 @@
         <translation>Сума</translation>
     </message>
     <message>
-        <source>Enter a OG address (e.g. %1)</source>
-        <translation>Въведете OG адрес (например: %1)</translation>
+        <source>Enter a OGKush address (e.g. %1)</source>
+        <translation>Въведете OGKush адрес (например: %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1713,8 +1713,8 @@
         <translation>Заявката за плащане е изтекла.</translation>
     </message>
     <message>
-        <source>Warning: Invalid OG address</source>
-        <translation>Внимание: Невалиден OG адрес</translation>
+        <source>Warning: Invalid OGKush address</source>
+        <translation>Внимание: Невалиден OGKush адрес</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -1833,7 +1833,7 @@
         <translation>Копиране на текущия подпис</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this OG address</source>
+        <source>Sign the message to prove you own this OGKush address</source>
         <translation>Подпишете съобщение като доказателство, че притежавате определен адрес</translation>
     </message>
     <message>
@@ -1849,7 +1849,7 @@
         <translation>&amp;Провери</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified OG address</source>
+        <source>Verify the message to ensure it was signed with the specified OGKush address</source>
         <translation>Проверете съобщение, за да сте сигурни че е подписано с определен Биткоин адрес</translation>
     </message>
     <message>
@@ -2366,8 +2366,8 @@
         <translation>Въведете Ваш публичен адрес</translation>
     </message>
     <message>
-        <source>OG Core</source>
-        <translation>OG ядро</translation>
+        <source>OGKush Core</source>
+        <translation>OGKush ядро</translation>
     </message>
     <message>
         <source>&lt;category&gt; can be:</source>

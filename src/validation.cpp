@@ -48,7 +48,7 @@
 #include <boost/thread.hpp>
 
 #if defined(NDEBUG)
-# error "OG cannot be compiled without assertions."
+# error "OGKush cannot be compiled without assertions."
 #endif
 
 #define MICRO 0.000001
@@ -238,7 +238,7 @@ CTxMemPool mempool(&feeEstimator);
 /** Constant stuff for coinbase transactions we create: */
 CScript COINBASE_FLAGS;
 
-const std::string strMessageMagic = "OG Signed Message:\n";
+const std::string strMessageMagic = "OGKush Signed Message:\n";
 
 // Internal stuff
 namespace {
@@ -1148,8 +1148,7 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
     // Force block reward to zero when right shift is undefined.
     if (halvings >= 64)
         return 0;
-    
-    if (nHeight == 1) return COIN * 2000000; // Premined amount
+
     CAmount nSubsidy = 50 * COIN;
     // Subsidy is cut in half every 210,000 blocks which will occur approximately every 4 years.
     nSubsidy >>= halvings;
@@ -1684,7 +1683,7 @@ static bool WriteTxIndexDataForBlock(const CBlock& block, CValidationState& stat
 static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck() {
-    RenameThread("og-scriptch");
+    RenameThread("ogkush-scriptch");
     scriptcheckqueue.Thread();
 }
 

@@ -98,8 +98,8 @@
         <translation>Vhura &amp;URI</translation>
     </message>
     <message>
-        <source>OG</source>
-        <translation>OG</translation>
+        <source>OGKush</source>
+        <translation>OGKush</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -165,8 +165,8 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>OG</source>
-        <translation>OG</translation>
+        <source>OGKush</source>
+        <translation>OGKush</translation>
     </message>
     </context>
 <context>
@@ -194,8 +194,8 @@
         <translation>Marii </translation>
     </message>
     <message>
-        <source>Enter a OG address (e.g. %1)</source>
-        <translation>Nyora kero ye OG (sekuti %1)</translation>
+        <source>Enter a OGKush address (e.g. %1)</source>
+        <translation>Nyora kero ye OGKush (sekuti %1)</translation>
     </message>
     <message>
         <source>%1 d</source>

@@ -5,7 +5,7 @@ Before every release candidate:
 
 * Update translations (ping wumpus on IRC) see [translation_process.md](https://github.com/bitcoin/bitcoin/blob/master/doc/translation_process.md#synchronising-translations).
 
-* Update manpages, see [gen-manpages.sh](https://github.com/minblock/og/blob/master/contrib/devtools/README.md#gen-manpagessh).
+* Update manpages, see [gen-manpages.sh](https://github.com/ogkush-project/ogkush/blob/master/contrib/devtools/README.md#gen-manpagessh).
 
 Before every minor and major release:
 
@@ -33,12 +33,12 @@ If you're using the automated script (found in [contrib/gitian-build.sh](/contri
 Check out the source code in the following directory hierarchy.
 
     cd /path/to/your/toplevel/build
-    git clone https://github.com/minblock/gitian.sigs.ltc.git
-    git clone https://github.com/minblock/og-detached-sigs.git
+    git clone https://github.com/ogkush-project/gitian.sigs.ltc.git
+    git clone https://github.com/ogkush-project/ogkush-detached-sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
-    git clone https://github.com/minblock/og.git
+    git clone https://github.com/ogkush-project/ogkush.git
 
-### OG maintainers/release engineers, suggestion for writing release notes
+### OGKush maintainers/release engineers, suggestion for writing release notes
 
 Write release notes. git shortlog helps a lot, for example:
 
@@ -61,7 +61,7 @@ If you're using the automated script (found in [contrib/gitian-build.sh](/contri
 
 Setup Gitian descriptors:
 
-    pushd ./og
+    pushd ./ogkush
     export SIGNER=(your Gitian key, ie bluematt, sipa, etc)
     export VERSION=(new version, e.g. 0.8.0)
     git fetch
@@ -95,7 +95,7 @@ Create the OS X SDK tarball, see the [OS X readme](README_osx.md) for details, a
 By default, Gitian will fetch source files as needed. To cache them ahead of time:
 
     pushd ./gitian-builder
-    make -C ../og/depends download SOURCES_PATH=`pwd`/cache/common
+    make -C ../ogkush/depends download SOURCES_PATH=`pwd`/cache/common
     popd
 
 Only missing files will be fetched, so this is safe to re-run for each build.
@@ -103,50 +103,53 @@ Only missing files will be fetched, so this is safe to re-run for each build.
 NOTE: Offline builds must use the --url flag to ensure Gitian fetches only from local URLs. For example:
 
     pushd ./gitian-builder
-    ./bin/gbuild --url og=/path/to/og,signature=/path/to/sigs {rest of arguments}
+    ./bin/gbuild --url ogkush=/path/to/ogkush,signature=/path/to/sigs {rest of arguments}
     popd
 
 The gbuild invocations below <b>DO NOT DO THIS</b> by default.
 
-### Build and sign OG Core for Linux, Windows, and OS X:
+### Build and sign OGKush Core for Linux, Windows, and OS X:
 
+    export GITIAN_THREADS=2
+    export GITIAN_MEMORY=3000
+    
     pushd ./gitian-builder
-    ./bin/gbuild --num-make 2 --memory 3000 --commit og=v${VERSION} ../og/contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs.ltc/ ../og/contrib/gitian-descriptors/gitian-linux.yml
-    mv build/out/og-*.tar.gz build/out/src/og-*.tar.gz ../
+    ./bin/gbuild --num-make $GITIAN_THREADS --memory $GITIAN_MEMORY --commit ogkush=v${VERSION} ../ogkush/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs.ltc/ ../ogkush/contrib/gitian-descriptors/gitian-linux.yml
+    mv build/out/ogkush-*.tar.gz build/out/src/ogkush-*.tar.gz ../
 
-    ./bin/gbuild --num-make 2 --memory 3000 --commit og=v${VERSION} ../og/contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs.ltc/ ../og/contrib/gitian-descriptors/gitian-win.yml
-    mv build/out/og-*-win-unsigned.tar.gz inputs/og-win-unsigned.tar.gz
-    mv build/out/og-*.zip build/out/og-*.exe ../
+    ./bin/gbuild --num-make $GITIAN_THREADS --memory $GITIAN_MEMORY --commit ogkush=v${VERSION} ../ogkush/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs.ltc/ ../ogkush/contrib/gitian-descriptors/gitian-win.yml
+    mv build/out/ogkush-*-win-unsigned.tar.gz inputs/ogkush-win-unsigned.tar.gz
+    mv build/out/ogkush-*.zip build/out/ogkush-*.exe ../
 
-    ./bin/gbuild --num-make 2 --memory 3000 --commit og=v${VERSION} ../og/contrib/gitian-descriptors/gitian-osx.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs.ltc/ ../og/contrib/gitian-descriptors/gitian-osx.yml
-    mv build/out/og-*-osx-unsigned.tar.gz inputs/og-osx-unsigned.tar.gz
-    mv build/out/og-*.tar.gz build/out/og-*.dmg ../
+    ./bin/gbuild --num-make $GITIAN_THREADS --memory $GITIAN_MEMORY --commit ogkush=v${VERSION} ../ogkush/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs.ltc/ ../ogkush/contrib/gitian-descriptors/gitian-osx.yml
+    mv build/out/ogkush-*-osx-unsigned.tar.gz inputs/ogkush-osx-unsigned.tar.gz
+    mv build/out/ogkush-*.tar.gz build/out/ogkush-*.dmg ../
     popd
 
 Build output expected:
 
-  1. source tarball (`og-${VERSION}.tar.gz`)
-  2. linux 32-bit and 64-bit dist tarballs (`og-${VERSION}-linux[32|64].tar.gz`)
-  3. windows 32-bit and 64-bit unsigned installers and dist zips (`og-${VERSION}-win[32|64]-setup-unsigned.exe`, `og-${VERSION}-win[32|64].zip`)
-  4. OS X unsigned installer and dist tarball (`og-${VERSION}-osx-unsigned.dmg`, `og-${VERSION}-osx64.tar.gz`)
+  1. source tarball (`ogkush-${VERSION}.tar.gz`)
+  2. linux 32-bit and 64-bit dist tarballs (`ogkush-${VERSION}-linux[32|64].tar.gz`)
+  3. windows 32-bit and 64-bit unsigned installers and dist zips (`ogkush-${VERSION}-win[32|64]-setup-unsigned.exe`, `ogkush-${VERSION}-win[32|64].zip`)
+  4. OS X unsigned installer and dist tarball (`ogkush-${VERSION}-osx-unsigned.dmg`, `ogkush-${VERSION}-osx64.tar.gz`)
   5. Gitian signatures (in `gitian.sigs.ltc/${VERSION}-<linux|{win,osx}-unsigned>/(your Gitian key)/`)
 
 ### Verify other gitian builders signatures to your own. (Optional)
 
 Add other gitian builders keys to your gpg keyring, and/or refresh keys.
 
-    gpg --import og/contrib/gitian-keys/*.pgp
+    gpg --import ogkush/contrib/gitian-keys/*.pgp
     gpg --refresh-keys
 
 Verify the signatures
 
     pushd ./gitian-builder
-    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-linux ../og/contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-win-unsigned ../og/contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-osx-unsigned ../og/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-linux ../ogkush/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-win-unsigned ../ogkush/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-osx-unsigned ../ogkush/contrib/gitian-descriptors/gitian-osx.yml
     popd
 
 ### Next steps:
@@ -167,22 +170,22 @@ Codesigner only: Create Windows/OS X detached signatures:
 
 Codesigner only: Sign the osx binary:
 
-    transfer og-osx-unsigned.tar.gz to osx for signing
-    tar xf og-osx-unsigned.tar.gz
+    transfer ogkush-osx-unsigned.tar.gz to osx for signing
+    tar xf ogkush-osx-unsigned.tar.gz
     ./detached-sig-create.sh -s "Key ID"
     Enter the keychain password and authorize the signature
     Move signature-osx.tar.gz back to the gitian host
 
 Codesigner only: Sign the windows binaries:
 
-    tar xf og-win-unsigned.tar.gz
+    tar xf ogkush-win-unsigned.tar.gz
     ./detached-sig-create.sh -key /path/to/codesign.key
     Enter the passphrase for the key when prompted
     signature-win.tar.gz will be created
 
 Codesigner only: Commit the detached codesign payloads:
 
-    cd ~/og-detached-sigs
+    cd ~/ogkush-detached-sigs
     checkout the appropriate branch for this release series
     rm -rf *
     tar xf signature-osx.tar.gz
@@ -195,25 +198,25 @@ Codesigner only: Commit the detached codesign payloads:
 Non-codesigners: wait for Windows/OS X detached signatures:
 
 - Once the Windows/OS X builds each have 3 matching signatures, they will be signed with their respective release keys.
-- Detached signatures will then be committed to the [og-detached-sigs](https://github.com/minblock/og-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
+- Detached signatures will then be committed to the [ogkush-detached-sigs](https://github.com/ogkush-project/ogkush-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
 
 Create (and optionally verify) the signed OS X binary:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ../og/contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs.ltc/ ../og/contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-osx-signed ../og/contrib/gitian-descriptors/gitian-osx-signer.yml
-    mv build/out/og-osx-signed.dmg ../og-${VERSION}-osx.dmg
+    ./bin/gbuild -i --commit signature=v${VERSION} ../ogkush/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs.ltc/ ../ogkush/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-osx-signed ../ogkush/contrib/gitian-descriptors/gitian-osx-signer.yml
+    mv build/out/ogkush-osx-signed.dmg ../ogkush-${VERSION}-osx.dmg
     popd
 
 Create (and optionally verify) the signed Windows binaries:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ../og/contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs.ltc/ ../og/contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-win-signed ../og/contrib/gitian-descriptors/gitian-win-signer.yml
-    mv build/out/og-*win64-setup.exe ../og-${VERSION}-win64-setup.exe
-    mv build/out/og-*win32-setup.exe ../og-${VERSION}-win32-setup.exe
+    ./bin/gbuild -i --commit signature=v${VERSION} ../ogkush/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs.ltc/ ../ogkush/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-win-signed ../ogkush/contrib/gitian-descriptors/gitian-win-signer.yml
+    mv build/out/ogkush-*win64-setup.exe ../ogkush-${VERSION}-win64-setup.exe
+    mv build/out/ogkush-*win32-setup.exe ../ogkush-${VERSION}-win32-setup.exe
     popd
 
 Commit your signature for the signed OS X/Windows binaries:
@@ -235,23 +238,23 @@ sha256sum * > SHA256SUMS
 
 The list of files should be:
 ```
-og-${VERSION}-aarch64-linux-gnu.tar.gz
-og-${VERSION}-arm-linux-gnueabihf.tar.gz
-og-${VERSION}-i686-pc-linux-gnu.tar.gz
-og-${VERSION}-x86_64-linux-gnu.tar.gz
-og-${VERSION}-osx64.tar.gz
-og-${VERSION}-osx.dmg
-og-${VERSION}.tar.gz
-og-${VERSION}-win32-setup.exe
-og-${VERSION}-win32.zip
-og-${VERSION}-win64-setup.exe
-og-${VERSION}-win64.zip
+ogkush-${VERSION}-aarch64-linux-gnu.tar.gz
+ogkush-${VERSION}-arm-linux-gnueabihf.tar.gz
+ogkush-${VERSION}-i686-pc-linux-gnu.tar.gz
+ogkush-${VERSION}-x86_64-linux-gnu.tar.gz
+ogkush-${VERSION}-osx64.tar.gz
+ogkush-${VERSION}-osx.dmg
+ogkush-${VERSION}.tar.gz
+ogkush-${VERSION}-win32-setup.exe
+ogkush-${VERSION}-win32.zip
+ogkush-${VERSION}-win64-setup.exe
+ogkush-${VERSION}-win64.zip
 ```
 The `*-debug*` files generated by the gitian build contain debug symbols
 for troubleshooting by developers. It is assumed that anyone that is interested
 in debugging can run gitian to generate the files for themselves. To avoid
 end-user confusion about which file to pick, as well as save storage
-space *do not upload these to the og.org server, nor put them in the torrent*.
+space *do not upload these to the ogkush.org server, nor put them in the torrent*.
 
 - GPG-sign it, delete the unsigned file:
 ```
@@ -261,24 +264,24 @@ rm SHA256SUMS
 (the digest algorithm is forced to sha256 to avoid confusion of the `Hash:` header that GPG adds with the SHA256 used for the files)
 Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spurious/nonsensical entry.
 
-- Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the og.org server.
+- Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the ogkush.org server.
 
 ```
 
-- Update og.org version
+- Update ogkush.org version
 
 - Announce the release:
 
-  - og-dev and og-dev mailing list
+  - ogkush-dev and ogkush-dev mailing list
 
-  - blog.og.org blog post
+  - blog.ogkush.org blog post
 
-  - Update title of #og and #og-dev on Freenode IRC
+  - Update title of #ogkush and #ogkush-dev on Freenode IRC
 
-  - Optionally twitter, reddit /r/OG, ... but this will usually sort out itself
+  - Optionally twitter, reddit /r/OGKush, ... but this will usually sort out itself
 
   - Archive release notes for the new version to `doc/release-notes/` (branch `master` and branch of the release)
 
-  - Create a [new GitHub release](https://github.com/minblock/og/releases/new) with a link to the archived release notes.
+  - Create a [new GitHub release](https://github.com/ogkush-project/ogkush/releases/new) with a link to the archived release notes.
 
   - Celebrate

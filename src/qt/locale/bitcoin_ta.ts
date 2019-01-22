@@ -90,8 +90,8 @@
         <translation>&amp;செய்தியை சரிசெய்...</translation>
     </message>
     <message>
-        <source>OG</source>
-        <translation>OG</translation>
+        <source>OGKush</source>
+        <translation>OGKush</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -225,8 +225,8 @@
         <translation>நல்வரவு</translation>
     </message>
     <message>
-        <source>OG</source>
-        <translation>OG</translation>
+        <source>OGKush</source>
+        <translation>OGKush</translation>
     </message>
     <message>
         <source>Error</source>
@@ -708,8 +708,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>OG Core</source>
-        <translation>OG மையம்</translation>
+        <source>OGKush Core</source>
+        <translation>OGKush மையம்</translation>
     </message>
     <message>
         <source>(default: %u)</source>

@@ -65,11 +65,11 @@ TESTS =
 BENCHMARKS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += ogd
+  bin_PROGRAMS += ogkushd
 endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += og-cli og-tx
+  bin_PROGRAMS += ogkush-cli ogkush-tx
 endif
 
 .PHONY: FORCE check-symbols check-security
@@ -381,16 +381,16 @@ nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
 # bitcoind binary #
-ogd_SOURCES = bitcoind.cpp
-ogd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-ogd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-ogd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+ogkushd_SOURCES = bitcoind.cpp
+ogkushd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+ogkushd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+ogkushd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-ogd_SOURCES += bitcoind-res.rc
+ogkushd_SOURCES += bitcoind-res.rc
 endif
 
-ogd_LDADD = \
+ogkushd_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_COMMON) \
   $(LIBUNIVALUE) \
@@ -404,38 +404,38 @@ ogd_LDADD = \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
 
-ogd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
+ogkushd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
 
 # bitcoin-cli binary #
-og_cli_SOURCES = bitcoin-cli.cpp
-og_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-og_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-og_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+ogkush_cli_SOURCES = bitcoin-cli.cpp
+ogkush_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+ogkush_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+ogkush_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-og_cli_SOURCES += bitcoin-cli-res.rc
+ogkush_cli_SOURCES += bitcoin-cli-res.rc
 endif
 
-og_cli_LDADD = \
+ogkush_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CRYPTO)
 
-og_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
+ogkush_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
 # bitcoin-tx binary #
-og_tx_SOURCES = bitcoin-tx.cpp
-og_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-og_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-og_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+ogkush_tx_SOURCES = bitcoin-tx.cpp
+ogkush_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+ogkush_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+ogkush_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-og_tx_SOURCES += bitcoin-tx-res.rc
+ogkush_tx_SOURCES += bitcoin-tx-res.rc
 endif
 
-og_tx_LDADD = \
+ogkush_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
@@ -443,7 +443,7 @@ og_tx_LDADD = \
   $(LIBBITCOIN_CRYPTO) \
   $(LIBSECP256K1)
 
-og_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+ogkush_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
 # bitcoinconsensus library #

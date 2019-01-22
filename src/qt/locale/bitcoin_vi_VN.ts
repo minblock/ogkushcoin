@@ -62,12 +62,12 @@
         <translation>Địa chỉ nhận</translation>
     </message>
     <message>
-        <source>These are your OG addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Đây là các địa chỉ OG để gửi bạn gửi tiền. Trước khi gửi bạn nên kiểm tra lại số tiền bạn muốn gửi và địa chỉ og của người nhận.</translation>
+        <source>These are your OGKush addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Đây là các địa chỉ OGKush để gửi bạn gửi tiền. Trước khi gửi bạn nên kiểm tra lại số tiền bạn muốn gửi và địa chỉ ogkush của người nhận.</translation>
     </message>
     <message>
-        <source>These are your OG addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Đây là các địa chỉ OG để bạn nhận tiền. Với mỗi giao dịch, bạn nên dùng một địa chỉ OG mới để nhận tiền.</translation>
+        <source>These are your OGKush addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Đây là các địa chỉ OGKush để bạn nhận tiền. Với mỗi giao dịch, bạn nên dùng một địa chỉ OGKush mới để nhận tiền.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -331,8 +331,8 @@ Ví của bạn chưa được mã hóa.</translation>
         <translation>Đánh chỉ số (indexing) lại các khối (blocks) trên ổ đĩa ...</translation>
     </message>
     <message>
-        <source>Send coins to a OG address</source>
-        <translation>Gửi coins đến tài khoản OG</translation>
+        <source>Send coins to a OGKush address</source>
+        <translation>Gửi coins đến tài khoản OGKush</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -355,8 +355,8 @@ Ví của bạn chưa được mã hóa.</translation>
         <translation>&amp;Tin nhắn xác thực</translation>
     </message>
     <message>
-        <source>OG</source>
-        <translation>OG</translation>
+        <source>OGKush</source>
+        <translation>OGKush</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -383,12 +383,12 @@ Ví của bạn chưa được mã hóa.</translation>
         <translation>Mã hoá các khoá bí mật trong Ví của bạn.</translation>
     </message>
     <message>
-        <source>Sign messages with your OG addresses to prove you own them</source>
-        <translation>Dùng địa chỉ OG của bạn ký các tin nhắn để xác minh những nội dung tin nhắn đó là của bạn.</translation>
+        <source>Sign messages with your OGKush addresses to prove you own them</source>
+        <translation>Dùng địa chỉ OGKush của bạn ký các tin nhắn để xác minh những nội dung tin nhắn đó là của bạn.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified OG addresses</source>
-        <translation>Kiểm tra các tin nhắn để chắc chắn rằng chúng được ký bằng các địa chỉ OG xác định.</translation>
+        <source>Verify messages to ensure they were signed with specified OGKush addresses</source>
+        <translation>Kiểm tra các tin nhắn để chắc chắn rằng chúng được ký bằng các địa chỉ OGKush xác định.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -407,8 +407,8 @@ Ví của bạn chưa được mã hóa.</translation>
         <translation>Thanh công cụ (toolbar)</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and og: URIs)</source>
-        <translation>Yêu cầu thanh toán(tạo mã QR và địa chỉ OG: URLs)</translation>
+        <source>Request payments (generates QR codes and ogkush: URIs)</source>
+        <translation>Yêu cầu thanh toán(tạo mã QR và địa chỉ OGKush: URLs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -419,16 +419,16 @@ Ví của bạn chưa được mã hóa.</translation>
         <translation>Hiện thỉ danh sách các địa chỉ và nhãn đã dùng để nhận.</translation>
     </message>
     <message>
-        <source>Open a og: URI or payment request</source>
-        <translation>Mở og:URL hoặc yêu cầu thanh toán</translation>
+        <source>Open a ogkush: URI or payment request</source>
+        <translation>Mở ogkush:URL hoặc yêu cầu thanh toán</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>7Tùy chọn dòng lệnh</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to OG network</source>
-        <translation><numerusform>%n liên kết hoạt động với mạng lưới OG</numerusform></translation>
+        <source>%n active connection(s) to OGKush network</source>
+        <translation><numerusform>%n liên kết hoạt động với mạng lưới OGKush</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -471,8 +471,8 @@ Ví của bạn chưa được mã hóa.</translation>
         <translation>Đã cập nhật</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible OG command-line options</source>
-        <translation>Hiển thị tin nhắn trợ giúp %1 để có được danh sách với các tùy chọn dòng lệnh OG.</translation>
+        <source>Show the %1 help message to get a list with possible OGKush command-line options</source>
+        <translation>Hiển thị tin nhắn trợ giúp %1 để có được danh sách với các tùy chọn dòng lệnh OGKush.</translation>
     </message>
     <message>
         <source>Connecting to peers...</source>
@@ -652,8 +652,8 @@ Ví của bạn chưa được mã hóa.</translation>
         <translation>Sử dụng vị trí dữ liệu mặc định</translation>
     </message>
     <message>
-        <source>OG</source>
-        <translation>OG</translation>
+        <source>OGKush</source>
+        <translation>OGKush</translation>
     </message>
     <message>
         <source>Error</source>
@@ -705,8 +705,8 @@ Ví của bạn chưa được mã hóa.</translation>
         <translation>Ví</translation>
     </message>
     <message>
-        <source>Connect to the OG network through a SOCKS5 proxy.</source>
-        <translation>Kết nối đến máy chủ OG thông qua SOCKS5 proxy.</translation>
+        <source>Connect to the OGKush network through a SOCKS5 proxy.</source>
+        <translation>Kết nối đến máy chủ OGKush thông qua SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -1223,8 +1223,8 @@ Ví của bạn chưa được mã hóa.</translation>
         <translation>Lựa chọn:</translation>
     </message>
     <message>
-        <source>OG Core</source>
-        <translation>OG Core</translation>
+        <source>OGKush Core</source>
+        <translation>OGKush Core</translation>
     </message>
     <message>
         <source>(default: %u)</source>

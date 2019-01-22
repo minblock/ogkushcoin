@@ -90,8 +90,8 @@
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <source>Send coins to a OG address</source>
-        <translation>ផ្ញើកាក់ទៅកាន់ អាសយដ្ឋាន OG មួយ</translation>
+        <source>Send coins to a OGKush address</source>
+        <translation>ផ្ញើកាក់ទៅកាន់ អាសយដ្ឋាន OGKush មួយ</translation>
     </message>
     <message>
         <source>Wallet</source>

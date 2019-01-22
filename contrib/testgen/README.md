@@ -1,6 +1,6 @@
 ### TestGen ###
 
-Utilities to generate test vectors for the data-driven OG tests.
+Utilities to generate test vectors for the data-driven OGKush tests.
 
 Usage: 
 

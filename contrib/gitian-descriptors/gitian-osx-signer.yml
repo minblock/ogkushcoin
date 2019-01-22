@@ -1,5 +1,5 @@
 ---
-name: "og-dmg-signer"
+name: "ogkush-dmg-signer"
 suites:
 - "trusty"
 architectures:
@@ -7,10 +7,10 @@ architectures:
 packages:
 - "faketime"
 remotes:
-- "url": "https://github.com/minblock/og-detached-sigs.git"
+- "url": "https://github.com/ogkush-project/ogkush-detached-sigs.git"
   "dir": "signature"
 files:
-- "og-osx-unsigned.tar.gz"
+- "ogkush-osx-unsigned.tar.gz"
 script: |
   WRAP_DIR=$HOME/wrapped
   mkdir -p ${WRAP_DIR}
@@ -27,8 +27,8 @@ script: |
     chmod +x ${WRAP_DIR}/${prog}
   done
 
-  UNSIGNED=og-osx-unsigned.tar.gz
-  SIGNED=og-osx-signed.dmg
+  UNSIGNED=ogkush-osx-unsigned.tar.gz
+  SIGNED=ogkush-osx-signed.dmg
 
   tar -xf ${UNSIGNED}
   OSX_VOLNAME="$(cat osx_volname)"

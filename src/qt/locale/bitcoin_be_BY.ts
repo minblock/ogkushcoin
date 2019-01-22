@@ -62,12 +62,12 @@
         <translation>адрасы Прымання</translation>
     </message>
     <message>
-        <source>These are your OG addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Тут знаходзяцца OG-адрасы для высылання плацяжоў. Заўсёды спраўджвайце колькасць і адрас прызначэння перад здзяйсненнем транзакцыі.</translation>
+        <source>These are your OGKush addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Тут знаходзяцца OGKush-адрасы для высылання плацяжоў. Заўсёды спраўджвайце колькасць і адрас прызначэння перад здзяйсненнем транзакцыі.</translation>
     </message>
     <message>
-        <source>These are your OG addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Тут знаходзяцца OG-адрасы для прымання плацяжоў. Пажадана выкарыстоўваць новы адрас для кожнай транзакцыі.</translation>
+        <source>These are your OGKush addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Тут знаходзяцца OGKush-адрасы для прымання плацяжоў. Пажадана выкарыстоўваць новы адрас для кожнай транзакцыі.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -298,8 +298,8 @@
         <translation>Пераіндэксацыя блокаў на дыску...</translation>
     </message>
     <message>
-        <source>Send coins to a OG address</source>
-        <translation>Даслаць манеты на OG-адрас</translation>
+        <source>Send coins to a OGKush address</source>
+        <translation>Даслаць манеты на OGKush-адрас</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -322,8 +322,8 @@
         <translation>Праверыць паведамленне...</translation>
     </message>
     <message>
-        <source>OG</source>
-        <translation>OG</translation>
+        <source>OGKush</source>
+        <translation>OGKush</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -350,12 +350,12 @@
         <translation>Зашыфраваць прыватныя ключы, якия належаць вашаму гаманцу</translation>
     </message>
     <message>
-        <source>Sign messages with your OG addresses to prove you own them</source>
-        <translation>Падпісаць паведамленне з дапамогай OG-адраса каб даказаць, што яно належыць вам</translation>
+        <source>Sign messages with your OGKush addresses to prove you own them</source>
+        <translation>Падпісаць паведамленне з дапамогай OGKush-адраса каб даказаць, што яно належыць вам</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified OG addresses</source>
-        <translation>Спраўдзіць паведамленне з дапамогай OG-адраса каб даказаць, што яно належыць вам</translation>
+        <source>Verify messages to ensure they were signed with specified OGKush addresses</source>
+        <translation>Спраўдзіць паведамленне з дапамогай OGKush-адраса каб даказаць, што яно належыць вам</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -370,8 +370,8 @@
         <translation>Дапамога</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and og: URIs)</source>
-        <translation>Запатрабаваць плацёж (генеруецца QR-код для og URI)</translation>
+        <source>Request payments (generates QR codes and ogkush: URIs)</source>
+        <translation>Запатрабаваць плацёж (генеруецца QR-код для ogkush URI)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -382,8 +382,8 @@
         <translation>Паказаць спіс адрасоў і метак для прымання</translation>
     </message>
     <message>
-        <source>Open a og: URI or payment request</source>
-        <translation>Адкрыць og: URI ці запыт плацяжу</translation>
+        <source>Open a ogkush: URI or payment request</source>
+        <translation>Адкрыць ogkush: URI ці запыт плацяжу</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -675,8 +675,8 @@
         <translation>Вітаем</translation>
     </message>
     <message>
-        <source>OG</source>
-        <translation>OG</translation>
+        <source>OGKush</source>
+        <translation>OGKush</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1266,8 +1266,8 @@
         <translation>Запусціць у фоне як дэман і прымаць каманды</translation>
     </message>
     <message>
-        <source>OG Core</source>
-        <translation>OG Core</translation>
+        <source>OGKush Core</source>
+        <translation>OGKush Core</translation>
     </message>
     <message>
         <source>Do you want to rebuild the block database now?</source>

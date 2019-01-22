@@ -5,8 +5,7 @@
 # What to do
 sign=false
 verify=false
-build=true
-setupenv=false
+build=false
 
 # Systems to build
 linux=true
@@ -17,9 +16,9 @@ osx=true
 SIGNER=
 VERSION=
 commit=false
-url=https://github.com/minblock/og
-proc=12
-mem=5000
+url=https://github.com/ogkush-project/ogkush
+proc=2
+mem=2000
 lxc=true
 osslTarUrl=http://downloads.sourceforge.net/project/osslsigncode/osslsigncode/osslsigncode-1.7.1.tar.gz
 osslPatchUrl=https://bitcoincore.org/cfields/osslsigncode-Backports-to-1.7.1.patch
@@ -31,7 +30,7 @@ commitFiles=true
 read -d '' usage <<- EOF
 Usage: $scriptName [-c|u|v|b|s|B|o|h|j|m|] signer version
 
-Run this script from the directory containing the og, gitian-builder, gitian.sigs.ltc, and og-detached-sigs.
+Run this script from the directory containing the ogkush, gitian-builder, gitian.sigs.ltc, and ogkush-detached-sigs.
 
 Arguments:
 signer          GPG signer to sign each build assert file
@@ -39,7 +38,7 @@ version		Version number, commit, or branch to build. If building a commit or bra
 
 Options:
 -c|--commit	Indicate that the version argument is for a commit or branch
--u|--url	Specify the URL of the repository. Default is https://github.com/minblock/og
+-u|--url	Specify the URL of the repository. Default is https://github.com/ogkush-project/ogkush
 -v|--verify 	Verify the gitian build
 -b|--build	Do a gitian build
 -s|--sign	Make signed binaries for Windows and Mac OSX
@@ -48,7 +47,7 @@ Options:
 -j		Number of processes to use. Default 2
 -m		Memory to allocate in MiB. Default 2000
 --kvm           Use KVM instead of LXC
---setup         Setup the gitian building environment. Uses KVM. If you want to use lxc, use the --lxc option. Only works on Debian-based systems (Ubuntu, Debian)
+--setup         Set up the Gitian building environment. Uses KVM. If you want to use lxc, use the --lxc option. Only works on Debian-based systems (Ubuntu, Debian)
 --detach-sign   Create the assert file for detached signing. Will not commit anything.
 --no-commit     Do not commit anything to git
 -h|--help	Print this help message
@@ -106,7 +105,7 @@ while :; do
 		fi
 		shift
 	    else
-		echo 'Error: "--os" requires an argument containing an l (for linux), w (for windows), or x (for Mac OSX)\n'
+		echo 'Error: "--os" requires an argument containing an l (for linux), w (for windows), or x (for Mac OSX)'
 		exit 1
 	    fi
 	    ;;
@@ -179,8 +178,6 @@ done
 if [[ $lxc = true ]]
 then
     export USE_LXC=1
-#    export LXC_BRIDGE=lxcbr0
-#    sudo ifconfig lxcbr0 up 10.0.2.2
 fi
 
 # Check for OSX SDK
@@ -191,7 +188,7 @@ then
 fi
 
 # Get signer
-if [[ -n"$1" ]]
+if [[ -n "$1" ]]
 then
     SIGNER=$1
     shift
@@ -232,8 +229,8 @@ echo ${COMMIT}
 if [[ $setup = true ]]
 then
     sudo apt-get install ruby apache2 git apt-cacher-ng python-vm-builder qemu-kvm qemu-utils
-    git clone https://github.com/minblock/gitian.sigs.ltc.git
-    git clone https://github.com/minblock/og-detached-sigs.git
+    git clone https://github.com/ogkush-project/gitian.sigs.ltc.git
+    git clone https://github.com/ogkush-project/ogkush-detached-sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
     pushd ./gitian-builder
     if [[ -n "$USE_LXC" ]]
@@ -247,7 +244,7 @@ then
 fi
 
 # Set up build
-pushd ./og
+pushd ./ogkush
 git fetch
 git checkout ${COMMIT}
 popd
@@ -256,7 +253,7 @@ popd
 if [[ $build = true ]]
 then
 	# Make output folder
-	mkdir -p ./og-binaries/${VERSION}
+	mkdir -p ./ogkush-binaries/${VERSION}
 	
 	# Build Dependencies
 	echo ""
@@ -266,7 +263,7 @@ then
 	mkdir -p inputs
 	wget -N -P inputs $osslPatchUrl
 	wget -N -P inputs $osslTarUrl
-	make -C ../og/depends download SOURCES_PATH=`pwd`/cache/common
+	make -C ../ogkush/depends download SOURCES_PATH=`pwd`/cache/common
 
 	# Linux
 	if [[ $linux = true ]]
@@ -274,9 +271,9 @@ then
             echo ""
 	    echo "Compiling ${VERSION} Linux"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit og=${COMMIT} --url og=${url} ../og/contrib/gitian-descriptors/gitian-linux.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs.ltc/ ../og/contrib/gitian-descriptors/gitian-linux.yml
-	    mv build/out/og-*.tar.gz build/out/src/og-*.tar.gz ../og-binaries/${VERSION}
+	    ./bin/gbuild -j ${proc} -m ${mem} --commit ogkush=${COMMIT} --url ogkush=${url} ../ogkush/contrib/gitian-descriptors/gitian-linux.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs.ltc/ ../ogkush/contrib/gitian-descriptors/gitian-linux.yml
+	    mv build/out/ogkush-*.tar.gz build/out/src/ogkush-*.tar.gz ../ogkush-binaries/${VERSION}
 	fi
 	# Windows
 	if [[ $windows = true ]]
@@ -284,10 +281,10 @@ then
 	    echo ""
 	    echo "Compiling ${VERSION} Windows"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit og=${COMMIT} --url og=${url} ../og/contrib/gitian-descriptors/gitian-win.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs.ltc/ ../og/contrib/gitian-descriptors/gitian-win.yml
-	    mv build/out/og-*-win-unsigned.tar.gz inputs/og-win-unsigned.tar.gz
-	    mv build/out/og-*.zip build/out/og-*.exe ../og-binaries/${VERSION}
+	    ./bin/gbuild -j ${proc} -m ${mem} --commit ogkush=${COMMIT} --url ogkush=${url} ../ogkush/contrib/gitian-descriptors/gitian-win.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs.ltc/ ../ogkush/contrib/gitian-descriptors/gitian-win.yml
+	    mv build/out/ogkush-*-win-unsigned.tar.gz inputs/ogkush-win-unsigned.tar.gz
+	    mv build/out/ogkush-*.zip build/out/ogkush-*.exe ../ogkush-binaries/${VERSION}
 	fi
 	# Mac OSX
 	if [[ $osx = true ]]
@@ -295,10 +292,10 @@ then
 	    echo ""
 	    echo "Compiling ${VERSION} Mac OSX"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit og=${COMMIT} --url og=${url} ../og/contrib/gitian-descriptors/gitian-osx.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs.ltc/ ../og/contrib/gitian-descriptors/gitian-osx.yml
-	    mv build/out/og-*-osx-unsigned.tar.gz inputs/og-osx-unsigned.tar.gz
-	    mv build/out/og-*.tar.gz build/out/og-*.dmg ../og-binaries/${VERSION}
+	    ./bin/gbuild -j ${proc} -m ${mem} --commit ogkush=${COMMIT} --url ogkush=${url} ../ogkush/contrib/gitian-descriptors/gitian-osx.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs.ltc/ ../ogkush/contrib/gitian-descriptors/gitian-osx.yml
+	    mv build/out/ogkush-*-osx-unsigned.tar.gz inputs/ogkush-osx-unsigned.tar.gz
+	    mv build/out/ogkush-*.tar.gz build/out/ogkush-*.dmg ../ogkush-binaries/${VERSION}
 	fi
 	popd
 
@@ -325,27 +322,27 @@ then
 	echo ""
 	echo "Verifying v${VERSION} Linux"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-linux ../og/contrib/gitian-descriptors/gitian-linux.yml
+	./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-linux ../ogkush/contrib/gitian-descriptors/gitian-linux.yml
 	# Windows
 	echo ""
 	echo "Verifying v${VERSION} Windows"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-win-unsigned ../og/contrib/gitian-descriptors/gitian-win.yml
+	./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-win-unsigned ../ogkush/contrib/gitian-descriptors/gitian-win.yml
 	# Mac OSX	
 	echo ""
 	echo "Verifying v${VERSION} Mac OSX"
 	echo ""	
-	./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-osx-unsigned ../og/contrib/gitian-descriptors/gitian-osx.yml
+	./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-osx-unsigned ../ogkush/contrib/gitian-descriptors/gitian-osx.yml
 	# Signed Windows
 	echo ""
 	echo "Verifying v${VERSION} Signed Windows"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-osx-signed ../og/contrib/gitian-descriptors/gitian-osx-signer.yml
+	./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-osx-signed ../ogkush/contrib/gitian-descriptors/gitian-osx-signer.yml
 	# Signed Mac OSX
 	echo ""
 	echo "Verifying v${VERSION} Signed Mac OSX"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-osx-signed ../og/contrib/gitian-descriptors/gitian-osx-signer.yml	
+	./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-osx-signed ../ogkush/contrib/gitian-descriptors/gitian-osx-signer.yml	
 	popd
 fi
 
@@ -360,10 +357,10 @@ then
 	    echo ""
 	    echo "Signing ${VERSION} Windows"
 	    echo ""
-	    ./bin/gbuild -i --commit signature=${COMMIT} ../og/contrib/gitian-descriptors/gitian-win-signer.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs.ltc/ ../og/contrib/gitian-descriptors/gitian-win-signer.yml
-	    mv build/out/og-*win64-setup.exe ../og-binaries/${VERSION}
-	    mv build/out/og-*win32-setup.exe ../og-binaries/${VERSION}
+	    ./bin/gbuild -i --commit signature=${COMMIT} ../ogkush/contrib/gitian-descriptors/gitian-win-signer.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs.ltc/ ../ogkush/contrib/gitian-descriptors/gitian-win-signer.yml
+	    mv build/out/ogkush-*win64-setup.exe ../ogkush-binaries/${VERSION}
+	    mv build/out/ogkush-*win32-setup.exe ../ogkush-binaries/${VERSION}
 	fi
 	# Sign Mac OSX
 	if [[ $osx = true ]]
@@ -371,9 +368,9 @@ then
 	    echo ""
 	    echo "Signing ${VERSION} Mac OSX"
 	    echo ""
-	    ./bin/gbuild -i --commit signature=${COMMIT} ../og/contrib/gitian-descriptors/gitian-osx-signer.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs.ltc/ ../og/contrib/gitian-descriptors/gitian-osx-signer.yml
-	    mv build/out/og-osx-signed.dmg ../og-binaries/${VERSION}/og-${VERSION}-osx.dmg
+	    ./bin/gbuild -i --commit signature=${COMMIT} ../ogkush/contrib/gitian-descriptors/gitian-osx-signer.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs.ltc/ ../ogkush/contrib/gitian-descriptors/gitian-osx-signer.yml
+	    mv build/out/ogkush-osx-signed.dmg ../ogkush-binaries/${VERSION}/ogkush-${VERSION}-osx.dmg
 	fi
 	popd
 

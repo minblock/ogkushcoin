@@ -55,10 +55,10 @@ static int AppInitRawTx(int argc, char* argv[])
     if (argc<2 || gArgs.IsArgSet("-?") || gArgs.IsArgSet("-h") || gArgs.IsArgSet("-help"))
     {
         // First part of help message is specific to this utility
-        std::string strUsage = strprintf(_("%s og-tx utility version"), _(PACKAGE_NAME)) + " " + FormatFullVersion() + "\n\n" +
+        std::string strUsage = strprintf(_("%s ogkush-tx utility version"), _(PACKAGE_NAME)) + " " + FormatFullVersion() + "\n\n" +
             _("Usage:") + "\n" +
-              "  og-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded og transaction") + "\n" +
-              "  og-tx [options] -create [commands]   " + _("Create hex-encoded og transaction") + "\n" +
+              "  ogkush-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded ogkush transaction") + "\n" +
+              "  ogkush-tx [options] -create [commands]   " + _("Create hex-encoded ogkush transaction") + "\n" +
               "\n";
 
         fprintf(stdout, "%s", strUsage.c_str());

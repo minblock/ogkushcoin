@@ -42,8 +42,8 @@
         <translation>Recibiendo direcciones</translation>
     </message>
     <message>
-        <source>These are your OG addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Estas son sus direcciones de OG para enviar sus pagos. Siempre revise el monto y la dirección recibida antes de enviar monedas.</translation>
+        <source>These are your OGKush addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Estas son sus direcciones de OGKush para enviar sus pagos. Siempre revise el monto y la dirección recibida antes de enviar monedas.</translation>
     </message>
     </context>
 <context>

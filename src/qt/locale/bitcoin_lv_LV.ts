@@ -39,11 +39,11 @@
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation>Izvēlies adresi uz kuru sūtīt ogs</translation>
+        <translation>Izvēlies adresi uz kuru sūtīt ogkushs</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation>Izvēlies adresi ar kuru saņemt ogs</translation>
+        <translation>Izvēlies adresi ar kuru saņemt ogkushs</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -202,8 +202,8 @@
         <translation>Bloku reindeksēšana no diska...</translation>
     </message>
     <message>
-        <source>Send coins to a OG address</source>
-        <translation>Nosūtīt bitkoinus uz OG adresi</translation>
+        <source>Send coins to a OGKush address</source>
+        <translation>Nosūtīt bitkoinus uz OGKush adresi</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -226,8 +226,8 @@
         <translation>&amp;Pārbaudīt ziņojumu...</translation>
     </message>
     <message>
-        <source>OG</source>
-        <translation>OG</translation>
+        <source>OGKush</source>
+        <translation>OGKush</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -254,12 +254,12 @@
         <translation>Šifrēt privātās atslēgas kuras pieder tavam maciņam</translation>
     </message>
     <message>
-        <source>Sign messages with your OG addresses to prove you own them</source>
-        <translation>Parakstīt ziņojumus ar savām OG adresēm lai pierādītu ka tās pieder tev</translation>
+        <source>Sign messages with your OGKush addresses to prove you own them</source>
+        <translation>Parakstīt ziņojumus ar savām OGKush adresēm lai pierādītu ka tās pieder tev</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified OG addresses</source>
-        <translation>Pārbaudīt ziņojumus lai pārliecinātos, ka tie tika parakstīti ar norādītajām OG adresēm</translation>
+        <source>Verify messages to ensure they were signed with specified OGKush addresses</source>
+        <translation>Pārbaudīt ziņojumus lai pārliecinātos, ka tie tika parakstīti ar norādītajām OGKush adresēm</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -278,12 +278,12 @@
         <translation>Ciļņu rīkjosla</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and og: URIs)</source>
-        <translation>Pieprasīt maksājumus (izveido QR kodu un og: URIs)</translation>
+        <source>Request payments (generates QR codes and ogkush: URIs)</source>
+        <translation>Pieprasīt maksājumus (izveido QR kodu un ogkush: URIs)</translation>
     </message>
     <message>
-        <source>Open a og: URI or payment request</source>
-        <translation>Atvērt og URI vai maksājuma pieprasījumu</translation>
+        <source>Open a ogkush: URI or payment request</source>
+        <translation>Atvērt ogkush URI vai maksājuma pieprasījumu</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -465,8 +465,8 @@
         <translation>Izmantot pielāgotu datu mapi:</translation>
     </message>
     <message>
-        <source>OG</source>
-        <translation>OG</translation>
+        <source>OGKush</source>
+        <translation>OGKush</translation>
     </message>
     <message>
         <source>Error</source>
@@ -559,15 +559,15 @@
     </message>
     <message>
         <source>Enable coin &amp;control features</source>
-        <translation>Ieslēgt og &amp;kontroles funkcijas</translation>
+        <translation>Ieslēgt ogkush &amp;kontroles funkcijas</translation>
     </message>
     <message>
         <source>&amp;Spend unconfirmed change</source>
         <translation>&amp;Tērēt neapstiprinātu atlikumu</translation>
     </message>
     <message>
-        <source>Automatically open the OG client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Uz rūtera automātiski atvērt OG klienta portu. Tas strādā tikai tad, ja rūteris atbalsta UPnP un tas ir ieslēgts.</translation>
+        <source>Automatically open the OGKush client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Uz rūtera automātiski atvērt OGKush klienta portu. Tas strādā tikai tad, ja rūteris atbalsta UPnP un tas ir ieslēgts.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -619,7 +619,7 @@
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
-        <translation>Vai rādīt OG kontroles funkcijas vai nē.</translation>
+        <translation>Vai rādīt OGKush kontroles funkcijas vai nē.</translation>
     </message>
     <message>
         <source>&amp;OK</source>
@@ -657,8 +657,8 @@
         <translation>Forma</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the OG network after a connection is established, but this process has not completed yet.</source>
-        <translation>Attēlotā informācija var būt novecojusi. Jūsu maciņš pēc savienojuma izveides automātiski sinhronizējas ar OG tīklu, taču šis process vēl nav beidzies.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the OGKush network after a connection is established, but this process has not completed yet.</source>
+        <translation>Attēlotā informācija var būt novecojusi. Jūsu maciņš pēc savienojuma izveides automātiski sinhronizējas ar OGKush tīklu, taču šis process vēl nav beidzies.</translation>
     </message>
     <message>
         <source>Available:</source>
@@ -920,7 +920,7 @@
     </message>
     <message>
         <source>Coin Control Features</source>
-        <translation>OG Kontroles Funkcijas</translation>
+        <translation>OGKush Kontroles Funkcijas</translation>
     </message>
     <message>
         <source>Inputs...</source>
@@ -1099,8 +1099,8 @@
         <translation>Kopēt parakstu uz sistēmas starpliktuvi</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this OG address</source>
-        <translation>Parakstīt ziņojumu lai pierādītu, ka esi šīs OG adreses īpašnieks.</translation>
+        <source>Sign the message to prove you own this OGKush address</source>
+        <translation>Parakstīt ziņojumu lai pierādītu, ka esi šīs OGKush adreses īpašnieks.</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1216,8 +1216,8 @@
         <translation>Darbināt fonā kā servisu un pieņemt komandas</translation>
     </message>
     <message>
-        <source>OG Core</source>
-        <translation>OG Core</translation>
+        <source>OGKush Core</source>
+        <translation>OGKush Core</translation>
     </message>
     <message>
         <source>&lt;category&gt; can be:</source>

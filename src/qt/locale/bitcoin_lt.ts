@@ -162,8 +162,8 @@
         <translation>Blokai iš naujo indeksuojami...</translation>
     </message>
     <message>
-        <source>Send coins to a OG address</source>
-        <translation>Siųsti monetas OG adresui</translation>
+        <source>Send coins to a OGKush address</source>
+        <translation>Siųsti monetas OGKush adresui</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -186,8 +186,8 @@
         <translation>&amp;Tikrinti žinutę...</translation>
     </message>
     <message>
-        <source>OG</source>
-        <translation>OG</translation>
+        <source>OGKush</source>
+        <translation>OGKush</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -383,8 +383,8 @@
         <translation>Sveiki</translation>
     </message>
     <message>
-        <source>OG</source>
-        <translation>OG</translation>
+        <source>OGKush</source>
+        <translation>OGKush</translation>
     </message>
     <message>
         <source>Error</source>
@@ -436,8 +436,8 @@
         <translation>Piniginė</translation>
     </message>
     <message>
-        <source>Automatically open the OG client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatiškai atidaryti OG kliento prievadą maršrutizatoriuje. Tai veikia tik tada, kai jūsų maršrutizatorius palaiko UPnP ir ji įjungta.</translation>
+        <source>Automatically open the OGKush client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatiškai atidaryti OGKush kliento prievadą maršrutizatoriuje. Tai veikia tik tada, kai jūsų maršrutizatorius palaiko UPnP ir ji įjungta.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -877,7 +877,7 @@
         <translation>Įveskite pranešimą, kurį norite pasirašyti čia</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this OG address</source>
+        <source>Sign the message to prove you own this OGKush address</source>
         <translation>Registruotis žinute įrodymuii, kad turite šį adresą</translation>
     </message>
     <message>
@@ -893,8 +893,8 @@
         <translation>&amp;Patikrinti žinutę</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified OG address</source>
-        <translation>Patikrinkite žinutę, jog įsitikintumėte, kad ją pasirašė nurodytas OG adresas</translation>
+        <source>Verify the message to ensure it was signed with the specified OGKush address</source>
+        <translation>Patikrinkite žinutę, jog įsitikintumėte, kad ją pasirašė nurodytas OGKush adresas</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -970,8 +970,8 @@
         <translation>Dirbti fone kaip šešėlyje ir priimti komandas</translation>
     </message>
     <message>
-        <source>OG Core</source>
-        <translation>OG branduolys</translation>
+        <source>OGKush Core</source>
+        <translation>OGKush branduolys</translation>
     </message>
     <message>
         <source>Error opening block database</source>

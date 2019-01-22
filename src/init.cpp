@@ -185,7 +185,7 @@ void Shutdown()
     /// for example if the data directory was found to be locked.
     /// Be sure that anything that writes files or flushes caches only does this if the respective
     /// module was initialized.
-    RenameThread("og-shutoff");
+    RenameThread("ogkush-shutoff");
     mempool.AddTransactionsUpdated(1);
 
     StopHTTPRPC();
@@ -529,8 +529,8 @@ std::string HelpMessage(HelpMessageMode mode)
 
 std::string LicenseInfo()
 {
-    const std::string URL_SOURCE_CODE = "<https://github.com/minblock/og>";
-    const std::string URL_WEBSITE = "<https://og.org>";
+    const std::string URL_SOURCE_CODE = "<https://github.com/ogkush-project/ogkush>";
+    const std::string URL_WEBSITE = "<https://ogkush.org>";
 
     return CopyrightHolders(strprintf(_("Copyright (C) %i-%i"), 2011, COPYRIGHT_YEAR) + " ") + "\n" +
            "\n" +
@@ -634,7 +634,7 @@ void CleanupBlockRevFiles()
 void ThreadImport(std::vector<fs::path> vImportFiles)
 {
     const CChainParams& chainparams = Params();
-    RenameThread("og-loadblk");
+    RenameThread("ogkush-loadblk");
 
     {
     CImportingNow imp;
@@ -1234,9 +1234,9 @@ bool AppInitMain()
     // Warn about relative -datadir path.
     if (gArgs.IsArgSet("-datadir") && !fs::path(gArgs.GetArg("-datadir", "")).is_absolute()) {
         LogPrintf("Warning: relative datadir option '%s' specified, which will be interpreted relative to the "
-                  "current working directory '%s'. This is fragile, because if og is started in the future "
+                  "current working directory '%s'. This is fragile, because if ogkush is started in the future "
                   "from a different location, it will be unable to locate the current data files. There could "
-                  "also be data loss if og is started while in a temporary directory.\n",
+                  "also be data loss if ogkush is started while in a temporary directory.\n",
             gArgs.GetArg("-datadir", ""), fs::current_path().string());
     }
 

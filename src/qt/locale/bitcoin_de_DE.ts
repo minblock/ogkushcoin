@@ -62,12 +62,12 @@
         <translation>Empfangsadressen</translation>
     </message>
     <message>
-        <source>These are your OG addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dies sind Ihre OG-Adressen zum Senden von Zahlungen. Überprüfen Sie immer die Menge und die Empfangsadresse, bevor Sie OGs senden.</translation>
+        <source>These are your OGKush addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Dies sind Ihre OGKush-Adressen zum Senden von Zahlungen. Überprüfen Sie immer die Menge und die Empfangsadresse, bevor Sie OGKushs senden.</translation>
     </message>
     <message>
-        <source>These are your OG addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dies sind Ihre OG-Adressen für den Empfang von Zahlungen. Es wird empfohlen, für jede Transaktion eine neue Empfangsadresse zu verwenden.</translation>
+        <source>These are your OGKush addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Dies sind Ihre OGKush-Adressen für den Empfang von Zahlungen. Es wird empfohlen, für jede Transaktion eine neue Empfangsadresse zu verwenden.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -169,7 +169,7 @@
     </message>
     <message>
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR OGKUSHS&lt;/b&gt;!</source>
-        <translation>Achtung: Wenn Sie Ihre Wallet verschlüsseln und das Passwort verlieren, gehen &lt;b&gt;alle Ihre OGs verloren&lt;/b&gt;!</translation>
+        <translation>Achtung: Wenn Sie Ihre Wallet verschlüsseln und das Passwort verlieren, gehen &lt;b&gt;alle Ihre OGKushs verloren&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -330,8 +330,8 @@
         <translation>Reindexiere Blöcke auf dem Datenträger...</translation>
     </message>
     <message>
-        <source>Send coins to a OG address</source>
-        <translation>Coins an eine OG-Adresse senden</translation>
+        <source>Send coins to a OGKush address</source>
+        <translation>Coins an eine OGKush-Adresse senden</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -354,8 +354,8 @@
         <translation>Nachricht &amp;bestätigen</translation>
     </message>
     <message>
-        <source>OG</source>
-        <translation>OG</translation>
+        <source>OGKush</source>
+        <translation>OGKush</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -382,12 +382,12 @@
         <translation>Verschlüssele die Private Keys, die zu deiner Brieftasche gehören</translation>
     </message>
     <message>
-        <source>Sign messages with your OG addresses to prove you own them</source>
-        <translation>Nachrichten mit Ihrer OG-Adresse signieren, um zu beweisen, dass sie Ihnen gehören</translation>
+        <source>Sign messages with your OGKush addresses to prove you own them</source>
+        <translation>Nachrichten mit Ihrer OGKush-Adresse signieren, um zu beweisen, dass sie Ihnen gehören</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified OG addresses</source>
-        <translation>Überprüfen Sie Nachrichten, um sicherzustellen, dass sie mit den angegebenen OG-Adressen signiert wurden</translation>
+        <source>Verify messages to ensure they were signed with specified OGKush addresses</source>
+        <translation>Überprüfen Sie Nachrichten, um sicherzustellen, dass sie mit den angegebenen OGKush-Adressen signiert wurden</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -468,8 +468,8 @@
         <translation>Überweisung empfangen</translation>
     </message>
     <message>
-        <source>A fatal error occurred. OG can no longer continue safely and will quit.</source>
-        <translation>Ein schwerwiegender Fehler ist aufgetreten. OG kann nicht mehr sicher fortfahren und beendet sich.</translation>
+        <source>A fatal error occurred. OGKush can no longer continue safely and will quit.</source>
+        <translation>Ein schwerwiegender Fehler ist aufgetreten. OGKush kann nicht mehr sicher fortfahren und beendet sich.</translation>
     </message>
 </context>
 <context>
@@ -599,8 +599,8 @@
         <translation>Willkommen</translation>
     </message>
     <message>
-        <source>OG</source>
-        <translation>OG</translation>
+        <source>OGKush</source>
+        <translation>OGKush</translation>
     </message>
     <message>
         <source>Error</source>
@@ -652,8 +652,8 @@
         <translation>Betrag</translation>
     </message>
     <message>
-        <source>Enter a OG address (e.g. %1)</source>
-        <translation>OG Adresse eingeben (z.B. %1)</translation>
+        <source>Enter a OGKush address (e.g. %1)</source>
+        <translation>OGKush Adresse eingeben (z.B. %1)</translation>
     </message>
     <message>
         <source>N/A</source>

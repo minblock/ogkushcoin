@@ -1,18 +1,12 @@
 OGKush Core integration/staging tree
 =====================================
 
-[![Build Status](https://travis-ci.org/minblock/ogkush.svg?branch=master)](https://travis-ci.org/minblock/ogkush)
+[![Build Status](https://travis-ci.org/ogkush-project/ogkush.svg?branch=master)](https://travis-ci.org/ogkush-project/ogkush)
 
 https://ogkush.org
 
 What is OGKush?
 ----------------
-
-OGKush uses scrypt as a proof-of-work algorithm designed to study and patent new Marijuana strains. 
-
-2.5 minute block targets, subsidy halves in 840k blocks (~4 years), ~42 million total coins. 1 Million premined amount for fundraising. Each block that is mined needs atleast 2000 confirmations before your OGC's can be used.
-
-The rest is the same as Bitcoin. 50 coins per block, 2016 blocks to retarget difficulty.
 
 OGKush is an experimental digital currency that enables instant payments to
 anyone, anywhere in the world. OGKush uses peer-to-peer technology to operate
@@ -33,7 +27,7 @@ Development Process
 -------------------
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/minblock/ogkush/tags) are created
+completely stable. [Tags](https://github.com/ogkush-project/ogkush/tags) are created
 regularly to indicate new official, stable release versions of OGKush Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).
@@ -59,9 +53,9 @@ submit new unit tests for old code. Unit tests can be compiled and run
 (assuming they weren't disabled in configure) with: `make check`. Further details on running
 and extending unit tests can be found in [/src/test/README.md](/src/test/README.md).
 
-There are also [regression and integration tests](/qa) of the RPC interface, written
+There are also [regression and integration tests](/test), written
 in Python, that are run automatically on the build server.
-These tests can be run (if the [test dependencies](/qa) are installed) with: `qa/pull-tester/rpc-tests.py`
+These tests can be run (if the [test dependencies](/test) are installed) with: `test/functional/test_runner.py`
 
 The Travis CI system makes sure that every pull request is built for Windows, Linux, and OS X, and that unit/sanity tests are run automatically.
 

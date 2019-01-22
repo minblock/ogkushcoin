@@ -62,12 +62,12 @@
         <translation>Adresy do odbierania</translation>
     </message>
     <message>
-        <source>These are your OG addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>To są Twoje adresy OG do wysyłania płatności. Zawsze sprawdzaj kwotę oraz adres odbioru zanim prześlesz monety.</translation>
+        <source>These are your OGKush addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>To są Twoje adresy OGKush do wysyłania płatności. Zawsze sprawdzaj kwotę oraz adres odbioru zanim prześlesz monety.</translation>
     </message>
     <message>
-        <source>These are your OG addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>To są Twoje adresy OG do otrzymywania płatności. Zalecane jest używać nowego adresu do każdej transakcji. </translation>
+        <source>These are your OGKush addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>To są Twoje adresy OGKush do otrzymywania płatności. Zalecane jest używać nowego adresu do każdej transakcji. </translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -169,7 +169,7 @@
     </message>
     <message>
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR OGKUSHS&lt;/b&gt;!</source>
-        <translation>Uwaga: Jeśli zaszyfrujesz portfel i utracisz do niego hasło, stracisz wszystkie swoje OGy. </translation>
+        <translation>Uwaga: Jeśli zaszyfrujesz portfel i utracisz do niego hasło, stracisz wszystkie swoje OGKushy. </translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -180,8 +180,8 @@
         <translation>Portfel zaszyfrowany</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ogs from being stolen by malware infecting your computer.</source>
-        <translation>%1 zamknie się teraz aby zakończyć proces szyfrowania. Pamiętaj że zaszyfrowanie portfela nie może w pełni zabezpieczyć Twoich ogów od próby kradzieży lub poprzez zainfekowanie Twojego komputera.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ogkushs from being stolen by malware infecting your computer.</source>
+        <translation>%1 zamknie się teraz aby zakończyć proces szyfrowania. Pamiętaj że zaszyfrowanie portfela nie może w pełni zabezpieczyć Twoich ogkushów od próby kradzieży lub poprzez zainfekowanie Twojego komputera.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -338,8 +338,8 @@
         <translation>Reindeksowanie bloków na dysku...</translation>
     </message>
     <message>
-        <source>Send coins to a OG address</source>
-        <translation>Wyślij monety na adres OG</translation>
+        <source>Send coins to a OGKush address</source>
+        <translation>Wyślij monety na adres OGKush</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -362,8 +362,8 @@
         <translation>&amp;Zweryfikuj wiadomość...</translation>
     </message>
     <message>
-        <source>OG</source>
-        <translation>OG</translation>
+        <source>OGKush</source>
+        <translation>OGKush</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -390,12 +390,12 @@
         <translation>Zaszyfruj prywatne klucze które należą do Twojego portfela</translation>
     </message>
     <message>
-        <source>Sign messages with your OG addresses to prove you own them</source>
-        <translation>Podpisz wiadomość z Twoimi adresami OG żeby udowodnić że je posiadasz</translation>
+        <source>Sign messages with your OGKush addresses to prove you own them</source>
+        <translation>Podpisz wiadomość z Twoimi adresami OGKush żeby udowodnić że je posiadasz</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified OG addresses</source>
-        <translation>Zweryfikuj wiadomość żeby się upewnić że zostały podpisane ze specyficznym adresem OG</translation>
+        <source>Verify messages to ensure they were signed with specified OGKush addresses</source>
+        <translation>Zweryfikuj wiadomość żeby się upewnić że zostały podpisane ze specyficznym adresem OGKush</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -414,8 +414,8 @@
         <translation>Pasek zakładek</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and og: URIs)</source>
-        <translation>Zażądaj płatności (generuje kod QR oraz og: URls)</translation>
+        <source>Request payments (generates QR codes and ogkush: URIs)</source>
+        <translation>Zażądaj płatności (generuje kod QR oraz ogkush: URls)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -426,8 +426,8 @@
         <translation>Pokaż liste użytych adresów do odbioru oraz ich etykiety</translation>
     </message>
     <message>
-        <source>Open a og: URI or payment request</source>
-        <translation>Otwórz og: URl lub żądanie płatności</translation>
+        <source>Open a ogkush: URI or payment request</source>
+        <translation>Otwórz ogkush: URl lub żądanie płatności</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -653,8 +653,8 @@
         <translation>Użyj wybranego katalogu danych:</translation>
     </message>
     <message>
-        <source>OG</source>
-        <translation>OG</translation>
+        <source>OGKush</source>
+        <translation>OGKush</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -665,8 +665,8 @@
         <translation>W przybliżeniu %1 GB danych będzie przechowywanych w tym katalogu. </translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the OG block chain.</source>
-        <translation>%1 ściągnie i przechowa kopie łańcucha bloków OG.</translation>
+        <source>%1 will download and store a copy of the OGKush block chain.</source>
+        <translation>%1 ściągnie i przechowa kopie łańcucha bloków OGKush.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -688,12 +688,12 @@
         <translation>Formularz</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the og network, as detailed below.</source>
-        <translation>Niedawne transakcje mogą być jeszcze nie widoczne i z tego powodu saldo Twojego portfela może być nieprawidłowe. Te informacje zostaną poprawione kiedy Twój portfel skończy się synchronizować z siecią OG, w sposób opisany poniżej. </translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the ogkush network, as detailed below.</source>
+        <translation>Niedawne transakcje mogą być jeszcze nie widoczne i z tego powodu saldo Twojego portfela może być nieprawidłowe. Te informacje zostaną poprawione kiedy Twój portfel skończy się synchronizować z siecią OGKush, w sposób opisany poniżej. </translation>
     </message>
     <message>
-        <source>Attempting to spend ogs that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>Próby przesłania OGów które nie zostały jeszcze wyświetlone w transakcjach nie zostaną zaakceptowane przez sieć.</translation>
+        <source>Attempting to spend ogkushs that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Próby przesłania OGKushów które nie zostały jeszcze wyświetlone w transakcjach nie zostaną zaakceptowane przez sieć.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>

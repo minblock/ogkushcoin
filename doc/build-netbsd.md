@@ -2,7 +2,7 @@ NetBSD build guide
 ======================
 (updated for NetBSD 7.0)
 
-This guide describes how to build ogd and command-line utilities on NetBSD.
+This guide describes how to build ogkushd and command-line utilities on NetBSD.
 
 This guide does not contain instructions for building the GUI.
 
@@ -25,12 +25,12 @@ python27
 
 Download the source code:
 ```
-git clone https://github.com/minblock/og
+git clone https://github.com/ogkush-project/ogkush
 ```
 
 See [dependencies.md](dependencies.md) for a complete overview.
 
-### Building OG Core
+### Building OGKush Core
 
 **Important**: Use `gmake` (the non-GNU `make` will exit with an error).
 

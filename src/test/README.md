@@ -5,42 +5,42 @@ and tests weren't explicitly disabled.
 
 After configuring, they can be run with `make check`.
 
-To run the ogd tests manually, launch `src/test/test_og`. To recompile
+To run the ogkushd tests manually, launch `src/test/test_ogkush`. To recompile
 after a test file was modified, run `make` and then run the test again. If you
 modify a non-test file, use `make -C src/test` to recompile only what's needed
-to run the ogd tests.
+to run the ogkushd tests.
 
-To add more ogd tests, add `BOOST_AUTO_TEST_CASE` functions to the existing
+To add more ogkushd tests, add `BOOST_AUTO_TEST_CASE` functions to the existing
 .cpp files in the `test/` directory or add new .cpp files that
 implement new BOOST_AUTO_TEST_SUITE sections.
 
-To run the og-qt tests manually, launch `src/qt/test/test_og-qt`
+To run the ogkush-qt tests manually, launch `src/qt/test/test_ogkush-qt`
 
-To add more og-qt tests, add them to the `src/qt/test/` directory and
+To add more ogkush-qt tests, add them to the `src/qt/test/` directory and
 the `src/qt/test/test_main.cpp` file.
 
 ### Running individual tests
 
-test_og has some built-in command-line arguments; for
+test_ogkush has some built-in command-line arguments; for
 example, to run just the getarg_tests verbosely:
 
-    test_og --log_level=all --run_test=getarg_tests
+    test_ogkush --log_level=all --run_test=getarg_tests
 
 ... or to run just the doubledash test:
 
-    test_og --run_test=getarg_tests/doubledash
+    test_ogkush --run_test=getarg_tests/doubledash
 
-Run `test_og --help` for the full list.
+Run `test_ogkush --help` for the full list.
 
 ### Note on adding test cases
 
 The sources in this directory are unit test cases.  Boost includes a
-unit testing framework, and since og already uses boost, it makes
+unit testing framework, and since ogkush already uses boost, it makes
 sense to simply use this framework rather than require developers to
 configure some other framework (we want as few impediments to creating
 unit tests as possible).
 
-The build system is setup to compile an executable called "test_og"
+The build system is setup to compile an executable called "test_ogkush"
 that runs all of the unit tests.  The main source file is called
 test_bitcoin.cpp, which simply includes other files that contain the
 actual unit tests (outside of a couple required preprocessor

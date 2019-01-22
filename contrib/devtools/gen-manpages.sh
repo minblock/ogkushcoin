@@ -4,10 +4,10 @@ TOPDIR=${TOPDIR:-$(git rev-parse --show-toplevel)}
 SRCDIR=${SRCDIR:-$TOPDIR/src}
 MANDIR=${MANDIR:-$TOPDIR/doc/man}
 
-OGKUSHD=${OGKUSHD:-$SRCDIR/ogd}
-OGKUSHCLI=${OGKUSHCLI:-$SRCDIR/og-cli}
-OGKUSHTX=${OGKUSHTX:-$SRCDIR/og-tx}
-OGKUSHQT=${OGKUSHQT:-$SRCDIR/qt/og-qt}
+OGKUSHD=${OGKUSHD:-$SRCDIR/ogkushd}
+OGKUSHCLI=${OGKUSHCLI:-$SRCDIR/ogkush-cli}
+OGKUSHTX=${OGKUSHTX:-$SRCDIR/ogkush-tx}
+OGKUSHQT=${OGKUSHQT:-$SRCDIR/qt/ogkush-qt}
 
 [ ! -x $OGKUSHD ] && echo "$OGKUSHD not found or not executable." && exit 1
 

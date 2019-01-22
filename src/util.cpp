@@ -82,8 +82,8 @@
 // Application startup time (used for uptime calculation)
 const int64_t nStartupTime = GetTime();
 
-const char * const BITCOIN_CONF_FILENAME = "og.conf";
-const char * const BITCOIN_PID_FILENAME = "ogd.pid";
+const char * const BITCOIN_CONF_FILENAME = "ogkush.conf";
+const char * const BITCOIN_PID_FILENAME = "ogkushd.pid";
 const char * const DEFAULT_DEBUGLOGFILE = "debug.log";
 
 ArgsManager gArgs;
@@ -558,7 +558,7 @@ static std::string FormatException(const std::exception* pex, const char* pszThr
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(nullptr, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "og";
+    const char* pszModule = "ogkush";
 #endif
     if (pex)
         return strprintf(
@@ -583,7 +583,7 @@ fs::path GetDefaultDataDir()
     // Unix: ~/.bitcoin
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "OG";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "OGKush";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -593,10 +593,10 @@ fs::path GetDefaultDataDir()
         pathRet = fs::path(pszHome);
 #ifdef MAC_OSX
     // Mac
-    return pathRet / "Library/Application Support/OG";
+    return pathRet / "Library/Application Support/OGKush";
 #else
     // Unix
-    return pathRet / ".og";
+    return pathRet / ".ogkush";
 #endif
 #endif
 }

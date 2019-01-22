@@ -46,9 +46,9 @@ static const int MAX_URI_LENGTH = 255;
 /* Number of frames in spinner animation */
 #define SPINNER_FRAMES 36
 
-#define QAPP_ORG_NAME "OG"
-#define QAPP_ORG_DOMAIN "og.org"
-#define QAPP_APP_NAME_DEFAULT "OG-Qt"
-#define QAPP_APP_NAME_TESTNET "OG-Qt-testnet"
+#define QAPP_ORG_NAME "OGKush"
+#define QAPP_ORG_DOMAIN "ogkush.org"
+#define QAPP_APP_NAME_DEFAULT "OGKush-Qt"
+#define QAPP_APP_NAME_TESTNET "OGKush-Qt-testnet"
 
 #endif // BITCOIN_QT_GUICONSTANTS_H

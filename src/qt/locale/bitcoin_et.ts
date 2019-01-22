@@ -62,12 +62,12 @@
         <translation>Vastuvõtvad aadressid</translation>
     </message>
     <message>
-        <source>These are your OG addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Need on sinu OG aadressid maksete saatmiseks. Ennem müntide saatmist kontrolli alati summat ja makse saaja aadressi.</translation>
+        <source>These are your OGKush addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Need on sinu OGKush aadressid maksete saatmiseks. Ennem müntide saatmist kontrolli alati summat ja makse saaja aadressi.</translation>
     </message>
     <message>
-        <source>These are your OG addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Need on sinu OG aadressid sisenevate maksete vastu võtmiseks. Soovitav on iga tehingu tarbeks kasutada uut aadressi.</translation>
+        <source>These are your OGKush addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Need on sinu OGKush aadressid sisenevate maksete vastu võtmiseks. Soovitav on iga tehingu tarbeks kasutada uut aadressi.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -290,8 +290,8 @@
         <translation>Kettal olevate blokkide re-indekseerimine...</translation>
     </message>
     <message>
-        <source>Send coins to a OG address</source>
-        <translation>Saada münte OGi aadressile</translation>
+        <source>Send coins to a OGKush address</source>
+        <translation>Saada münte OGKushi aadressile</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -314,8 +314,8 @@
         <translation>&amp;Kontrolli sõnumit...</translation>
     </message>
     <message>
-        <source>OG</source>
-        <translation>OG</translation>
+        <source>OGKush</source>
+        <translation>OGKush</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -342,12 +342,12 @@
         <translation>Krüpteeri oma rahakoti privaatvõtmed</translation>
     </message>
     <message>
-        <source>Sign messages with your OG addresses to prove you own them</source>
-        <translation>Omandi tõestamiseks allkirjasta sõnumid oma OGi aadressiga</translation>
+        <source>Sign messages with your OGKush addresses to prove you own them</source>
+        <translation>Omandi tõestamiseks allkirjasta sõnumid oma OGKushi aadressiga</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified OG addresses</source>
-        <translation>Kinnita sõnumid kindlustamaks et need allkirjastati määratud OGi aadressiga</translation>
+        <source>Verify messages to ensure they were signed with specified OGKush addresses</source>
+        <translation>Kinnita sõnumid kindlustamaks et need allkirjastati määratud OGKushi aadressiga</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -366,20 +366,20 @@
         <translation>Vahelehe tööriistariba</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and og: URIs)</source>
-        <translation>Loo maksepäring (genereerib QR koodid ja ogi: URId)</translation>
+        <source>Request payments (generates QR codes and ogkush: URIs)</source>
+        <translation>Loo maksepäring (genereerib QR koodid ja ogkushi: URId)</translation>
     </message>
     <message>
-        <source>Open a og: URI or payment request</source>
-        <translation>Ava ogi: URI või maksepäring</translation>
+        <source>Open a ogkush: URI or payment request</source>
+        <translation>Ava ogkushi: URI või maksepäring</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>Käsurea valikud</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to OG network</source>
-        <translation><numerusform>%n aktiivne ühendus OGi võrku</numerusform><numerusform>%n aktiivset ühendust OGi võrku</numerusform></translation>
+        <source>%n active connection(s) to OGKush network</source>
+        <translation><numerusform>%n aktiivne ühendus OGKushi võrku</numerusform><numerusform>%n aktiivset ühendust OGKushi võrku</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -626,8 +626,8 @@
         <translation>Muuda saatvat aadressi</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid OG address.</source>
-        <translation>Sisestatud aadress "%1" ei ole korrektne OG aadress.</translation>
+        <source>The entered address "%1" is not a valid OGKush address.</source>
+        <translation>Sisestatud aadress "%1" ei ole korrektne OGKush aadress.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -683,8 +683,8 @@
         <translation>Teretulemast</translation>
     </message>
     <message>
-        <source>OG</source>
-        <translation>OG</translation>
+        <source>OGKush</source>
+        <translation>OGKush</translation>
     </message>
     <message>
         <source>Error</source>
@@ -760,8 +760,8 @@
         <translation>Ekspert</translation>
     </message>
     <message>
-        <source>Automatically open the OG client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>OGi kliendi pordi automaatne avamine ruuteris. Toimib, kui sinu ruuter aktsepteerib UPnP ühendust.</translation>
+        <source>Automatically open the OGKush client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>OGKushi kliendi pordi automaatne avamine ruuteris. Toimib, kui sinu ruuter aktsepteerib UPnP ühendust.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -859,7 +859,7 @@
         <translation>Vorm</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the OG network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the OGKush network after a connection is established, but this process has not completed yet.</source>
         <translation>Kuvatav info ei pruugi olla ajakohane. Ühenduse loomisel süngitakse sinu rahakott automaatselt Liteconi võrgustikuga, kuid see toiming on hetkel lõpetamata.</translation>
     </message>
     <message>
@@ -1361,8 +1361,8 @@
         <translation>Maksepäring aegunud.</translation>
     </message>
     <message>
-        <source>Warning: Invalid OG address</source>
-        <translation>Hoiatus: Ebakorrektne OG aadress</translation>
+        <source>Warning: Invalid OGKush address</source>
+        <translation>Hoiatus: Ebakorrektne OGKush aadress</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -1445,8 +1445,8 @@
         <translation>&amp;Allkirjastamise teade</translation>
     </message>
     <message>
-        <source>The OG address to sign the message with</source>
-        <translation>OG aadress millega sõnum allkirjastada</translation>
+        <source>The OGKush address to sign the message with</source>
+        <translation>OGKush aadress millega sõnum allkirjastada</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1477,8 +1477,8 @@
         <translation>Kopeeri praegune signatuur vahemällu</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this OG address</source>
-        <translation>Allkirjasta sõnum OGi aadressi sulle kuulumise tõestamiseks</translation>
+        <source>Sign the message to prove you own this OGKush address</source>
+        <translation>Allkirjasta sõnum OGKushi aadressi sulle kuulumise tõestamiseks</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1497,12 +1497,12 @@
         <translation>&amp;Kinnita Sõnum</translation>
     </message>
     <message>
-        <source>The OG address the message was signed with</source>
-        <translation>OG aadress millega sõnum on allkirjastatud</translation>
+        <source>The OGKush address the message was signed with</source>
+        <translation>OGKush aadress millega sõnum on allkirjastatud</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified OG address</source>
-        <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud OGi aadressiga.</translation>
+        <source>Verify the message to ensure it was signed with the specified OGKush address</source>
+        <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud OGKushi aadressiga.</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1970,8 +1970,8 @@
         <translation>Tööta taustal ning aktsepteeri käsklusi</translation>
     </message>
     <message>
-        <source>OG Core</source>
-        <translation>OGi tuumik</translation>
+        <source>OGKush Core</source>
+        <translation>OGKushi tuumik</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
