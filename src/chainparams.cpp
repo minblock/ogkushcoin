@@ -113,7 +113,6 @@ public:
          * a large 32-bit integer with any alignment.
          */
 
-
         pchMessageStart[0] = 0x57; //W
         pchMessageStart[1] = 0x45; //E
         pchMessageStart[2] = 0x45; //E
