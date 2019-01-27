@@ -3,7 +3,7 @@ OGKush Core integration/staging tree
 
 [![Build Status](https://travis-ci.org/minblock/ogkush.svg?branch=master)](https://travis-ci.org/minblock/ogkush)
 
-https://ogkush.org
+Explorer: https://kushplorer.bitwall.ca
 
 What is OGKush?
 ----------------
