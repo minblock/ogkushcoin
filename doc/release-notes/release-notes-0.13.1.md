@@ -56,7 +56,7 @@ covered by the txid. This provides several immediate benefits:
   identifier (txid) of transactions without referencing the witness, which can
   sometimes be changed by third-parties (such as miners) or by co-signers in a
   multisig spend. This solves all known cases of unwanted transaction
-  malleability, which is a problem that makes programming Bitcoin wallet
+  malleability, which is a problem that makes proogkushming Bitcoin wallet
   software more difficult and which seriously complicates the design of smart
   contracts for Bitcoin.
 

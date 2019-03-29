@@ -1,34 +1,35 @@
-OGKush Core integration/staging tree
-=====================================
 
+OGkush Core integration/staging tree
+=====================================
 [![Build Status](https://travis-ci.org/minblock/ogkush.svg?branch=master)](https://travis-ci.org/minblock/ogkush)
 
-Explorer: https://kushplorer.bitwall.ca
-
-What is OGKush?
+What is OGkush?
 ----------------
 
-OGKush is an experimental digital currency that enables instant payments to
-anyone, anywhere in the world. OGKush uses peer-to-peer technology to operate
-with no central authority: managing transactions and issuing money are carried
-out collectively by the network. OGKush Core is the name of open source
-software which enables the use of this currency.
+OGkush is a fork Litecoin using scrypt as a proof-of-work algorithm with some differences.
+ - 2.5 minute block targets
+ - subsidy halves in 840k blocks (~4 years)
+ - ~42 million total coins (Litecoin is 84Million)
+ - 1 Million Premined for Crowdfunding
 
-For more information, as well as an immediately useable, binary version of
-the OGKush Core software, see [https://ogkush.org](https://ogkush.org).
+The rest is the same as Bitcoin.
+ - 50 coins per block
+ - 2016 blocks to retarget difficulty
+
+An experimental digital currency that enables storage and retreivable of ogkushtures/photos. Each block will represent an image store for retreivable with RPC and API. Private Encrypted messaging / instant payments as well as satellite internet for PIC transfers along with a Picture as receipt. The API will be deployed on the OGkush blockchain for implementation to Bitcoin and other top Blockchains  (https://explorer.ogkushs.org) is the experimental block explorer based on the Iquidos Block Explorer that will integrate ogkushture link (hybrid ftp/samba server protocol) into the block hash. OGkush Core is the name of the proogkush that enables the use of this digital currency. OGkush is completely anonymous. Having Segwith deployed allows PIC's to be sent anonymously. Two payments can go to the same address but once payment is received, the wallet address changes, making tracing transactions impossible. Your ogkushture will be hashed into the blockchain for future retreival and an ANSI (text-based l33t) ogkushture confirmation as well as a universally checkable timestamp. This allows you to patent and share your  ogkushtellectual property through any means. 
+
+For more information visit [https://bitwall.ca](https://bitwall.ca).
 
 License
 -------
 
-OGKush Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
+OGkush Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see https://opensource.org/licenses/MIT.
 
 Development Process
 -------------------
 
-The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/minblock/ogkush/tags) are created
-regularly to indicate new official, stable release versions of OGKush Core.
+The `master` branch is where the latest OGkushs developmental builds are being deployed to tags and releases. All Releases are to be considered Developmental as well as latest stable builds. Stable builds begin with a v.  [Tags](https://github.com/minblock/ogkush/tags) are created generated sequentially to indicate new compilation ready releases of OGkush Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).
 
@@ -45,7 +46,6 @@ Testing and code review is the bottleneck for development; we get more pull
 requests than we can review and test on short notice. Please be patient and help out by testing
 other people's pull requests, and remember this is a security-critical project where any mistake might cost people
 lots of money.
-
 ### Automated Testing
 
 Developers are strongly encouraged to write [unit tests](src/test/README.md) for new code, and to
@@ -70,7 +70,7 @@ Translations
 ------------
 
 We only accept translation fixes that are submitted through [Bitcoin Core's Transifex page](https://www.transifex.com/projects/p/bitcoin/).
-Translations are converted to OGKush periodically.
+Translations are converted to OGkush periodically.
 
 Translations are periodically pulled from Transifex and merged into the git repository. See the
 [translation process](doc/translation_process.md) for details on how this works.

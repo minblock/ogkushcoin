@@ -90,8 +90,8 @@
         <translation>&amp;செய்தியை சரிசெய்...</translation>
     </message>
     <message>
-        <source>OGKush</source>
-        <translation>OGKush</translation>
+        <source>OGkush</source>
+        <translation>OGkush</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -225,8 +225,8 @@
         <translation>நல்வரவு</translation>
     </message>
     <message>
-        <source>OGKush</source>
-        <translation>OGKush</translation>
+        <source>OGkush</source>
+        <translation>OGkush</translation>
     </message>
     <message>
         <source>Error</source>
@@ -580,6 +580,10 @@
         <source>Address</source>
         <translation>முகவரி</translation>
     </message>
+    <message>
+        <source>Wallet</source>
+        <translation>பணப்பை</translation>
+    </message>
     </context>
 <context>
     <name>RecentRequestsTableModel</name>
@@ -708,12 +712,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>OGKush Core</source>
-        <translation>OGKush மையம்</translation>
-    </message>
-    <message>
-        <source>(default: %u)</source>
-        <translation>(default: %u)</translation>
+        <source>OGkush Core</source>
+        <translation>OGkush மையம்</translation>
     </message>
     <message>
         <source>Information</source>
@@ -722,10 +722,6 @@
     <message>
         <source>Warning</source>
         <translation>எச்சரிக்கை</translation>
-    </message>
-    <message>
-        <source>(default: %s)</source>
-        <translation>(default: %s)</translation>
     </message>
     <message>
         <source>Error</source>

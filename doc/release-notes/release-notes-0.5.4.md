@@ -36,4 +36,4 @@ Detail reorganization information better in debug log.
 Use a messagebox to display the error when -server is provided without configuring a RPC password.
 Testing suite build now honours provided CXXFLAGS.
 Removed an extraneous line-break in mature transaction tooltips.
-Fix some grammatical errors in translation process documentation.
+Fix some ogkushmatical errors in translation process documentation.

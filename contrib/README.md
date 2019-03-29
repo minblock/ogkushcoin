@@ -13,7 +13,7 @@ Construct a linear, no-fork, best version of the blockchain.
 
 ### [Qos](/contrib/qos) ###
 
-A Linux bash script that will set up traffic control (tc) to limit the outgoing bandwidth for connections to the OGKush network. This means one can have an always-on ogkushd instance running, and another local ogkushd/ogkush-qt instance which connects to this node and receives blocks from it.
+A Linux bash script that will set up traffic control (tc) to limit the outgoing bandwidth for connections to the OGkush network. This means one can have an always-on ogkushd instance running, and another local ogkushd/ogkush-qt instance which connects to this node and receives blocks from it.
 
 ### [Seeds](/contrib/seeds) ###
 Utility to generate the pnSeed[] array that is compiled into the client.
@@ -21,30 +21,28 @@ Utility to generate the pnSeed[] array that is compiled into the client.
 Build Tools and Keys
 ---------------------
 
-### [Debian](/contrib/debian) ###
-Contains files used to package ogkushd/ogkush-qt
-for Debian-based Linux systems. If you compile ogkushd/ogkush-qt yourself, there are some useful files here.
+### Packaging ###
+The [Debian](/contrib/debian) subfolder contains the copyright file.
+
+All other packaging related files can be found in the [bitcoin-core/packaging](https://github.com/bitcoin-core/packaging) repository.
 
 ### [Gitian-descriptors](/contrib/gitian-descriptors) ###
 Files used during the gitian build process. For more information about gitian, see the [the Bitcoin Core documentation repository](https://github.com/bitcoin-core/docs).
 
 ### [Gitian-keys](/contrib/gitian-keys)
-PGP keys used for signing OGKush Core [Gitian release](/doc/release-process.md) results.
+PGP keys used for signing OGkush Core [Gitian release](/doc/release-process.md) results.
 
 ### [MacDeploy](/contrib/macdeploy) ###
 Scripts and notes for Mac builds. 
 
-### [RPM](/contrib/rpm) ###
-RPM spec file for building bogkush-core on RPM based distributions.
-
-### [Gitian-build](/contrib/gitian-build.sh) ###
+### [Gitian-build](/contrib/gitian-build.py) ###
 Script for running full Gitian builds.
 
 Test and Verify Tools 
 ---------------------
 
 ### [TestGen](/contrib/testgen) ###
-Utilities to generate test vectors for the data-driven OGKush tests.
+Utilities to generate test vectors for the data-driven OGkush tests.
 
 ### [Verify Binaries](/contrib/verifybinaries) ###
-This script attempts to download and verify the signature file SHA256SUMS.asc from ogkush.org.
+This script attempts to download and verify the signature file SHA256SUMS.asc from ogkushs.org.

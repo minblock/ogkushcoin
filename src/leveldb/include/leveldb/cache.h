@@ -76,7 +76,7 @@ class Cache {
   virtual void Erase(const Slice& key) = 0;
 
   // Return a new numeric id.  May be used by multiple clients who are
-  // sharing the same cache to partition the key space.  Typically the
+  // sharing the same cache to partition the key space.  Tyogkushally the
   // client will allocate a new id at startup and prepend the id to
   // its cache keys.
   virtual uint64_t NewId() = 0;

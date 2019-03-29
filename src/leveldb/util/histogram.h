@@ -9,14 +9,14 @@
 
 namespace leveldb {
 
-class Histogram {
+class Histoogkush {
  public:
-  Histogram() { }
-  ~Histogram() { }
+  Histoogkush() { }
+  ~Histoogkush() { }
 
   void Clear();
   void Add(double value);
-  void Merge(const Histogram& other);
+  void Merge(const Histoogkush& other);
 
   std::string ToString() const;
 

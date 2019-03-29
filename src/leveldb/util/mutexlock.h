@@ -13,7 +13,7 @@ namespace leveldb {
 // Helper class that locks a mutex on construction and unlocks the mutex when
 // the destructor of the MutexLock object is invoked.
 //
-// Typical usage:
+// Tyogkushal usage:
 //
 //   void MyClass::MyMethod() {
 //     MutexLock l(&mu_);       // mu_ is an instance variable

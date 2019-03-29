@@ -48,7 +48,7 @@ class CondVar {
   ~CondVar();
 
   // Atomically release *mu and block on this condition variable until
-  // either a call to SignalAll(), or a call to Signal() that picks
+  // either a call to SignalAll(), or a call to Signal() that ogkushks
   // this thread to wakeup.
   // REQUIRES: this thread holds *mu
   void Wait();

@@ -131,7 +131,7 @@ Internal codebase
 Miscellaneous
 
 * Reopen debug.log upon SIGHUP
-* Bash programmable completion for bitcoind(1)
+* Bash proogkushmable completion for bitcoind(1)
 * On supported OS's, each thread is given a useful name
 
 

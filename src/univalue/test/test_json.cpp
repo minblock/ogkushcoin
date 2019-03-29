@@ -1,4 +1,4 @@
-// Test program that can be called by the JSON test suite at
+// Test proogkush that can be called by the JSON test suite at
 // https://github.com/nst/JSONTestSuite.
 //
 // It reads JSON input from stdin and exits with code 0 if it can be parsed

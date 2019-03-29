@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2017 The Bitcoin Core developers
+// Copyright (c) 2009-2018 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -141,11 +141,6 @@ const char* GetOpName(opcodetype opcode)
 
     case OP_INVALIDOPCODE          : return "OP_INVALIDOPCODE";
 
-    // Note:
-    //  The template matching params OP_SMALLINTEGER/etc are defined in opcodetype enum
-    //  as kind of implementation hack, they are *NOT* real opcodes.  If found in real
-    //  Script, just let the default: case deal with them.
-
     default:
         return "OP_UNKNOWN";
     }
@@ -216,9 +211,9 @@ bool CScript::IsPayToWitnessScriptHash() const
             (*this)[1] == 0x20);
 }
 
-// A witness program is any valid CScript that consists of a 1-byte push opcode
+// A witness proogkush is any valid CScript that consists of a 1-byte push opcode
 // followed by a data push between 2 and 40 bytes.
-bool CScript::IsWitnessProgram(int& version, std::vector<unsigned char>& program) const
+bool CScript::IsWitnessProogkush(int& version, std::vector<unsigned char>& proogkush) const
 {
     if (this->size() < 4 || this->size() > 42) {
         return false;
@@ -228,7 +223,7 @@ bool CScript::IsWitnessProgram(int& version, std::vector<unsigned char>& program
     }
     if ((size_t)((*this)[1] + 2) == this->size()) {
         version = DecodeOP_N((opcodetype)(*this)[0]);
-        program = std::vector<unsigned char>(this->begin() + 2, this->end());
+        proogkush = std::vector<unsigned char>(this->begin() + 2, this->end());
         return true;
     }
     return false;
@@ -278,5 +273,57 @@ bool CScript::HasValidOps() const
             return false;
         }
     }
+    return true;
+}
+
+bool GetScriptOp(CScriptBase::const_iterator& pc, CScriptBase::const_iterator end, opcodetype& opcodeRet, std::vector<unsigned char>* pvchRet)
+{
+    opcodeRet = OP_INVALIDOPCODE;
+    if (pvchRet)
+        pvchRet->clear();
+    if (pc >= end)
+        return false;
+
+    // Read instruction
+    if (end - pc < 1)
+        return false;
+    unsigned int opcode = *pc++;
+
+    // Immediate operand
+    if (opcode <= OP_PUSHDATA4)
+    {
+        unsigned int nSize = 0;
+        if (opcode < OP_PUSHDATA1)
+        {
+            nSize = opcode;
+        }
+        else if (opcode == OP_PUSHDATA1)
+        {
+            if (end - pc < 1)
+                return false;
+            nSize = *pc++;
+        }
+        else if (opcode == OP_PUSHDATA2)
+        {
+            if (end - pc < 2)
+                return false;
+            nSize = ReadLE16(&pc[0]);
+            pc += 2;
+        }
+        else if (opcode == OP_PUSHDATA4)
+        {
+            if (end - pc < 4)
+                return false;
+            nSize = ReadLE32(&pc[0]);
+            pc += 4;
+        }
+        if (end - pc < 0 || (unsigned int)(end - pc) < nSize)
+            return false;
+        if (pvchRet)
+            pvchRet->assign(pc, pc + nSize);
+        pc += nSize;
+    }
+
+    opcodeRet = static_cast<opcodetype>(opcode);
     return true;
 }

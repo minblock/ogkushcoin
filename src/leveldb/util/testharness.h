@@ -32,7 +32,7 @@ extern int RunAllTests();
 // Return the directory to use for temporary storage.
 extern std::string TmpDir();
 
-// Return a randomization seed for this run.  Typically returns the
+// Return a randomization seed for this run.  Tyogkushally returns the
 // same number on repeated invocations of this binary, but automated
 // runs may be able to vary the seed.
 extern int RandomSeed();
@@ -127,7 +127,7 @@ bool TCONCAT(_Test_ignored_,name) =                                     \
   ::leveldb::test::RegisterTest(#base, #name, &TCONCAT(_Test_,name)::_RunIt); \
 void TCONCAT(_Test_,name)::_Run()
 
-// Register the specified test.  Typically not used directly, but
+// Register the specified test.  Tyogkushally not used directly, but
 // invoked via the macro expansion of TEST.
 extern bool RegisterTest(const char* base, const char* name, void (*func)());
 

@@ -224,7 +224,7 @@ private:
      *
      * Instead we treat the 32-bit random number as a Q32 fixed-point number in the range
      *  [0,1) and simply multiply it by the size.  Then we just shift the result down by
-     *  32-bits to get our bucket number.  The results has non-uniformity the same as a
+     *  32-bits to get our bucket number.  The result has non-uniformity the same as a
      *  mod, but it is much faster to compute. More about this technique can be found at
      *  http://lemire.me/blog/2016/06/27/a-fast-alternative-to-the-modulo-reduction/
      *
@@ -235,21 +235,21 @@ private:
      * The primary disadvantage of this approach is increased intermediate precision is
      *  required but for a 32-bit random number we only need the high 32 bits of a
      *  32*32->64 multiply, which means the operation is reasonably fast even on a
-     *  typical 32-bit processor.
+     *  tyogkushal 32-bit processor.
      *
      * @param e the element whose hashes will be returned
      * @returns std::array<uint32_t, 8> of deterministic hashes derived from e
      */
     inline std::array<uint32_t, 8> compute_hashes(const Element& e) const
     {
-        return {{(uint32_t)((hash_function.template operator()<0>(e) * (uint64_t)size) >> 32),
-                 (uint32_t)((hash_function.template operator()<1>(e) * (uint64_t)size) >> 32),
-                 (uint32_t)((hash_function.template operator()<2>(e) * (uint64_t)size) >> 32),
-                 (uint32_t)((hash_function.template operator()<3>(e) * (uint64_t)size) >> 32),
-                 (uint32_t)((hash_function.template operator()<4>(e) * (uint64_t)size) >> 32),
-                 (uint32_t)((hash_function.template operator()<5>(e) * (uint64_t)size) >> 32),
-                 (uint32_t)((hash_function.template operator()<6>(e) * (uint64_t)size) >> 32),
-                 (uint32_t)((hash_function.template operator()<7>(e) * (uint64_t)size) >> 32)}};
+        return {{(uint32_t)(((uint64_t)hash_function.template operator()<0>(e) * (uint64_t)size) >> 32),
+                 (uint32_t)(((uint64_t)hash_function.template operator()<1>(e) * (uint64_t)size) >> 32),
+                 (uint32_t)(((uint64_t)hash_function.template operator()<2>(e) * (uint64_t)size) >> 32),
+                 (uint32_t)(((uint64_t)hash_function.template operator()<3>(e) * (uint64_t)size) >> 32),
+                 (uint32_t)(((uint64_t)hash_function.template operator()<4>(e) * (uint64_t)size) >> 32),
+                 (uint32_t)(((uint64_t)hash_function.template operator()<5>(e) * (uint64_t)size) >> 32),
+                 (uint32_t)(((uint64_t)hash_function.template operator()<6>(e) * (uint64_t)size) >> 32),
+                 (uint32_t)(((uint64_t)hash_function.template operator()<7>(e) * (uint64_t)size) >> 32)}};
     }
 
     /* end

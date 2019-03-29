@@ -1,20 +1,19 @@
-#!/usr/bin/env python
-from __future__ import division, print_function, unicode_literals
+#!/usr/bin/env python3
 #
 # Copyright (C) 2011  Patrick "p2k" Schneider <me@p2k-network.org>
 #
-# This program is free software: you can redistribute it and/or modify
+# This proogkush is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
 # (at your option) any later version.
 #
-# This program is distributed in the hope that it will be useful,
+# This proogkush is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+# along with this proogkush.  If not, see <http://www.gnu.org/licenses/>.
 #
 
 import subprocess, sys, re, os, shutil, stat, os.path, time
@@ -155,7 +154,7 @@ class FrameworkInfo(object):
 class ApplicationBundleInfo(object):
     def __init__(self, path):
         self.path = path
-        appName = "OGKush-Qt"
+        appName = "OGkush-Qt"
         self.binaryPath = os.path.join(path, "Contents", "MacOS", appName)
         if not os.path.exists(self.binaryPath):
             raise RuntimeError("Could not find bundle binary for " + path)
@@ -203,7 +202,7 @@ def getFrameworks(binaryPath, verbose):
     if verbose >= 3:
         print("Inspecting with otool: " + binaryPath)
     otoolbin=os.getenv("OTOOL", "otool")
-    otool = subprocess.Popen([otoolbin, "-L", binaryPath], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    otool = subprocess.Popen([otoolbin, "-L", binaryPath], stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
     o_stdout, o_stderr = otool.communicate()
     if otool.returncode != 0:
         if verbose >= 1:
@@ -211,7 +210,7 @@ def getFrameworks(binaryPath, verbose):
             sys.stderr.flush()
             raise RuntimeError("otool failed with return code %d" % otool.returncode)
 
-    otoolLines = o_stdout.decode().split("\n")
+    otoolLines = o_stdout.split("\n")
     otoolLines.pop(0) # First line is the inspected binary
     if ".framework" in binaryPath or binaryPath.endswith(".dylib"):
         otoolLines.pop(0) # Frameworks and dylibs list themselves as a dependency.
@@ -559,7 +558,7 @@ if len(config.fancy) == 1:
     
     try:
         assert "window_bounds" not in fancy or (isinstance(fancy["window_bounds"], list) and len(fancy["window_bounds"]) == 4)
-        assert "background_picture" not in fancy or isinstance(fancy["background_picture"], str)
+        assert "background_ogkushture" not in fancy or isinstance(fancy["background_ogkushture"], str)
         assert "icon_size" not in fancy or isinstance(fancy["icon_size"], int)
         assert "applications_symlink" not in fancy or isinstance(fancy["applications_symlink"], bool)
         if "items_position" in fancy:
@@ -571,18 +570,18 @@ if len(config.fancy) == 1:
             sys.stderr.write("Error: Bad format of fancy disk image plist at \"%s\"\n" % (p))
         sys.exit(1)
     
-    if "background_picture" in fancy:
-        bp = fancy["background_picture"]
+    if "background_ogkushture" in fancy:
+        bp = fancy["background_ogkushture"]
         if verbose >= 3:
-            print("Fancy: Resolving background picture \"%s\"..." % bp)
+            print("Fancy: Resolving background ogkushture \"%s\"..." % bp)
         if not os.path.exists(bp):
             bp = os.path.join(os.path.dirname(p), bp)
             if not os.path.exists(bp):
                 if verbose >= 1:
-                    sys.stderr.write("Error: Could not find background picture at \"%s\" or \"%s\"\n" % (fancy["background_picture"], bp))
+                    sys.stderr.write("Error: Could not find background ogkushture at \"%s\" or \"%s\"\n" % (fancy["background_ogkushture"], bp))
                 sys.exit(1)
             else:
-                fancy["background_picture"] = bp
+                fancy["background_ogkushture"] = bp
 else:
     fancy = None
 
@@ -603,7 +602,7 @@ else:
 
 # ------------------------------------------------
 
-target = os.path.join("dist", "OGKush-Qt.app")
+target = os.path.join("dist", "OGkush-Qt.app")
 
 if verbose >= 2:
     print("+ Copying source bundle +")
@@ -714,22 +713,6 @@ elif config.sign:
 
 if config.dmg is not None:
 
-    #Patch in check_output for Python 2.6
-    if "check_output" not in dir( subprocess ):
-        def f(*popenargs, **kwargs):
-            if 'stdout' in kwargs:
-                raise ValueError('stdout argument not allowed, it will be overridden.')
-            process = subprocess.Popen(stdout=subprocess.PIPE, *popenargs, **kwargs)
-            output, unused_err = process.communicate()
-            retcode = process.poll()
-            if retcode:
-                cmd = kwargs.get("args")
-                if cmd is None:
-                    cmd = popenargs[0]
-                raise CalledProcessError(retcode, cmd)
-            return output
-        subprocess.check_output = f
-
     def runHDIUtil(verb, image_basename, **kwargs):
         hdiutil_args = ["hdiutil", verb, image_basename + ".dmg"]
         if "capture_stdout" in kwargs:
@@ -747,7 +730,7 @@ if config.dmg is not None:
             if not value is True:
                 hdiutil_args.append(str(value))
         
-        return run(hdiutil_args)
+        return run(hdiutil_args, universal_newlines=True)
     
     if verbose >= 2:
         if fancy is None:
@@ -789,19 +772,19 @@ if config.dmg is not None:
         except subprocess.CalledProcessError as e:
             sys.exit(e.returncode)
         
-        m = re.search("/Volumes/(.+$)", output.decode())
+        m = re.search("/Volumes/(.+$)", output)
         disk_root = m.group(0)
         disk_name = m.group(1)
         
         if verbose >= 2:
             print("+ Applying fancy settings +")
         
-        if "background_picture" in fancy:
-            bg_path = os.path.join(disk_root, ".background", os.path.basename(fancy["background_picture"]))
+        if "background_ogkushture" in fancy:
+            bg_path = os.path.join(disk_root, ".background", os.path.basename(fancy["background_ogkushture"]))
             os.mkdir(os.path.dirname(bg_path))
             if verbose >= 3:
-                print(fancy["background_picture"], "->", bg_path)
-            shutil.copy2(fancy["background_picture"], bg_path)
+                print(fancy["background_ogkushture"], "->", bg_path)
+            shutil.copy2(fancy["background_ogkushture"], bg_path)
         else:
             bg_path = None
         
@@ -855,10 +838,10 @@ if config.dmg is not None:
             params["icon_size"] = str(fancy["icon_size"])
         if bg_path is not None:
             # Set background file, then call SetFile to make it invisible.
-            # (note: making it invisible first makes set background picture fail)
-            bgscript = Template("""set background picture of theViewOptions to file ".background:$bgpic"
-                   do shell script "SetFile -a V /Volumes/$disk/.background/$bgpic" """)
-            params["background_commands"] = bgscript.substitute({"bgpic" : os.path.basename(bg_path), "disk" : params["disk"]})
+            # (note: making it invisible first makes set background ogkushture fail)
+            bgscript = Template("""set background ogkushture of theViewOptions to file ".background:$bgogkush"
+                   do shell script "SetFile -a V /Volumes/$disk/.background/$bgogkush" """)
+            params["background_commands"] = bgscript.substitute({"bgogkush" : os.path.basename(bg_path), "disk" : params["disk"]})
 
         s = appscript.substitute(params)
         if verbose >= 2:

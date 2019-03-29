@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2017 The Bitcoin Core developers
+// Copyright (c) 2011-2018 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -32,10 +32,10 @@
 const int FREEDESKTOP_NOTIFICATION_ICON_SIZE = 128;
 #endif
 
-Notificator::Notificator(const QString &_programName, QSystemTrayIcon *_trayIcon, QWidget *_parent) :
+Notificator::Notificator(const QString &_proogkushName, QSystemTrayIcon *_trayIcon, QWidget *_parent) :
     QObject(_parent),
     parent(_parent),
-    programName(_programName),
+    proogkushName(_proogkushName),
     mode(None),
     trayIcon(_trayIcon)
 #ifdef USE_DBUS
@@ -158,8 +158,8 @@ void Notificator::notifyDBus(Class cls, const QString &title, const QString &tex
     // Arguments for DBus call:
     QList<QVariant> args;
 
-    // Program Name:
-    args.append(programName);
+    // Proogkush Name:
+    args.append(proogkushName);
 
     // Unique ID of this notification type:
     args.append(0U);
@@ -181,7 +181,7 @@ void Notificator::notifyDBus(Class cls, const QString &title, const QString &tex
     QVariantMap hints;
 
     // If no icon specified, set icon based on class
-    QIcon tmpicon;
+    QIcon tmogkushon;
     if(icon.isNull())
     {
         QStyle::StandardPixmap sicon = QStyle::SP_MessageBoxQuestion;
@@ -192,13 +192,13 @@ void Notificator::notifyDBus(Class cls, const QString &title, const QString &tex
         case Critical: sicon = QStyle::SP_MessageBoxCritical; break;
         default: break;
         }
-        tmpicon = QApplication::style()->standardIcon(sicon);
+        tmogkushon = QApplication::style()->standardIcon(sicon);
     }
     else
     {
-        tmpicon = icon;
+        tmogkushon = icon;
     }
-    hints["icon_data"] = FreedesktopImage::toVariant(tmpicon.pixmap(FREEDESKTOP_NOTIFICATION_ICON_SIZE).toImage());
+    hints["icon_data"] = FreedesktopImage::toVariant(tmogkushon.pixmap(FREEDESKTOP_NOTIFICATION_ICON_SIZE).toImage());
     args.append(hints);
 
     // Timeout (in msec)

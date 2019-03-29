@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2017 The Bitcoin Core developers
+// Copyright (c) 2011-2018 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -12,6 +12,7 @@
 
 #include <qt/guiutil.h>
 
+#include <interfaces/node.h>
 #include <util.h>
 
 #include <QFileDialog>
@@ -22,7 +23,7 @@
 
 static const uint64_t GB_BYTES = 1000000000LL;
 /* Minimum free space (in GB) needed for data directory */
-static const uint64_t BLOCK_CHAIN_SIZE = 18;
+constexpr uint64_t BLOCK_CHAIN_SIZE = 20;
 /* Minimum free space (in GB) needed for data directory when pruned; Does not include prune target */
 static const uint64_t CHAIN_STATE_SIZE = 3;
 /* Total required space (in GB) depending on user choice (prune, not prune) */
@@ -127,7 +128,7 @@ Intro::Intro(QWidget *parent) :
         .arg(tr(PACKAGE_NAME))
         .arg(BLOCK_CHAIN_SIZE)
         .arg(2011)
-        .arg(tr("OGKush"))
+        .arg(tr("OGkush"))
     );
     ui->lblExplanation2->setText(ui->lblExplanation2->text().arg(tr(PACKAGE_NAME)));
 
@@ -146,7 +147,7 @@ Intro::Intro(QWidget *parent) :
     }
     requiredSpace += CHAIN_STATE_SIZE;
     ui->sizeWarningLabel->setText(
-        tr("%1 will download and store a copy of the OGKush block chain.").arg(tr(PACKAGE_NAME)) + " " +
+        tr("%1 will download and store a copy of the OGkush block chain.").arg(tr(PACKAGE_NAME)) + " " +
         storageRequiresMsg.arg(requiredSpace) + " " +
         tr("The wallet will also be stored in this directory.")
     );
@@ -186,11 +187,11 @@ QString Intro::getDefaultDataDirectory()
     return GUIUtil::boostPathToQString(GetDefaultDataDir());
 }
 
-bool Intro::pickDataDirectory()
+bool Intro::ogkushkDataDirectory(interfaces::Node& node)
 {
     QSettings settings;
     /* If data directory provided on command line, no need to look at settings
-       or show a picking dialog */
+       or show a ogkushking dialog */
     if(!gArgs.GetArg("-datadir", "").empty())
         return true;
     /* 1) Default data directory for operating system */
@@ -233,8 +234,9 @@ bool Intro::pickDataDirectory()
      * override -datadir in the bitcoin.conf file in the default data directory
      * (to be consistent with bitcoind behavior)
      */
-    if(dataDir != getDefaultDataDirectory())
-        gArgs.SoftSetArg("-datadir", GUIUtil::qstringToBoostPath(dataDir).string()); // use OS locale for path setting
+    if(dataDir != getDefaultDataDirectory()) {
+        node.softSetArg("-datadir", GUIUtil::qstringToBoostPath(dataDir).string()); // use OS locale for path setting
+    }
     return true;
 }
 

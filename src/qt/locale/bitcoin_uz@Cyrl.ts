@@ -30,6 +30,10 @@
         <translation>Жорий танланган манзилни рўйхатдан ўчириш</translation>
     </message>
     <message>
+        <source>Enter address or label to search</source>
+        <translation>Излаш учун манзил ёки ёрлиқни киритинг</translation>
+    </message>
+    <message>
         <source>Export the data in the current tab to a file</source>
         <translation>Жорий ички ойна ичидаги маълумотларни файлга экспорт қилиш</translation>
     </message>
@@ -146,8 +150,8 @@
         <translation>Дискдаги блоклар қайта индексланмоқда...</translation>
     </message>
     <message>
-        <source>Send coins to a OGKush address</source>
-        <translation>Тангаларни OGKush манзилига жўнатиш</translation>
+        <source>Send coins to a OGkush address</source>
+        <translation>Тангаларни OGkush манзилига жўнатиш</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -170,8 +174,8 @@
         <translation>Хабарни &amp;тасдиқлаш...</translation>
     </message>
     <message>
-        <source>OGKush</source>
-        <translation>OGKush</translation>
+        <source>OGkush</source>
+        <translation>OGkush</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -198,12 +202,12 @@
         <translation>Ҳамёнингизга тегишли махфий калитларни кодлаш</translation>
     </message>
     <message>
-        <source>Sign messages with your OGKush addresses to prove you own them</source>
-        <translation>OGKush манзилидан унинг эгаси эканлигингизни исботлаш учун хабарлар ёзинг</translation>
+        <source>Sign messages with your OGkush addresses to prove you own them</source>
+        <translation>OGkush манзилидан унинг эгаси эканлигингизни исботлаш учун хабарлар ёзинг</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified OGKush addresses</source>
-        <translation>Хабарларни махсус OGKush манзилларингиз билан ёзилганлигига ишонч ҳосил қилиш учун уларни тасдиқланг</translation>
+        <source>Verify messages to ensure they were signed with specified OGkush addresses</source>
+        <translation>Хабарларни махсус OGkush манзилларингиз билан ёзилганлигига ишонч ҳосил қилиш учун уларни тасдиқланг</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -235,15 +239,15 @@
     </message>
     <message>
         <source>Open a ogkush: URI or payment request</source>
-        <translation>OGKush’ни очиш: URI ёки тўлов сўрови</translation>
+        <translation>OGkush’ни очиш: URI ёки тўлов сўрови</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Буйруқлар сатри мосламалари</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to OGKush network</source>
-        <translation><numerusform>%n та OGKush тармоғига фаол уланиш мавжуд</numerusform></translation>
+        <source>%n active connection(s) to OGkush network</source>
+        <translation><numerusform>%n та OGkush тармоғига фаол уланиш мавжуд</numerusform></translation>
     </message>
     <message>
         <source>%1 behind</source>
@@ -413,15 +417,7 @@
         <source>Command-line options</source>
         <translation>Буйруқлар сатри мосламалари</translation>
     </message>
-    <message>
-        <source>Usage:</source>
-        <translation>Фойдаланиш:</translation>
-    </message>
-    <message>
-        <source>command-line options</source>
-        <translation>буйруқлар қатори орқали мослаш</translation>
-    </message>
-    </context>
+</context>
 <context>
     <name>Intro</name>
     <message>
@@ -437,8 +433,8 @@
         <translation>Бошқа маълумотлар директориясида фойдаланинг:</translation>
     </message>
     <message>
-        <source>OGKush</source>
-        <translation>OGKush</translation>
+        <source>OGkush</source>
+        <translation>OGkush</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -597,8 +593,8 @@
         <translation>Шакл</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the OGKush network after a connection is established, but this process has not completed yet.</source>
-        <translation>Кўрсатилган маълумот эскирган бўлиши мумкин. Ҳамёнингиз алоқа ўрнатилгандан сўнг OGKush тармоқ билан автоматик тарзда синхронланади, аммо жараён ҳалигача тугалланмади.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the OGkush network after a connection is established, but this process has not completed yet.</source>
+        <translation>Кўрсатилган маълумот эскирган бўлиши мумкин. Ҳамёнингиз алоқа ўрнатилгандан сўнг OGkush тармоқ билан автоматик тарзда синхронланади, аммо жараён ҳалигача тугалланмади.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -678,8 +674,8 @@
         <translation>Миқдори</translation>
     </message>
     <message>
-        <source>Enter a OGKush address (e.g. %1)</source>
-        <translation>OGKush манзилини киритинг (масалан.  %1)</translation>
+        <source>Enter a OGkush address (e.g. %1)</source>
+        <translation>OGkush манзилини киритинг (масалан.  %1)</translation>
     </message>
     <message>
         <source>%1 m</source>
@@ -952,6 +948,10 @@
         <source>&amp;Save Image...</source>
         <translation>Расмни &amp;сақлаш</translation>
     </message>
+    <message>
+        <source>Wallet</source>
+        <translation>Ҳамён</translation>
+    </message>
     </context>
 <context>
     <name>RecentRequestsTableModel</name>
@@ -1049,6 +1049,10 @@
     <message>
         <source>S&amp;end</source>
         <translation>Жў&amp;натиш</translation>
+    </message>
+    <message>
+        <source>Transaction fee</source>
+        <translation>Ўтказма тўлови</translation>
     </message>
     </context>
 <context>
@@ -1168,44 +1172,16 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>Options:</source>
-        <translation>Танламалар:</translation>
-    </message>
-    <message>
-        <source>Specify data directory</source>
-        <translation>Маълумотлар директориясини кўрсатинг</translation>
-    </message>
-    <message>
-        <source>Accept command line and JSON-RPC commands</source>
-        <translation>Буйруқлар сатри ва JSON-RPC буйруқларига рози бўлинг</translation>
-    </message>
-    <message>
-        <source>Run in the background as a daemon and accept commands</source>
-        <translation>Демон сифатида орқа фонда ишга туширинг ва буйруқларга рози бўлинг</translation>
-    </message>
-    <message>
-        <source>OGKush Core</source>
-        <translation>OGKush Core</translation>
-    </message>
-    <message>
-        <source>Connection options:</source>
-        <translation>Уланиш кўрсаткичлари:</translation>
+        <source>OGkush Core</source>
+        <translation>OGkush Core</translation>
     </message>
     <message>
         <source>Information</source>
         <translation>Маълумот</translation>
     </message>
     <message>
-        <source>Username for JSON-RPC connections</source>
-        <translation>JSON-RPC уланишлари учун фойдаланувчи номи</translation>
-    </message>
-    <message>
         <source>Warning</source>
         <translation>Диққат</translation>
-    </message>
-    <message>
-        <source>Password for JSON-RPC connections</source>
-        <translation>JSON-RPC уланишлари учун парол</translation>
     </message>
     <message>
         <source>Insufficient funds</source>

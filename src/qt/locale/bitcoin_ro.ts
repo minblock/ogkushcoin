@@ -62,12 +62,12 @@
         <translation>Adresele de primire</translation>
     </message>
     <message>
-        <source>These are your OGKush addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Acestea sunt adresele tale OGKush pentru trimiterea plății. Verifică mereu suma și adresa de primire înainte de trimiterea monedelor.</translation>
+        <source>These are your OGkush addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Acestea sunt adresele tale OGkush pentru trimiterea plății. Verifică mereu suma și adresa de primire înainte de trimiterea monedelor.</translation>
     </message>
     <message>
-        <source>These are your OGKush addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Acestea sunt adresele tale OGKush pentru primirea plăților. Este recomandată folosirea de noi adrese de primire pentru fiecare tranzacție.</translation>
+        <source>These are your OGkush addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Acestea sunt adresele tale OGkush pentru primirea plăților. Este recomandată folosirea de noi adrese de primire pentru fiecare tranzacție.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -133,7 +133,7 @@
     </message>
     <message>
         <source>Encrypt wallet</source>
-        <translation>Incripteaza portofelul</translation>
+        <translation>Criptează portofelul</translation>
     </message>
     <message>
         <source>This operation needs your wallet passphrase to unlock the wallet.</source>
@@ -176,8 +176,20 @@
         <translation>Portofel criptat</translation>
     </message>
     <message>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ogkushs from being stolen by malware infecting your computer.</source>
+        <translation>%1 se va inchide pentru a termina procesul de criptare. Aduți aminte că prin criptarea portofelului tău virtual, nu îți poți proteja complet monedele virtuale de a fi furate când te-ai infectat cu un virus de tip malware pe calculatorul tau.</translation>
+    </message>
+    <message>
+        <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
+        <translation>IMPORTANT: Fiecare backup anterior pe care l-ai facut portofelului tău virtual trebuie înlocuit cu cel nou. Din motive de securitate, backup-urile anteroiare făcute portofelului tău, care nu sunt criptate vor deveni inutilizabile și inutile când vei începe să utilizezi portofelul criptat.</translation>
+    </message>
+    <message>
         <source>Wallet encryption failed</source>
         <translation>Criptarea portofelului a eșuat</translation>
+    </message>
+    <message>
+        <source>Wallet encryption failed due to an internal error. Your wallet was not encrypted.</source>
+        <translation>Criptarea portofelului a eșuat din cauza unei erori interne. Portofelul tău nu a fost criptat.</translation>
     </message>
     <message>
         <source>The supplied passphrases do not match.</source>
@@ -186,6 +198,10 @@
     <message>
         <source>Wallet unlock failed</source>
         <translation>Deblocarea portofelului a eșuat</translation>
+    </message>
+    <message>
+        <source>The passphrase entered for the wallet decryption was incorrect.</source>
+        <translation>Parola pe care ai introdus-o pentru decripatrea portofelului nu este corectă.</translation>
     </message>
     <message>
         <source>Wallet decryption failed</source>
@@ -215,7 +231,7 @@
     <name>BitcoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
-        <translation>Semnează &amp;mesajul...</translation>
+        <translation>Semnează și trimite...</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -242,8 +258,20 @@
         <translation>Navighează în istoricul tranzacțiilor</translation>
     </message>
     <message>
+        <source>E&amp;xit</source>
+        <translation>Ieși din...</translation>
+    </message>
+    <message>
         <source>Quit application</source>
         <translation>Părăsește aplicația</translation>
+    </message>
+    <message>
+        <source>&amp;About %1</source>
+        <translation>&amp;Despre %1</translation>
+    </message>
+    <message>
+        <source>Show information about %1</source>
+        <translation>Arată informații despre %1</translation>
     </message>
     <message>
         <source>About &amp;Qt</source>
@@ -286,8 +314,8 @@
         <translation>Click pentru a permite, din nou, activitate rețelei.</translation>
     </message>
     <message>
-        <source>Send coins to a OGKush address</source>
-        <translation>Trimite monedele către o adresă OGKush</translation>
+        <source>Send coins to a OGkush address</source>
+        <translation>Trimite monedele către o adresă OGkush</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -310,8 +338,8 @@
         <translation>&amp;Verifică mesajul...</translation>
     </message>
     <message>
-        <source>OGKush</source>
-        <translation>OGKush</translation>
+        <source>OGkush</source>
+        <translation>OGkush</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -338,12 +366,12 @@
         <translation>Criptează cheile private care aparțin portofelului tău.</translation>
     </message>
     <message>
-        <source>Sign messages with your OGKush addresses to prove you own them</source>
-        <translation>Semnează mesajele cu adresa ta de OGKush pentru a face dovada că îți aparțin.</translation>
+        <source>Sign messages with your OGkush addresses to prove you own them</source>
+        <translation>Semnează mesajele cu adresa ta de OGkush pentru a face dovada că îți aparțin.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified OGKush addresses</source>
-        <translation>Verifică mesajele cu scopul de a asigura faptul că au fost semnate cu adresa de OGKush specificată.</translation>
+        <source>Verify messages to ensure they were signed with specified OGkush addresses</source>
+        <translation>Verifică mesajele cu scopul de a asigura faptul că au fost semnate cu adresa de OGkush specificată.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -544,10 +572,6 @@
         <translation>&amp;Adresa</translation>
     </message>
     <message>
-        <source>New receiving address</source>
-        <translation>Adresă de primire nouă</translation>
-    </message>
-    <message>
         <source>New sending address</source>
         <translation>Adresă nouă de livrare</translation>
     </message>
@@ -585,19 +609,7 @@
         <source>(%1-bit)</source>
         <translation>(%1-bit)</translation>
     </message>
-    <message>
-        <source>Usage:</source>
-        <translation>Utilizare:</translation>
-    </message>
-    <message>
-        <source>Start minimized</source>
-        <translation>Pornește minimalizat</translation>
-    </message>
-    <message>
-        <source>Reset all settings changed in the GUI</source>
-        <translation>Resetează toate setările modificate în Interfața Grafică.</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>Intro</name>
     <message>
@@ -613,8 +625,8 @@
         <translation>Alege un folder/director personalizat</translation>
     </message>
     <message>
-        <source>OGKush</source>
-        <translation>OGKush</translation>
+        <source>OGkush</source>
+        <translation>OGkush</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -1000,6 +1012,10 @@
         <source>Message</source>
         <translation>Mesaj</translation>
     </message>
+    <message>
+        <source>Wallet</source>
+        <translation>Portofel</translation>
+    </message>
     </context>
 <context>
     <name>RecentRequestsTableModel</name>
@@ -1268,12 +1284,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>Options:</source>
-        <translation>Optiuni:</translation>
-    </message>
-    <message>
-        <source>OGKush Core</source>
-        <translation>OGKush Core</translation>
+        <source>OGkush Core</source>
+        <translation>OGkush Core</translation>
     </message>
     <message>
         <source>Upgrading UTXO database</source>

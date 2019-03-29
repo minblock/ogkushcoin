@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2017 The Bitcoin Core developers
+# Copyright (c) 2017-2018 The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test that the wallet can send and receive using all combinations of address types.
@@ -63,6 +63,7 @@ from test_framework.util import (
     sync_mempools,
 )
 
+
 class AddressTypeTest(BitcoinTestFramework):
     def set_test_params(self):
         self.num_nodes = 6
@@ -72,8 +73,11 @@ class AddressTypeTest(BitcoinTestFramework):
             ["-addresstype=p2sh-segwit", "-changetype=bech32"],
             ["-addresstype=bech32"],
             ["-changetype=p2sh-segwit"],
-            []
+            [],
         ]
+
+    def skip_test_if_missing_module(self):
+        self.skip_if_no_wallet()
 
     def setup_network(self):
         self.setup_nodes()
@@ -93,8 +97,8 @@ class AddressTypeTest(BitcoinTestFramework):
 
     def test_address(self, node, address, multisig, typ):
         """Run sanity checks on an address."""
-        info = self.nodes[node].validateaddress(address)
-        assert(info['isvalid'])
+        info = self.nodes[node].getaddressinfo(address)
+        assert(self.nodes[node].validateaddress(address)['isvalid'])
         if not multisig and typ == 'legacy':
             # P2PKH
             assert(not info['isscript'])
@@ -111,7 +115,7 @@ class AddressTypeTest(BitcoinTestFramework):
             assert(not info['isscript'])
             assert(info['iswitness'])
             assert_equal(info['witness_version'], 0)
-            assert_equal(len(info['witness_program']), 40)
+            assert_equal(len(info['witness_proogkush']), 40)
             assert('pubkey' in info)
         elif typ == 'legacy':
             # P2SH-multisig
@@ -128,7 +132,7 @@ class AddressTypeTest(BitcoinTestFramework):
             assert_equal(info['embedded']['script'], 'multisig')
             assert(info['embedded']['iswitness'])
             assert_equal(info['embedded']['witness_version'], 0)
-            assert_equal(len(info['embedded']['witness_program']), 64)
+            assert_equal(len(info['embedded']['witness_proogkush']), 64)
             assert('pubkeys' in info['embedded'])
         elif typ == 'bech32':
             # P2WSH-multisig
@@ -136,7 +140,7 @@ class AddressTypeTest(BitcoinTestFramework):
             assert_equal(info['script'], 'multisig')
             assert(info['iswitness'])
             assert_equal(info['witness_version'], 0)
-            assert_equal(len(info['witness_program']), 64)
+            assert_equal(len(info['witness_proogkush']), 64)
             assert('pubkeys' in info)
         else:
             # Unknown type
@@ -280,7 +284,10 @@ class AddressTypeTest(BitcoinTestFramework):
         self.log.info('getrawchangeaddress defaults to addresstype if -changetype is not set and argument is absent')
         self.test_address(3, self.nodes[3].getrawchangeaddress(), multisig=False, typ='bech32')
 
-        self.log.info('getrawchangeaddress fails with invalid changetype argument')
+        self.log.info('test invalid address type arguments')
+        assert_raises_rpc_error(-5, "Unknown address type ''", self.nodes[3].addmultisigaddress, 2, [compressed_1, compressed_2], None, '')
+        assert_raises_rpc_error(-5, "Unknown address type ''", self.nodes[3].getnewaddress, None, '')
+        assert_raises_rpc_error(-5, "Unknown address type ''", self.nodes[3].getrawchangeaddress, '')
         assert_raises_rpc_error(-5, "Unknown address type 'bech23'", self.nodes[3].getrawchangeaddress, 'bech23')
 
         self.log.info("Nodes with changetype=p2sh-segwit never use a P2WPKH change output")

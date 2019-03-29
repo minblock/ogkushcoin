@@ -9,7 +9,7 @@
 		<integer>800</integer>
 		<integer>620</integer>
 	</array>
-	<key>background_picture</key>
+	<key>background_ogkushture</key>
 	<string>background.tiff</string>
 	<key>icon_size</key>
 	<integer>96</integer>
@@ -22,7 +22,7 @@
 			<integer>370</integer>
 			<integer>156</integer>
 		</array>
-		<key>OGKush-Qt.app</key>
+		<key>OGkush-Qt.app</key>
 		<array>
 			<integer>128</integer>
 			<integer>156</integer>

@@ -16,8 +16,8 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "OGKush"
-            VALUE "FileDescription",    "ogkushd (OGKush node with a JSON-RPC server)"
+            VALUE "CompanyName",        "OGkush"
+            VALUE "FileDescription",    "ogkushd (OGkush node with a JSON-RPC server)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "ogkushd"
             VALUE "LegalCopyright",     COPYRIGHT_STR

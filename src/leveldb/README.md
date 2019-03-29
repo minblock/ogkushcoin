@@ -58,7 +58,7 @@ with the internal repository at Google. More information at GitHub's
 # Performance
 
 Here is a performance report (with explanations) from the run of the
-included db_bench program.  The results are somewhat noisy, but should
+included db_bench proogkush.  The results are somewhat noisy, but should
 be enough to get a ballpark performance estimate.
 
 ## Setup
@@ -95,7 +95,7 @@ Each "op" above corresponds to a write of a single key/value pair.
 I.e., a random write benchmark goes at approximately 400,000 writes per second.
 
 Each "fillsync" operation costs much less (0.3 millisecond)
-than a disk seek (typically 10 milliseconds).  We suspect that this is
+than a disk seek (tyogkushally 10 milliseconds).  We suspect that this is
 because the hard disk itself is buffering the update in its memory and
 responding before the data has been written to the platter.  This may
 or may not be safe based on whether or not the hard disk has enough

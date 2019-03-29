@@ -325,7 +325,7 @@ AUTOLINK_SUPPORT       = YES
 # tag to YES in order to let doxygen match functions declarations and
 # definitions whose arguments contain STL classes (e.g. func(std::string);
 # versus func(std::string) {}). This also make the inheritance and collaboration
-# diagrams that involve STL classes more complete and accurate.
+# diaogkushs that involve STL classes more complete and accurate.
 # The default value is: NO.
 
 BUILTIN_STL_SUPPORT    = NO
@@ -403,7 +403,7 @@ INLINE_SIMPLE_STRUCTS  = NO
 # enum is documented as struct, union, or enum with the name of the typedef. So
 # typedef struct TypeS {} TypeT, will appear in the documentation as a struct
 # with name TypeT. When disabled the typedef will appear as a member of a file,
-# namespace, or class. And the struct will be named TypeS. This can typically be
+# namespace, or class. And the struct will be named TypeS. This can tyogkushally be
 # useful for C code in case the coding convention dictates that all compound
 # types are typedef'ed and only the typedef is referenced, never the tag name.
 # The default value is: NO.
@@ -682,12 +682,12 @@ SHOW_FILES             = YES
 
 SHOW_NAMESPACES        = YES
 
-# The FILE_VERSION_FILTER tag can be used to specify a program or script that
-# doxygen should invoke to get the current version for each file (typically from
-# the version control system). Doxygen will invoke the program by executing (via
+# The FILE_VERSION_FILTER tag can be used to specify a proogkush or script that
+# doxygen should invoke to get the current version for each file (tyogkushally from
+# the version control system). Doxygen will invoke the proogkush by executing (via
 # popen()) the command command input-file, where command is the value of the
 # FILE_VERSION_FILTER tag, and input-file is the name of an input file provided
-# by doxygen. Whatever the program writes to standard output is used as the file
+# by doxygen. Whatever the proogkush writes to standard output is used as the file
 # version. For an example see the documentation.
 
 FILE_VERSION_FILTER    =
@@ -920,15 +920,15 @@ EXAMPLE_RECURSIVE      = NO
 
 IMAGE_PATH             =
 
-# The INPUT_FILTER tag can be used to specify a program that doxygen should
-# invoke to filter for each input file. Doxygen will invoke the filter program
+# The INPUT_FILTER tag can be used to specify a proogkush that doxygen should
+# invoke to filter for each input file. Doxygen will invoke the filter proogkush
 # by executing (via popen()) the command:
 #
 # <filter> <input-file>
 #
 # where <filter> is the value of the INPUT_FILTER tag, and <input-file> is the
 # name of an input file. Doxygen will then use the output that the filter
-# program writes to standard output. If FILTER_PATTERNS is specified, this tag
+# proogkush writes to standard output. If FILTER_PATTERNS is specified, this tag
 # will be ignored.
 #
 # Note that the filter must not add or remove lines; it is applied before the
@@ -1125,7 +1125,7 @@ HTML_FILE_EXTENSION    = .html
 # and then modify the file new_header.html. See also section "Doxygen usage"
 # for information on how to generate the default header that doxygen normally
 # uses.
-# Note: The header is subject to change so you typically have to regenerate the
+# Note: The header is subject to change so you tyogkushally have to regenerate the
 # default header when upgrading to a newer version of doxygen. For a description
 # of the possible markers and block names see the documentation.
 # This tag requires that the tag GENERATE_HTML is set to YES.
@@ -1550,11 +1550,11 @@ MATHJAX_CODEFILE       =
 # the HTML output. The underlying search engine uses javascript and DHTML and
 # should work on any modern browser. Note that when using HTML help
 # (GENERATE_HTMLHELP), Qt help (GENERATE_QHP), or docsets (GENERATE_DOCSET)
-# there is already a search function so this one should typically be disabled.
+# there is already a search function so this one should tyogkushally be disabled.
 # For large projects the javascript based search engine can be slow, then
 # enabling SERVER_BASED_SEARCH may provide a better solution. It is possible to
 # search using the keyboard; to jump to the search box use <access key> + S
-# (what the <access key> is depends on the OS and browser, but it is typically
+# (what the <access key> is depends on the OS and browser, but it is tyogkushally
 # <CTRL>, <ALT>/<option>, or both). Inside the search box use the <cursor down
 # key> to jump into the search results window, the results can be navigated
 # using the <cursor keys>. Press <Enter> to select an item or <escape> to cancel
@@ -1929,7 +1929,7 @@ GENERATE_XML           = NO
 
 XML_OUTPUT             = xml
 
-# If the XML_PROGRAMLISTING tag is set to YES, doxygen will dump the program
+# If the XML_PROGRAMLISTING tag is set to YES, doxygen will dump the proogkush
 # listings (including syntax highlighting and cross-referencing information) to
 # the XML output. Note that enabling this will significantly increase the size
 # of the XML output.
@@ -1957,7 +1957,7 @@ GENERATE_DOCBOOK       = NO
 DOCBOOK_OUTPUT         = docbook
 
 # If the DOCBOOK_PROGRAMLISTING tag is set to YES, doxygen will include the
-# program listings (including syntax highlighting and cross-referencing
+# proogkush listings (including syntax highlighting and cross-referencing
 # information) to the DOCBOOK output. Note that enabling this will significantly
 # increase the size of the DOCBOOK output.
 # The default value is: NO.
@@ -2086,7 +2086,7 @@ EXPAND_AS_DEFINED      =
 # If the SKIP_FUNCTION_MACROS tag is set to YES then doxygen's preprocessor will
 # remove all references to function-like macros that are alone on a line, have
 # an all uppercase name, and do not end with a semicolon. Such function macros
-# are typically used for boiler-plate code, and will confuse the parser if not
+# are tyogkushally used for boiler-plate code, and will confuse the parser if not
 # removed.
 # The default value is: YES.
 # This tag requires that the tag ENABLE_PREPROCESSING is set to YES.
@@ -2149,9 +2149,9 @@ PERL_PATH              = /usr/bin/perl
 # Configuration options related to the dot tool
 #---------------------------------------------------------------------------
 
-# If the CLASS_DIAGRAMS tag is set to YES, doxygen will generate a class diagram
+# If the CLASS_DIAGRAMS tag is set to YES, doxygen will generate a class diaogkush
 # (in HTML and LaTeX) for classes with base or super classes. Setting the tag to
-# NO turns the diagrams off. Note that this option also works with HAVE_DOT
+# NO turns the diaogkushs off. Note that this option also works with HAVE_DOT
 # disabled, but it is recommended to install and use dot, since it yields more
 # powerful graphs.
 # The default value is: YES.
@@ -2167,8 +2167,8 @@ CLASS_DIAGRAMS         = YES
 
 MSCGEN_PATH            =
 
-# You can include diagrams made with dia in doxygen documentation. Doxygen will
-# then run dia to produce the diagram and insert it in the documentation. The
+# You can include diaogkushs made with dia in doxygen documentation. Doxygen will
+# then run dia to produce the diaogkush and insert it in the documentation. The
 # DIA_PATH tag allows you to specify the directory where the dia binary resides.
 # If left empty dia is assumed to be found in the default search path.
 
@@ -2248,7 +2248,7 @@ COLLABORATION_GRAPH    = YES
 GROUP_GRAPHS           = YES
 
 # If the UML_LOOK tag is set to YES, doxygen will generate inheritance and
-# collaboration diagrams in a style similar to the OMG's Unified Modeling
+# collaboration diaogkushs in a style similar to the OMG's Unified Modeling
 # Language.
 # The default value is: NO.
 # This tag requires that the tag HAVE_DOT is set to YES.
@@ -2390,7 +2390,7 @@ DIAFILE_DIRS           =
 # path where java can find the plantuml.jar file. If left blank, it is assumed
 # PlantUML is not used or called during a preprocessing step. Doxygen will
 # generate a warning when it encounters a \startuml command in this case and
-# will not generate output for the diagram.
+# will not generate output for the diaogkush.
 
 PLANTUML_JAR_PATH      =
 

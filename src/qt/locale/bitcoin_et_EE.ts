@@ -130,8 +130,8 @@
         <translation>Kõvakettal olevate plokkide reindekseerimine...</translation>
     </message>
     <message>
-        <source>OGKush</source>
-        <translation>OGKush</translation>
+        <source>OGkush</source>
+        <translation>OGkush</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -257,15 +257,7 @@
         <source>Command-line options</source>
         <translation>Käsurea valikud</translation>
     </message>
-    <message>
-        <source>Usage:</source>
-        <translation>Kasutus:</translation>
-    </message>
-    <message>
-        <source>command-line options</source>
-        <translation>käsurea valikud</translation>
-    </message>
-    </context>
+</context>
 <context>
     <name>Intro</name>
     <message>
@@ -273,8 +265,8 @@
         <translation>Tere tulemast</translation>
     </message>
     <message>
-        <source>OGKush</source>
-        <translation>OGKush</translation>
+        <source>OGkush</source>
+        <translation>OGkush</translation>
     </message>
     <message>
         <source>Error</source>
@@ -507,6 +499,10 @@
     <message>
         <source>Message</source>
         <translation>Sõnum</translation>
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation>Rahakott</translation>
     </message>
     </context>
 <context>
@@ -764,12 +760,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>Options:</source>
-        <translation>Valikud:</translation>
-    </message>
-    <message>
-        <source>OGKush Core</source>
-        <translation>OGKush Core</translation>
+        <source>OGkush Core</source>
+        <translation>OGkush Core</translation>
     </message>
     <message>
         <source>Information</source>

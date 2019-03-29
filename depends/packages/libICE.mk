@@ -7,7 +7,7 @@ $(package)_dependencies=xtrans xproto
 
 define $(package)_set_vars
   $(package)_config_opts=--disable-static --disable-docs --disable-specs --without-xsltproc
-  $(package)_config_opts_linux=--with-pic
+  $(package)_config_opts_linux=--with-ogkush
 endef
 
 define $(package)_config_cmds

@@ -9,7 +9,7 @@
 # DESCRIPTION
 #
 #   AX_JNI_INCLUDE_DIR finds include directories needed for compiling
-#   programs using the JNI interface.
+#   proogkushs using the JNI interface.
 #
 #   JNI include directories are usually in the Java distribution. This is
 #   deduced from the value of $JAVA_HOME, $JAVAC, or the path to "javac", in
@@ -32,7 +32,7 @@
 #
 #   - at the configure level, setenv JAVAC
 #
-#   Note: This macro can work with the autoconf M4 macros for Java programs.
+#   Note: This macro can work with the autoconf M4 macros for Java proogkushs.
 #   This particular macro is not part of the original set of macros.
 #
 # LICENSE

@@ -2281,7 +2281,7 @@ void run_ecmult_chain(void) {
         0x6e9323d4, 0x2b3152e5, 0xca2c3990, 0xedc7c9de
     );
     /* two small multipliers to be applied to xn and gn in every iteration: */
-    static const secp256k1_scalar xf = SECP256K1_SCALAR_CONST(0, 0, 0, 0, 0, 0, 0, 0x1337);
+    static const secp256k1_scalar xf = SECP256K1_SCALAR_CONST(0, 0, 0, 0, 0, 0, 0, 0x2337);
     static const secp256k1_scalar gf = SECP256K1_SCALAR_CONST(0, 0, 0, 0, 0, 0, 0, 0x7113);
     /* accumulators with the resulting coefficients to A and G */
     secp256k1_scalar ae = SECP256K1_SCALAR_CONST(0, 0, 0, 0, 0, 0, 0, 1);
@@ -4432,7 +4432,7 @@ int main(int argc, char **argv) {
     } else {
         FILE *frand = fopen("/dev/urandom", "r");
         if ((frand == NULL) || !fread(&seed16, sizeof(seed16), 1, frand)) {
-            uint64_t t = time(NULL) * (uint64_t)1337;
+            uint64_t t = time(NULL) * (uint64_t)2337;
             seed16[0] ^= t;
             seed16[1] ^= t >> 8;
             seed16[2] ^= t >> 16;

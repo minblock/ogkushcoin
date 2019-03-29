@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2017 The Bitcoin Core developers
+// Copyright (c) 2009-2018 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -76,11 +76,11 @@ const char* ScriptErrorString(const ScriptError serror)
         case SCRIPT_ERR_CLEANSTACK:
             return "Extra items left on stack after execution";
         case SCRIPT_ERR_WITNESS_PROGRAM_WRONG_LENGTH:
-            return "Witness program has incorrect length";
+            return "Witness proogkush has incorrect length";
         case SCRIPT_ERR_WITNESS_PROGRAM_WITNESS_EMPTY:
-            return "Witness program was passed an empty witness";
+            return "Witness proogkush was passed an empty witness";
         case SCRIPT_ERR_WITNESS_PROGRAM_MISMATCH:
-            return "Witness program hash mismatch";
+            return "Witness proogkush hash mismatch";
         case SCRIPT_ERR_WITNESS_MALLEATED:
             return "Witness requires empty scriptSig";
         case SCRIPT_ERR_WITNESS_MALLEATED_P2SH:

@@ -30,6 +30,10 @@
         <translation>Forigi la elektitan adreson el la listo</translation>
     </message>
     <message>
+        <source>Enter address or label to search</source>
+        <translation>Tajpu adreson aŭ etikedon por serĉi</translation>
+    </message>
+    <message>
         <source>Export the data in the current tab to a file</source>
         <translation>Eksporti la datumojn el la aktuala langeto al dosiero</translation>
     </message>
@@ -62,11 +66,11 @@
         <translation>Ricevaj adresoj</translation>
     </message>
     <message>
-        <source>These are your OGKush addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Jen viaj OGKush-adresoj por sendi pagojn. Zorge kontrolu la sumon kaj la alsendan adreson antaŭ ol sendi.</translation>
+        <source>These are your OGkush addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Jen viaj OGkush-adresoj por sendi pagojn. Zorge kontrolu la sumon kaj la alsendan adreson antaŭ ol sendi.</translation>
     </message>
     <message>
-        <source>These are your OGKush addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your OGkush addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation>Jen viaj ogkushj adresoj por ricevi pagojn. Estas konsilinde uzi apartan ricevan adreson por ĉiu transakcio.</translation>
     </message>
     <message>
@@ -270,8 +274,8 @@
         <translation>Reindeksado de blokoj sur disko...</translation>
     </message>
     <message>
-        <source>Send coins to a OGKush address</source>
-        <translation>Sendi monon al OGKush-adreso</translation>
+        <source>Send coins to a OGkush address</source>
+        <translation>Sendi monon al OGkush-adreso</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -294,8 +298,8 @@
         <translation>&amp;Kontroli mesaĝon...</translation>
     </message>
     <message>
-        <source>OGKush</source>
-        <translation>OGKush</translation>
+        <source>OGkush</source>
+        <translation>OGkush</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -322,12 +326,12 @@
         <translation>Ĉifri la privatajn ŝlosilojn de via monujo</translation>
     </message>
     <message>
-        <source>Sign messages with your OGKush addresses to prove you own them</source>
-        <translation>Subskribi mesaĝojn per via OGKush-adresoj por pravigi, ke vi estas la posedanto</translation>
+        <source>Sign messages with your OGkush addresses to prove you own them</source>
+        <translation>Subskribi mesaĝojn per via OGkush-adresoj por pravigi, ke vi estas la posedanto</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified OGKush addresses</source>
-        <translation>Kontroli mesaĝojn por kontroli ĉu ili estas subskribitaj per specifaj OGKush-adresoj</translation>
+        <source>Verify messages to ensure they were signed with specified OGkush addresses</source>
+        <translation>Kontroli mesaĝojn por kontroli ĉu ili estas subskribitaj per specifaj OGkush-adresoj</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -571,19 +575,7 @@
         <source>Command-line options</source>
         <translation>Komandliniaj agordaĵoj</translation>
     </message>
-    <message>
-        <source>Usage:</source>
-        <translation>Uzado:</translation>
-    </message>
-    <message>
-        <source>command-line options</source>
-        <translation>komandliniaj agordaĵoj</translation>
-    </message>
-    <message>
-        <source>UI Options:</source>
-        <translation>Uzantinterfaco ebloj:</translation>
-    </message>
-    </context>
+</context>
 <context>
     <name>Intro</name>
     <message>
@@ -599,8 +591,8 @@
         <translation>Uzi alian dosierujon por datumoj:</translation>
     </message>
     <message>
-        <source>OGKush</source>
-        <translation>OGKush</translation>
+        <source>OGkush</source>
+        <translation>OGkush</translation>
     </message>
     <message>
         <source>Error</source>
@@ -680,8 +672,8 @@
         <translation>Fakulo</translation>
     </message>
     <message>
-        <source>Automatically open the OGKush client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Aŭtomate malfermi la kursilan pordon por OGKush. Tio funkcias nur se via kursilo havas la UPnP-funkcion, kaj se tiu ĉi estas ŝaltita.</translation>
+        <source>Automatically open the OGkush client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Aŭtomate malfermi la kursilan pordon por OGkush. Tio funkcias nur se via kursilo havas la UPnP-funkcion, kaj se tiu ĉi estas ŝaltita.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -713,7 +705,7 @@
     </message>
     <message>
         <source>Show only a tray icon after minimizing the window.</source>
-        <translation>Montri nur sistempletan piktogramon post minimumigo de la fenestro.</translation>
+        <translation>Montri nur sistempletan piktoogkushon post minimumigo de la fenestro.</translation>
     </message>
     <message>
         <source>&amp;Minimize to the tray instead of the taskbar</source>
@@ -779,7 +771,7 @@
         <translation>Formularo</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the OGKush network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the OGkush network after a connection is established, but this process has not completed yet.</source>
         <translation>Eblas, ke la informoj videblaj ĉi tie estas eksdataj. Via monujo aŭtomate sinkoniĝas kun la ogkush reto kiam ili konektiĝas, sed tiu procezo ankoraŭ ne finfariĝis.</translation>
     </message>
     <message>
@@ -1099,6 +1091,10 @@
         <translation>Mesaĝo</translation>
     </message>
     <message>
+        <source>Wallet</source>
+        <translation>Monujo</translation>
+    </message>
+    <message>
         <source>Resulting URI too long, try to reduce the text for label / message.</source>
         <translation>La rezultanta URI estas tro longa. Provu malplilongigi la tekston de la etikedo / mesaĝo.</translation>
     </message>
@@ -1134,7 +1130,7 @@
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>Sendi OGKushn</translation>
+        <translation>Sendi OGkushn</translation>
     </message>
     <message>
         <source>Coin Control Features</source>
@@ -1245,16 +1241,12 @@
         <translation>Ĉu vi certas, ke vi volas sendi?</translation>
     </message>
     <message>
-        <source>added as transaction fee</source>
-        <translation>aldonita kiel krompago</translation>
-    </message>
-    <message>
-        <source>Total Amount %1</source>
-        <translation>Totala sumo %1</translation>
-    </message>
-    <message>
         <source>or</source>
         <translation>aŭ</translation>
+    </message>
+    <message>
+        <source>Transaction fee</source>
+        <translation>Krompago</translation>
     </message>
     <message>
         <source>Confirm send coins</source>
@@ -1277,8 +1269,8 @@
         <translation>Kreo de transakcio fiaskis!</translation>
     </message>
     <message>
-        <source>Warning: Invalid OGKush address</source>
-        <translation>Averto: Nevalida OGKush-adreso</translation>
+        <source>Warning: Invalid OGkush address</source>
+        <translation>Averto: Nevalida OGkush-adreso</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -1393,8 +1385,8 @@
         <translation>Kopii la aktualan subskribon al la tondejo</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this OGKush address</source>
-        <translation>Subskribi la mesaĝon por pravigi, ke vi estas la posedanto de tiu OGKush-adreso</translation>
+        <source>Sign the message to prove you own this OGkush address</source>
+        <translation>Subskribi la mesaĝon por pravigi, ke vi estas la posedanto de tiu OGkush-adreso</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1413,8 +1405,8 @@
         <translation>&amp;Kontroli Mesaĝon</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified OGKush address</source>
-        <translation>Kontroli la mesaĝon por pravigi, ke ĝi ja estas subskribita per la specifa OGKush-adreso</translation>
+        <source>Verify the message to ensure it was signed with the specified OGkush address</source>
+        <translation>Kontroli la mesaĝon por pravigi, ke ĝi ja estas subskribita per la specifa OGkush-adreso</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1498,10 +1490,6 @@
         <translation>Malferma ĝis %1</translation>
     </message>
     <message>
-        <source>%1/offline</source>
-        <translation>%1/senkonekte</translation>
-    </message>
-    <message>
         <source>%1/unconfirmed</source>
         <translation>%1/nekonfirmite</translation>
     </message>
@@ -1512,10 +1500,6 @@
     <message>
         <source>Status</source>
         <translation>Stato</translation>
-    </message>
-    <message>
-        <source>, has not been successfully broadcast yet</source>
-        <translation>, ankoraŭ ne elsendita sukcese</translation>
     </message>
     <message>
         <source>Date</source>
@@ -1640,20 +1624,12 @@
         <translation>Malferma ĝis %1</translation>
     </message>
     <message>
-        <source>Offline</source>
-        <translation>Senkonekte</translation>
-    </message>
-    <message>
         <source>Unconfirmed</source>
         <translation>Nekonfirmita</translation>
     </message>
     <message>
         <source>Confirmed (%1 confirmations)</source>
         <translation>Konfirmita (%1 konfirmoj)</translation>
-    </message>
-    <message>
-        <source>This block was not received by any other nodes and will probably not be accepted!</source>
-        <translation>Tiun ĉi blokon ne ricevis ajna alia nodo, kaj ĝi verŝajne ne akceptiĝos!</translation>
     </message>
     <message>
         <source>Generated but not accepted</source>
@@ -1833,7 +1809,7 @@
     <name>WalletModel</name>
     <message>
         <source>Send Coins</source>
-        <translation>Sendi OGKushn</translation>
+        <translation>Sendi OGkushn</translation>
     </message>
     </context>
 <context>
@@ -1866,40 +1842,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>Options:</source>
-        <translation>Agordoj:</translation>
-    </message>
-    <message>
-        <source>Specify data directory</source>
-        <translation>Specifi dosieron por datumoj</translation>
-    </message>
-    <message>
-        <source>Connect to a node to retrieve peer addresses, and disconnect</source>
-        <translation>Konekti al nodo por ricevi adresojn de samtavolanoj, kaj malkonekti</translation>
-    </message>
-    <message>
-        <source>Specify your own public address</source>
-        <translation>Specifi vian propran publikan adreson</translation>
-    </message>
-    <message>
-        <source>Accept command line and JSON-RPC commands</source>
-        <translation>Akcepti komandojn JSON-RPC kaj el komandlinio</translation>
-    </message>
-    <message>
-        <source>Run in the background as a daemon and accept commands</source>
-        <translation>Ruli fone kiel demono kaj akcepti komandojn</translation>
-    </message>
-    <message>
-        <source>OGKush Core</source>
-        <translation>Kerno de OGKush</translation>
-    </message>
-    <message>
-        <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
-        <translation>Bindi al donita adreso kaj ĉiam aŭskulti per ĝi. Uzu la formaton [gastigo]:pordo por IPv6</translation>
-    </message>
-    <message>
-        <source>Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</source>
-        <translation>Plenumi komandon kiam monuja transakcio ŝanĝiĝas (%s en cmd anstataŭiĝas per TxID)</translation>
+        <source>OGkush Core</source>
+        <translation>Kerno de OGkusho</translation>
     </message>
     <message>
         <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
@@ -1912,18 +1856,6 @@
     <message>
         <source>Warning: We do not appear to fully agree with our peers! You may need to upgrade, or other nodes may need to upgrade.</source>
         <translation>Averto: ŝajne ni ne tute konsentas kun niaj samtavolanoj! Eble vi devas ĝisdatigi vian klienton, aŭ eble aliaj nodoj faru same.</translation>
-    </message>
-    <message>
-        <source>&lt;category&gt; can be:</source>
-        <translation>&lt;category&gt; povas esti:</translation>
-    </message>
-    <message>
-        <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
-        <translation>Akcepti konektojn el ekstere (defaŭlte: 1 se ne estas -proxy nek -connect)</translation>
-    </message>
-    <message>
-        <source>Block creation options:</source>
-        <translation>Blok-kreaj agordaĵoj:</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>
@@ -1966,32 +1898,12 @@
         <translation>Nesufiĉa nombro de dosierpriskribiloj disponeblas.</translation>
     </message>
     <message>
-        <source>Specify wallet file (within data directory)</source>
-        <translation>Specifi monujan dosieron (ene de dosierujo por datumoj)</translation>
-    </message>
-    <message>
         <source>Verifying blocks...</source>
         <translation>Kontrolado de blokoj...</translation>
     </message>
     <message>
-        <source>Wallet options:</source>
-        <translation>Monujaj opcioj:</translation>
-    </message>
-    <message>
-        <source>Execute command when a relevant alert is received or we see a really long fork (%s in cmd is replaced by message)</source>
-        <translation>Plenumi komandon kiam rilata alerto riceviĝas, aŭ kiam ni vidas tre longan forkon (%s en cms anstataŭiĝas per mesaĝo)</translation>
-    </message>
-    <message>
         <source>Information</source>
         <translation>Informoj</translation>
-    </message>
-    <message>
-        <source>Send trace/debug info to console instead of debug.log file</source>
-        <translation>Sendi spurajn/sencimigajn informojn al la konzolo anstataŭ al dosiero debug.log</translation>
-    </message>
-    <message>
-        <source>Shrink debug.log file on client startup (default: 1 when no -debug)</source>
-        <translation>Malpligrandigi la sencimigan protokol-dosieron kiam kliento lanĉiĝas (defaŭlte: 1 kiam mankas -debug)</translation>
     </message>
     <message>
         <source>Signing transaction failed</source>
@@ -1999,7 +1911,7 @@
     </message>
     <message>
         <source>This is experimental software.</source>
-        <translation>ĝi estas eksperimenta programo</translation>
+        <translation>ĝi estas eksperimenta proogkusho</translation>
     </message>
     <message>
         <source>Transaction amount too small</source>
@@ -2010,28 +1922,8 @@
         <translation>Transakcio estas tro granda</translation>
     </message>
     <message>
-        <source>Username for JSON-RPC connections</source>
-        <translation>Salutnomo por konektoj JSON-RPC</translation>
-    </message>
-    <message>
         <source>Warning</source>
         <translation>Averto</translation>
-    </message>
-    <message>
-        <source>You need to rebuild the database using -reindex to change -txindex</source>
-        <translation>Vi devas rekontrui la datumbazon kun -reindex por ŝanĝi -txindex</translation>
-    </message>
-    <message>
-        <source>Password for JSON-RPC connections</source>
-        <translation>Pasvorto por konektoj JSON-RPC</translation>
-    </message>
-    <message>
-        <source>Execute command when the best block changes (%s in cmd is replaced by block hash)</source>
-        <translation>Plenumi komandon kiam plej bona bloko ŝanĝiĝas (%s en cmd anstataŭiĝas per bloka haketaĵo)</translation>
-    </message>
-    <message>
-        <source>Allow DNS lookups for -addnode, -seednode and -connect</source>
-        <translation>Permesi DNS-elserĉojn por -addnote, -seednote kaj -connect</translation>
     </message>
     <message>
         <source>Unknown network specified in -onlynet: '%s'</source>

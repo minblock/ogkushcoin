@@ -178,8 +178,8 @@
         <translation>กำลังทำดัชนี ที่เก็บบล็อก ใหม่ ในดิสก์...</translation>
     </message>
     <message>
-        <source>Send coins to a OGKush address</source>
-        <translation>ส่ง coins ไปยัง ที่เก็บ OGKush</translation>
+        <source>Send coins to a OGkush address</source>
+        <translation>ส่ง coins ไปยัง ที่เก็บ OGkush</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -202,8 +202,8 @@
         <translation>&amp;ยืนยันข้อความ...</translation>
     </message>
     <message>
-        <source>OGKush</source>
-        <translation>OGKush</translation>
+        <source>OGkush</source>
+        <translation>OGkush</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -230,12 +230,12 @@
         <translation>เข้ารหัส private keys/ รหัสส่วนตัว สำหรับกระเป๋าเงินของท่าน</translation>
     </message>
     <message>
-        <source>Sign messages with your OGKush addresses to prove you own them</source>
-        <translation>เซ็นชื่อด้วยข้อความ ที่เก็บ OGKush เพื่อแสดงว่าท่านเป็นเจ้าของ ogkush นี้จริง</translation>
+        <source>Sign messages with your OGkush addresses to prove you own them</source>
+        <translation>เซ็นชื่อด้วยข้อความ ที่เก็บ OGkush เพื่อแสดงว่าท่านเป็นเจ้าของ ogkush นี้จริง</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified OGKush addresses</source>
-        <translation>ตรวจสอบ ข้อความ เพื่อให้แน่ใจว่า การเซ็นต์ชื่อ ด้วยที่เก็บ OGKush แล้ว</translation>
+        <source>Verify messages to ensure they were signed with specified OGkush addresses</source>
+        <translation>ตรวจสอบ ข้อความ เพื่อให้แน่ใจว่า การเซ็นต์ชื่อ ด้วยที่เก็บ OGkush แล้ว</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -274,8 +274,8 @@
         <translation>&amp;ตัวเลือก Command-line</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to OGKush network</source>
-        <translation><numerusform>%n ช่องการเชื่อมต่อที่ใช้งานได้ เพื่อเชื่อมกับเครือข่าย OGKush</numerusform></translation>
+        <source>%n active connection(s) to OGkush network</source>
+        <translation><numerusform>%n ช่องการเชื่อมต่อที่ใช้งานได้ เพื่อเชื่อมกับเครือข่าย OGkush</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -318,8 +318,8 @@
         <translation>ทันสมัย</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible OGKush command-line options</source>
-        <translation>แสดง %1 ข้อความช่วยเหลือ เพื่อแสดงรายการ ตัวเลือกที่เป็นไปได้สำหรับ OGKush command-line</translation>
+        <source>Show the %1 help message to get a list with possible OGkush command-line options</source>
+        <translation>แสดง %1 ข้อความช่วยเหลือ เพื่อแสดงรายการ ตัวเลือกที่เป็นไปได้สำหรับ OGkush command-line</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -511,42 +511,6 @@
         <source>Command-line options</source>
         <translation>ตัวเลือก Command-line</translation>
     </message>
-    <message>
-        <source>Usage:</source>
-        <translation>วิธีใช้งาน:</translation>
-    </message>
-    <message>
-        <source>command-line options</source>
-        <translation>ตัวเลือก command-line</translation>
-    </message>
-    <message>
-        <source>UI Options:</source>
-        <translation>ตัวเลือก UI:</translation>
-    </message>
-    <message>
-        <source>Choose data directory on startup (default: %u)</source>
-        <translation>เลือกไดเร็กทอรี่ข้อมูลตั้งแต่เริ่มต้นสตาร์ทอัพ (ค่าเริ่มต้น: %u)</translation>
-    </message>
-    <message>
-        <source>Set language, for example "de_DE" (default: system locale)</source>
-        <translation>ตั้งค่าภาษา ยกตัวอย่าง "de_DE" (ค่าเริ่มต้น: ภาษาท้องถิ่นของระบบ)</translation>
-    </message>
-    <message>
-        <source>Start minimized</source>
-        <translation>เริ่มต้นมินิไมซ์</translation>
-    </message>
-    <message>
-        <source>Set SSL root certificates for payment request (default: -system-)</source>
-        <translation>ตั้งค่า SSL root certificates สำหรับเรียกการชำระเงิน (ค่าเริ่มต้น: -system-)</translation>
-    </message>
-    <message>
-        <source>Show splash screen on startup (default: %u)</source>
-        <translation>แสดง splash screen ตอนเริ่มต้น (ค่าเริ่มต้น: %u)</translation>
-    </message>
-    <message>
-        <source>Reset all settings changed in the GUI</source>
-        <translation>รีเซตการเปลี่ยนการตั้งค่าทั้งหมดใน GUI</translation>
-    </message>
 </context>
 <context>
     <name>Intro</name>
@@ -559,7 +523,7 @@
         <translation>ยินดีต้องรับสู่ %1</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where %1 will store its data.</source>
+        <source>As this is the first time the proogkush is launched, you can choose where %1 will store its data.</source>
         <translation>นี่เป็นการรันโปรแกรมครั้งแรก ท่านสามารถเลือก ว่าจะเก็บข้อมูลไว้ที่ %1</translation>
     </message>
     <message>
@@ -571,8 +535,8 @@
         <translation>ใช้ไดเร็กทอรี่ข้อมูลที่ตั้งค่าเอง:</translation>
     </message>
     <message>
-        <source>OGKush</source>
-        <translation>OGKush</translation>
+        <source>OGkush</source>
+        <translation>OGkush</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -700,16 +664,16 @@
         <translation>&amp;ใช้เงินทอนที่ยังไม่ยืนยัน</translation>
     </message>
     <message>
-        <source>Automatically open the OGKush client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>เปิด OGKush ไคล์เอ็นท์พอร์ต/client port บน router โดยอัตโนมัติ วิธีนี้ใช้ได้เมื่อ router สนับสนุน UPnP และสถานะเปิดใช้งาน</translation>
+        <source>Automatically open the OGkush client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>เปิด OGkush ไคล์เอ็นท์พอร์ต/client port บน router โดยอัตโนมัติ วิธีนี้ใช้ได้เมื่อ router สนับสนุน UPnP และสถานะเปิดใช้งาน</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>จองพอร์ต โดยใช้ &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the OGKush network through a SOCKS5 proxy.</source>
-        <translation>เชื่อมต่อกับ OGKush เน็ตเวิร์ก ผ่านพร็อกซี่แบบ SOCKS5</translation>
+        <source>Connect to the OGkush network through a SOCKS5 proxy.</source>
+        <translation>เชื่อมต่อกับ OGkush เน็ตเวิร์ก ผ่านพร็อกซี่แบบ SOCKS5</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -744,8 +708,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the OGKush network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>เชื่อมต่อกับ เครือข่าย OGKush ผ่านทาง พร้อกซี่ SOCKS5 แยกต่างหาก สำหรับ Tor เซอร์วิส</translation>
+        <source>Connect to the OGkush network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>เชื่อมต่อกับ เครือข่าย OGkush ผ่านทาง พร้อกซี่ SOCKS5 แยกต่างหาก สำหรับ Tor เซอร์วิส</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -802,6 +766,10 @@
     </context>
 <context>
     <name>ReceiveRequestDialog</name>
+    <message>
+        <source>Wallet</source>
+        <translation>กระเป๋าเงิน</translation>
+    </message>
     </context>
 <context>
     <name>RecentRequestsTableModel</name>
@@ -893,10 +861,6 @@
     </context>
 <context>
     <name>bitcoin-core</name>
-    <message>
-        <source>Options:</source>
-        <translation>ตัวเลือก:</translation>
-    </message>
     <message>
         <source>Information</source>
         <translation>ข้อมูล</translation>

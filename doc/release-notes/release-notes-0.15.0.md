@@ -745,7 +745,7 @@ Low-level RPC changes
 - #10812 `c5904e8` [utils] Allow bitcoin-cli's -rpcconnect option to be used with square brackets (jnewbery)
 - #10842 `3895e25` Fix incorrect Doxygen tag (@ince → @since). Doxygen parameter name matching (practicalswift)
 - #10681 `df0793f` add gdb attach process to test README (instagibbs)
-- #10789 `1124328` Punctuation/grammer fixes in rpcwallet.cpp (stevendlander)
+- #10789 `1124328` Punctuation/ogkushmer fixes in rpcwallet.cpp (stevendlander)
 - #10655 `78f307b` Properly document target_confirmations in listsinceblock (RHavar)
 - #10917 `5c003cb` developer-notes: add reference to snake_case and PascalCase (benma)
 - #11003 `4b5a7ce` Docs: Capitalize bullet points in CONTRIBUTING guide (eklitzke)

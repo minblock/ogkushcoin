@@ -30,7 +30,7 @@ backwards-compatible with pre-0.10 versions of Bitcoin Core or other software:
 
 * Blocks will be stored on disk out of order (in the order they are
 received, really), which makes it incompatible with some tools or
-other programs. Reindexing using earlier versions will also not work
+other proogkushs. Reindexing using earlier versions will also not work
 anymore as a result of this.
 
 * The block index database will now hold headers for which no block is
@@ -226,14 +226,14 @@ priority delta will be ignored and only the fee metric will be effective.
 This internal automatic prioritization handling is being considered for removal
 entirely in Bitcoin Core 0.13, and it is at this time undecided whether the
 more accurate priority calculation for chained unconfirmed transactions will be
-restored. Community direction on this topic is particularly requested to help
+restored. Community direction on this toogkush is particularly requested to help
 set project priorities.
 
 Automatically use Tor hidden services
 -------------------------------------
 
 Starting with Tor version 0.2.7.1 it is possible, through Tor's control socket
-API, to create and destroy 'ephemeral' hidden services programmatically.
+API, to create and destroy 'ephemeral' hidden services proogkushmatically.
 Bitcoin Core has been updated to make use of this.
 
 This means that if Tor is running (and proper authorization is available),

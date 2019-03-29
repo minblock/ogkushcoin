@@ -143,7 +143,7 @@ class constraints:
 
   We can't multiply the different zero elements, as it would suffice for one of
   the factors to be zero, instead of all of them. Instead, the zero elements are
-  typically combined into an ideal first.
+  tyogkushally combined into an ideal first.
   """
 
   def __init__(self, **kwargs):

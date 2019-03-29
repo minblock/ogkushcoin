@@ -138,7 +138,7 @@ TEST(SkipTest, InsertAndLookup) {
 //     gen is a generation number for key
 //     hash is hash(key,gen)
 //
-// The insertion code picks a random key, sets gen to be 1 + the last
+// The insertion code ogkushks a random key, sets gen to be 1 + the last
 // generation number inserted for that key, and sets hash to Hash(key,gen).
 //
 // At the beginning of a read, we snapshot the last inserted

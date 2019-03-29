@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
-# Copyright (c) 2013-2017 The Bitcoin Core developers
+# Copyright (c) 2013-2018 The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #
 # Generate seeds.txt from Pieter's DNS seeder
 #
+
+import re
+import sys
+import dns.resolver
+import collections
 
 NSEEDS=512
 
@@ -22,15 +27,10 @@ SUSPICIOUS_HOSTS = {
     "54.94.195.96", "54.94.200.247"
 }
 
-import re
-import sys
-import dns.resolver
-import collections
-
 PATTERN_IPV4 = re.compile(r"^((\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})):(\d+)$")
 PATTERN_IPV6 = re.compile(r"^\[([0-9a-z:]+)\]:(\d+)$")
 PATTERN_ONION = re.compile(r"^([abcdefghijklmnopqrstuvwxyz234567]{16}\.onion):(\d+)$")
-PATTERN_AGENT = re.compile(r"^(/Satoshi:0.13.(0|1|2|99)/|/OGKushCore:0.13.(0|1|2|99)/|/OGKushCore:0.14.(0|1|2|99)/|/OGKushCore:0.15.(0|1|2|99)/)$")
+PATTERN_AGENT = re.compile(r"^(/OGkushCore:0.14.(0|1|2|99)/|/OGkushCore:0.15.(0|1|2|99)|/OGkushCore:0.16.(0|1|2|99)/)$")
 
 def parseline(line):
     sline = line.split()
@@ -143,7 +143,7 @@ def main():
 
     # Skip entries with valid address.
     ips = [ip for ip in ips if ip is not None]
-    # Skip entries from suspicious hosts.
+    # Skip entries from susogkushious hosts.
     ips = [ip for ip in ips if ip['ip'] not in SUSPICIOUS_HOSTS]
     # Enforce minimal number of blocks.
     ips = [ip for ip in ips if ip['blocks'] >= MIN_BLOCKS]

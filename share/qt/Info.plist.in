@@ -3,7 +3,7 @@
 <plist version="0.9">
 <dict>
   <key>LSMinimumSystemVersion</key>
-  <string>10.8.0</string>
+  <string>10.10.0</string>
 
   <key>LSArchitecturePriority</key>
   <array>
@@ -29,16 +29,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>OGKush-Qt</string>
+  <string>OGkush-Qt</string>
   
   <key>CFBundleName</key>
-  <string>OGKush-Qt</string>
+  <string>OGkush-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>org.ogkush.OGKush-Qt</string>
+  <string>org.ogkush.OGkush-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,7 +46,7 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>org.ogkush.OGKushPayment</string>
+      <string>org.ogkush.OGkushPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
         <string>ogkush</string>
@@ -60,7 +60,7 @@
       <key>UTTypeIdentifier</key>
       <string>org.ogkush.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>OGKush payment request</string>
+      <string>OGkush payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>
@@ -98,6 +98,9 @@
     <string>True</string>
 
   <key>LSAppNapIsDisabled</key>
+    <string>True</string>
+
+  <key>NSRequiresAquaSystemAppearance</key>
     <string>True</string>
   
   <key>LSApplicationCategoryType</key>

@@ -33,7 +33,7 @@ time.
 NEW FEATURES SINCE BITCOIN VERSION 0.5
 
 Initial network synchronization should be much faster
-(one or two hours on a typical machine instead of ten or more
+(one or two hours on a tyogkushal machine instead of ten or more
 hours).
 
 Backup Wallet menu option.

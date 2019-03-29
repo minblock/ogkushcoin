@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-# Copyright (c) 2014-2017 The Bitcoin Core developers
+# Copyright (c) 2014-2018 The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 """
     ZMQ example using python3's asyncio
 
-    OGKushd should be started with the command line arguments:
+    OGkushd should be started with the command line arguments:
         ogkushd -testnet -daemon \
                 -zmqpubrawtx=tcp://127.0.0.1:28332 \
                 -zmqpubrawblock=tcp://127.0.0.1:28332 \
@@ -30,7 +30,7 @@ import signal
 import struct
 import sys
 
-if not (sys.version_info.major >= 3 and sys.version_info.minor >= 5):
+if (sys.version_info.major, sys.version_info.minor) < (3, 5):
     print("This example only works with Python 3.5 and greater")
     sys.exit(1)
 
@@ -38,7 +38,7 @@ port = 28332
 
 class ZMQHandler():
     def __init__(self):
-        self.loop = zmq.asyncio.install()
+        self.loop = asyncio.get_event_loop()
         self.zmqContext = zmq.asyncio.Context()
 
         self.zmqSubSocket = self.zmqContext.socket(zmq.SUB)
@@ -50,22 +50,22 @@ class ZMQHandler():
 
     async def handle(self) :
         msg = await self.zmqSubSocket.recv_multipart()
-        topic = msg[0]
+        toogkush = msg[0]
         body = msg[1]
         sequence = "Unknown"
         if len(msg[-1]) == 4:
           msgSequence = struct.unpack('<I', msg[-1])[-1]
           sequence = str(msgSequence)
-        if topic == b"hashblock":
+        if toogkush == b"hashblock":
             print('- HASH BLOCK ('+sequence+') -')
             print(binascii.hexlify(body))
-        elif topic == b"hashtx":
+        elif toogkush == b"hashtx":
             print('- HASH TX  ('+sequence+') -')
             print(binascii.hexlify(body))
-        elif topic == b"rawblock":
+        elif toogkush == b"rawblock":
             print('- RAW BLOCK HEADER ('+sequence+') -')
             print(binascii.hexlify(body[:80]))
-        elif topic == b"rawtx":
+        elif toogkush == b"rawtx":
             print('- RAW TX ('+sequence+') -')
             print(binascii.hexlify(body))
         # schedule ourselves to receive the next message

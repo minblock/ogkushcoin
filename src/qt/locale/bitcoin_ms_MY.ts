@@ -30,6 +30,11 @@
         <translation>Padam alamat semasa yang dipilih dari senaraiyang dipilih dari senarai</translation>
     </message>
     <message>
+        <source>Enter address or label to search</source>
+        <translation>Masukkan alamat atau label untuk carian
+</translation>
+    </message>
+    <message>
         <source>Export the data in the current tab to a file</source>
         <translation>
 Alihkan fail data ke dalam tab semasa</translation>
@@ -63,12 +68,12 @@ Alihkan fail data ke dalam tab semasa</translation>
         <translation>alamat-alamat penerimaan</translation>
     </message>
     <message>
-        <source>These are your OGKush addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Ini adalah alamat OGKush anda untuk pembayaran. Periksa jumlah dan alamat penerima sebelum membuat penghantaran koin sentiasa.</translation>
+        <source>These are your OGkush addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Ini adalah alamat OGkush anda untuk pembayaran. Periksa jumlah dan alamat penerima sebelum membuat penghantaran koin sentiasa.</translation>
     </message>
     <message>
-        <source>These are your OGKush addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Ini adalah alamat OGKush anda untuk menerima pembayaraan.  Anda disyorkan untuk menguna alamat menerima untuk setiap transaksi.</translation>
+        <source>These are your OGkush addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Ini adalah alamat OGkush anda untuk menerima pembayaraan.  Anda disyorkan untuk menguna alamat menerima untuk setiap transaksi.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -131,6 +136,11 @@ Alihkan fail data ke dalam tab semasa</translation>
     <message>
         <source>Repeat new passphrase</source>
         <translation>Ulangi frasa laluan baru</translation>
+    </message>
+    <message>
+        <source>Show password</source>
+        <translation>Tunjukkan kata laluan
+</translation>
     </message>
     <message>
         <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;ten or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
@@ -319,6 +329,15 @@ Alihkan fail data ke dalam tab semasa</translation>
         <translation>Buka &amp;URI...</translation>
     </message>
     <message>
+        <source>Wallet:</source>
+        <translation>dompet</translation>
+    </message>
+    <message>
+        <source>default wallet</source>
+        <translation>dompet lalai
+</translation>
+    </message>
+    <message>
         <source>Click to disable network activity.</source>
         <translation>Tekan untuk lumpuhkan rangkaian</translation>
     </message>
@@ -339,8 +358,8 @@ Alihkan fail data ke dalam tab semasa</translation>
         <translation>Reindexi blok pada cakera...</translation>
     </message>
     <message>
-        <source>Send coins to a OGKush address</source>
-        <translation>Menghantar koin kepada alamat OGKush</translation>
+        <source>Send coins to a OGkush address</source>
+        <translation>Menghantar koin kepada alamat OGkush</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -363,8 +382,8 @@ Alihkan fail data ke dalam tab semasa</translation>
         <translation>sahkan mesej</translation>
     </message>
     <message>
-        <source>OGKush</source>
-        <translation>OGKush</translation>
+        <source>OGkush</source>
+        <translation>OGkush</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -391,12 +410,12 @@ Alihkan fail data ke dalam tab semasa</translation>
         <translation>sulitkan kata laluan milik peribadi anda </translation>
     </message>
     <message>
-        <source>Sign messages with your OGKush addresses to prove you own them</source>
+        <source>Sign messages with your OGkush addresses to prove you own them</source>
         <translation>sahkan mesej bersama alamat ogkush anda untuk menunjukkan alamat ini anda punya</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified OGKush addresses</source>
-        <translation>Sahkan mesej untuk memastikan mereka telah ditandatangani dengan alamat OGKush yang ditentukan</translation>
+        <source>Verify messages to ensure they were signed with specified OGkush addresses</source>
+        <translation>Sahkan mesej untuk memastikan mereka telah ditandatangani dengan alamat OGkush yang ditentukan</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -409,6 +428,21 @@ Alihkan fail data ke dalam tab semasa</translation>
     <message>
         <source>&amp;Help</source>
         <translation>tolong</translation>
+    </message>
+    <message>
+        <source>Tabs toolbar</source>
+        <translation>Bar alat tab
+</translation>
+    </message>
+    <message>
+        <source>Request payments (generates QR codes and ogkush: URIs)</source>
+        <translation>Request payments (generates QR codes and ogkush: URIs)
+</translation>
+    </message>
+    <message>
+        <source>Show the list of used sending addresses and labels</source>
+        <translation>Tunjukkan senarai alamat dan label yang digunakan
+</translation>
     </message>
     </context>
 <context>
@@ -438,8 +472,8 @@ Alihkan fail data ke dalam tab semasa</translation>
 <context>
     <name>Intro</name>
     <message>
-        <source>OGKush</source>
-        <translation>OGKush</translation>
+        <source>OGkush</source>
+        <translation>OGkush</translation>
     </message>
     </context>
 <context>
@@ -471,6 +505,11 @@ Alihkan fail data ke dalam tab semasa</translation>
     </context>
 <context>
     <name>RPCConsole</name>
+    <message>
+        <source>default wallet</source>
+        <translation>dompet lalai
+</translation>
+    </message>
     </context>
 <context>
     <name>ReceiveCoinsDialog</name>
@@ -488,6 +527,10 @@ Alihkan fail data ke dalam tab semasa</translation>
     <message>
         <source>Label</source>
         <translation>Label</translation>
+    </message>
+    <message>
+        <source>Wallet</source>
+        <translation>dompet</translation>
     </message>
     </context>
 <context>

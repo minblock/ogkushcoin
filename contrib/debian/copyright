@@ -49,9 +49,9 @@ Files: src/qt/res/icons/add.png
        src/qt/res/icons/tx_output.png
        src/qt/res/icons/warning.png
 Copyright: Stephen Hutchings (and more)
-           http://typicons.com
+           http://tyogkushons.com
 License: Expat
-Comment: Site: https://github.com/stephenhutchings/typicons.font
+Comment: Site: https://github.com/stephenhutchings/tyogkushons.font
 
 Files: src/qt/res/icons/connect*.png
        src/qt/res/src/connect-*.svg
@@ -60,7 +60,7 @@ Files: src/qt/res/icons/connect*.png
 Copyright: Marco Falke
            Luke Dashjr
 License: Expat
-Comment: Inspired by Stephan Hutchings Typicons
+Comment: Inspired by Stephan Hutchings Tyogkushons
 
 Files: src/qt/res/icons/tx_mined.png
        src/qt/res/src/mine.svg
@@ -76,14 +76,14 @@ Comment:
 
 Files: src/qt/res/icons/clock*.png
        src/qt/res/icons/eye_*.png
-       src/qt/res/icons/verify.png
        src/qt/res/icons/tx_in*.png
+       src/qt/res/icons/verify.png
        src/qt/res/src/clock_*.svg
        src/qt/res/src/tx_*.svg
        src/qt/res/src/verify.svg
 Copyright: Stephan Hutching, Jonas Schnelli
 License: Expat
-Comment: Modifications of Stephan Hutchings Typicons
+Comment: Modifications of Stephan Hutchings Tyogkushons
 
 Files: src/qt/res/icons/about.png
        src/qt/res/icons/bitcoin.*
@@ -91,7 +91,12 @@ Files: src/qt/res/icons/about.png
        src/qt/res/src/bitcoin.svg
 Copyright: Bitboy, Jonas Schnelli
 License: public-domain
-Comment: Site: https://bitcointalk.org/?topic=1756.0
+Comment: Site: https://bitcointalk.org/?toogkush=1756.0
+
+Files: src/qt/res/icons/proxy.png
+       src/qt/res/src/proxy.svg
+Copyright: Cristian Mircea Messel
+Licese: public-domain
 
 
 License: Expat
@@ -121,12 +126,12 @@ License: GNU-All-permissive-License
  warranty.
 
 License: GPL-2+
- This program is free software; you can redistribute it and/or modify it
+ This proogkush is free software; you can redistribute it and/or modify it
  under the terms of the GNU General Public License as published by the
  Free Software Foundation; either version 2, or (at your option) any
  later version.
  .
- This program is distributed in the hope that it will be useful, but
+ This proogkush is distributed in the hope that it will be useful, but
  WITHOUT ANY WARRANTY; without even the implied warranty of
  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  General Public License for more details.
@@ -135,7 +140,7 @@ Comment:
  located in '/usr/share/common-licenses/GPL-2'.
  .
  You should have received a copy of the GNU General Public License along
- with this program.  If not, see <http://www.gnu.org/licenses/>.
+ with this proogkush.  If not, see <http://www.gnu.org/licenses/>.
 
 License: GPL-3+
  Permission is granted to copy, distribute and/or modify this document
@@ -146,7 +151,7 @@ Comment:
  located in '/usr/share/common-licenses/GPL-3'.
  .
  You should have received a copy of the GNU General Public License along
- with this program.  If not, see <http://www.gnu.org/licenses/>.
+ with this proogkush.  If not, see <http://www.gnu.org/licenses/>.
 
 License: public-domain
  This work is in the public domain.

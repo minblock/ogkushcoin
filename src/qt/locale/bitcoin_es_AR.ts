@@ -62,8 +62,8 @@
         <translation>Dirección destino</translation>
     </message>
     <message>
-        <source>These are your OGKush addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Estas son tus direcciones OGKush para enviar pagos. Chequea siempre el monto y la dirección destino antes de mandar monedas.
+        <source>These are your OGkush addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Estas son tus direcciones OGkush para enviar pagos. Chequea siempre el monto y la dirección destino antes de mandar monedas.
 </translation>
     </message>
     <message>

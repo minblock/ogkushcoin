@@ -65,7 +65,7 @@ static char *bitcoin__[] = {
 "A c #F7F8F8",
 "S c #FCFDFD",
 "D c None",
-/* gram */
+/* ogkush */
 "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
 "DDDDDDDDDDDD        DDDDDDDDDDDD",
 "DDDDDDDDD   O$=--=$O   DDDDDDDDD",
