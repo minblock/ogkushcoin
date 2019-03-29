@@ -93,13 +93,13 @@ public:
 
         // Deployment of BIP68, BIP112, and BIP113.
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1485561600; // January 28, 2020
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1517356801; // January 31st, 2021
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1554076800; // April 1st, 2019
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 999999999999ULL; // January 31st, 2021
 
         // Deployment of SegWit (BIP141, BIP143, and BIP147)
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 1;
-        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1485561600; // January 28, 2021
-        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1517356801; // January 31st, 2022
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1554076800; // April 1st, 2019
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 999999999999ULL; // January 31st, 2022
 
         // The best chain should have at least this much work.
         consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000000000005c1edf182");
@@ -113,10 +113,10 @@ public:
          * a large 32-bit integer with any alignment.
          */
 
-        pchMessageStart[0] = 0x57; //W
-        pchMessageStart[1] = 0x45; //E
-        pchMessageStart[2] = 0x45; //E
-        pchMessageStart[3] = 0x44; //D
+        pchMessageStart[0] = 0x57;
+        pchMessageStart[1] = 0x45;
+        pchMessageStart[2] = 0x45;
+        pchMessageStart[3] = 0x44;
         nDefaultPort = 2337;
         nPruneAfterHeight = 100000;
 
@@ -129,9 +129,9 @@ public:
         // Note that of those with the service bits flag, most only support a subset of possible options
         vSeeds.emplace_back("seed-a.ogkush.bitwall.ca");
         
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,5); //3
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,5); 
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
-        base58Prefixes[SCRIPT_ADDRESS2] = std::vector<unsigned char>(1,15); //G
+        base58Prefixes[SCRIPT_ADDRESS2] = std::vector<unsigned char>(1,15); 
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,176);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xB2, 0x1E};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x88, 0xAD, 0xE4};
@@ -152,14 +152,19 @@ public:
                 {    3337, uint256S("0x55c567fbf44fbc2f80390b993755f1dd8bf401449b94959450384d462a35bf42")},
                 {    4337, uint256S("0xd2aa5c1f2c2f2fa9f852258d018dca034fcc64cf797f9a3650663eb4da298b91")},
                 {    5337, uint256S("0xb275523e3d92cca8785eab785bdb8f9accfa0662429327e469aa3b21a78df201")},
-                {    6337, uint256S("0xbc5f810930bc588c370b370be5b459ad003c7d3608d9ac1e635d698f1f872033")},
+                {    7337, uint256S("0x1c2b91e626ba1bcd0edd57f7249bfb3c5abcbe1aeb4f4ca0a7f2688c9822ea6d")},
+                {    13337, uint256S("0x163379f912b5f27259aff81b9032ecd360df0da9d8de59f9d77b9b4f9d8658d4")},
+                {    23337, uint256S("0xf98b2cd939339bd40f61d89a404bbd4f77f51c4648d95da424ff619571a16ea7")},
+                {    24337, uint256S("0x44f579416365dd2fa364c0532a1fa202f6f0f0d00bcf9932310b979c4e14f34a")},
+                {    37337, uint256S("0x54662d2d9240d0c62ba919783b7f48835332bcd37277b4f58db1e8c2966f4513")},
+                {    39617, uint256S("0x6fdccaa592650c7d2158d53e3f597dba74a15f6f60c7e54d19ff21dfe47ae9d0")},
             }
         };
 
         chainTxData = ChainTxData{
             // Data as of block 7db2b717f0c459e21c1d930db432d12b464b3bd5d54e3a31a92753a0660c2a27 (height 6934).
-            1548609749, // * UNIX timestamp of last known number of transactions
-            8359,  // * total number of transactions between genesis and that timestamp
+            1553900153, // * UNIX timestamp of last known number of transactions
+            41325,  // * total number of transactions between genesis and that timestamp
                     //   (the tx=... number in the SetBestChain debug.log lines)
             0.08     // * estimated number of transactions per second after that timestamp
         };
