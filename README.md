@@ -1,12 +1,12 @@
 
-OGkush Core integration/staging tree
+OGKush Core integration/staging tree
 =====================================
 [![Build Status](https://travis-ci.org/minblock/ogkush.svg?branch=master)](https://travis-ci.org/minblock/ogkush)
 
-What is OGkush?
+What is OGKush?
 ----------------
 
-OGkush is a fork Litecoin using scrypt as a proof-of-work algorithm with some differences.
+OGKush is an early fork of Litecoin using scrypt as a proof-of-work algorithm with some differences.
  - 2.5 minute block targets
  - subsidy halves in 840k blocks (~4 years)
  - ~42 million total coins (Litecoin is 84Million)
