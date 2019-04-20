@@ -18,7 +18,7 @@ The rest is the same as Bitcoin.
 
 An experimental digital currency that enables storage and retreivable of ogkushtures/photos. Each block will represent an image store for retreivable with RPC and API. Private Encrypted messaging / instant payments as well as satellite internet for PIC transfers along with a Picture as receipt. The API will be deployed on the OGkush blockchain for implementation to Bitcoin and other top Blockchains  (https://explorer.ogkush.org) is the experimental block explorer based on the Iquidos Block Explorer that will integrate ogkushture link (hybrid ftp/samba server protocol) into the block hash. OGkush Core is the name of the proogkush that enables the use of this digital currency. OGkush is completely anonymous. Having Segwith deployed allows PIC's to be sent anonymously. Two payments can go to the same address but once payment is received, the wallet address changes, making tracing transactions impossible. Your ogkushture will be hashed into the blockchain for future retreival and an ANSI (text-based l33t) ogkushture confirmation as well as a universally checkable timestamp. This allows you to patent and share your  ogkushtellectual property through any means. 
 
-For more information visit [https://ogkush.org (https:/ogkush.org).
+For more information visit [https://ogkush.org (https://ogkush.org).
 
 License
 -------
