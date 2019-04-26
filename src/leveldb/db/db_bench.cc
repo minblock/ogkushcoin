@@ -13,7 +13,7 @@
 #include "leveldb/write_batch.h"
 #include "port/port.h"
 #include "util/crc32c.h"
-#include "util/histoogkush.h"
+#include "util/histogram.h"
 #include "util/mutexlock.h"
 #include "util/random.h"
 #include "util/testutil.h"
@@ -77,8 +77,8 @@ static int FLAGS_value_size = 100;
 // their original size after compression
 static double FLAGS_compression_ratio = 0.5;
 
-// Print histoogkush of operation timings
-static bool FLAGS_histoogkush = false;
+// Print histogram of operation timings
+static bool FLAGS_histogram = false;
 
 // Number of bytes to buffer in memtable before compacting
 // (initialized to default value by "main")
@@ -182,7 +182,7 @@ class Stats {
   int next_report_;
   int64_t bytes_;
   double last_op_finish_;
-  Histoogkush hist_;
+  Histogram hist_;
   std::string message_;
 
  public:
@@ -222,7 +222,7 @@ class Stats {
   }
 
   void FinishedSingleOp() {
-    if (FLAGS_histoogkush) {
+    if (FLAGS_histogram) {
       double now = g_env->NowMicros();
       double micros = now - last_op_finish_;
       hist_.Add(micros);
@@ -273,7 +273,7 @@ class Stats {
             seconds_ * 1e6 / done_,
             (extra.empty() ? "" : " "),
             extra.c_str());
-    if (FLAGS_histoogkush) {
+    if (FLAGS_histogram) {
       fprintf(stdout, "Microseconds per op:\n%s\n", hist_.ToString().c_str());
     }
     fflush(stdout);
@@ -968,9 +968,9 @@ int main(int argc, char** argv) {
       FLAGS_benchmarks = argv[i] + strlen("--benchmarks=");
     } else if (sscanf(argv[i], "--compression_ratio=%lf%c", &d, &junk) == 1) {
       FLAGS_compression_ratio = d;
-    } else if (sscanf(argv[i], "--histoogkush=%d%c", &n, &junk) == 1 &&
+    } else if (sscanf(argv[i], "--histogram=%d%c", &n, &junk) == 1 &&
                (n == 0 || n == 1)) {
-      FLAGS_histoogkush = n;
+      FLAGS_histogram = n;
     } else if (sscanf(argv[i], "--use_existing_db=%d%c", &n, &junk) == 1 &&
                (n == 0 || n == 1)) {
       FLAGS_use_existing_db = n;

@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sqlite3.h>
-#include "util/histoogkush.h"
+#include "util/histogram.h"
 #include "util/random.h"
 #include "util/testutil.h"
 
@@ -50,8 +50,8 @@ static int FLAGS_reads = -1;
 // Size of each value
 static int FLAGS_value_size = 100;
 
-// Print histoogkush of operation timings
-static bool FLAGS_histoogkush = false;
+// Print histogram of operation timings
+static bool FLAGS_histogram = false;
 
 // Arrange to generate values that shrink to this fraction of
 // their original size after compression
@@ -170,7 +170,7 @@ class Benchmark {
   double last_op_finish_;
   int64_t bytes_;
   std::string message_;
-  Histoogkush hist_;
+  Histogram hist_;
   RandomGenerator gen_;
   Random rand_;
 
@@ -248,7 +248,7 @@ class Benchmark {
   }
 
   void FinishedSingleOp() {
-    if (FLAGS_histoogkush) {
+    if (FLAGS_histogram) {
       double now = Env::Default()->NowMicros() * 1e-6;
       double micros = (now - last_op_finish_) * 1e6;
       hist_.Add(micros);
@@ -296,7 +296,7 @@ class Benchmark {
             (finish - start_) * 1e6 / done_,
             (message_.empty() ? "" : " "),
             message_.c_str());
-    if (FLAGS_histoogkush) {
+    if (FLAGS_histogram) {
       fprintf(stdout, "Microseconds per op:\n%s\n", hist_.ToString().c_str());
     }
     fflush(stdout);
@@ -674,9 +674,9 @@ int main(int argc, char** argv) {
     char junk;
     if (leveldb::Slice(argv[i]).starts_with("--benchmarks=")) {
       FLAGS_benchmarks = argv[i] + strlen("--benchmarks=");
-    } else if (sscanf(argv[i], "--histoogkush=%d%c", &n, &junk) == 1 &&
+    } else if (sscanf(argv[i], "--histogram=%d%c", &n, &junk) == 1 &&
                (n == 0 || n == 1)) {
-      FLAGS_histoogkush = n;
+      FLAGS_histogram = n;
     } else if (sscanf(argv[i], "--compression_ratio=%lf%c", &d, &junk) == 1) {
       FLAGS_compression_ratio = d;
     } else if (sscanf(argv[i], "--use_existing_db=%d%c", &n, &junk) == 1 &&
