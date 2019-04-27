@@ -66,12 +66,12 @@
         <translation>Imenik naslovov za prejemanje</translation>
     </message>
     <message>
-        <source>These are your OGkush addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>To so vaši OGkush naslovi za pošiljanje. Pred pošiljanjem vedno preverite količino in prejemnikov naslov.</translation>
+        <source>These are your OGKush addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>To so vaši OGKush naslovi za pošiljanje. Pred pošiljanjem vedno preverite količino in prejemnikov naslov.</translation>
     </message>
     <message>
-        <source>These are your OGkush addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>To so vaši OGkush naslovi za prejemanje. Priporočeno je, da za vsako transakcijo uporabite nov naslov.</translation>
+        <source>These are your OGKush addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>To so vaši OGKush naslovi za prejemanje. Priporočeno je, da za vsako transakcijo uporabite nov naslov.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -354,8 +354,8 @@
         <translation>Namestniški strežnik je omogočen&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a OGkush address</source>
-        <translation>Izvedite plačilo na naslov OGkush</translation>
+        <source>Send coins to a OGKush address</source>
+        <translation>Izvedite plačilo na naslov OGKush</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -378,8 +378,8 @@
         <translation>&amp;Preveri sporočilo ...</translation>
     </message>
     <message>
-        <source>OGkush</source>
-        <translation>OGkush</translation>
+        <source>OGKush</source>
+        <translation>OGKush</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -406,12 +406,12 @@
         <translation>Šifrirajte zasebne ključe, ki se nahajajo v denarnici</translation>
     </message>
     <message>
-        <source>Sign messages with your OGkush addresses to prove you own them</source>
-        <translation>Podpišite poljubno sporočilo z enim svojih naslovov OGkush, da prejemniku sporočila dokažete, da je ta naslov v vaši lasti.</translation>
+        <source>Sign messages with your OGKush addresses to prove you own them</source>
+        <translation>Podpišite poljubno sporočilo z enim svojih naslovov OGKush, da prejemniku sporočila dokažete, da je ta naslov v vaši lasti.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified OGkush addresses</source>
-        <translation>Preverite, če je bilo prejeto sporočilo podpisano z določenim naslovom OGkush</translation>
+        <source>Verify messages to ensure they were signed with specified OGKush addresses</source>
+        <translation>Preverite, če je bilo prejeto sporočilo podpisano z določenim naslovom OGKush</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -450,8 +450,8 @@
         <translation>Opcije &amp;ukazne vrstice</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to OGkush network</source>
-        <translation><numerusform>%n aktivna povezava v omrežje OGkush</numerusform><numerusform>%n aktivni povezavi v omrežje OGkush</numerusform><numerusform>%n aktivne povezave v omrežje OGkush</numerusform><numerusform>%n aktivnih povezav v omrežje OGkush</numerusform></translation>
+        <source>%n active connection(s) to OGKush network</source>
+        <translation><numerusform>%n aktivna povezava v omrežje OGKush</numerusform><numerusform>%n aktivni povezavi v omrežje OGKush</numerusform><numerusform>%n aktivne povezave v omrežje OGKush</numerusform><numerusform>%n aktivnih povezav v omrežje OGKush</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -707,8 +707,8 @@
         <translation>Uporabi to podatkovno mapo:</translation>
     </message>
     <message>
-        <source>OGkush</source>
-        <translation>OGkush</translation>
+        <source>OGKush</source>
+        <translation>OGKush</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -836,7 +836,7 @@
         <translation>Omogoči &amp;trošenje drobiža iz še nepotrjenih plačil</translation>
     </message>
     <message>
-        <source>Automatically open the OGkush client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the OGKush client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>Proogkush samodejno odpre ustrezna vrata na usmerjevalniku. To deluje samo, če vaš usmerjevalnik podpira in ima omogočen UPnP.</translation>
     </message>
     <message>
@@ -844,8 +844,8 @@
         <translation>Preslikaj vrata z uporabo &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the OGkush network through a SOCKS5 proxy.</source>
-        <translation>Poveži se v omrežje OGkush preko posredniškega strežnika SOCKS5.</translation>
+        <source>Connect to the OGKush network through a SOCKS5 proxy.</source>
+        <translation>Poveži se v omrežje OGKush preko posredniškega strežnika SOCKS5.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -947,8 +947,8 @@
         <translation>Oblika</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the OGkush network after a connection is established, but this process has not completed yet.</source>
-        <translation>Prikazani podatki so morda zastareli. Proogkush ob vzpostavitvi povezave samodejno sinhronizira denarnico z omrežjem OGkush, a trenutno ta proces še ni zaključen.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the OGKush network after a connection is established, but this process has not completed yet.</source>
+        <translation>Prikazani podatki so morda zastareli. Proogkush ob vzpostavitvi povezave samodejno sinhronizira denarnico z omrežjem OGKush, a trenutno ta proces še ni zaključen.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1044,8 +1044,8 @@
         <translation>Znesek</translation>
     </message>
     <message>
-        <source>Enter a OGkush address (e.g. %1)</source>
-        <translation>Vnesite naslov OGkush (npr. %1):</translation>
+        <source>Enter a OGKush address (e.g. %1)</source>
+        <translation>Vnesite naslov OGKush (npr. %1):</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1296,8 +1296,8 @@
         <translation>&amp;Sporočilo:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the OGkush network.</source>
-        <translation>Neobvezno sporočilo kot priponka zahtevku za plačilo, ki bo prikazano, ko bo zahtevek odprt. Opomba: Opravljeno plačilo.prek omrežja OGkush tega sporočila ne bo vsebovalo.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the OGKush network.</source>
+        <translation>Neobvezno sporočilo kot priponka zahtevku za plačilo, ki bo prikazano, ko bo zahtevek odprt. Opomba: Opravljeno plačilo.prek omrežja OGKush tega sporočila ne bo vsebovalo.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -1544,8 +1544,8 @@
         <translation>Plačilo je navadne vrste.</translation>
     </message>
     <message>
-        <source>The OGkush address to send the payment to</source>
-        <translation>Naslov OGkush, na katerega bo plačilo poslano</translation>
+        <source>The OGKush address to send the payment to</source>
+        <translation>Naslov OGKush, na katerega bo plačilo poslano</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -1588,8 +1588,8 @@
         <translation>Če vnesete oznako za zgornji naslov, se bo skupaj z naslovom shranila v imenk že uporabljenih naslovov</translation>
     </message>
     <message>
-        <source>A message that was attached to the ogkush: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the OGkush network.</source>
-        <translation>Sporočilo, ki ste ga pripeli na URI tipa ogkush:. Shranjeno bo skupaj s podatki o transakciji. Opomba: Sporočilo ne bo poslano preko omrežja OGkush.</translation>
+        <source>A message that was attached to the ogkush: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the OGKush network.</source>
+        <translation>Sporočilo, ki ste ga pripeli na URI tipa ogkush:. Shranjeno bo skupaj s podatki o transakciji. Opomba: Sporočilo ne bo poslano preko omrežja OGKush.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -1625,8 +1625,8 @@
         <translation>S svojimi naslovi lahko podpisujete sporočila ali pogodbe in s tem dokazujete, da na teh naslovih lahko prejemate kovance. Bodite previdni in ne podpisujte ničesar nejasnega ali naključnega, ker vas zlikovci preko ribarjenja (phishing) lahko prelisičijo, da na njih prepišete svojo identiteto. Podpisujte samo podrobno opisane izjave, s katerimi se strinjate.</translation>
     </message>
     <message>
-        <source>The OGkush address to sign the message with</source>
-        <translation>Naslov OGkush, s katerim podpisujete sporočilo</translation>
+        <source>The OGKush address to sign the message with</source>
+        <translation>Naslov OGKush, s katerim podpisujete sporočilo</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1657,7 +1657,7 @@
         <translation>Kopiranje trenutnega podpisa na sistemsko odložišče.</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this OGkush address</source>
+        <source>Sign the message to prove you own this OGKush address</source>
         <translation>Podpišite sporočilo, da dokažete lastništvo nad zgornjim naslovom.</translation>
     </message>
     <message>
@@ -1681,12 +1681,12 @@
         <translation>Da preverite verodostojnost sporočila, spodaj vnesite: prejemnikov naslov, prejeto sporočilo (pazljivo skopirajte vse prelome vrstic, presledke, tabulatorje ipd.,) in prejeti podpis. Da se izognete napadom tipa man-in-the-middle, vedite, da iz veljavnega podpisa ne sledi nič drugega, kot tisto, kar je navedeno v sporočilu. Podpis samo potrjuje dejstvo, da ima podpisnik v lasti prejemni naslov, ne more pa dokazati vira nobene transakcije!</translation>
     </message>
     <message>
-        <source>The OGkush address the message was signed with</source>
-        <translation>Naslov OGkush, s katerim je bilo sporočilo podpisano</translation>
+        <source>The OGKush address the message was signed with</source>
+        <translation>Naslov OGKush, s katerim je bilo sporočilo podpisano</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified OGkush address</source>
-        <translation>Preverite, ali je bilo sporočilo v resnici podpisano z navedenim naslovom OGkush.</translation>
+        <source>Verify the message to ensure it was signed with the specified OGKush address</source>
+        <translation>Preverite, ali je bilo sporočilo v resnici podpisano z navedenim naslovom OGKush.</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1774,8 +1774,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>OGkush Core</source>
-        <translation>OGkush Core</translation>
+        <source>OGKush Core</source>
+        <translation>OGKush Core</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>

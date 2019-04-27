@@ -16,8 +16,8 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "OGkush"
-            VALUE "FileDescription",    "ogkush-tx (CLI OGkush transaction editor utility)"
+            VALUE "CompanyName",        "OGKush"
+            VALUE "FileDescription",    "ogkush-tx (CLI OGKush transaction editor utility)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "ogkush-tx"
             VALUE "LegalCopyright",     COPYRIGHT_STR

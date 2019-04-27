@@ -13,7 +13,7 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
-        return @"org.ogkush.OGkush-Qt";
+        return @"org.ogkush.OGKush-Qt";
     } else {
         return [self __bundleIdentifier];
     }

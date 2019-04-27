@@ -1524,7 +1524,7 @@ static void ThreadMapPort()
             }
         }
 
-        std::string strDesc = "OGkush " + FormatFullVersion();
+        std::string strDesc = "OGKush " + FormatFullVersion();
 
         do {
 #ifndef UPNPDISCOVER_SUCCESS

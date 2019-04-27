@@ -62,12 +62,12 @@
         <translation>Direcciones de recepción</translation>
     </message>
     <message>
-        <source>These are your OGkush addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Estas son sus direcciones OGkush para enviar pagos. Compruebe siempre la cantidad y la dirección de recibo antes de transferir monedas.</translation>
+        <source>These are your OGKush addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Estas son sus direcciones OGKush para enviar pagos. Compruebe siempre la cantidad y la dirección de recibo antes de transferir monedas.</translation>
     </message>
     <message>
-        <source>These are your OGkush addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Estas son sus direcciones de OGkush para recibir pagos. Se recomienda utilizar una nueva dirección de recepción para cada transacción.</translation>
+        <source>These are your OGKush addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Estas son sus direcciones de OGKush para recibir pagos. Se recomienda utilizar una nueva dirección de recepción para cada transacción.</translation>
     </message>
     <message>
         <source>Export Address List</source>
@@ -165,7 +165,7 @@
     </message>
     <message>
         <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ogkushs from being stolen by malware infecting your computer.</source>
-        <translation>%1 se cerrará ahora para finalizar el proceso de cifrado. Recuerde que el cifrado de su monedero no puede proteger de manera completa su OGkush de robo por malware que esté infectando su sistema.</translation>
+        <translation>%1 se cerrará ahora para finalizar el proceso de cifrado. Recuerde que el cifrado de su monedero no puede proteger de manera completa su OGKush de robo por malware que esté infectando su sistema.</translation>
     </message>
     </context>
 <context>
@@ -250,8 +250,8 @@
         <translation>Reindexando bloques en disco...</translation>
     </message>
     <message>
-        <source>Send coins to a OGkush address</source>
-        <translation>Enviar monedas a una dirección OGkush</translation>
+        <source>Send coins to a OGKush address</source>
+        <translation>Enviar monedas a una dirección OGKush</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -274,8 +274,8 @@
         <translation>&amp;Verificar mensaje...</translation>
     </message>
     <message>
-        <source>OGkush</source>
-        <translation>OGkush</translation>
+        <source>OGKush</source>
+        <translation>OGKush</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -302,12 +302,12 @@
         <translation>Cifrar las claves privadas de su monedero</translation>
     </message>
     <message>
-        <source>Sign messages with your OGkush addresses to prove you own them</source>
-        <translation>Firmar mensajes con sus direcciones OGkush para demostrar la propiedad</translation>
+        <source>Sign messages with your OGKush addresses to prove you own them</source>
+        <translation>Firmar mensajes con sus direcciones OGKush para demostrar la propiedad</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified OGkush addresses</source>
-        <translation>Verificar mensajes comprobando que están firmados con direcciones OGkush concretas</translation>
+        <source>Verify messages to ensure they were signed with specified OGKush addresses</source>
+        <translation>Verificar mensajes comprobando que están firmados con direcciones OGKush concretas</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -327,7 +327,7 @@
     </message>
     <message>
         <source>Request payments (generates QR codes and ogkush: URIs)</source>
-        <translation>Solicitar pagos (genera codigo QR y URL's de OGkush)</translation>
+        <translation>Solicitar pagos (genera codigo QR y URL's de OGKush)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -521,8 +521,8 @@
         <translation>Utilice un directorio de datos personalizado:</translation>
     </message>
     <message>
-        <source>OGkush</source>
-        <translation>OGkush</translation>
+        <source>OGKush</source>
+        <translation>OGKush</translation>
     </message>
     <message>
         <source>Error</source>
@@ -598,8 +598,8 @@
         <translation>Experto</translation>
     </message>
     <message>
-        <source>Automatically open the OGkush client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abrir automáticamente el puerto del cliente OGkush en el router. Esta opción solo funciona si el router admite UPnP y está activado.</translation>
+        <source>Automatically open the OGKush client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Abrir automáticamente el puerto del cliente OGKush en el router. Esta opción solo funciona si el router admite UPnP y está activado.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -697,8 +697,8 @@
         <translation>Desde</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the OGkush network after a connection is established, but this process has not completed yet.</source>
-        <translation>La información mostrada puede estar desactualizada. Su monedero se sincroniza automáticamente con la red OGkush después de que se haya establecido una conexión, pero este proceso aún no se ha completado.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the OGKush network after a connection is established, but this process has not completed yet.</source>
+        <translation>La información mostrada puede estar desactualizada. Su monedero se sincroniza automáticamente con la red OGKush después de que se haya establecido una conexión, pero este proceso aún no se ha completado.</translation>
     </message>
     <message>
         <source>Your current spendable balance</source>
@@ -1131,8 +1131,8 @@
         <translation>Copiar la firma actual al portapapeles del sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this OGkush address</source>
-        <translation>Firmar el mensaje para demostrar que se posee esta dirección OGkush</translation>
+        <source>Sign the message to prove you own this OGKush address</source>
+        <translation>Firmar el mensaje para demostrar que se posee esta dirección OGKush</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1151,8 +1151,8 @@
         <translation>&amp;Verificar mensaje</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified OGkush address</source>
-        <translation>Verificar el mensaje para comprobar que fue firmado con la dirección OGkush indicada</translation>
+        <source>Verify the message to ensure it was signed with the specified OGKush address</source>
+        <translation>Verificar el mensaje para comprobar que fue firmado con la dirección OGKush indicada</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1228,8 +1228,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>OGkush Core</source>
-        <translation>Núcleo de OGkush</translation>
+        <source>OGKush Core</source>
+        <translation>Núcleo de OGKush</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>

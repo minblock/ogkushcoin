@@ -130,8 +130,8 @@
         <translation>Оношилгоо ба засварын консолыг онгойлго</translation>
     </message>
     <message>
-        <source>OGkush</source>
-        <translation>OGkush</translation>
+        <source>OGKush</source>
+        <translation>OGKush</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -233,8 +233,8 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>OGkush</source>
-        <translation>OGkush</translation>
+        <source>OGKush</source>
+        <translation>OGKush</translation>
     </message>
     <message>
         <source>Error</source>

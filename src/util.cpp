@@ -710,7 +710,7 @@ fs::path GetDefaultDataDir()
     // Unix: ~/.bitcoin
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "OGkush";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "OGKush";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -720,7 +720,7 @@ fs::path GetDefaultDataDir()
         pathRet = fs::path(pszHome);
 #ifdef MAC_OSX
     // Mac
-    return pathRet / "Library/Application Support/OGkush";
+    return pathRet / "Library/Application Support/OGKush";
 #else
     // Unix
     return pathRet / ".ogkush";

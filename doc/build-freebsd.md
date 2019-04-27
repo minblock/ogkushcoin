@@ -27,7 +27,7 @@ Download the source code:
 git clone https://github.com/minblock/ogkush
 ```
 
-## Building OGkush Core
+## Building OGKush Core
 
 **Important**: Use `gmake` (the non-GNU `make` will exit with an error).
 

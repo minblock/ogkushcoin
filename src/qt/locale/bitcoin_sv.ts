@@ -66,12 +66,12 @@
         <translation>Mottagaradresser</translation>
     </message>
     <message>
-        <source>These are your OGkush addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Detta är dina OGkush-adresser för att skicka betalningar. Kontrollera alltid summan och den mottagande adressen innan du skickar ogkush.</translation>
+        <source>These are your OGKush addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Detta är dina OGKush-adresser för att skicka betalningar. Kontrollera alltid summan och den mottagande adressen innan du skickar ogkush.</translation>
     </message>
     <message>
-        <source>These are your OGkush addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Detta är dina OGkush-adresser för att ta emot betalningar. Det rekommenderas att använda en ny mottagningsadress för varje transaktion.</translation>
+        <source>These are your OGKush addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Detta är dina OGKush-adresser för att ta emot betalningar. Det rekommenderas att använda en ny mottagningsadress för varje transaktion.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -347,8 +347,8 @@ Var vänlig och försök igen.</translation>
         <translation>Återindexerar block på disken...</translation>
     </message>
     <message>
-        <source>Send coins to a OGkush address</source>
-        <translation>Skicka ogkush till en OGkush-adress</translation>
+        <source>Send coins to a OGKush address</source>
+        <translation>Skicka ogkush till en OGKush-adress</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -371,8 +371,8 @@ Var vänlig och försök igen.</translation>
         <translation>&amp;Verifiera meddelande...</translation>
     </message>
     <message>
-        <source>OGkush</source>
-        <translation>OGkush</translation>
+        <source>OGKush</source>
+        <translation>OGKush</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -399,12 +399,12 @@ Var vänlig och försök igen.</translation>
         <translation>Kryptera de privata nycklar som tillhör din plånbok</translation>
     </message>
     <message>
-        <source>Sign messages with your OGkush addresses to prove you own them</source>
-        <translation>Signera meddelanden med dina OGkush-adresser för att bevisa att du äger dem</translation>
+        <source>Sign messages with your OGKush addresses to prove you own them</source>
+        <translation>Signera meddelanden med dina OGKush-adresser för att bevisa att du äger dem</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified OGkush addresses</source>
-        <translation>Verifiera meddelanden för att vara säker på att de signerades med angivna OGkush-adresser</translation>
+        <source>Verify messages to ensure they were signed with specified OGKush addresses</source>
+        <translation>Verifiera meddelanden för att vara säker på att de signerades med angivna OGKush-adresser</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -443,8 +443,8 @@ Var vänlig och försök igen.</translation>
         <translation>&amp;Kommandoradsalternativ</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to OGkush network</source>
-        <translation><numerusform>%n aktiva anslutningar till OGkush-nätverket.</numerusform><numerusform>%n aktiva anslutningar till OGkush-nätverket.</numerusform></translation>
+        <source>%n active connection(s) to OGKush network</source>
+        <translation><numerusform>%n aktiva anslutningar till OGKush-nätverket.</numerusform><numerusform>%n aktiva anslutningar till OGKush-nätverket.</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -487,8 +487,8 @@ Var vänlig och försök igen.</translation>
         <translation>Uppdaterad</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible OGkush command-line options</source>
-        <translation>Visa %1 hjälpmeddelande för att få en lista med möjliga OGkush kommandoradsalternativ.</translation>
+        <source>Show the %1 help message to get a list with possible OGKush command-line options</source>
+        <translation>Visa %1 hjälpmeddelande för att få en lista med möjliga OGKush kommandoradsalternativ.</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -557,8 +557,8 @@ Var vänlig och försök igen.</translation>
         <translation>Denna plånbok är &lt;b&gt;krypterad&lt;/b&gt; och för närvarande &lt;b&gt;låst&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. OGkush can no longer continue safely and will quit.</source>
-        <translation>Ett kritiskt fel uppstod. OGkush kan inte fortsätta att köra säkert och kommer att avslutas.</translation>
+        <source>A fatal error occurred. OGKush can no longer continue safely and will quit.</source>
+        <translation>Ett kritiskt fel uppstod. OGKush kan inte fortsätta att köra säkert och kommer att avslutas.</translation>
     </message>
 </context>
 <context>
@@ -747,8 +747,8 @@ Var vänlig och försök igen.</translation>
         <translation>Redigera avsändaradress</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid OGkush address.</source>
-        <translation>Den angivna adressen "%1" är inte en giltig OGkush-adress.</translation>
+        <source>The entered address "%1" is not a valid OGKush address.</source>
+        <translation>Den angivna adressen "%1" är inte en giltig OGKush-adress.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -832,8 +832,8 @@ Var vänlig och försök igen.</translation>
         <translation>Använd en anpassad datakatalog:</translation>
     </message>
     <message>
-        <source>OGkush</source>
-        <translation>OGkush</translation>
+        <source>OGKush</source>
+        <translation>OGKush</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -844,8 +844,8 @@ Var vänlig och försök igen.</translation>
         <translation>Ungefär %1 GB data kommer att lagras i den här katalogen.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the OGkush block chain.</source>
-        <translation>%1 kommer att ladda ner och lagra en kopia av OGkush-blockkedjan.</translation>
+        <source>%1 will download and store a copy of the OGKush block chain.</source>
+        <translation>%1 kommer att ladda ner och lagra en kopia av OGKush-blockkedjan.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -876,7 +876,7 @@ Var vänlig och försök igen.</translation>
     </message>
     <message>
         <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the ogkush network, as detailed below.</source>
-        <translation>Nyligen gjorda transaktioner visas inte korrekt och därför kan din plånboks saldo visas felaktigt. Denna information kommer att visas korrekt så snart din plånbok har synkroniserat klart med OGkush-nätverket enligt detaljer nedan.</translation>
+        <translation>Nyligen gjorda transaktioner visas inte korrekt och därför kan din plånboks saldo visas felaktigt. Denna information kommer att visas korrekt så snart din plånbok har synkroniserat klart med OGKush-nätverket enligt detaljer nedan.</translation>
     </message>
     <message>
         <source>Attempting to spend ogkushs that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
@@ -1049,8 +1049,8 @@ Var vänlig och försök igen.</translation>
         <translation>&amp;Spendera obekräftad växel</translation>
     </message>
     <message>
-        <source>Automatically open the OGkush client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Öppna automatiskt OGkush-klientens port på routern. Detta fungerar endast om din router stödjer UPnP och det är är aktiverat.</translation>
+        <source>Automatically open the OGKush client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Öppna automatiskt OGKush-klientens port på routern. Detta fungerar endast om din router stödjer UPnP och det är är aktiverat.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1065,8 +1065,8 @@ Var vänlig och försök igen.</translation>
         <translation>Tillåt ankommande anslutningar</translation>
     </message>
     <message>
-        <source>Connect to the OGkush network through a SOCKS5 proxy.</source>
-        <translation>Anslut till OGkush-nätverket genom en SOCKS5-proxy.</translation>
+        <source>Connect to the OGKush network through a SOCKS5 proxy.</source>
+        <translation>Anslut till OGKush-nätverket genom en SOCKS5-proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1101,8 +1101,8 @@ Var vänlig och försök igen.</translation>
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the OGkush network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Anslut till OGkush-nätverket genom en separat SOCKS5-proxy för dolda tjänster i Tor.</translation>
+        <source>Connect to the OGKush network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Anslut till OGKush-nätverket genom en separat SOCKS5-proxy för dolda tjänster i Tor.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1208,8 +1208,8 @@ Var vänlig och försök igen.</translation>
         <translation>Formulär</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the OGkush network after a connection is established, but this process has not completed yet.</source>
-        <translation>Den visade informationen kan vara inaktuell. Plånboken synkroniseras automatiskt med OGkush-nätverket efter att anslutningen är upprättad, men denna process har inte slutförts ännu.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the OGKush network after a connection is established, but this process has not completed yet.</source>
+        <translation>Den visade informationen kan vara inaktuell. Plånboken synkroniseras automatiskt med OGKush-nätverket efter att anslutningen är upprättad, men denna process har inte slutförts ännu.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1299,8 +1299,8 @@ Var vänlig och försök igen.</translation>
         <translation>Ogiltig betalningsadress %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid OGkush address or malformed URI parameters.</source>
-        <translation>URI kan inte parsas! Detta kan orsakas av en ogiltig OGkush-adress eller felaktiga URI-parametrar.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid OGKush address or malformed URI parameters.</source>
+        <translation>URI kan inte parsas! Detta kan orsakas av en ogiltig OGKush-adress eller felaktiga URI-parametrar.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1401,8 +1401,8 @@ Var vänlig och försök igen.</translation>
         <translation>Mängd</translation>
     </message>
     <message>
-        <source>Enter a OGkush address (e.g. %1)</source>
-        <translation>Ange en OGkush-adress (t.ex. %1)</translation>
+        <source>Enter a OGKush address (e.g. %1)</source>
+        <translation>Ange en OGKush-adress (t.ex. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1821,8 +1821,8 @@ Var vänlig och försök igen.</translation>
         <translation>&amp;Meddelande:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the OGkush network.</source>
-        <translation>Ett valfritt meddelande att bifoga betalningsbegäran, vilket visas när begäran öppnas. Obs: Meddelandet kommer inte att sändas med betalningen över OGkush-nätverket.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the OGKush network.</source>
+        <translation>Ett valfritt meddelande att bifoga betalningsbegäran, vilket visas när begäran öppnas. Obs: Meddelandet kommer inte att sändas med betalningen över OGKush-nätverket.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2226,8 +2226,8 @@ Var vänlig och försök igen.</translation>
         <translation><numerusform>Uppskattas till att påbörja bekräftelse inom %n block.</numerusform><numerusform>Uppskattas till att påbörja bekräftelse inom %n block.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid OGkush address</source>
-        <translation>Varning: Ogiltig OGkush-adress</translation>
+        <source>Warning: Invalid OGKush address</source>
+        <translation>Varning: Ogiltig OGKush-adress</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2269,8 +2269,8 @@ Var vänlig och försök igen.</translation>
         <translation>Detta är en normal betalning.</translation>
     </message>
     <message>
-        <source>The OGkush address to send the payment to</source>
-        <translation>OGkush-adress att sända betalning till</translation>
+        <source>The OGKush address to send the payment to</source>
+        <translation>OGKush-adress att sända betalning till</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2317,8 +2317,8 @@ Var vänlig och försök igen.</translation>
         <translation>Ange en etikett för denna adress för att lägga till den i listan med använda adresser</translation>
     </message>
     <message>
-        <source>A message that was attached to the ogkush: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the OGkush network.</source>
-        <translation>Ett meddelande som bifogades ogkush: -URIn och som lagras med transaktionen som referens. NB: Meddelandet kommer inte att sändas över OGkush-nätverket.</translation>
+        <source>A message that was attached to the ogkush: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the OGKush network.</source>
+        <translation>Ett meddelande som bifogades ogkush: -URIn och som lagras med transaktionen som referens. NB: Meddelandet kommer inte att sändas över OGKush-nätverket.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2366,8 +2366,8 @@ Var vänlig och försök igen.</translation>
         <translation>Du kan signera meddelanden/avtal med dina adresser för att bevisa att du kan ta emot ogkush som skickats till dem. Var försiktig så du inte signerar något oklart eller konstigt, eftersom phishing-angrepp kan försöka få dig att signera över din identitet till dem. Signera endast väldetaljerade meddelanden som du godkänner.</translation>
     </message>
     <message>
-        <source>The OGkush address to sign the message with</source>
-        <translation>OGkush-adress att signera meddelandet med</translation>
+        <source>The OGKush address to sign the message with</source>
+        <translation>OGKush-adress att signera meddelandet med</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2398,8 +2398,8 @@ Var vänlig och försök igen.</translation>
         <translation>Kopiera signaturen till systemets Urklipp</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this OGkush address</source>
-        <translation>Signera meddelandet för att bevisa att du äger denna OGkush-adress</translation>
+        <source>Sign the message to prove you own this OGKush address</source>
+        <translation>Signera meddelandet för att bevisa att du äger denna OGKush-adress</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2422,12 +2422,12 @@ Var vänlig och försök igen.</translation>
         <translation>Ange mottagarens adress, meddelande (kopiera radbrytningar, mellanslag, TAB-tecken, osv. exakt) och signatur nedan, för att verifiera meddelandet. Undvik att läsa in mera information i signaturen än vad som stod i själva det signerade meddelandet, för att undvika ett man-in-the-middle-angrepp. Notera att detta endast bevisar att den signerande parten tar emot med adressen, det bevisar inte vem som skickat transaktionen!</translation>
     </message>
     <message>
-        <source>The OGkush address the message was signed with</source>
-        <translation>OGkush-adress som meddelandet signerades med</translation>
+        <source>The OGKush address the message was signed with</source>
+        <translation>OGKush-adress som meddelandet signerades med</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified OGkush address</source>
-        <translation>Verifiera meddelandet för att vara säker på att det signerades med angiven OGkush-adress</translation>
+        <source>Verify the message to ensure it was signed with the specified OGKush address</source>
+        <translation>Verifiera meddelandet för att vara säker på att det signerades med angiven OGKush-adress</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2962,7 +2962,7 @@ Var vänlig och försök igen.</translation>
     <name>WalletModel</name>
     <message>
         <source>Send Coins</source>
-        <translation>Skicka OGkushs</translation>
+        <translation>Skicka OGKushs</translation>
     </message>
     <message>
         <source>Increasing transaction fee failed</source>
@@ -3063,8 +3063,8 @@ Var vänlig och försök igen.</translation>
         <translation>Kunde inte starta HTTP-server. Se avlusningsloggen för detaljer.</translation>
     </message>
     <message>
-        <source>OGkush Core</source>
-        <translation>OGkush Core</translation>
+        <source>OGKush Core</source>
+        <translation>OGKush Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

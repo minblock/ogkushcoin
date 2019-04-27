@@ -19,8 +19,8 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "OGkush"
-            VALUE "FileDescription",    PACKAGE_NAME " (GUI node for OGkush)"
+            VALUE "CompanyName",        "OGKush"
+            VALUE "FileDescription",    PACKAGE_NAME " (GUI node for OGKush)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "ogkush-qt"
             VALUE "LegalCopyright",     COPYRIGHT_STR

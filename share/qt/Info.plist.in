@@ -29,16 +29,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>OGkush-Qt</string>
+  <string>OGKush-Qt</string>
   
   <key>CFBundleName</key>
-  <string>OGkush-Qt</string>
+  <string>OGKush-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>org.ogkush.OGkush-Qt</string>
+  <string>org.ogkush.OGKush-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,7 +46,7 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>org.ogkush.OGkushPayment</string>
+      <string>org.ogkush.OGKushPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
         <string>ogkush</string>
@@ -60,7 +60,7 @@
       <key>UTTypeIdentifier</key>
       <string>org.ogkush.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>OGkush payment request</string>
+      <string>OGKush payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>

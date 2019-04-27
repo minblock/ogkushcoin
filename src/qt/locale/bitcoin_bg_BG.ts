@@ -62,12 +62,12 @@
         <translation>Адрес за получаване</translation>
     </message>
     <message>
-        <source>These are your OGkush addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Тези са вашите OGkush адреси за изпращане на монети. Винаги проверявайте количеството и получаващия адрес преди изпращане. </translation>
+        <source>These are your OGKush addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Тези са вашите OGKush адреси за изпращане на монети. Винаги проверявайте количеството и получаващия адрес преди изпращане. </translation>
     </message>
     <message>
-        <source>These are your OGkush addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Това са вашите OGkush адреси за получаване на монети. Препоръчително е да ползвате нов адрес на всяка транзакция.</translation>
+        <source>These are your OGKush addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Това са вашите OGKush адреси за получаване на монети. Препоръчително е да ползвате нов адрес на всяка транзакция.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -894,8 +894,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>OGkush Core</source>
-        <translation>OGkush ядро</translation>
+        <source>OGKush Core</source>
+        <translation>OGKush ядро</translation>
     </message>
     <message>
         <source>Information</source>

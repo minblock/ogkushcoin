@@ -2,7 +2,7 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#define BOOST_TEST_MODULE OGkush Test Suite
+#define BOOST_TEST_MODULE OGKush Test Suite
 
 #include <net.h>
 

@@ -1,14 +1,14 @@
 Benchmarking
 ============
 
-OGkush Core has an internal benchmarking framework, with benchmarks
+OGKush Core has an internal benchmarking framework, with benchmarks
 for cryptographic algorithms (e.g. SHA1, SHA256, SHA512, RIPEMD160), as well as the rolling bloom filter.
 
 Running
 ---------------------
-After compiling OGkush-core, the benchmarks can be run with:
+After compiling OGKush-core, the benchmarks can be run with:
 
-    src/bench/bench_OGkush
+    src/bench/bench_OGKush
 
 The output will look similar to:
 ```
@@ -43,7 +43,7 @@ Help
 ---------------------
 `-?` will print a list of options and exit:
 
-    src/bench/bench_OGkush -?
+    src/bench/bench_OGKush -?
 
 Notes
 ---------------------

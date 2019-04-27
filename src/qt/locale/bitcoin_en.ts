@@ -85,12 +85,12 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your OGkush addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your OGKush addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+5"/>
-        <source>These are your OGkush addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your OGKush addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -455,8 +455,8 @@
     </message>
     <message>
         <location line="-880"/>
-        <source>Send coins to a OGkush address</source>
-        <translation>Send coins to a OGkush address</translation>
+        <source>Send coins to a OGKush address</source>
+        <translation>Send coins to a OGKush address</translation>
     </message>
     <message>
         <location line="+67"/>
@@ -485,8 +485,8 @@
     </message>
     <message>
         <location line="+570"/>
-        <source>OGkush</source>
-        <translation>OGkush</translation>
+        <source>OGKush</source>
+        <translation>OGKush</translation>
     </message>
     <message>
         <location line="-792"/>
@@ -520,13 +520,13 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your OGkush addresses to prove you own them</source>
-        <translation>Sign messages with your OGkush addresses to prove you own them</translation>
+        <source>Sign messages with your OGKush addresses to prove you own them</source>
+        <translation>Sign messages with your OGKush addresses to prove you own them</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified OGkush addresses</source>
-        <translation>Verify messages to ensure they were signed with specified OGkush addresses</translation>
+        <source>Verify messages to ensure they were signed with specified OGKush addresses</source>
+        <translation>Verify messages to ensure they were signed with specified OGKush addresses</translation>
     </message>
     <message>
         <location line="+58"/>
@@ -575,10 +575,10 @@
     </message>
     <message numerus="yes">
         <location line="+410"/>
-        <source>%n active connection(s) to OGkush network</source>
+        <source>%n active connection(s) to OGKush network</source>
         <translation>
-            <numerusform>%n active connection to OGkush network</numerusform>
-            <numerusform>%n active connections to OGkush network</numerusform>
+            <numerusform>%n active connection to OGKush network</numerusform>
+            <numerusform>%n active connections to OGKush network</numerusform>
         </translation>
     </message>
     <message>
@@ -636,7 +636,7 @@
     </message>
     <message>
         <location line="-494"/>
-        <source>Show the %1 help message to get a list with possible OGkush command-line options</source>
+        <source>Show the %1 help message to get a list with possible OGKush command-line options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -722,7 +722,7 @@
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+529"/>
-        <source>A fatal error occurred. OGkush can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. OGKush can no longer continue safely and will quit.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -960,7 +960,7 @@
     </message>
     <message>
         <location line="+75"/>
-        <source>The entered address &quot;%1&quot; is not a valid OGkush address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid OGKush address.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1080,8 +1080,8 @@
     </message>
     <message>
         <location filename="../intro.cpp" line="+20"/>
-        <source>OGkush</source>
-        <translation type="unfinished">OGkush</translation>
+        <source>OGKush</source>
+        <translation type="unfinished">OGKush</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -1095,7 +1095,7 @@
     </message>
     <message>
         <location line="+8"/>
-        <source>%1 will download and store a copy of the OGkush block chain.</source>
+        <source>%1 will download and store a copy of the OGKush block chain.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1382,8 +1382,8 @@
     </message>
     <message>
         <location line="+30"/>
-        <source>Automatically open the OGkush client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatically open the OGkush client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
+        <source>Automatically open the OGKush client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatically open the OGKush client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1402,7 +1402,7 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the OGkush network through a SOCKS5 proxy.</source>
+        <source>Connect to the OGKush network through a SOCKS5 proxy.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1450,7 +1450,7 @@
     </message>
     <message>
         <location line="+25"/>
-        <source>Connect to the OGkush network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <source>Connect to the OGKush network through a separate SOCKS5 proxy for Tor hidden services.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1585,8 +1585,8 @@
     <message>
         <location line="+62"/>
         <location line="+386"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the OGkush network after a connection is established, but this process has not completed yet.</source>
-        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the OGkush network after a connection is established, but this process has not completed yet.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the OGKush network after a connection is established, but this process has not completed yet.</source>
+        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the OGKush network after a connection is established, but this process has not completed yet.</translation>
     </message>
     <message>
         <location line="-139"/>
@@ -1711,7 +1711,7 @@
     </message>
     <message>
         <location line="+8"/>
-        <source>URI cannot be parsed! This can be caused by an invalid OGkush address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid OGKush address or malformed URI parameters.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1843,7 +1843,7 @@
     </message>
     <message>
         <location filename="../guiutil.cpp" line="+115"/>
-        <source>Enter a OGkush address (e.g. %1)</source>
+        <source>Enter a OGKush address (e.g. %1)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2459,7 +2459,7 @@
     <message>
         <location line="-3"/>
         <location line="+46"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the OGkush network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the OGKush network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3005,7 +3005,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+101"/>
-        <source>Warning: Invalid OGkush address</source>
+        <source>Warning: Invalid OGKush address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3060,7 +3060,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+39"/>
-        <source>The OGkush address to send the payment to</source>
+        <source>The OGKush address to send the payment to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3122,7 +3122,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+54"/>
-        <source>A message that was attached to the ogkush: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the OGkush network.</source>
+        <source>A message that was attached to the ogkush: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the OGKush network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3184,7 +3184,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+18"/>
-        <source>The OGkush address to sign the message with</source>
+        <source>The OGKush address to sign the message with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3226,8 +3226,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this OGkush address</source>
-        <translation>Sign the message to prove you own this OGkush address</translation>
+        <source>Sign the message to prove you own this OGKush address</source>
+        <translation>Sign the message to prove you own this OGKush address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3257,13 +3257,13 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+21"/>
-        <source>The OGkush address the message was signed with</source>
+        <source>The OGKush address the message was signed with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+37"/>
-        <source>Verify the message to ensure it was signed with the specified OGkush address</source>
-        <translation>Verify the message to ensure it was signed with the specified OGkush address</translation>
+        <source>Verify the message to ensure it was signed with the specified OGKush address</source>
+        <translation>Verify the message to ensure it was signed with the specified OGKush address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4097,8 +4097,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="-184"/>
-        <source>OGkush Core</source>
-        <translation type="unfinished">OGkush Core</translation>
+        <source>OGKush Core</source>
+        <translation type="unfinished">OGKush Core</translation>
     </message>
     <message>
         <location line="+1"/>

@@ -30,7 +30,7 @@ git clone https://github.com/minblock/ogkush
 
 See [dependencies.md](dependencies.md) for a complete overview.
 
-### Building OGkush Core
+### Building OGKush Core
 
 **Important**: Use `gmake` (the non-GNU `make` will exit with an error).
 

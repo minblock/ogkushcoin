@@ -66,11 +66,11 @@
         <translation>آدرس‌های گیرنده</translation>
     </message>
     <message>
-        <source>These are your OGkush addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your OGKush addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>اینها آدرس‌های شما برای ارسال وجوه هستند. همیشه قبل از ارسال، مقدار و آدرس گیرنده را بررسی کنید.</translation>
     </message>
     <message>
-        <source>These are your OGkush addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your OGKush addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation>اینها آدرس‌های بیتکوین شما برای دریافت وجوه هستند. توصیه می‌شود برای هر دریافت از یک آدرس جدید استفاده کنید.</translation>
     </message>
     <message>
@@ -177,7 +177,7 @@
     </message>
     <message>
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR OGKUSHS&lt;/b&gt;!</source>
-        <translation>اخطار: اگر کیف‌پول خود را رمزگذاری کرده و رمز خود را فراموش کنید، شما &lt;b&gt;تمام OGkush‌های خود را از دست خواهید داد&lt;/b&gt;!</translation>
+        <translation>اخطار: اگر کیف‌پول خود را رمزگذاری کرده و رمز خود را فراموش کنید، شما &lt;b&gt;تمام OGKush‌های خود را از دست خواهید داد&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -346,7 +346,7 @@
         <translation>فهرست‌بندی نمایه بلاک‌ها…</translation>
     </message>
     <message>
-        <source>Send coins to a OGkush address</source>
+        <source>Send coins to a OGKush address</source>
         <translation>ارسال کوین به آدرس ogkush</translation>
     </message>
     <message>
@@ -366,7 +366,7 @@
         <translation>تایید پیام</translation>
     </message>
     <message>
-        <source>OGkush</source>
+        <source>OGKush</source>
         <translation>ogkush</translation>
     </message>
     <message>
@@ -394,12 +394,12 @@
         <translation>رمزنگاری کلیدهای شخصی متعلق به کیف‌پول</translation>
     </message>
     <message>
-        <source>Sign messages with your OGkush addresses to prove you own them</source>
-        <translation>پیام‌ها را با آدرس OGkush خود امضا کنید تا مالکیت آن‌ها را اثبات کنید</translation>
+        <source>Sign messages with your OGKush addresses to prove you own them</source>
+        <translation>پیام‌ها را با آدرس OGKush خود امضا کنید تا مالکیت آن‌ها را اثبات کنید</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified OGkush addresses</source>
-        <translation>پیام‌ها را تائید کنید تا از امضاشدن آن‌ها با آدرس OGkush مطمئن شوید</translation>
+        <source>Verify messages to ensure they were signed with specified OGKush addresses</source>
+        <translation>پیام‌ها را تائید کنید تا از امضاشدن آن‌ها با آدرس OGKush مطمئن شوید</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -419,7 +419,7 @@
     </message>
     <message>
         <source>Request payments (generates QR codes and ogkush: URIs)</source>
-        <translation>درخواست پرداخت (ساخت کد QR و OGkush: URIs)</translation>
+        <translation>درخواست پرداخت (ساخت کد QR و OGKush: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -431,11 +431,11 @@
     </message>
     <message>
         <source>Open a ogkush: URI or payment request</source>
-        <translation>بازکردن OGkush: آدرس یا درخواست پرداخت</translation>
+        <translation>بازکردن OGKush: آدرس یا درخواست پرداخت</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to OGkush network</source>
-        <translation><numerusform>%n ارتباط فعال به شبکه OGkush</numerusform><numerusform>%n ارتباط فعال به شبکه OGkush</numerusform></translation>
+        <source>%n active connection(s) to OGKush network</source>
+        <translation><numerusform>%n ارتباط فعال به شبکه OGKush</numerusform><numerusform>%n ارتباط فعال به شبکه OGKush</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -628,7 +628,7 @@
         <translation>ویرایش آدرس ارسالی</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid OGkush address.</source>
+        <source>The entered address "%1" is not a valid OGKush address.</source>
         <translation>آدرس وارد شده "%1" آدرس معتبر ogkush نیست.</translation>
     </message>
     </context>
@@ -657,7 +657,7 @@
         <translation>به %1 خوش آمدید.</translation>
     </message>
     <message>
-        <source>OGkush</source>
+        <source>OGKush</source>
         <translation>ogkush</translation>
     </message>
     <message>
@@ -761,7 +761,7 @@
         <translation>فرم</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the OGkush network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the OGKush network after a connection is established, but this process has not completed yet.</source>
         <translation>اطلاعات نمایش داده شده ممکن است روزآمد نباشد. wallet شما به صورت خودکار بعد از برقراری اتصال با شبکه ogkush به روز می شود اما این فرایند هنوز تکمیل نشده است.</translation>
     </message>
     <message>
