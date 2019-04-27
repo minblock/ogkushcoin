@@ -185,7 +185,7 @@
     </message>
     <message>
         <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ogkushs from being stolen by malware infecting your computer.</source>
-        <translation>Ara es tancarà el %1 per finalitzar el procés d'encriptació. Recordeu que encriptar el vostre moneder no garanteix que les vostres ogkushs no puguin ser robades per proogkushari maliciós que infecti l'ordinador.</translation>
+        <translation>Ara es tancarà el %1 per finalitzar el procés d'encriptació. Recordeu que encriptar el vostre moneder no garanteix que les vostres ogkushs no puguin ser robades per programari maliciós que infecti l'ordinador.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -799,8 +799,8 @@
         <translation>Us donem la benvinguda a %1.</translation>
     </message>
     <message>
-        <source>As this is the first time the proogkush is launched, you can choose where %1 will store its data.</source>
-        <translation>Com és la primera vegada que s'executa el proogkusha, podeu triar on %1 emmagatzemarà les dades.</translation>
+        <source>As this is the first time the program is launched, you can choose where %1 will store its data.</source>
+        <translation>Com és la primera vegada que s'executa el programa, podeu triar on %1 emmagatzemarà les dades.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -2863,7 +2863,7 @@
     </message>
     <message>
         <source>This is experimental software.</source>
-        <translation>Això és proogkushari experimental.</translation>
+        <translation>Això és programari experimental.</translation>
     </message>
     <message>
         <source>Transaction amount too small</source>

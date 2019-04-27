@@ -523,7 +523,7 @@
         <translation>ยินดีต้องรับสู่ %1</translation>
     </message>
     <message>
-        <source>As this is the first time the proogkush is launched, you can choose where %1 will store its data.</source>
+        <source>As this is the first time the program is launched, you can choose where %1 will store its data.</source>
         <translation>นี่เป็นการรันโปรแกรมครั้งแรก ท่านสามารถเลือก ว่าจะเก็บข้อมูลไว้ที่ %1</translation>
     </message>
     <message>

@@ -811,8 +811,8 @@
         <translation>%1'a hoş geldiniz.</translation>
     </message>
     <message>
-        <source>As this is the first time the proogkush is launched, you can choose where %1 will store its data.</source>
-        <translation>Bu proogkushın ilk kez başlatılmasından dolayı %1 yazılımının verilerini nerede saklayacağını seçebilirsiniz.</translation>
+        <source>As this is the first time the program is launched, you can choose where %1 will store its data.</source>
+        <translation>Bu programın ilk kez başlatılmasından dolayı %1 yazılımının verilerini nerede saklayacağını seçebilirsiniz.</translation>
     </message>
     <message>
         <source>If you have chosen to limit block chain storage (pruning), the historical data must still be downloaded and processed, but will be deleted afterward to keep your disk usage low.</source>
@@ -941,7 +941,7 @@
     </message>
     <message>
         <source>Automatically start %1 after logging in to the system.</source>
-        <translation>Sistemde oturum açıldığında %1 proogkushını otomatik olarak başlat.</translation>
+        <translation>Sistemde oturum açıldığında %1 programını otomatik olarak başlat.</translation>
     </message>
     <message>
         <source>&amp;Start %1 on system login</source>
@@ -3043,7 +3043,7 @@
     </message>
     <message>
         <source>Please contribute if you find %s useful. Visit %s for further information about the software.</source>
-        <translation>%s proogkushını faydalı buluyorsanız lütfen katkıda bulununuz. Yazılım hakkında daha fazla bilgi için %s adresini ziyaret ediniz.</translation>
+        <translation>%s programını faydalı buluyorsanız lütfen katkıda bulununuz. Yazılım hakkında daha fazla bilgi için %s adresini ziyaret ediniz.</translation>
     </message>
     <message>
         <source>The block database contains a block which appears to be from the future. This may be due to your computer's date and time being set incorrectly. Only rebuild the block database if you are sure that your computer's date and time are correct</source>
@@ -3115,7 +3115,7 @@
     </message>
     <message>
         <source>Error loading %s: Wallet requires newer version of %s</source>
-        <translation>%s unsurunun yüklenmesinde hata oluştu: cüzdan %s proogkushının yeni bir sürümüne ihtiyaç duyuyor</translation>
+        <translation>%s unsurunun yüklenmesinde hata oluştu: cüzdan %s programının yeni bir sürümüne ihtiyaç duyuyor</translation>
     </message>
     <message>
         <source>Error loading block database</source>
@@ -3231,7 +3231,7 @@
     </message>
     <message>
         <source>Wallet needed to be rewritten: restart %s to complete</source>
-        <translation>Cüzdanın tekrar yazılması gerekiyordu: işlemi tamamlamak için %s proogkushını yeniden başlatınız</translation>
+        <translation>Cüzdanın tekrar yazılması gerekiyordu: işlemi tamamlamak için %s programını yeniden başlatınız</translation>
     </message>
     <message>
         <source>Error: Listening for incoming connections failed (listen returned error %s)</source>

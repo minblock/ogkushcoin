@@ -797,7 +797,7 @@
         <translation> اهلا بكم في %1</translation>
     </message>
     <message>
-        <source>As this is the first time the proogkush is launched, you can choose where %1 will store its data.</source>
+        <source>As this is the first time the program is launched, you can choose where %1 will store its data.</source>
         <translation>بما انه هذه اول مرة لانطلاق هذا البرنامج, فيمكنك ان تختار اين سيخزن %1 بياناته</translation>
     </message>
     <message>

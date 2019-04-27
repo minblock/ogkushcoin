@@ -275,7 +275,7 @@
     </message>
     <message>
         <source>Quit application</source>
-        <translation>Salir del proogkusha</translation>
+        <translation>Salir del programa</translation>
     </message>
     <message>
         <source>&amp;About %1</source>
@@ -812,8 +812,8 @@
         <translation>Bienvenido a %1.</translation>
     </message>
     <message>
-        <source>As this is the first time the proogkush is launched, you can choose where %1 will store its data.</source>
-        <translation>Al ser la primera vez que se ejecuta el proogkusha, puede elegir donde %1 almacenará sus datos.</translation>
+        <source>As this is the first time the program is launched, you can choose where %1 will store its data.</source>
+        <translation>Al ser la primera vez que se ejecuta el programa, puede elegir donde %1 almacenará sus datos.</translation>
     </message>
     <message>
         <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>

@@ -29,7 +29,7 @@ backwards-compatible with older versions of Bitcoin Core or other software:
 
 * Blocks will be stored on disk out of order (in the order they are
 received, really), which makes it incompatible with some tools or
-other proogkushs. Reindexing using earlier versions will also not work
+other programs. Reindexing using earlier versions will also not work
 anymore as a result of this.
 
 * The block index database will now hold headers for which no block is
@@ -87,7 +87,7 @@ sometimes create transactions that took a very long time to confirm.
 
 Statistics used to estimate fees and priorities are saved in the
 data directory in the `fee_estimates.dat` file just before
-proogkush shutdown, and are read in at startup.
+program shutdown, and are read in at startup.
 
 New command line options for transaction fee changes:
 - `-txconfirmtarget=n` : create transactions that have enough fees (or priority)

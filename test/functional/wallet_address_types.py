@@ -115,7 +115,7 @@ class AddressTypeTest(BitcoinTestFramework):
             assert(not info['isscript'])
             assert(info['iswitness'])
             assert_equal(info['witness_version'], 0)
-            assert_equal(len(info['witness_proogkush']), 40)
+            assert_equal(len(info['witness_program']), 40)
             assert('pubkey' in info)
         elif typ == 'legacy':
             # P2SH-multisig
@@ -132,7 +132,7 @@ class AddressTypeTest(BitcoinTestFramework):
             assert_equal(info['embedded']['script'], 'multisig')
             assert(info['embedded']['iswitness'])
             assert_equal(info['embedded']['witness_version'], 0)
-            assert_equal(len(info['embedded']['witness_proogkush']), 64)
+            assert_equal(len(info['embedded']['witness_program']), 64)
             assert('pubkeys' in info['embedded'])
         elif typ == 'bech32':
             # P2WSH-multisig
@@ -140,7 +140,7 @@ class AddressTypeTest(BitcoinTestFramework):
             assert_equal(info['script'], 'multisig')
             assert(info['iswitness'])
             assert_equal(info['witness_version'], 0)
-            assert_equal(len(info['witness_proogkush']), 64)
+            assert_equal(len(info['witness_program']), 64)
             assert('pubkeys' in info)
         else:
             # Unknown type

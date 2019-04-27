@@ -51,21 +51,21 @@ def key_to_p2sh_p2wpkh(key, main = False):
     p2shscript = CScript([OP_0, hash160(key)])
     return script_to_p2sh(p2shscript, main)
 
-def proogkush_to_witness(version, proogkush, main = False):
-    if (type(proogkush) is str):
-        proogkush = hex_str_to_bytes(proogkush)
+def program_to_witness(version, program, main = False):
+    if (type(program) is str):
+        program = hex_str_to_bytes(program)
     assert 0 <= version <= 16
-    assert 2 <= len(proogkush) <= 40
-    assert version > 0 or len(proogkush) in [20, 32]
-    return segwit_addr.encode("ogkush" if main else "rogkush", version, proogkush)
+    assert 2 <= len(program) <= 40
+    assert version > 0 or len(program) in [20, 32]
+    return segwit_addr.encode("ogkush" if main else "rogkush", version, program)
 
 def script_to_p2wsh(script, main = False):
     script = check_script(script)
-    return proogkush_to_witness(0, sha256(script), main)
+    return program_to_witness(0, sha256(script), main)
 
 def key_to_p2wpkh(key, main = False):
     key = check_key(key)
-    return proogkush_to_witness(0, hash160(key), main)
+    return program_to_witness(0, hash160(key), main)
 
 def script_to_p2sh_p2wsh(script, main = False):
     script = check_script(script)

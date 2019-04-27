@@ -4,7 +4,7 @@
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 '''
 Perform basic ELF security checks on a series of executables.
-Exit status will be 0 if successful, and the proogkush will be silent.
+Exit status will be 0 if successful, and the program will be silent.
 Otherwise the exit status will be 1 and it will log which executables failed which checks.
 Needs `readelf` (for ELF) and `objdump` (for PE).
 '''
@@ -32,8 +32,8 @@ def check_ELF_PIE(executable):
             ok = True
     return ok
 
-def get_ELF_proogkush_headers(executable):
-    '''Return type and flags for ELF proogkush headers'''
+def get_ELF_program_headers(executable):
+    '''Return type and flags for ELF program headers'''
     p = subprocess.Popen([READELF_CMD, '-l', '-W', executable], stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE, universal_newlines=True)
     (stdout, stderr) = p.communicate()
     if p.returncode:
@@ -67,7 +67,7 @@ def check_ELF_NX(executable):
     '''
     have_wx = False
     have_gnu_stack = False
-    for (typ, flags) in get_ELF_proogkush_headers(executable):
+    for (typ, flags) in get_ELF_program_headers(executable):
         if typ == 'GNU_STACK':
             have_gnu_stack = True
         if 'W' in flags and 'E' in flags: # section is both writable and executable
@@ -77,13 +77,13 @@ def check_ELF_NX(executable):
 def check_ELF_RELRO(executable):
     '''
     Check for read-only relocations.
-    GNU_RELRO proogkush header must exist
+    GNU_RELRO program header must exist
     Dynamic section must have BIND_NOW flag
     '''
     have_gnu_relro = False
-    for (typ, flags) in get_ELF_proogkush_headers(executable):
+    for (typ, flags) in get_ELF_program_headers(executable):
         # Note: not checking flags == 'R': here as linkers set the permission differently
-        # This does not affect security: the permission flags of the GNU_RELRO proogkush header are ignored, the PT_LOAD header determines the effective permissions.
+        # This does not affect security: the permission flags of the GNU_RELRO program header are ignored, the PT_LOAD header determines the effective permissions.
         # However, the dynamic linker need to write to this area so these are RW.
         # Glibc itself takes care of mprotecting this area R after relocations are finished.
         # See also http://permalink.gmane.org/gmane.comp.gnu.binutils/71347

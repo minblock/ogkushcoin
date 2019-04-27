@@ -93,12 +93,12 @@ struct WitnessUnknown
 {
     unsigned int version;
     unsigned int length;
-    unsigned char proogkush[40];
+    unsigned char program[40];
 
     friend bool operator==(const WitnessUnknown& w1, const WitnessUnknown& w2) {
         if (w1.version != w2.version) return false;
         if (w1.length != w2.length) return false;
-        return std::equal(w1.proogkush, w1.proogkush + w1.length, w2.proogkush);
+        return std::equal(w1.program, w1.program + w1.length, w2.program);
     }
 
     friend bool operator<(const WitnessUnknown& w1, const WitnessUnknown& w2) {
@@ -106,7 +106,7 @@ struct WitnessUnknown
         if (w1.version > w2.version) return false;
         if (w1.length < w2.length) return true;
         if (w1.length > w2.length) return false;
-        return std::lexicographical_compare(w1.proogkush, w1.proogkush + w1.length, w2.proogkush, w2.proogkush + w2.length);
+        return std::lexicographical_compare(w1.program, w1.program + w1.length, w2.program, w2.program + w2.length);
     }
 };
 

@@ -833,8 +833,8 @@
         <translation>Bem vindo ao %1</translation>
     </message>
     <message>
-        <source>As this is the first time the proogkush is launched, you can choose where %1 will store its data.</source>
-        <translation>Como essa é a primeira vez que o proogkusha é executado, você pode escolher onde %1 armazenará seus dados.</translation>
+        <source>As this is the first time the program is launched, you can choose where %1 will store its data.</source>
+        <translation>Como essa é a primeira vez que o programa é executado, você pode escolher onde %1 armazenará seus dados.</translation>
     </message>
     <message>
         <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
@@ -1019,7 +1019,7 @@
     </message>
     <message>
         <source>Minimize instead of exit the application when the window is closed. When this option is enabled, the application will be closed only after selecting Exit in the menu.</source>
-        <translation>Minimizar em vez de fechar o proogkusha quando a janela for fechada. Quando essa opção estiver ativa, o proogkusha só será fechado somente pela opção Sair no menu Arquivo.</translation>
+        <translation>Minimizar em vez de fechar o programa quando a janela for fechada. Quando essa opção estiver ativa, o programa só será fechado somente pela opção Sair no menu Arquivo.</translation>
     </message>
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
@@ -1215,7 +1215,7 @@
     </message>
     <message>
         <source>Client will be shut down. Do you want to proceed?</source>
-        <translation>O proogkusha será encerrado. Deseja continuar?</translation>
+        <translation>O programa será encerrado. Deseja continuar?</translation>
     </message>
     <message>
         <source>Configuration options</source>

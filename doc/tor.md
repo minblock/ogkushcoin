@@ -89,7 +89,7 @@ for normal IPv4/IPv6 communication, use:
 ## 3. Automatically listen on Tor
 
 Starting with Tor version 0.2.7.1 it is possible, through Tor's control socket
-API, to create and destroy 'ephemeral' hidden services proogkushmatically.
+API, to create and destroy 'ephemeral' hidden services programmatically.
 OGkush Core has been updated to make use of this.
 
 This means that if Tor is running (and proper authentication has been configured),

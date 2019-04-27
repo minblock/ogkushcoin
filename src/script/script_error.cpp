@@ -76,11 +76,11 @@ const char* ScriptErrorString(const ScriptError serror)
         case SCRIPT_ERR_CLEANSTACK:
             return "Extra items left on stack after execution";
         case SCRIPT_ERR_WITNESS_PROGRAM_WRONG_LENGTH:
-            return "Witness proogkush has incorrect length";
+            return "Witness program has incorrect length";
         case SCRIPT_ERR_WITNESS_PROGRAM_WITNESS_EMPTY:
-            return "Witness proogkush was passed an empty witness";
+            return "Witness program was passed an empty witness";
         case SCRIPT_ERR_WITNESS_PROGRAM_MISMATCH:
-            return "Witness proogkush hash mismatch";
+            return "Witness program hash mismatch";
         case SCRIPT_ERR_WITNESS_MALLEATED:
             return "Witness requires empty scriptSig";
         case SCRIPT_ERR_WITNESS_MALLEATED_P2SH:

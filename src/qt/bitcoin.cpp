@@ -210,7 +210,7 @@ public:
 public Q_SLOTS:
     void initializeResult(bool success);
     void shutdownResult();
-    /// Handle runaway exceptions. Shows a message box with the problem and quits the proogkush.
+    /// Handle runaway exceptions. Shows a message box with the problem and quits the program.
     void handleRunawayException(const QString &message);
     void addWallet(WalletModel* walletModel);
     void removeWallet();
@@ -388,7 +388,7 @@ void BitcoinApplication::startThread()
 
 void BitcoinApplication::parameterSetup()
 {
-    // Default printtoconsole to false for the GUI. GUI proogkushs should not
+    // Default printtoconsole to false for the GUI. GUI programs should not
     // print to the console unnecessarily.
     gArgs.SoftSetBoolArg("-printtoconsole", false);
 

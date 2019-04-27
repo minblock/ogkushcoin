@@ -32,10 +32,10 @@
 const int FREEDESKTOP_NOTIFICATION_ICON_SIZE = 128;
 #endif
 
-Notificator::Notificator(const QString &_proogkushName, QSystemTrayIcon *_trayIcon, QWidget *_parent) :
+Notificator::Notificator(const QString &_programName, QSystemTrayIcon *_trayIcon, QWidget *_parent) :
     QObject(_parent),
     parent(_parent),
-    proogkushName(_proogkushName),
+    programName(_programName),
     mode(None),
     trayIcon(_trayIcon)
 #ifdef USE_DBUS
@@ -159,7 +159,7 @@ void Notificator::notifyDBus(Class cls, const QString &title, const QString &tex
     QList<QVariant> args;
 
     // Proogkush Name:
-    args.append(proogkushName);
+    args.append(programName);
 
     // Unique ID of this notification type:
     args.append(0U);

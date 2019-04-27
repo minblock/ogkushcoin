@@ -180,8 +180,8 @@ def witness_script(use_p2wsh, pubkey):
         pkscript = CScript([OP_0, pubkeyhash])
     else:
         # 1-of-1 multisig
-        witness_proogkush = CScript([OP_1, hex_str_to_bytes(pubkey), OP_1, OP_CHECKMULTISIG])
-        scripthash = sha256(witness_proogkush)
+        witness_program = CScript([OP_1, hex_str_to_bytes(pubkey), OP_1, OP_CHECKMULTISIG])
+        scripthash = sha256(witness_program)
         pkscript = CScript([OP_0, scripthash])
     return bytes_to_hex_str(pkscript)
 
@@ -190,8 +190,8 @@ def create_witness_tx(node, use_p2wsh, utxo, pubkey, encode_p2sh, amount):
 
     Optionally wrap the segwit output using P2SH."""
     if use_p2wsh:
-        proogkush = CScript([OP_1, hex_str_to_bytes(pubkey), OP_1, OP_CHECKMULTISIG])
-        addr = script_to_p2sh_p2wsh(proogkush) if encode_p2sh else script_to_p2wsh(proogkush)
+        program = CScript([OP_1, hex_str_to_bytes(pubkey), OP_1, OP_CHECKMULTISIG])
+        addr = script_to_p2sh_p2wsh(program) if encode_p2sh else script_to_p2wsh(program)
     else:
         addr = key_to_p2sh_p2wpkh(pubkey) if encode_p2sh else key_to_p2wpkh(pubkey)
     if not encode_p2sh:

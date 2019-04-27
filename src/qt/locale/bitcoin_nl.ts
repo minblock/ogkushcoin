@@ -837,8 +837,8 @@
         <translation>Welkom bij %1.</translation>
     </message>
     <message>
-        <source>As this is the first time the proogkush is launched, you can choose where %1 will store its data.</source>
-        <translation>Omdat dit de eerste keer is dat het proogkushma gestart is, kunt u nu kiezen waar %1 de data moet opslaan.</translation>
+        <source>As this is the first time the program is launched, you can choose where %1 will store its data.</source>
+        <translation>Omdat dit de eerste keer is dat het programma gestart is, kunt u nu kiezen waar %1 de data moet opslaan.</translation>
     </message>
     <message>
         <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
@@ -1183,7 +1183,7 @@
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Kies de standaardonderverdelingseenheid om weer te geven in uw proogkushma, en voor het versturen van munten</translation>
+        <translation>Kies de standaardonderverdelingseenheid om weer te geven in uw programma, en voor het versturen van munten</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>

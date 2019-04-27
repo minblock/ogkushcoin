@@ -8,21 +8,21 @@
 #
 # DESCRIPTION
 #
-#   This macro figures out how to build C proogkushs using POSIX threads. It
+#   This macro figures out how to build C programs using POSIX threads. It
 #   sets the PTHREAD_LIBS output variable to the threads library and linker
 #   flags, and the PTHREAD_CFLAGS output variable to any special C compiler
 #   flags that are needed. (The user can also force certain compiler
 #   flags/libs to be tested by setting these environment variables.)
 #
 #   Also sets PTHREAD_CC to any special C compiler that is needed for
-#   multi-threaded proogkushs (defaults to the value of CC otherwise). (This
+#   multi-threaded programs (defaults to the value of CC otherwise). (This
 #   is necessary on AIX to use the special cc_r compiler alias.)
 #
-#   NOTE: You are assumed to not only compile your proogkush with these flags,
+#   NOTE: You are assumed to not only compile your program with these flags,
 #   but also to link with them as well. For example, you might link with
 #   $PTHREAD_CC $CFLAGS $PTHREAD_CFLAGS $LDFLAGS ... $PTHREAD_LIBS $LIBS
 #
-#   If you are only building threaded proogkushs, you may wish to use these
+#   If you are only building threaded programs, you may wish to use these
 #   variables in your default LIBS, CFLAGS, and CC:
 #
 #     LIBS="$PTHREAD_LIBS $LIBS"
@@ -56,18 +56,18 @@
 #   Copyright (c) 2008 Steven G. Johnson <stevenj@alum.mit.edu>
 #   Copyright (c) 2011 Daniel Richard G. <skunk@iSKUNK.ORG>
 #
-#   This proogkush is free software: you can redistribute it and/or modify it
+#   This program is free software: you can redistribute it and/or modify it
 #   under the terms of the GNU General Public License as published by the
 #   Free Software Foundation, either version 3 of the License, or (at your
 #   option) any later version.
 #
-#   This proogkush is distributed in the hope that it will be useful, but
+#   This program is distributed in the hope that it will be useful, but
 #   WITHOUT ANY WARRANTY; without even the implied warranty of
 #   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
 #   Public License for more details.
 #
 #   You should have received a copy of the GNU General Public License along
-#   with this proogkush. If not, see <http://www.gnu.org/licenses/>.
+#   with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 #   As a special exception, the respective Autoconf Macro's copyright owner
 #   gives unlimited permission to copy, distribute and modify the configure
@@ -126,7 +126,7 @@ fi
 # Create a list of thread flags to try.  Items starting with a "-" are
 # C compiler flags, and other items are library names, except for "none"
 # which indicates that we try without any flags at all, and "pthread-config"
-# which is a proogkush returning the flags for the Pth emulation library.
+# which is a program returning the flags for the Pth emulation library.
 
 ax_pthread_flags="pthreads none -Kthread -pthread -pthreads -mthreads pthread --thread-safe -mt pthread-config"
 
@@ -148,7 +148,7 @@ ax_pthread_flags="pthreads none -Kthread -pthread -pthreads -mthreads pthread --
 # -mthreads: Mingw32/gcc, Lynx/gcc
 # pthread: Linux, etcetera
 # --thread-safe: KAI C++
-# pthread-config: use pthread-config proogkush (for GNU Pth library)
+# pthread-config: use pthread-config program (for GNU Pth library)
 
 case $host_os in
 
@@ -457,7 +457,7 @@ if test "x$ax_pthread_ok" = "xyes"; then
                 aix*)
                 AS_CASE(["x/$CC"],
                     [x*/c89|x*/c89_128|x*/c99|x*/c99_128|x*/cc|x*/cc128|x*/xlc|x*/xlc_v6|x*/xlc128|x*/xlc128_v6],
-                    [#handle absolute path differently from PATH based proogkush lookup
+                    [#handle absolute path differently from PATH based program lookup
                      AS_CASE(["x$CC"],
                          [x/*],
                          [AS_IF([AS_EXECUTABLE_P([${CC}_r])],[PTHREAD_CC="${CC}_r"])],

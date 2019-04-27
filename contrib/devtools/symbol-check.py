@@ -67,7 +67,7 @@ ALLOWED_LIBRARIES = {
 'libxcb.so.1', # part of X11
 'libfontconfig.so.1', # font support
 'libfreetype.so.6', # font parsing
-'libdl.so.2' # proogkushming interface to dynamic linker
+'libdl.so.2' # programming interface to dynamic linker
 }
 
 class CPPFilt(object):

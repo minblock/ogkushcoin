@@ -2583,7 +2583,7 @@
     </message>
     <message>
         <source>This is experimental software.</source>
-        <translation>Això és proogkushari experimental.</translation>
+        <translation>Això és programari experimental.</translation>
     </message>
     <message>
         <source>Transaction amount too small</source>

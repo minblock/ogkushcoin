@@ -459,8 +459,8 @@ void CoinControlDialog::updateLabels(WalletModel *model, QDialog* dialog)
         // Bytes
         CTxDestination address;
         int witnessversion = 0;
-        std::vector<unsigned char> witnessproogkush;
-        if (out.txout.scriptPubKey.IsWitnessProogkush(witnessversion, witnessproogkush))
+        std::vector<unsigned char> witnessprogram;
+        if (out.txout.scriptPubKey.IsWitnessProogkush(witnessversion, witnessprogram))
         {
             nBytesInputs += (32 + 4 + 1 + (107 / WITNESS_SCALE_FACTOR) + 4);
             fWitness = true;

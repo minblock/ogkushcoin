@@ -152,7 +152,7 @@ BOOST_AUTO_TEST_CASE(GetTxSigOpCost)
         assert(VerifyWithFlag(creationTx, spendingTx, flags) == SCRIPT_ERR_CHECKMULTISIGVERIFY);
     }
 
-    // P2WPKH witness proogkush
+    // P2WPKH witness program
     {
         CScript p2pk = CScript() << ToByteVector(pubkey) << OP_CHECKSIG;
         CScript scriptPubKey = GetScriptForWitness(p2pk);
@@ -196,7 +196,7 @@ BOOST_AUTO_TEST_CASE(GetTxSigOpCost)
         assert(VerifyWithFlag(creationTx, spendingTx, flags) == SCRIPT_ERR_EQUALVERIFY);
     }
 
-    // P2WSH witness proogkush
+    // P2WSH witness program
     {
         CScript witnessScript = CScript() << 1 << ToByteVector(pubkey) << ToByteVector(pubkey) << 2 << OP_CHECKMULTISIGVERIFY;
         CScript scriptPubKey = GetScriptForWitness(witnessScript);

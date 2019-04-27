@@ -186,7 +186,7 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
     </message>
     <message>
         <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ogkushs from being stolen by malware infecting your computer.</source>
-        <translation>A %1 most bezár, hogy befejezze a titkosítást. Ne feledje, hogy a tárca titkosítása nem nyújt teljes védelmet azzal szemben, hogy kártékony proogkushok megfertőzzék a számítógépét és ellopják a ogkushjait.</translation>
+        <translation>A %1 most bezár, hogy befejezze a titkosítást. Ne feledje, hogy a tárca titkosítása nem nyújt teljes védelmet azzal szemben, hogy kártékony programok megfertőzzék a számítógépét és ellopják a ogkushjait.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -804,8 +804,8 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
         <translation>Üdvözlünk a %1 -ban.</translation>
     </message>
     <message>
-        <source>As this is the first time the proogkush is launched, you can choose where %1 will store its data.</source>
-        <translation>Mivel ez a proogkush első indulása, megváltoztathatja, hogy a %1 hova mentse az adatokat.</translation>
+        <source>As this is the first time the program is launched, you can choose where %1 will store its data.</source>
+        <translation>Mivel ez a program első indulása, megváltoztathatja, hogy a %1 hova mentse az adatokat.</translation>
     </message>
     <message>
         <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
@@ -813,7 +813,7 @@ Kérem a kulcsmondatban használjon &lt;b&gt; tíz vagy több véletlenszerű ka
     </message>
     <message>
         <source>This initial synchronisation is very demanding, and may expose hardware problems with your computer that had previously gone unnoticed. Each time you run %1, it will continue downloading where it left off.</source>
-        <translation>Az első szinkronizáció nagyon erőforrás-igényes és felszínre hozhat a számítógépében eddig rejtve maradt hardver problémákat. Minden %1 indításnál a proogkush onnan folytatja a letöltést, ahol legutóbb abbahagyta.</translation>
+        <translation>Az első szinkronizáció nagyon erőforrás-igényes és felszínre hozhat a számítógépében eddig rejtve maradt hardver problémákat. Minden %1 indításnál a program onnan folytatja a letöltést, ahol legutóbb abbahagyta.</translation>
     </message>
     <message>
         <source>If you have chosen to limit block chain storage (pruning), the historical data must still be downloaded and processed, but will be deleted afterward to keep your disk usage low.</source>

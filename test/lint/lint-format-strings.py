@@ -4,7 +4,7 @@
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #
-# Lint format strings: This proogkush checks that the number of arguments passed
+# Lint format strings: This program checks that the number of arguments passed
 # to a variadic format string function matches the number of format specifiers
 # in the format string.
 
@@ -256,7 +256,7 @@ def count_format_specifiers(format_string):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="This proogkush checks that the number of arguments passed "
+    parser = argparse.ArgumentParser(description="This program checks that the number of arguments passed "
                                      "to a variadic format string function matches the number of format "
                                      "specifiers in the format string.")
     parser.add_argument("--skip-arguments", type=int, help="number of arguments before the format string "

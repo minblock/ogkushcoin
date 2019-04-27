@@ -29,7 +29,7 @@ backwards-compatible with pre-0.10 versions of Bitcoin Core or other software:
 
 * Blocks will be stored on disk out of order (in the order they are
 received, really), which makes it incompatible with some tools or
-other proogkushs. Reindexing using earlier versions will also not work
+other programs. Reindexing using earlier versions will also not work
 anymore as a result of this.
 
 * The block index database will now hold headers for which no block is
@@ -103,7 +103,7 @@ blocks on disk.
 
 Block pruning works during initial sync in the same way as during steady state, 
 by deleting block files "as you go" whenever disk space is allocated. Thus, if 
-the user specifies 550MB, once that level is reached the proogkush will begin 
+the user specifies 550MB, once that level is reached the program will begin 
 deleting the oldest block and undo files, while continuing to download the 
 blockchain.
 

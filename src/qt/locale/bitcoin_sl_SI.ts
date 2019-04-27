@@ -185,7 +185,7 @@
     </message>
     <message>
         <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ogkushs from being stolen by malware infecting your computer.</source>
-        <translation>%1 se bo zaprl, da bi dokončal postopek šifriranja. Zapomnite si, da šifriranje vaše denarnice vaših ne more popolnoma zaščititi vaših ogkushov pred krajami zlonamernih proogkushov, ki bi lahko bili nameščeni na vašem računalniku.</translation>
+        <translation>%1 se bo zaprl, da bi dokončal postopek šifriranja. Zapomnite si, da šifriranje vaše denarnice vaših ne more popolnoma zaščititi vaših ogkushov pred krajami zlonamernih programov, ki bi lahko bili nameščeni na vašem računalniku.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -271,7 +271,7 @@
     </message>
     <message>
         <source>Quit application</source>
-        <translation>Ustavite proogkush</translation>
+        <translation>Ustavite program</translation>
     </message>
     <message>
         <source>&amp;About %1</source>
@@ -781,7 +781,7 @@
     </message>
     <message>
         <source>Number of script &amp;verification threads</source>
-        <translation>Število proogkushskih &amp;niti za preverjanje</translation>
+        <translation>Število programskih &amp;niti za preverjanje</translation>
     </message>
     <message>
         <source>IP address of the proxy (e.g. IPv4: 127.0.0.1 / IPv6: ::1)</source>
@@ -789,7 +789,7 @@
     </message>
     <message>
         <source>Minimize instead of exit the application when the window is closed. When this option is enabled, the application will be closed only after selecting Exit in the menu.</source>
-        <translation>Ko zaprete glavno okno proogkusha, bo proogkush tekel še naprej, okno pa bo zgolj minimirano. Proogkush v tem primeru ustavite tako, da v meniju izberete ukaz Izhod.</translation>
+        <translation>Ko zaprete glavno okno programa, bo program tekel še naprej, okno pa bo zgolj minimirano. Proogkush v tem primeru ustavite tako, da v meniju izberete ukaz Izhod.</translation>
     </message>
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
@@ -801,7 +801,7 @@
     </message>
     <message>
         <source>Reset all client options to default.</source>
-        <translation>Ponastavi vse nastavitve proogkusha na privzete vrednosti.</translation>
+        <translation>Ponastavi vse nastavitve programa na privzete vrednosti.</translation>
     </message>
     <message>
         <source>&amp;Reset Options</source>
@@ -869,7 +869,7 @@
     </message>
     <message>
         <source>Show only a tray icon after minimizing the window.</source>
-        <translation>Po minimiranju okna samo prikaži ikono proogkusha v pladnju.</translation>
+        <translation>Po minimiranju okna samo prikaži ikono programa v pladnju.</translation>
     </message>
     <message>
         <source>&amp;Minimize to the tray instead of the taskbar</source>
@@ -921,7 +921,7 @@
     </message>
     <message>
         <source>Client restart required to activate changes.</source>
-        <translation>Za uveljavitev sprememb je potreben ponoven zagon proogkusha.</translation>
+        <translation>Za uveljavitev sprememb je potreben ponoven zagon programa.</translation>
     </message>
     <message>
         <source>Client will be shut down. Do you want to proceed?</source>
@@ -933,7 +933,7 @@
     </message>
     <message>
         <source>This change would require a client restart.</source>
-        <translation>Ta sprememba zahteva ponoven zagon proogkusha.</translation>
+        <translation>Ta sprememba zahteva ponoven zagon programa.</translation>
     </message>
     <message>
         <source>The supplied proxy address is invalid.</source>

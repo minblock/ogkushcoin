@@ -1050,7 +1050,7 @@
     </message>
     <message>
         <location line="+26"/>
-        <source>As this is the first time the proogkush is launched, you can choose where %1 will store its data.</source>
+        <source>As this is the first time the program is launched, you can choose where %1 will store its data.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

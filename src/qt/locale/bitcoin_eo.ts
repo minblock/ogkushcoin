@@ -1911,7 +1911,7 @@
     </message>
     <message>
         <source>This is experimental software.</source>
-        <translation>ĝi estas eksperimenta proogkusho</translation>
+        <translation>ĝi estas eksperimenta programo</translation>
     </message>
     <message>
         <source>Transaction amount too small</source>

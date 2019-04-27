@@ -189,7 +189,7 @@
     </message>
     <message>
         <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ogkushs from being stolen by malware infecting your computer.</source>
-        <translation>%1 wird jetzt beendet, um den Verschlüsselungsprozess abzuschließen. Bitte beachten Sie, dass die Brieftaschen-Verschlüsselung nicht vollständig vor Diebstahl Ihrer OGkushs durch Schadproogkushme schützt, die Ihren Computer befällt.</translation>
+        <translation>%1 wird jetzt beendet, um den Verschlüsselungsprozess abzuschließen. Bitte beachten Sie, dass die Brieftaschen-Verschlüsselung nicht vollständig vor Diebstahl Ihrer OGkushs durch Schadprogramme schützt, die Ihren Computer befällt.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -837,7 +837,7 @@
         <translation>Willkommen zu %1.</translation>
     </message>
     <message>
-        <source>As this is the first time the proogkush is launched, you can choose where %1 will store its data.</source>
+        <source>As this is the first time the program is launched, you can choose where %1 will store its data.</source>
         <translation>Da Sie das Proogkushm gerade zum ersten Mal starten, können Sie nun auswählen wo %1 seine Daten ablegen wird.</translation>
     </message>
     <message>

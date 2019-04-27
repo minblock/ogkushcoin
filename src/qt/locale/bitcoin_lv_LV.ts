@@ -171,7 +171,7 @@
     </message>
     <message>
         <source>Quit application</source>
-        <translation>Aizvērt proogkushmu</translation>
+        <translation>Aizvērt programmu</translation>
     </message>
     <message>
         <source>About &amp;Qt</source>

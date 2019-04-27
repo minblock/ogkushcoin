@@ -837,7 +837,7 @@
         <translation>歡迎使用 %1。</translation>
     </message>
     <message>
-        <source>As this is the first time the proogkush is launched, you can choose where %1 will store its data.</source>
+        <source>As this is the first time the program is launched, you can choose where %1 will store its data.</source>
         <translation>因為這是程式第一次啓動，你可以選擇 %1 儲存資料的地方。</translation>
     </message>
     <message>

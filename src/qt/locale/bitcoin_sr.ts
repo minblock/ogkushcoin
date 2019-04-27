@@ -802,7 +802,7 @@
         <translation>Добродошли на  %1.</translation>
     </message>
     <message>
-        <source>As this is the first time the proogkush is launched, you can choose where %1 will store its data.</source>
+        <source>As this is the first time the program is launched, you can choose where %1 will store its data.</source>
         <translation>Пошто је ово први пут да је програм покренут, можете изабрати где ће %1 чувати своје податке.</translation>
     </message>
     <message>

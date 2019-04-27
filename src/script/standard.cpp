@@ -102,22 +102,22 @@ bool Solver(const CScript& scriptPubKey, txnouttype& typeRet, std::vector<std::v
     }
 
     int witnessversion;
-    std::vector<unsigned char> witnessproogkush;
-    if (scriptPubKey.IsWitnessProogkush(witnessversion, witnessproogkush)) {
-        if (witnessversion == 0 && witnessproogkush.size() == WITNESS_V0_KEYHASH_SIZE) {
+    std::vector<unsigned char> witnessprogram;
+    if (scriptPubKey.IsWitnessProogkush(witnessversion, witnessprogram)) {
+        if (witnessversion == 0 && witnessprogram.size() == WITNESS_V0_KEYHASH_SIZE) {
             typeRet = TX_WITNESS_V0_KEYHASH;
-            vSolutionsRet.push_back(witnessproogkush);
+            vSolutionsRet.push_back(witnessprogram);
             return true;
         }
-        if (witnessversion == 0 && witnessproogkush.size() == WITNESS_V0_SCRIPTHASH_SIZE) {
+        if (witnessversion == 0 && witnessprogram.size() == WITNESS_V0_SCRIPTHASH_SIZE) {
             typeRet = TX_WITNESS_V0_SCRIPTHASH;
-            vSolutionsRet.push_back(witnessproogkush);
+            vSolutionsRet.push_back(witnessprogram);
             return true;
         }
         if (witnessversion != 0) {
             typeRet = TX_WITNESS_UNKNOWN;
             vSolutionsRet.push_back(std::vector<unsigned char>{(unsigned char)witnessversion});
-            vSolutionsRet.push_back(std::move(witnessproogkush));
+            vSolutionsRet.push_back(std::move(witnessprogram));
             return true;
         }
         typeRet = TX_NONSTANDARD;
@@ -200,7 +200,7 @@ bool ExtractDestination(const CScript& scriptPubKey, CTxDestination& addressRet)
     } else if (whichType == TX_WITNESS_UNKNOWN) {
         WitnessUnknown unk;
         unk.version = vSolutions[0][0];
-        std::copy(vSolutions[1].begin(), vSolutions[1].end(), unk.proogkush);
+        std::copy(vSolutions[1].begin(), vSolutions[1].end(), unk.program);
         unk.length = vSolutions[1].size();
         addressRet = unk;
         return true;
@@ -292,7 +292,7 @@ public:
     bool operator()(const WitnessUnknown& id) const
     {
         script->clear();
-        *script << CScript::EncodeOP_N(id.version) << std::vector<unsigned char>(id.proogkush, id.proogkush + id.length);
+        *script << CScript::EncodeOP_N(id.version) << std::vector<unsigned char>(id.program, id.program + id.length);
         return true;
     }
 };

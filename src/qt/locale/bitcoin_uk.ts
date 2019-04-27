@@ -833,7 +833,7 @@
         <translation>Ласкаво просимо до %1.</translation>
     </message>
     <message>
-        <source>As this is the first time the proogkush is launched, you can choose where %1 will store its data.</source>
+        <source>As this is the first time the program is launched, you can choose where %1 will store its data.</source>
         <translation>Оскільки це перший запуск програми, ви можете обрати де %1 буде зберігати дані.</translation>
     </message>
     <message>

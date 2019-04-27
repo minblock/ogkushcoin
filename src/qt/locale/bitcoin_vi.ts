@@ -803,7 +803,7 @@
         <translation>Welcome to %1.</translation>
     </message>
     <message>
-        <source>As this is the first time the proogkush is launched, you can choose where %1 will store its data.</source>
+        <source>As this is the first time the program is launched, you can choose where %1 will store its data.</source>
         <translation>Đây là lần đầu chương trình khởi chạy, bạn có thể chọn nơi %1 sẽ lưu trữ data.</translation>
     </message>
     <message>

@@ -27,7 +27,7 @@
 // s->scheduleFromNow(std::bind(Class::func, this, argument), 3);
 // boost::thread* t = new boost::thread(boost::bind(CScheduler::serviceQueue, s));
 //
-// ... then at proogkush shutdown, clean up the thread running serviceQueue:
+// ... then at program shutdown, clean up the thread running serviceQueue:
 // t->interrupt();
 // t->join();
 // delete t;

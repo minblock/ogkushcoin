@@ -837,7 +837,7 @@
         <translation>Bienvenue à %1.</translation>
     </message>
     <message>
-        <source>As this is the first time the proogkush is launched, you can choose where %1 will store its data.</source>
+        <source>As this is the first time the program is launched, you can choose where %1 will store its data.</source>
         <translation>Puisque c’est la première fois que le logiciel est lancé, vous pouvez choisir où %1 stockera ses données.</translation>
     </message>
     <message>
