@@ -1494,10 +1494,10 @@ static UniValue addwitnessaddress(const JSONRPCRequest& request)
         throw JSONRPCError(RPC_WALLET_ERROR, "Public key or redeemscript not known to wallet, or the key is uncompressed");
     }
 
-    CScript witproogkush = GetScriptForDestination(w.result);
+    CScript witprogram = GetScriptForDestination(w.result);
 
     if (p2sh) {
-        w.result = CScriptID(witproogkush);
+        w.result = CScriptID(witprogram);
     }
 
     if (w.already_witness) {
@@ -1505,7 +1505,7 @@ static UniValue addwitnessaddress(const JSONRPCRequest& request)
             throw JSONRPCError(RPC_WALLET_ERROR, "Cannot convert between witness address types");
         }
     } else {
-        pwallet->AddCScript(witproogkush); // Implicit for single-key now, but necessary for multisig and for compatibility with older software
+        pwallet->AddCScript(witprogram); // Implicit for single-key now, but necessary for multisig and for compatibility with older software
         pwallet->SetAddressBook(w.result, "", "receive");
     }
 
@@ -4170,8 +4170,8 @@ UniValue getaddressinfo(const JSONRPCRequest& request)
             "  \"iswatchonly\" : true|false,   (boolean) If the address is watchonly\n"
             "  \"isscript\" : true|false,      (boolean) If the key is a script\n"
             "  \"iswitness\" : true|false,     (boolean) If the address is a witness address\n"
-            "  \"witness_version\" : version   (numeric, optional) The version number of the witness proogkush\n"
-            "  \"witness_proogkush\" : \"hex\"     (string, optional) The hex value of the witness proogkush\n"
+            "  \"witness_version\" : version   (numeric, optional) The version number of the witness program\n"
+            "  \"witness_program\" : \"hex\"     (string, optional) The hex value of the witness program\n"
             "  \"script\" : \"type\"             (string, optional) The output script type. Only if \"isscript\" is true and the redeemscript is known. Possible types: nonstandard, pubkey, pubkeyhash, scripthash, multisig, nulldata, witness_v0_keyhash, witness_v0_scripthash, witness_unknown\n"
             "  \"hex\" : \"hex\",                (string, optional) The redeemscript for the p2sh address\n"
             "  \"pubkeys\"                     (string, optional) Array of pubkeys associated with the known redeemscript (only if \"script\" is \"multisig\")\n"

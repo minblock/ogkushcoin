@@ -184,7 +184,7 @@ Automatically use Tor hidden services
 -------------------------------------
 
 Starting with Tor version 0.2.7.1 it is possible, through Tor's control socket
-API, to create and destroy 'ephemeral' hidden services proogkushmatically.
+API, to create and destroy 'ephemeral' hidden services programmatically.
 OGkush Core has been updated to make use of this.
 
 This means that if Tor is running (and proper authorization is available),
@@ -786,7 +786,7 @@ covered by the txid. This provides several immediate benefits:
   identifier (txid) of transactions without referencing the witness, which can
   sometimes be changed by third-parties (such as miners) or by co-signers in a
   multisig spend. This solves all known cases of unwanted transaction
-  malleability, which is a problem that makes proogkushming OGkush wallet
+  malleability, which is a problem that makes programming OGkush wallet
   software more difficult and which seriously complicates the design of smart
   contracts for OGkush.
 

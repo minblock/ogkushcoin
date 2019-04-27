@@ -276,7 +276,7 @@ Var vänlig och försök igen.</translation>
     </message>
     <message>
         <source>Quit application</source>
-        <translation>Avsluta proogkushmet</translation>
+        <translation>Avsluta programmet</translation>
     </message>
     <message>
         <source>&amp;About %1</source>
@@ -812,8 +812,8 @@ Var vänlig och försök igen.</translation>
         <translation>Välkommen till %1.</translation>
     </message>
     <message>
-        <source>As this is the first time the proogkush is launched, you can choose where %1 will store its data.</source>
-        <translation>Eftersom detta är första gången proogkushmet startas får du välja var %1 skall lagra sitt data.</translation>
+        <source>As this is the first time the program is launched, you can choose where %1 will store its data.</source>
+        <translation>Eftersom detta är första gången programmet startas får du välja var %1 skall lagra sitt data.</translation>
     </message>
     <message>
         <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
@@ -994,7 +994,7 @@ Var vänlig och försök igen.</translation>
     </message>
     <message>
         <source>Minimize instead of exit the application when the window is closed. When this option is enabled, the application will be closed only after selecting Exit in the menu.</source>
-        <translation>Minimera istället för att stänga proogkushmet när fönstret stängs. När detta alternativ är aktiverat stängs proogkushmet endast genom att välja Stäng i menyn.</translation>
+        <translation>Minimera istället för att stänga programmet när fönstret stängs. När detta alternativ är aktiverat stängs programmet endast genom att välja Stäng i menyn.</translation>
     </message>
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>

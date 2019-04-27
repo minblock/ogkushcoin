@@ -226,7 +226,7 @@ debug.log file if inconsistencies are detected.
 
 ### Valgrind suppressions file
 
-Valgrind is a proogkushming tool for memory debugging, memory leak detection, and
+Valgrind is a programming tool for memory debugging, memory leak detection, and
 profiling. The repo contains a Valgrind suppressions file
 ([`valgrind.supp`](https://github.com/minblock/ogkush/blob/master/contrib/valgrind.supp))
 which includes known Valgrind warnings in our dependencies that cannot be fixed

@@ -98,7 +98,7 @@ public:
         obj.pushKV("isscript", false);
         obj.pushKV("iswitness", true);
         obj.pushKV("witness_version", 0);
-        obj.pushKV("witness_proogkush", HexStr(id.begin(), id.end()));
+        obj.pushKV("witness_program", HexStr(id.begin(), id.end()));
         return obj;
     }
 
@@ -108,7 +108,7 @@ public:
         obj.pushKV("isscript", true);
         obj.pushKV("iswitness", true);
         obj.pushKV("witness_version", 0);
-        obj.pushKV("witness_proogkush", HexStr(id.begin(), id.end()));
+        obj.pushKV("witness_program", HexStr(id.begin(), id.end()));
         return obj;
     }
 
@@ -117,7 +117,7 @@ public:
         UniValue obj(UniValue::VOBJ);
         obj.pushKV("iswitness", true);
         obj.pushKV("witness_version", (int)id.version);
-        obj.pushKV("witness_proogkush", HexStr(id.proogkush, id.proogkush + id.length));
+        obj.pushKV("witness_program", HexStr(id.program, id.program + id.length));
         return obj;
     }
 };

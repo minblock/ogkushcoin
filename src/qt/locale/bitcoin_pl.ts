@@ -275,7 +275,7 @@
     </message>
     <message>
         <source>Quit application</source>
-        <translation>Zamknij proogkush</translation>
+        <translation>Zamknij program</translation>
     </message>
     <message>
         <source>&amp;About %1</source>
@@ -837,8 +837,8 @@
         <translation>Witaj w %1.</translation>
     </message>
     <message>
-        <source>As this is the first time the proogkush is launched, you can choose where %1 will store its data.</source>
-        <translation>Ponieważ jest to pierwsze uruchomienie proogkushu, możesz wybrać gdzie %1 będzie przechowywał swoje dane.</translation>
+        <source>As this is the first time the program is launched, you can choose where %1 will store its data.</source>
+        <translation>Ponieważ jest to pierwsze uruchomienie programu, możesz wybrać gdzie %1 będzie przechowywał swoje dane.</translation>
     </message>
     <message>
         <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
@@ -1023,7 +1023,7 @@
     </message>
     <message>
         <source>Minimize instead of exit the application when the window is closed. When this option is enabled, the application will be closed only after selecting Exit in the menu.</source>
-        <translation>Minimalizuje zamiast zakończyć działanie proogkushu przy zamykaniu okna. Kiedy ta opcja jest włączona, proogkush zakończy działanie po wybieraniu Zamknij w menu.</translation>
+        <translation>Minimalizuje zamiast zakończyć działanie programu przy zamykaniu okna. Kiedy ta opcja jest włączona, program zakończy działanie po wybieraniu Zamknij w menu.</translation>
     </message>
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
@@ -1215,7 +1215,7 @@
     </message>
     <message>
         <source>Client restart required to activate changes.</source>
-        <translation>Wymagany restart proogkushu, aby uaktywnić zmiany.</translation>
+        <translation>Wymagany restart programu, aby uaktywnić zmiany.</translation>
     </message>
     <message>
         <source>Client will be shut down. Do you want to proceed?</source>
@@ -3207,7 +3207,7 @@ Zwróć uwagę, że poprawnie zweryfikowana wiadomość potwierdza to, że nadaw
     </message>
     <message>
         <source>Please contribute if you find %s useful. Visit %s for further information about the software.</source>
-        <translation>Wspomóż proszę, jeśli uznasz %s za użyteczne. Odwiedź  %s, aby uzyskać więcej informacji o tym oproogkushowaniu.</translation>
+        <translation>Wspomóż proszę, jeśli uznasz %s za użyteczne. Odwiedź  %s, aby uzyskać więcej informacji o tym oprogramowaniu.</translation>
     </message>
     <message>
         <source>The block database contains a block which appears to be from the future. This may be due to your computer's date and time being set incorrectly. Only rebuild the block database if you are sure that your computer's date and time are correct</source>
@@ -3499,7 +3499,7 @@ Zwróć uwagę, że poprawnie zweryfikowana wiadomość potwierdza to, że nadaw
     </message>
     <message>
         <source>This is experimental software.</source>
-        <translation>To oproogkushowanie eksperymentalne.</translation>
+        <translation>To oprogramowanie eksperymentalne.</translation>
     </message>
     <message>
         <source>Transaction amount too small</source>
@@ -3555,7 +3555,7 @@ Zwróć uwagę, że poprawnie zweryfikowana wiadomość potwierdza to, że nadaw
     </message>
     <message>
         <source>This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit %s and cryptographic software written by Eric Young and UPnP software written by Thomas Bernard.</source>
-        <translation>Produkt zawiera oproogkushowanie stworzone przez OpenSSL Project do użycia w OpensSSL Toolkit %s, oproogkushowanie kryptograficzne napisane przez Eric Young oraz oproogkushowanie UPnP napisane przez Thomas Bernard.</translation>
+        <translation>Produkt zawiera oprogramowanie stworzone przez OpenSSL Project do użycia w OpensSSL Toolkit %s, oprogramowanie kryptograficzne napisane przez Eric Young oraz oprogramowanie UPnP napisane przez Thomas Bernard.</translation>
     </message>
     <message>
         <source>Total length of network version string (%i) exceeds maximum length (%i). Reduce the number or size of uacomments.</source>
@@ -3563,7 +3563,7 @@ Zwróć uwagę, że poprawnie zweryfikowana wiadomość potwierdza to, że nadaw
     </message>
     <message>
         <source>Unsupported argument -socks found. Setting SOCKS version isn't possible anymore, only SOCKS5 proxies are supported.</source>
-        <translation>Znaleziono niewspierany argument -socks. Wybieranie wersji SOCKS nie jest już możliwe, wsparcie proogkushu obejmuje tylko proxy SOCKS5</translation>
+        <translation>Znaleziono niewspierany argument -socks. Wybieranie wersji SOCKS nie jest już możliwe, wsparcie programu obejmuje tylko proxy SOCKS5</translation>
     </message>
     <message>
         <source>Unsupported argument -whitelistalwaysrelay ignored, use -whitelistrelay and/or -whitelistforcerelay.</source>

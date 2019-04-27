@@ -193,7 +193,7 @@
     </message>
     <message>
         <source>Wallet encryption failed due to an internal error. Your wallet was not encrypted.</source>
-        <translation>Enkripcija novčanika nije uspela zbog greške u proogkushu. Vaš novčanik nije enkriptovan.</translation>
+        <translation>Enkripcija novčanika nije uspela zbog greške u programu. Vaš novčanik nije enkriptovan.</translation>
     </message>
     <message>
         <source>The supplied passphrases do not match.</source>

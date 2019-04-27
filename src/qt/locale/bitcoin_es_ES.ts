@@ -807,8 +807,8 @@
         <translation>Bienvenido a %1</translation>
     </message>
     <message>
-        <source>As this is the first time the proogkush is launched, you can choose where %1 will store its data.</source>
-        <translation>Al ser la primera vez que se ejecuta el proogkusha, puede elegir donde %1 almacenara sus datos</translation>
+        <source>As this is the first time the program is launched, you can choose where %1 will store its data.</source>
+        <translation>Al ser la primera vez que se ejecuta el programa, puede elegir donde %1 almacenara sus datos</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -2871,7 +2871,7 @@
     </message>
     <message>
         <source>Please contribute if you find %s useful. Visit %s for further information about the software.</source>
-        <translation>Contribuya si encuentra %s de utilidad. Visite %s para mas información acerca del proogkusha.</translation>
+        <translation>Contribuya si encuentra %s de utilidad. Visite %s para mas información acerca del programa.</translation>
     </message>
     <message>
         <source>The block database contains a block which appears to be from the future. This may be due to your computer's date and time being set incorrectly. Only rebuild the block database if you are sure that your computer's date and time are correct</source>

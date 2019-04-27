@@ -275,7 +275,7 @@
     </message>
     <message>
         <source>Quit application</source>
-        <translation>Afslut proogkush</translation>
+        <translation>Afslut program</translation>
     </message>
     <message>
         <source>&amp;About %1</source>
@@ -837,8 +837,8 @@
         <translation>Velkommen til %1.</translation>
     </message>
     <message>
-        <source>As this is the first time the proogkush is launched, you can choose where %1 will store its data.</source>
-        <translation>Siden dette er første gang, proogkushmet startes, kan du vælge, hvor %1 skal gemme sin data.</translation>
+        <source>As this is the first time the program is launched, you can choose where %1 will store its data.</source>
+        <translation>Siden dette er første gang, programmet startes, kan du vælge, hvor %1 skal gemme sin data.</translation>
     </message>
     <message>
         <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
@@ -3217,7 +3217,7 @@ Note: Siden gebyret er kalkuleret på en per-byte basis, et gebyr på "100 satos
     </message>
     <message>
         <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
-        <translation>Dette er en foreløbig testudgivelse – brug på eget ansvar – brug ikke til mining eller handelsproogkushmer</translation>
+        <translation>Dette er en foreløbig testudgivelse – brug på eget ansvar – brug ikke til mining eller handelsprogrammer</translation>
     </message>
     <message>
         <source>This is the transaction fee you may discard if change is smaller than dust at this level</source>

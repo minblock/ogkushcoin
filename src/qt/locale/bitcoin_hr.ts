@@ -259,7 +259,7 @@
     </message>
     <message>
         <source>Quit application</source>
-        <translation>Izlazak iz proogkusha</translation>
+        <translation>Izlazak iz programa</translation>
     </message>
     <message>
         <source>&amp;About %1</source>
@@ -657,7 +657,7 @@
     </message>
     <message>
         <source>Command-line options</source>
-        <translation>Opcije proogkusha u naredbenoj liniji</translation>
+        <translation>Opcije programa u naredbenoj liniji</translation>
     </message>
 </context>
 <context>
@@ -741,7 +741,7 @@
     </message>
     <message>
         <source>Reset all client options to default.</source>
-        <translation>Nastavi sve postavke proogkusha na početne vrijednosti.</translation>
+        <translation>Nastavi sve postavke programa na početne vrijednosti.</translation>
     </message>
     <message>
         <source>&amp;Reset Options</source>
@@ -789,7 +789,7 @@
     </message>
     <message>
         <source>&amp;Minimize to the tray instead of the taskbar</source>
-        <translation>&amp;Minimiziraj u sistemsku traku umjesto u traku proogkusha</translation>
+        <translation>&amp;Minimiziraj u sistemsku traku umjesto u traku programa</translation>
     </message>
     <message>
         <source>M&amp;inimize on close</source>

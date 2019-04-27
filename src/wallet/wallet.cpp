@@ -2647,10 +2647,10 @@ OutputType CWallet::TransactionChangeType(OutputType change_type, const std::vec
     // if any destination is P2WPKH or P2WSH, use P2WPKH for the change
     // output.
     for (const auto& recipient : vecSend) {
-        // Check if any destination contains a witness proogkush:
+        // Check if any destination contains a witness program:
         int witnessversion = 0;
-        std::vector<unsigned char> witnessproogkush;
-        if (recipient.scriptPubKey.IsWitnessProogkush(witnessversion, witnessproogkush)) {
+        std::vector<unsigned char> witnessprogram;
+        if (recipient.scriptPubKey.IsWitnessProogkush(witnessversion, witnessprogram)) {
             return OutputType::BECH32;
         }
     }
@@ -4432,7 +4432,7 @@ void CWallet::LearnRelatedScripts(const CPubKey& key, OutputType type)
     if (key.IsCompressed() && (type == OutputType::P2SH_SEGWIT || type == OutputType::BECH32)) {
         CTxDestination witdest = WitnessV0KeyHash(key.GetID());
         CScript witprog = GetScriptForDestination(witdest);
-        // Make sure the resulting proogkush is solvable.
+        // Make sure the resulting program is solvable.
         assert(IsSolvable(*this, witprog));
         AddCScript(witprog);
     }

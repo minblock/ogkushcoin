@@ -189,7 +189,7 @@
     </message>
     <message>
         <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ogkushs from being stolen by malware infecting your computer.</source>
-        <translation>%1 se va închide acum pentru a termina procesul de criptare. Ţineţi minte că criptarea portofelului nu vă poate proteja în totalitate de furtul monedelor de către proogkushe malware care vă infectează calculatorul.</translation>
+        <translation>%1 se va închide acum pentru a termina procesul de criptare. Ţineţi minte că criptarea portofelului nu vă poate proteja în totalitate de furtul monedelor de către programe malware care vă infectează calculatorul.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -833,8 +833,8 @@
         <translation>Bun venit la %1!</translation>
     </message>
     <message>
-        <source>As this is the first time the proogkush is launched, you can choose where %1 will store its data.</source>
-        <translation>Deoarece este prima lansare a proogkushului poți alege unde %1 va stoca datele sale.</translation>
+        <source>As this is the first time the program is launched, you can choose where %1 will store its data.</source>
+        <translation>Deoarece este prima lansare a programului poți alege unde %1 va stoca datele sale.</translation>
     </message>
     <message>
         <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
@@ -1019,7 +1019,7 @@
     </message>
     <message>
         <source>Minimize instead of exit the application when the window is closed. When this option is enabled, the application will be closed only after selecting Exit in the menu.</source>
-        <translation>Minimizează fereastra în locul părăsirii proogkushului în momentul închiderii ferestrei. Cînd acestă opţiune e activă, aplicaţia se va opri doar în momentul selectării comenzii 'Închide aplicaţia' din menu.</translation>
+        <translation>Minimizează fereastra în locul părăsirii programului în momentul închiderii ferestrei. Cînd acestă opţiune e activă, aplicaţia se va opri doar în momentul selectării comenzii 'Închide aplicaţia' din menu.</translation>
     </message>
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
@@ -1143,7 +1143,7 @@
     </message>
     <message>
         <source>M&amp;inimize on close</source>
-        <translation>M&amp;inimizare fereastră în locul închiderii proogkushului</translation>
+        <translation>M&amp;inimizare fereastră în locul închiderii programului</translation>
     </message>
     <message>
         <source>&amp;Display</source>
@@ -3073,7 +3073,7 @@
     <name>bitcoin-core</name>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>
-        <translation>Distribuit sub licenţa de proogkushe MIT, vezi fişierul însoţitor %s sau %s</translation>
+        <translation>Distribuit sub licenţa de programe MIT, vezi fişierul însoţitor %s sau %s</translation>
     </message>
     <message>
         <source>Prune configured below the minimum of %d MiB.  Please use a higher number.</source>
@@ -3397,7 +3397,7 @@
     </message>
     <message>
         <source>This is experimental software.</source>
-        <translation>Acesta este un proogkush experimental.</translation>
+        <translation>Acesta este un program experimental.</translation>
     </message>
     <message>
         <source>Transaction amount too small</source>

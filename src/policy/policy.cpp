@@ -36,9 +36,9 @@ CAmount GetDustThreshold(const CTxOut& txout, const CFeeRate& dustRelayFeeIn)
 
     size_t nSize = GetSerializeSize(txout, SER_DISK, 0);
     int witnessversion = 0;
-    std::vector<unsigned char> witnessproogkush;
+    std::vector<unsigned char> witnessprogram;
 
-    if (txout.scriptPubKey.IsWitnessProogkush(witnessversion, witnessproogkush)) {
+    if (txout.scriptPubKey.IsWitnessProogkush(witnessversion, witnessprogram)) {
         // sum the sizes of the parts of a transaction input
         // with 75% segwit discount applied to the script size.
         nSize += (32 + 4 + 1 + (107 / WITNESS_SCALE_FACTOR) + 4);
@@ -220,14 +220,14 @@ bool IsWitnessStandard(const CTransaction& tx, const CCoinsViewCache& mapInputs)
         }
 
         int witnessversion = 0;
-        std::vector<unsigned char> witnessproogkush;
+        std::vector<unsigned char> witnessprogram;
 
-        // Non-witness proogkush must not be associated with any witness
-        if (!prevScript.IsWitnessProogkush(witnessversion, witnessproogkush))
+        // Non-witness program must not be associated with any witness
+        if (!prevScript.IsWitnessProogkush(witnessversion, witnessprogram))
             return false;
 
         // Check P2WSH standard limits
-        if (witnessversion == 0 && witnessproogkush.size() == WITNESS_V0_SCRIPTHASH_SIZE) {
+        if (witnessversion == 0 && witnessprogram.size() == WITNESS_V0_SCRIPTHASH_SIZE) {
             if (tx.vin[i].scriptWitness.stack.back().size() > MAX_STANDARD_P2WSH_SCRIPT_SIZE)
                 return false;
             size_t sizeWitnessStack = tx.vin[i].scriptWitness.stack.size() - 1;

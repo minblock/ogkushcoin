@@ -1416,14 +1416,14 @@ bool GenericTransactionSignatureChecker<T>::CheckSequence(const CScriptNum& nSeq
 template class GenericTransactionSignatureChecker<CTransaction>;
 template class GenericTransactionSignatureChecker<CMutableTransaction>;
 
-static bool VerifyWitnessProogkush(const CScriptWitness& witness, int witversion, const std::vector<unsigned char>& proogkush, unsigned int flags, const BaseSignatureChecker& checker, ScriptError* serror)
+static bool VerifyWitnessProogkush(const CScriptWitness& witness, int witversion, const std::vector<unsigned char>& program, unsigned int flags, const BaseSignatureChecker& checker, ScriptError* serror)
 {
     std::vector<std::vector<unsigned char> > stack;
     CScript scriptPubKey;
 
     if (witversion == 0) {
-        if (proogkush.size() == WITNESS_V0_SCRIPTHASH_SIZE) {
-            // Version 0 segregated witness proogkush: SHA256(CScript) inside the proogkush, CScript + inputs in witness
+        if (program.size() == WITNESS_V0_SCRIPTHASH_SIZE) {
+            // Version 0 segregated witness program: SHA256(CScript) inside the program, CScript + inputs in witness
             if (witness.stack.size() == 0) {
                 return set_error(serror, SCRIPT_ERR_WITNESS_PROGRAM_WITNESS_EMPTY);
             }
@@ -1431,15 +1431,15 @@ static bool VerifyWitnessProogkush(const CScriptWitness& witness, int witversion
             stack = std::vector<std::vector<unsigned char> >(witness.stack.begin(), witness.stack.end() - 1);
             uint256 hashScriptPubKey;
             CSHA256().Write(&scriptPubKey[0], scriptPubKey.size()).Finalize(hashScriptPubKey.begin());
-            if (memcmp(hashScriptPubKey.begin(), proogkush.data(), 32)) {
+            if (memcmp(hashScriptPubKey.begin(), program.data(), 32)) {
                 return set_error(serror, SCRIPT_ERR_WITNESS_PROGRAM_MISMATCH);
             }
-        } else if (proogkush.size() == WITNESS_V0_KEYHASH_SIZE) {
+        } else if (program.size() == WITNESS_V0_KEYHASH_SIZE) {
             // Special case for pay-to-pubkeyhash; signature + pubkey in witness
             if (witness.stack.size() != 2) {
                 return set_error(serror, SCRIPT_ERR_WITNESS_PROGRAM_MISMATCH); // 2 items in witness
             }
-            scriptPubKey << OP_DUP << OP_HASH160 << proogkush << OP_EQUALVERIFY << OP_CHECKSIG;
+            scriptPubKey << OP_DUP << OP_HASH160 << program << OP_EQUALVERIFY << OP_CHECKSIG;
             stack = witness.stack;
         } else {
             return set_error(serror, SCRIPT_ERR_WITNESS_PROGRAM_WRONG_LENGTH);
@@ -1497,21 +1497,21 @@ bool VerifyScript(const CScript& scriptSig, const CScript& scriptPubKey, const C
     if (CastToBool(stack.back()) == false)
         return set_error(serror, SCRIPT_ERR_EVAL_FALSE);
 
-    // Bare witness proogkushs
+    // Bare witness programs
     int witnessversion;
-    std::vector<unsigned char> witnessproogkush;
+    std::vector<unsigned char> witnessprogram;
     if (flags & SCRIPT_VERIFY_WITNESS) {
-        if (scriptPubKey.IsWitnessProogkush(witnessversion, witnessproogkush)) {
+        if (scriptPubKey.IsWitnessProogkush(witnessversion, witnessprogram)) {
             hadWitness = true;
             if (scriptSig.size() != 0) {
                 // The scriptSig must be _exactly_ CScript(), otherwise we reintroduce malleability.
                 return set_error(serror, SCRIPT_ERR_WITNESS_MALLEATED);
             }
-            if (!VerifyWitnessProogkush(*witness, witnessversion, witnessproogkush, flags, checker, serror)) {
+            if (!VerifyWitnessProogkush(*witness, witnessversion, witnessprogram, flags, checker, serror)) {
                 return false;
             }
             // Bypass the cleanstack check at the end. The actual stack is obviously not clean
-            // for witness proogkushs.
+            // for witness programs.
             stack.resize(1);
         }
     }
@@ -1543,20 +1543,20 @@ bool VerifyScript(const CScript& scriptSig, const CScript& scriptPubKey, const C
         if (!CastToBool(stack.back()))
             return set_error(serror, SCRIPT_ERR_EVAL_FALSE);
 
-        // P2SH witness proogkush
+        // P2SH witness program
         if (flags & SCRIPT_VERIFY_WITNESS) {
-            if (pubKey2.IsWitnessProogkush(witnessversion, witnessproogkush)) {
+            if (pubKey2.IsWitnessProogkush(witnessversion, witnessprogram)) {
                 hadWitness = true;
                 if (scriptSig != CScript() << std::vector<unsigned char>(pubKey2.begin(), pubKey2.end())) {
                     // The scriptSig must be _exactly_ a single push of the redeemScript. Otherwise we
                     // reintroduce malleability.
                     return set_error(serror, SCRIPT_ERR_WITNESS_MALLEATED_P2SH);
                 }
-                if (!VerifyWitnessProogkush(*witness, witnessversion, witnessproogkush, flags, checker, serror)) {
+                if (!VerifyWitnessProogkush(*witness, witnessversion, witnessprogram, flags, checker, serror)) {
                     return false;
                 }
                 // Bypass the cleanstack check at the end. The actual stack is obviously not clean
-                // for witness proogkushs.
+                // for witness programs.
                 stack.resize(1);
             }
         }
@@ -1588,13 +1588,13 @@ bool VerifyScript(const CScript& scriptSig, const CScript& scriptPubKey, const C
     return set_success(serror);
 }
 
-size_t static WitnessSigOps(int witversion, const std::vector<unsigned char>& witproogkush, const CScriptWitness& witness)
+size_t static WitnessSigOps(int witversion, const std::vector<unsigned char>& witprogram, const CScriptWitness& witness)
 {
     if (witversion == 0) {
-        if (witproogkush.size() == WITNESS_V0_KEYHASH_SIZE)
+        if (witprogram.size() == WITNESS_V0_KEYHASH_SIZE)
             return 1;
 
-        if (witproogkush.size() == WITNESS_V0_SCRIPTHASH_SIZE && witness.stack.size() > 0) {
+        if (witprogram.size() == WITNESS_V0_SCRIPTHASH_SIZE && witness.stack.size() > 0) {
             CScript subscript(witness.stack.back().begin(), witness.stack.back().end());
             return subscript.GetSigOpCount(true);
         }
@@ -1614,9 +1614,9 @@ size_t CountWitnessSigOps(const CScript& scriptSig, const CScript& scriptPubKey,
     assert((flags & SCRIPT_VERIFY_P2SH) != 0);
 
     int witnessversion;
-    std::vector<unsigned char> witnessproogkush;
-    if (scriptPubKey.IsWitnessProogkush(witnessversion, witnessproogkush)) {
-        return WitnessSigOps(witnessversion, witnessproogkush, witness ? *witness : witnessEmpty);
+    std::vector<unsigned char> witnessprogram;
+    if (scriptPubKey.IsWitnessProogkush(witnessversion, witnessprogram)) {
+        return WitnessSigOps(witnessversion, witnessprogram, witness ? *witness : witnessEmpty);
     }
 
     if (scriptPubKey.IsPayToScriptHash() && scriptSig.IsPushOnly()) {
@@ -1627,8 +1627,8 @@ size_t CountWitnessSigOps(const CScript& scriptSig, const CScript& scriptPubKey,
             scriptSig.GetOp(pc, opcode, data);
         }
         CScript subscript(data.begin(), data.end());
-        if (subscript.IsWitnessProogkush(witnessversion, witnessproogkush)) {
-            return WitnessSigOps(witnessversion, witnessproogkush, witness ? *witness : witnessEmpty);
+        if (subscript.IsWitnessProogkush(witnessversion, witnessprogram)) {
+            return WitnessSigOps(witnessversion, witnessprogram, witness ? *witness : witnessEmpty);
         }
     }
 

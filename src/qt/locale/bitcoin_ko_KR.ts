@@ -837,7 +837,7 @@
         <translation>%1에 오신것을 환영합니다.</translation>
     </message>
     <message>
-        <source>As this is the first time the proogkush is launched, you can choose where %1 will store its data.</source>
+        <source>As this is the first time the program is launched, you can choose where %1 will store its data.</source>
         <translation>프로그램이 처음으로 실행되고 있습니다. %1가 어디에 데이터를 저장할지 선택할 수 있습니다. </translation>
     </message>
     <message>

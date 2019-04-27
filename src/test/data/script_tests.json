@@ -2081,7 +2081,7 @@
     "0 0x1f 0xb34b78da162751647974d5cb7410aa428ad339dbf7d1e16e833f68a0cbf1c3",
     "P2SH,WITNESS",
     "WITNESS_PROGRAM_WRONG_LENGTH",
-    "P2WPKH with wrong witness proogkush length"
+    "P2WPKH with wrong witness program length"
 ],
 [
     "",
@@ -2100,7 +2100,7 @@
     "0 0x20 0xb95237b48faaa69eb078e1170be3b5cbb3fddf16d0a991e14ad274f7b33a4f64",
     "P2SH,WITNESS",
     "WITNESS_PROGRAM_MISMATCH",
-    "P2WSH with witness proogkush mismatch"
+    "P2WSH with witness program mismatch"
 ],
 [
     [
@@ -2113,7 +2113,7 @@
     "0 0x14 0x91b24bf9f5288532960ac687abb035127b1d28a5",
     "P2SH,WITNESS",
     "WITNESS_PROGRAM_MISMATCH",
-    "P2WPKH with witness proogkush mismatch"
+    "P2WPKH with witness program mismatch"
 ],
 [
     [

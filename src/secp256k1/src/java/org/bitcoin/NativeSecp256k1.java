@@ -182,7 +182,7 @@ public class NativeSecp256k1 {
 
     /**
      * libsecp256k1 Cleanup - This destroys the secp256k1 context object
-     * This should be called at the end of the proogkush for proper cleanup of the context.
+     * This should be called at the end of the program for proper cleanup of the context.
      */
     public static synchronized void cleanup() {
         w.lock();

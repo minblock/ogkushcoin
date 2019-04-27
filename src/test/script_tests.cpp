@@ -808,7 +808,7 @@ BOOST_AUTO_TEST_CASE(script_build)
         std::vector<unsigned char> hashBytes = ToByteVector(hash);
         hashBytes.pop_back();
         tests.push_back(TestBuilder(CScript() << OP_0 << hashBytes,
-                                    "P2WPKH with wrong witness proogkush length", SCRIPT_VERIFY_WITNESS | SCRIPT_VERIFY_P2SH, false
+                                    "P2WPKH with wrong witness program length", SCRIPT_VERIFY_WITNESS | SCRIPT_VERIFY_P2SH, false
                                    ).PushWitSig(keys.key0).Push(keys.pubkey0).AsWit().ScriptError(SCRIPT_ERR_WITNESS_PROGRAM_WRONG_LENGTH));
     }
     tests.push_back(TestBuilder(CScript() << ToByteVector(keys.pubkey0) << OP_CHECKSIG,
@@ -817,11 +817,11 @@ BOOST_AUTO_TEST_CASE(script_build)
     {
         CScript witscript = CScript() << ToByteVector(keys.pubkey0) << OP_CHECKSIG;
         tests.push_back(TestBuilder(witscript,
-                                    "P2WSH with witness proogkush mismatch", SCRIPT_VERIFY_WITNESS | SCRIPT_VERIFY_P2SH, false, WitnessMode::SH
+                                    "P2WSH with witness program mismatch", SCRIPT_VERIFY_WITNESS | SCRIPT_VERIFY_P2SH, false, WitnessMode::SH
                                    ).PushWitSig(keys.key0).Push(witscript).DamagePush(0).AsWit().ScriptError(SCRIPT_ERR_WITNESS_PROGRAM_MISMATCH));
     }
     tests.push_back(TestBuilder(CScript() << ToByteVector(keys.pubkey0),
-                                "P2WPKH with witness proogkush mismatch", SCRIPT_VERIFY_WITNESS | SCRIPT_VERIFY_P2SH, false, WitnessMode::PKH
+                                "P2WPKH with witness program mismatch", SCRIPT_VERIFY_WITNESS | SCRIPT_VERIFY_P2SH, false, WitnessMode::PKH
                                ).PushWitSig(keys.key0).Push(keys.pubkey0).AsWit().Push("0").AsWit().ScriptError(SCRIPT_ERR_WITNESS_PROGRAM_MISMATCH));
     tests.push_back(TestBuilder(CScript() << ToByteVector(keys.pubkey0),
                                 "P2WPKH with non-empty scriptSig", SCRIPT_VERIFY_WITNESS | SCRIPT_VERIFY_P2SH, false, WitnessMode::PKH

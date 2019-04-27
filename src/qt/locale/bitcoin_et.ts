@@ -721,7 +721,7 @@
     </message>
     <message>
         <source>Reset all client options to default.</source>
-        <translation>Taasta kõik klientproogkushmi seadete vaikeväärtused.</translation>
+        <translation>Taasta kõik klientprogrammi seadete vaikeväärtused.</translation>
     </message>
     <message>
         <source>&amp;Reset Options</source>
@@ -1923,7 +1923,7 @@
     </message>
     <message>
         <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
-        <translation>See on test-versioon - kasutamine omal riisikol - ära kasuta mining'uks ega kaupmeeste proogkushmides</translation>
+        <translation>See on test-versioon - kasutamine omal riisikol - ära kasuta mining'uks ega kaupmeeste programmides</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>

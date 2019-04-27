@@ -57,10 +57,10 @@ static void AssembleBlock(benchmark::State& state)
     CScriptWitness witness;
     witness.stack.push_back(op_true);
 
-    uint256 witness_proogkush;
-    CSHA256().Write(&op_true[0], op_true.size()).Finalize(witness_proogkush.begin());
+    uint256 witness_program;
+    CSHA256().Write(&op_true[0], op_true.size()).Finalize(witness_program.begin());
 
-    const CScript SCRIPT_PUB{CScript(OP_0) << std::vector<unsigned char>{witness_proogkush.begin(), witness_proogkush.end()}};
+    const CScript SCRIPT_PUB{CScript(OP_0) << std::vector<unsigned char>{witness_program.begin(), witness_program.end()}};
 
     // Switch to regtest so we can mine faster
     // Also segwit is active, so we can include witness transactions

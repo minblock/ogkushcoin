@@ -189,7 +189,7 @@
     </message>
     <message>
         <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your ogkushs from being stolen by malware infecting your computer.</source>
-        <translation>Ara es tancarà el %1 per finalitzar el procés d'encriptació. Recordeu que encriptar el vostre moneder no garanteix que les vostres ogkushs no puguin ser robades per proogkushari maliciós que infecti l'ordinador.</translation>
+        <translation>Ara es tancarà el %1 per finalitzar el procés d'encriptació. Recordeu que encriptar el vostre moneder no garanteix que les vostres ogkushs no puguin ser robades per programari maliciós que infecti l'ordinador.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -837,8 +837,8 @@
         <translation>Us donem la benvinguda a %1.</translation>
     </message>
     <message>
-        <source>As this is the first time the proogkush is launched, you can choose where %1 will store its data.</source>
-        <translation>Com és la primera vegada que s'executa el proogkusha, podeu triar on %1 emmagatzemarà les dades.</translation>
+        <source>As this is the first time the program is launched, you can choose where %1 will store its data.</source>
+        <translation>Com és la primera vegada que s'executa el programa, podeu triar on %1 emmagatzemarà les dades.</translation>
     </message>
     <message>
         <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
@@ -3105,7 +3105,7 @@ Nota: Com que la comissió es calcula en funció dels bytes, una comissió de "1
     <name>bitcoin-core</name>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>
-        <translation>Distribuït sota la llicència del proogkushari MIT, consulteu el fitxer d'acompanyament %s o %s</translation>
+        <translation>Distribuït sota la llicència del programari MIT, consulteu el fitxer d'acompanyament %s o %s</translation>
     </message>
     <message>
         <source>Prune configured below the minimum of %d MiB.  Please use a higher number.</source>
@@ -3153,7 +3153,7 @@ Nota: Com que la comissió es calcula en funció dels bytes, una comissió de "1
     </message>
     <message>
         <source>Please contribute if you find %s useful. Visit %s for further information about the software.</source>
-        <translation>Contribueix si trobes %s útil. Visita %s per obtenir més informació sobre el proogkushari.</translation>
+        <translation>Contribueix si trobes %s útil. Visita %s per obtenir més informació sobre el programari.</translation>
     </message>
     <message>
         <source>The block database contains a block which appears to be from the future. This may be due to your computer's date and time being set incorrectly. Only rebuild the block database if you are sure that your computer's date and time are correct</source>
@@ -3413,7 +3413,7 @@ Nota: Com que la comissió es calcula en funció dels bytes, una comissió de "1
     </message>
     <message>
         <source>This is experimental software.</source>
-        <translation>Això és proogkushari experimental.</translation>
+        <translation>Això és programari experimental.</translation>
     </message>
     <message>
         <source>Transaction amount too small</source>
@@ -3461,7 +3461,7 @@ Nota: Com que la comissió es calcula en funció dels bytes, una comissió de "1
     </message>
     <message>
         <source>This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit %s and cryptographic software written by Eric Young and UPnP software written by Thomas Bernard.</source>
-        <translation>Aquest producte inclou proogkushari desenvolupat pel Projecte OpenSSL per al seu ús en OpenSSL Toolkit %s i proogkushari criptogràfic escrit per Eric Young i el proogkushari UPnP escrit per Thomas Bernard.</translation>
+        <translation>Aquest producte inclou programari desenvolupat pel Projecte OpenSSL per al seu ús en OpenSSL Toolkit %s i programari criptogràfic escrit per Eric Young i el programari UPnP escrit per Thomas Bernard.</translation>
     </message>
     <message>
         <source>Total length of network version string (%i) exceeds maximum length (%i). Reduce the number or size of uacomments.</source>

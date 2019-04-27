@@ -775,7 +775,7 @@
         <translation>Добре дошли в %1.</translation>
     </message>
     <message>
-        <source>As this is the first time the proogkush is launched, you can choose where %1 will store its data.</source>
+        <source>As this is the first time the program is launched, you can choose where %1 will store its data.</source>
         <translation>Програмата се стартира за първи път вие може да изберете къде %1 ще се запаметят данните.</translation>
     </message>
     <message>

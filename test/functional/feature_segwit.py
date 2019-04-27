@@ -10,7 +10,7 @@ from test_framework.address import (
     key_to_p2pkh,
     key_to_p2sh_p2wpkh,
     key_to_p2wpkh,
-    proogkush_to_witness,
+    program_to_witness,
     script_to_p2sh,
     script_to_p2sh_p2wsh,
     script_to_p2wsh,
@@ -192,10 +192,10 @@ class SegWitTest(BitcoinTestFramework):
             assert(self.nodes[0].getrawtransaction(segwit_tx_list[i]) == bytes_to_hex_str(tx.serialize_without_witness()))
 
         self.log.info("Verify witness txs without witness data are invalid after the fork")
-        self.fail_accept(self.nodes[2], 'non-mandatory-script-verify-flag (Witness proogkush hash mismatch) (code 64)', wit_ids[NODE_2][WIT_V0][2], sign=False)
-        self.fail_accept(self.nodes[2], 'non-mandatory-script-verify-flag (Witness proogkush was passed an empty witness) (code 64)', wit_ids[NODE_2][WIT_V1][2], sign=False)
-        self.fail_accept(self.nodes[2], 'non-mandatory-script-verify-flag (Witness proogkush hash mismatch) (code 64)', p2sh_ids[NODE_2][WIT_V0][2], sign=False, redeem_script=witness_script(False, self.pubkey[2]))
-        self.fail_accept(self.nodes[2], 'non-mandatory-script-verify-flag (Witness proogkush was passed an empty witness) (code 64)', p2sh_ids[NODE_2][WIT_V1][2], sign=False, redeem_script=witness_script(True, self.pubkey[2]))
+        self.fail_accept(self.nodes[2], 'non-mandatory-script-verify-flag (Witness program hash mismatch) (code 64)', wit_ids[NODE_2][WIT_V0][2], sign=False)
+        self.fail_accept(self.nodes[2], 'non-mandatory-script-verify-flag (Witness program was passed an empty witness) (code 64)', wit_ids[NODE_2][WIT_V1][2], sign=False)
+        self.fail_accept(self.nodes[2], 'non-mandatory-script-verify-flag (Witness program hash mismatch) (code 64)', p2sh_ids[NODE_2][WIT_V0][2], sign=False, redeem_script=witness_script(False, self.pubkey[2]))
+        self.fail_accept(self.nodes[2], 'non-mandatory-script-verify-flag (Witness program was passed an empty witness) (code 64)', p2sh_ids[NODE_2][WIT_V1][2], sign=False, redeem_script=witness_script(True, self.pubkey[2]))
 
         self.log.info("Verify default node can now use witness txs")
         self.success_mine(self.nodes[0], wit_ids[NODE_0][WIT_V0][0], True) #block 432
@@ -542,7 +542,7 @@ class SegWitTest(BitcoinTestFramework):
         self.mine_and_test_listunspent(unseen_anytime, 0)
 
         # Check that createrawtransaction/decoderawtransaction with non-v0 Bech32 works
-        v1_addr = proogkush_to_witness(1, [3,5])
+        v1_addr = program_to_witness(1, [3,5])
         v1_tx = self.nodes[0].createrawtransaction([getutxo(spendable_txid[0])],{v1_addr: 1})
         v1_decoded = self.nodes[1].decoderawtransaction(v1_tx)
         assert_equal(v1_decoded['vout'][0]['scriptPubKey']['addresses'][0], v1_addr)

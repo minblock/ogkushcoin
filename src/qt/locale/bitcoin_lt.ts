@@ -119,7 +119,7 @@
     </message>
     <message>
         <source>Quit application</source>
-        <translation>Išjungti proogkushą</translation>
+        <translation>Išjungti programą</translation>
     </message>
     <message>
         <source>&amp;About %1</source>
@@ -473,7 +473,7 @@
     </message>
     <message>
         <source>Show only a tray icon after minimizing the window.</source>
-        <translation>Po proogkushos lango sumažinimo rodyti tik proogkushos ikoną.</translation>
+        <translation>Po programos lango sumažinimo rodyti tik programos ikoną.</translation>
     </message>
     <message>
         <source>&amp;Minimize to the tray instead of the taskbar</source>

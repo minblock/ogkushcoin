@@ -170,7 +170,7 @@ BOOST_AUTO_TEST_CASE(script_standard_Solver_failure)
     s << OP_RETURN << std::vector<unsigned char>({75}) << OP_ADD;
     BOOST_CHECK(!Solver(s, whichType, solutions));
 
-    // TX_WITNESS with incorrect proogkush size
+    // TX_WITNESS with incorrect program size
     s.clear();
     s << OP_0 << std::vector<unsigned char>(19, 0x01);
     BOOST_CHECK(!Solver(s, whichType, solutions));
@@ -241,7 +241,7 @@ BOOST_AUTO_TEST_CASE(script_standard_ExtractDestination)
     WitnessUnknown unk;
     unk.length = 33;
     unk.version = 1;
-    std::copy(pubkey.begin(), pubkey.end(), unk.proogkush);
+    std::copy(pubkey.begin(), pubkey.end(), unk.program);
     BOOST_CHECK(boost::get<WitnessUnknown>(&address) && *boost::get<WitnessUnknown>(&address) == unk);
 }
 

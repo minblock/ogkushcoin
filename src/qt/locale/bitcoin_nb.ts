@@ -811,8 +811,8 @@
         <translation>Velkommen til %1.</translation>
     </message>
     <message>
-        <source>As this is the first time the proogkush is launched, you can choose where %1 will store its data.</source>
-        <translation>Siden dette er første gang proogkushmet starter, kan du nå velge hvor %1 skal lagre sine data.</translation>
+        <source>As this is the first time the program is launched, you can choose where %1 will store its data.</source>
+        <translation>Siden dette er første gang programmet starter, kan du nå velge hvor %1 skal lagre sine data.</translation>
     </message>
     <message>
         <source>When you click OK, %1 will begin to download and process the full %4 block chain (%2GB) starting with the earliest transactions in %3 when %4 initially launched.</source>
@@ -3095,7 +3095,7 @@
     </message>
     <message>
         <source>Please contribute if you find %s useful. Visit %s for further information about the software.</source>
-        <translation>Bidra hvis du finner %s nyttig. Besøk %s for mer informasjon om proogkushvaren.</translation>
+        <translation>Bidra hvis du finner %s nyttig. Besøk %s for mer informasjon om programvaren.</translation>
     </message>
     <message>
         <source>The block database contains a block which appears to be from the future. This may be due to your computer's date and time being set incorrectly. Only rebuild the block database if you are sure that your computer's date and time are correct</source>
@@ -3375,7 +3375,7 @@
     </message>
     <message>
         <source>This is experimental software.</source>
-        <translation>Dette er eksperimentell proogkushvare.</translation>
+        <translation>Dette er eksperimentell programvare.</translation>
     </message>
     <message>
         <source>Transaction amount too small</source>
@@ -3431,7 +3431,7 @@
     </message>
     <message>
         <source>This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit %s and cryptographic software written by Eric Young and UPnP software written by Thomas Bernard.</source>
-        <translation>Dette produktet inneholder proogkushmet utviklet av OpenSSL-prosjektet for bruk i OpenSSL-verktøyssettet %s og kryptografisk proogkushvare skrevet av Eric Young og UPnP-proogkushvare skrevet av Thomas Bernard.</translation>
+        <translation>Dette produktet inneholder programmet utviklet av OpenSSL-prosjektet for bruk i OpenSSL-verktøyssettet %s og kryptografisk programvare skrevet av Eric Young og UPnP-programvare skrevet av Thomas Bernard.</translation>
     </message>
     <message>
         <source>Total length of network version string (%i) exceeds maximum length (%i). Reduce the number or size of uacomments.</source>

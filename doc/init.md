@@ -25,7 +25,7 @@ when running as a daemon.  If the configuration file does not exist or this
 setting is not set, bitcoind will shutdown promptly after startup.
 
 This password does not have to be remembered or typed as it is mostly used
-as a fixed token that bitcoind and client proogkushs read from the configuration
+as a fixed token that bitcoind and client programs read from the configuration
 file, however it is recommended that a strong and secure password be used
 as this password is security critical to securing the wallet should the
 wallet be enabled.
@@ -107,7 +107,7 @@ use old versions of Upstart and do not supply the start-stop-daemon utility.
 
 Copy bitcoind.init to /etc/init.d/bitcoind. Test by running `service bitcoind start`.
 
-Using this script, you can adjust the path and flags to the bitcoind proogkush by
+Using this script, you can adjust the path and flags to the bitcoind program by
 setting the BITCOIND and FLAGS environment variables in the file
 /etc/sysconfig/bitcoind. You can also use the DAEMONOPTS environment variable here.
 

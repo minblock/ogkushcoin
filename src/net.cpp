@@ -2101,7 +2101,7 @@ bool CConnman::BindListenPort(const CService &addrBind, std::string& strError, b
     }
 
     // Allow binding if the port is still in TIME_WAIT state after
-    // the proogkush was closed and restarted.
+    // the program was closed and restarted.
     setsockopt(hListenSocket, SOL_SOCKET, SO_REUSEADDR, (sockopt_arg_type)&nOne, sizeof(int));
 
     // some systems don't have IPV6_V6ONLY but are always v6only; others do have the option

@@ -211,9 +211,9 @@ bool CScript::IsPayToWitnessScriptHash() const
             (*this)[1] == 0x20);
 }
 
-// A witness proogkush is any valid CScript that consists of a 1-byte push opcode
+// A witness program is any valid CScript that consists of a 1-byte push opcode
 // followed by a data push between 2 and 40 bytes.
-bool CScript::IsWitnessProogkush(int& version, std::vector<unsigned char>& proogkush) const
+bool CScript::IsWitnessProogkush(int& version, std::vector<unsigned char>& program) const
 {
     if (this->size() < 4 || this->size() > 42) {
         return false;
@@ -223,7 +223,7 @@ bool CScript::IsWitnessProogkush(int& version, std::vector<unsigned char>& proog
     }
     if ((size_t)((*this)[1] + 2) == this->size()) {
         version = DecodeOP_N((opcodetype)(*this)[0]);
-        proogkush = std::vector<unsigned char>(this->begin() + 2, this->end());
+        program = std::vector<unsigned char>(this->begin() + 2, this->end());
         return true;
     }
     return false;

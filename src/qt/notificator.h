@@ -29,7 +29,7 @@ public:
     /** Create a new notificator.
        @note Ownership of trayIcon is not transferred to this object.
     */
-    Notificator(const QString &proogkushName, QSystemTrayIcon *trayIcon, QWidget *parent);
+    Notificator(const QString &programName, QSystemTrayIcon *trayIcon, QWidget *parent);
     ~Notificator();
 
     // Message class
@@ -60,7 +60,7 @@ private:
         QSystemTray,                /**< Use QSystemTray::showMessage */
         UserNotificationCenter      /**< Use the 10.8+ User Notification Center (Mac only) */
     };
-    QString proogkushName;
+    QString programName;
     Mode mode;
     QSystemTrayIcon *trayIcon;
 #ifdef USE_DBUS

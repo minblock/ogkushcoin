@@ -682,12 +682,12 @@ SHOW_FILES             = YES
 
 SHOW_NAMESPACES        = YES
 
-# The FILE_VERSION_FILTER tag can be used to specify a proogkush or script that
+# The FILE_VERSION_FILTER tag can be used to specify a program or script that
 # doxygen should invoke to get the current version for each file (tyogkushally from
-# the version control system). Doxygen will invoke the proogkush by executing (via
+# the version control system). Doxygen will invoke the program by executing (via
 # popen()) the command command input-file, where command is the value of the
 # FILE_VERSION_FILTER tag, and input-file is the name of an input file provided
-# by doxygen. Whatever the proogkush writes to standard output is used as the file
+# by doxygen. Whatever the program writes to standard output is used as the file
 # version. For an example see the documentation.
 
 FILE_VERSION_FILTER    =
@@ -920,15 +920,15 @@ EXAMPLE_RECURSIVE      = NO
 
 IMAGE_PATH             =
 
-# The INPUT_FILTER tag can be used to specify a proogkush that doxygen should
-# invoke to filter for each input file. Doxygen will invoke the filter proogkush
+# The INPUT_FILTER tag can be used to specify a program that doxygen should
+# invoke to filter for each input file. Doxygen will invoke the filter program
 # by executing (via popen()) the command:
 #
 # <filter> <input-file>
 #
 # where <filter> is the value of the INPUT_FILTER tag, and <input-file> is the
 # name of an input file. Doxygen will then use the output that the filter
-# proogkush writes to standard output. If FILTER_PATTERNS is specified, this tag
+# program writes to standard output. If FILTER_PATTERNS is specified, this tag
 # will be ignored.
 #
 # Note that the filter must not add or remove lines; it is applied before the
@@ -1929,7 +1929,7 @@ GENERATE_XML           = NO
 
 XML_OUTPUT             = xml
 
-# If the XML_PROGRAMLISTING tag is set to YES, doxygen will dump the proogkush
+# If the XML_PROGRAMLISTING tag is set to YES, doxygen will dump the program
 # listings (including syntax highlighting and cross-referencing information) to
 # the XML output. Note that enabling this will significantly increase the size
 # of the XML output.
@@ -1957,7 +1957,7 @@ GENERATE_DOCBOOK       = NO
 DOCBOOK_OUTPUT         = docbook
 
 # If the DOCBOOK_PROGRAMLISTING tag is set to YES, doxygen will include the
-# proogkush listings (including syntax highlighting and cross-referencing
+# program listings (including syntax highlighting and cross-referencing
 # information) to the DOCBOOK output. Note that enabling this will significantly
 # increase the size of the DOCBOOK output.
 # The default value is: NO.

@@ -819,7 +819,7 @@
         <translation>Vítej v %1.</translation>
     </message>
     <message>
-        <source>As this is the first time the proogkush is launched, you can choose where %1 will store its data.</source>
+        <source>As this is the first time the program is launched, you can choose where %1 will store its data.</source>
         <translation>Tohle je poprvé, co spouštíš %1, takže si můžeš zvolit, kam bude ukládat svá data.</translation>
     </message>
     <message>
@@ -1149,7 +1149,7 @@
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Zvol výchozí podjednotku, která se bude zobrazovat v proogkushu a při posílání mincí.</translation>
+        <translation>Zvol výchozí podjednotku, která se bude zobrazovat v programu a při posílání mincí.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -3087,7 +3087,7 @@
     </message>
     <message>
         <source>Please contribute if you find %s useful. Visit %s for further information about the software.</source>
-        <translation>Prosíme, zapoj se nebo přispěj, pokud ti %s přijde užitečný. Více informací o proogkushu je na %s.</translation>
+        <translation>Prosíme, zapoj se nebo přispěj, pokud ti %s přijde užitečný. Více informací o programu je na %s.</translation>
     </message>
     <message>
         <source>The block database contains a block which appears to be from the future. This may be due to your computer's date and time being set incorrectly. Only rebuild the block database if you are sure that your computer's date and time are correct</source>
@@ -3351,7 +3351,7 @@
     </message>
     <message>
         <source>This is experimental software.</source>
-        <translation>Tohle je experimentální proogkush.</translation>
+        <translation>Tohle je experimentální program.</translation>
     </message>
     <message>
         <source>Transaction amount too small</source>
@@ -3403,7 +3403,7 @@
     </message>
     <message>
         <source>This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit %s and cryptographic software written by Eric Young and UPnP software written by Thomas Bernard.</source>
-        <translation>Tento produkt zahrnuje proogkushy vyvinuté OpenSSL Projektem pro použití v OpenSSL Toolkitu %s a kryptografický proogkush od Erika Younga a proogkush UPnP od Thomase Bernarda.</translation>
+        <translation>Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v OpenSSL Toolkitu %s a kryptografický program od Erika Younga a program UPnP od Thomase Bernarda.</translation>
     </message>
     <message>
         <source>Total length of network version string (%i) exceeds maximum length (%i). Reduce the number or size of uacomments.</source>

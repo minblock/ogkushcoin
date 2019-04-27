@@ -837,7 +837,7 @@
         <translation>%1 へようこそ。</translation>
     </message>
     <message>
-        <source>As this is the first time the proogkush is launched, you can choose where %1 will store its data.</source>
+        <source>As this is the first time the program is launched, you can choose where %1 will store its data.</source>
         <translation>これはプログラム最初の起動です。%1 がデータを保存する場所を選択して下さい。</translation>
     </message>
     <message>

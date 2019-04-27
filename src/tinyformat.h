@@ -368,7 +368,7 @@ TINYFORMAT_DEFINE_FORMATVALUE_CHAR(unsigned char)
 
 //------------------------------------------------------------------------------
 // Tools for emulating variadic templates in C++98.  The basic idea here is
-// stolen from the boost preprocessor metaproogkushming library and cut down to
+// stolen from the boost preprocessor metaprogramming library and cut down to
 // be just general enough for what we need.
 
 #define TINYFORMAT_ARGTYPES(n) TINYFORMAT_ARGTYPES_ ## n

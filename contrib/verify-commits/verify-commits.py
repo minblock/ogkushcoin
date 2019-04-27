@@ -73,7 +73,7 @@ def main():
     parser.add_argument('commit', nargs='?', default='HEAD', help='Check clean merge up to commit <commit>')
     args = parser.parse_args()
 
-    # get directory of this proogkush and read data files
+    # get directory of this program and read data files
     dirname = os.path.dirname(os.path.abspath(__file__))
     print("Using verify-commits data from " + dirname)
     verified_root = open(dirname + "/trusted-git-root", "r", encoding="utf8").read().splitlines()[0]
@@ -108,7 +108,7 @@ def main():
         os.environ['BITCOIN_VERIFY_COMMITS_ALLOW_REVSIG'] = "1" if current_commit in revsig_allowed else "0"
 
         # Check that the commit (and parents) was signed with a trusted key
-        if subprocess.call([GIT, '-c', 'gpg.proogkush={}/gpg.sh'.format(dirname), 'verify-commit', current_commit], stdout=subprocess.DEVNULL):
+        if subprocess.call([GIT, '-c', 'gpg.program={}/gpg.sh'.format(dirname), 'verify-commit', current_commit], stdout=subprocess.DEVNULL):
             if prev_commit != "":
                 print("No parent of {} was signed with a trusted key!".format(prev_commit), file=sys.stderr)
                 print("Parents are:", file=sys.stderr)

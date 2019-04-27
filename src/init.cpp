@@ -1602,7 +1602,7 @@ bool AppInitMain()
 
     // As LoadBlockIndex can take several minutes, it's possible the user
     // requested to kill the GUI during the last operation. If so, exit.
-    // As the proogkush has not fully started yet, Shutdown() is possibly overkill.
+    // As the program has not fully started yet, Shutdown() is possibly overkill.
     if (ShutdownRequested()) {
         LogPrintf("Shutdown requested. Exiting.\n");
         return false;
