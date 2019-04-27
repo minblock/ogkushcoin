@@ -42,9 +42,9 @@ QString BitcoinUnits::longName(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("grams");
+    case BTC: return QString("OGC");
     case mBTC: return QString("spliffs");
-    case uBTC: return QString("bongs");
+    case uBTC: return QString("grams");
     case SAT: return QString("ogkushoshi");
     default: return QString("???");
     }
@@ -64,9 +64,9 @@ QString BitcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("Grams");
+    case BTC: return QString("OGC");
     case mBTC: return QString("Spliffs (1 / 1" THIN_SP_UTF8 "000)");
-    case uBTC: return QString("Bongs (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case uBTC: return QString("Grams (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     case SAT: return QString("OGKushoshis (sat) (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     default: return QString("???");
     }
