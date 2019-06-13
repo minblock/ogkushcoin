@@ -94,18 +94,18 @@ public:
         // Deployment of BIP68, BIP112, and BIP113.
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1554076800; // April 1st, 2019
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1558969836; // May 27th, 2019
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1560357200; // June 12th, 2019 
 
         // Deployment of SegWit (BIP141, BIP143, and BIP147)
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 1;
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1554076800; // April 1st, 2019
-        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1558969836; // May 27th, 2019
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1560357200; // June 12th, 2019 
 
         // The best chain should have at least this much work.
         consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000000000b967ae7689d");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x4df27e935989a4b3d0d04f5507de6b9d88e93dd687b320d96d171f421a273738"); //59032
+        consensus.defaultAssumeValid = uint256S("0xab05d6fc57fcadcc3947203eb8e47166d29735236b7a8257ec39329291ed5bce"); //65653
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -164,11 +164,11 @@ public:
         };
 
         chainTxData = ChainTxData{
-            // Data as of block 4df27e935989a4b3d0d04f5507de6b9d88e93dd687b320d96d171f421a273738 (height 6934).
-            1558969911, // * UNIX timestamp of last known number of transactions
-            59032,  // * total number of transactions between genesis and that timestamp
+            // Data as of block ab05d6fc57fcadcc3947203eb8e47166d29735236b7a8257ec39329291ed5bce (height 65653).
+            1560447073, // * UNIX timestamp of last known number of transactions
+            68097,  // * total number of transactions between genesis and that timestamp
                     //   (the tx=... number in the SetBestChain debug.log lines)
-            0.1     // * estimated number of transactions per second after that timestamp
+            0.4     // * estimated number of transactions per second after that timestamp
         };
     }
 };
