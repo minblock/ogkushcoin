@@ -1,7 +1,9 @@
 
 OGKush Core integration/staging tree
 =====================================
-[![Build Status](https://travis-ci.org/minblock/ogkush.svg?branch=master)](https://travis-ci.org/minblock/ogkush)
+![Build](https://pgn.one/img/build.jpg)
+![Success](https://pgn.one/img/success.png)
+
 
 What is OGKush?
 ----------------
