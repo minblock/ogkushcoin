@@ -275,7 +275,7 @@
     </message>
     <message>
         <source>Quit application</source>
-        <translation>Proogkushma afsluiten</translation>
+        <translation>Programma afsluiten</translation>
     </message>
     <message>
         <source>&amp;About %1</source>

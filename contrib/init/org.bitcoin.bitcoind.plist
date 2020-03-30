@@ -4,7 +4,7 @@
 <dict>
 	<key>Label</key>
 	<string>org.bitcoin.bitcoind</string>
-	<key>ProogkushArguments</key>
+	<key>ProgramArguments</key>
 	<array>
 		<string>/usr/local/bin/bitcoind</string>
 	</array>

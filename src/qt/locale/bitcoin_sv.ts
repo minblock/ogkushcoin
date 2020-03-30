@@ -1174,7 +1174,7 @@ Var vänlig och försök igen.</translation>
     </message>
     <message>
         <source>Client will be shut down. Do you want to proceed?</source>
-        <translation>Proogkushmet kommer att stängas. Vill du fortsätta?</translation>
+        <translation>Programmet kommer att stängas. Vill du fortsätta?</translation>
     </message>
     <message>
         <source>Configuration options</source>

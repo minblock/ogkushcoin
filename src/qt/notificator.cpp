@@ -158,7 +158,7 @@ void Notificator::notifyDBus(Class cls, const QString &title, const QString &tex
     // Arguments for DBus call:
     QList<QVariant> args;
 
-    // Proogkush Name:
+    // Program Name:
     args.append(programName);
 
     // Unique ID of this notification type:

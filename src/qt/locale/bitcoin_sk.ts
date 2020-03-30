@@ -1357,7 +1357,7 @@
     </message>
     <message>
         <source>Unverified payment requests to custom payment scripts are unsupported.</source>
-        <translation>Proogkush nepodporuje neoverené platobné požiadavky na vlastné skripty.</translation>
+        <translation>Program nepodporuje neoverené platobné požiadavky na vlastné skripty.</translation>
     </message>
     <message>
         <source>Invalid payment request.</source>

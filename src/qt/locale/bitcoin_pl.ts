@@ -1219,7 +1219,7 @@
     </message>
     <message>
         <source>Client will be shut down. Do you want to proceed?</source>
-        <translation>Proogkush zostanie wyłączony. Czy chcesz kontynuować?</translation>
+        <translation>Program zostanie wyłączony. Czy chcesz kontynuować?</translation>
     </message>
     <message>
         <source>Configuration options</source>

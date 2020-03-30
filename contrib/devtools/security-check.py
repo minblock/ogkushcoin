@@ -42,7 +42,7 @@ def get_ELF_program_headers(executable):
     count = 0
     headers = []
     for line in stdout.splitlines():
-        if line.startswith('Proogkush Headers:'):
+        if line.startswith('Program Headers:'):
             in_headers = True
         if line == '':
             in_headers = False

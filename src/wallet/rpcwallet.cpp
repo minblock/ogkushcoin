@@ -1413,7 +1413,7 @@ public:
         if (pwallet && pwallet->GetCScript(scriptID, subscript)) {
             int witnessversion;
             std::vector<unsigned char> witprog;
-            if (subscript.IsWitnessProogkush(witnessversion, witprog)) {
+            if (subscript.IsWitnessProgram(witnessversion, witprog)) {
                 ExtractDestination(subscript, result);
                 already_witness = true;
                 return true;

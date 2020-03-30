@@ -789,7 +789,7 @@
     </message>
     <message>
         <source>Minimize instead of exit the application when the window is closed. When this option is enabled, the application will be closed only after selecting Exit in the menu.</source>
-        <translation>Ko zaprete glavno okno programa, bo program tekel še naprej, okno pa bo zgolj minimirano. Proogkush v tem primeru ustavite tako, da v meniju izberete ukaz Izhod.</translation>
+        <translation>Ko zaprete glavno okno programa, bo program tekel še naprej, okno pa bo zgolj minimirano. Program v tem primeru ustavite tako, da v meniju izberete ukaz Izhod.</translation>
     </message>
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
@@ -837,7 +837,7 @@
     </message>
     <message>
         <source>Automatically open the OGKush client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Proogkush samodejno odpre ustrezna vrata na usmerjevalniku. To deluje samo, če vaš usmerjevalnik podpira in ima omogočen UPnP.</translation>
+        <translation>Program samodejno odpre ustrezna vrata na usmerjevalniku. To deluje samo, če vaš usmerjevalnik podpira in ima omogočen UPnP.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -925,7 +925,7 @@
     </message>
     <message>
         <source>Client will be shut down. Do you want to proceed?</source>
-        <translation>Proogkush bo zaustavljen. Želite nadaljevati z izhodom?</translation>
+        <translation>Program bo zaustavljen. Želite nadaljevati z izhodom?</translation>
     </message>
     <message>
         <source>Error</source>
@@ -948,7 +948,7 @@
     </message>
     <message>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the OGKush network after a connection is established, but this process has not completed yet.</source>
-        <translation>Prikazani podatki so morda zastareli. Proogkush ob vzpostavitvi povezave samodejno sinhronizira denarnico z omrežjem OGKush, a trenutno ta proces še ni zaključen.</translation>
+        <translation>Prikazani podatki so morda zastareli. Program ob vzpostavitvi povezave samodejno sinhronizira denarnico z omrežjem OGKush, a trenutno ta proces še ni zaključen.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1851,7 +1851,7 @@
     </message>
     <message>
         <source>This is experimental software.</source>
-        <translation>Proogkush je eksperimentalne narave.</translation>
+        <translation>Program je eksperimentalne narave.</translation>
     </message>
     <message>
         <source>Transaction amount too small</source>
