@@ -102,10 +102,10 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 1560357200; // June 12th, 2019 
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000000000b967ae7689d");
+        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000000006c44a9f6fc1b");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0xab05d6fc57fcadcc3947203eb8e47166d29735236b7a8257ec39329291ed5bce"); //65653
+        consensus.defaultAssumeValid = uint256S("0bfe7b0651fb1dbc52a13eb581e8cb4772c1196f9aad074d8df0a18bddd21eb6"); 
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -127,7 +127,7 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0x2cc06d170c33cdbf144e3e597a97a8786fcd84b04a0b3283c054c559646dc855"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
-        vSeeds.emplace_back("seed.ogkush.org");
+        vSeeds.emplace_back("seed.picsco.in");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,5); 
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
@@ -158,19 +158,20 @@ public:
                 {    24337, uint256S("0x44f579416365dd2fa364c0532a1fa202f6f0f0d00bcf9932310b979c4e14f34a")},
                 {    37337, uint256S("0x54662d2d9240d0c62ba919783b7f48835332bcd37277b4f58db1e8c2966f4513")},
                 {    39617, uint256S("0x6fdccaa592650c7d2158d53e3f597dba74a15f6f60c7e54d19ff21dfe47ae9d0")},
-                {    50129, uint256S("0x8482943cdc979dfae3eee9d15fee16ade91257072de26ca3e81f3932a63c352e")},     
-                {    59032, uint256S("0x4df27e935989a4b3d0d04f5507de6b9d88e93dd687b320d96d171f421a273738")},                
-                {    101337, uint256S("0x4df27e935989a4b3d0d04f5507de6b9d88e93dd687b320d96d171f421a273738")},    
-                {    101848, uint256S("0x00ba320cf081e0664e924aeb918d3ccb64a2381f004e8ecbb632dabe29526b9e")},                    
+                {    50129, uint256S("0x8482943cdc979dfae3eee9d15fee16ade91257072de26ca3e81f3932a63c352e")},
+                {    59032, uint256S("0x4df27e935989a4b3d0d04f5507de6b9d88e93dd687b320d96d171f421a273738")},
+                {    101337, uint256S("0x4df27e935989a4b3d0d04f5507de6b9d88e93dd687b320d96d171f421a273738")},
+                {    101848, uint256S("0x00ba320cf081e0664e924aeb918d3ccb64a2381f004e8ecbb632dabe29526b9e")},
+                {    329646, uint256S("0x0bfe7b0651fb1dbc52a13eb581e8cb4772c1196f9aad074d8df0a18bddd21eb6")},
             }
         };
 
         chainTxData = ChainTxData{
             // Data as of block 00ba320cf081e0664e924aeb918d3ccb64a2381f004e8ecbb632dabe29526b9e (height 101848).
-            1560447073, // * UNIX timestamp of last known number of transactions
-            109318,  // * total number of transactions between genesis and that timestamp
+            1630009285, // * UNIX timestamp of last known number of transactions
+            337356,  // * total number of transactions between genesis and that timestamp
                     //   (the tx=... number in the SetBestChain debug.log lines)
-            0.04     // * estimated number of transactions per second after that timestamp
+            0.08     // * estimated number of transactions per second after that timestamp
         };
     }
 };
