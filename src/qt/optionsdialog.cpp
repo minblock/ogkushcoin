@@ -136,6 +136,10 @@ OptionsDialog::OptionsDialog(QWidget *parent, bool enableWallet) :
         ui->minimizeToTray->setEnabled(false);
     }
 
+    if (!gArgs.IsArgSet("-debug")) {
+        ui->mwebFeatures->setVisible(false);
+    }
+
     GUIUtil::handleCloseWindowShortcut(this);
 }
 
@@ -211,6 +215,7 @@ void OptionsDialog::setMapper()
     /* Wallet */
     mapper->addMapping(ui->spendZeroConfChange, OptionsModel::SpendZeroConfChange);
     mapper->addMapping(ui->coinControlFeatures, OptionsModel::CoinControlFeatures);
+    mapper->addMapping(ui->mwebFeatures, OptionsModel::MWEBFeatures);
 
     /* Network */
     mapper->addMapping(ui->mapPortUpnp, OptionsModel::MapPortUPnP);

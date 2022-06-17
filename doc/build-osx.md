@@ -19,7 +19,7 @@ Then install [Homebrew](https://brew.sh).
 
 ## Dependencies
 ```shell
-brew install automake libtool boost miniupnpc pkg-config python qt libevent qrencode
+brew install automake libtool boost miniupnpc pkg-config python qt libevent qrencode fmt
 ```
 
 If you run into issues, check [Homebrew's troubleshooting page](https://docs.brew.sh/Troubleshooting).
@@ -130,6 +130,6 @@ tail -f $HOME/Library/Application\ Support/Litecoin/debug.log
 ```
 
 ## Notes
-* Tested on OS X 10.12 Sierra through macOS 10.15 Catalina on 64-bit Intel
+* Tested on OS X 10.14 Mojave through macOS 11 Big Sur on 64-bit Intel
 processors only.
 * Building with downloaded Qt binaries is not officially supported. See the notes in [#7714](https://github.com/bitcoin/bitcoin/issues/7714).
