@@ -10,11 +10,11 @@ BUILDDIR=${BUILDDIR:-$TOPDIR}
 BINDIR=${BINDIR:-$BUILDDIR/src}
 MANDIR=${MANDIR:-$TOPDIR/doc/man}
 
-BITCOIND=${BITCOIND:-$BINDIR/litecoind}
-BITCOINCLI=${BITCOINCLI:-$BINDIR/litecoin-cli}
-BITCOINTX=${BITCOINTX:-$BINDIR/litecoin-tx}
-WALLET_TOOL=${WALLET_TOOL:-$BINDIR/litecoin-wallet}
-BITCOINQT=${BITCOINQT:-$BINDIR/qt/litecoin-qt}
+BITCOIND=${BITCOIND:-$BINDIR/ogkushcoind}
+BITCOINCLI=${BITCOINCLI:-$BINDIR/ogkushcoin-cli}
+BITCOINTX=${BITCOINTX:-$BINDIR/ogkushcoin-tx}
+WALLET_TOOL=${WALLET_TOOL:-$BINDIR/ogkushcoin-wallet}
+BITCOINQT=${BITCOINQT:-$BINDIR/qt/ogkushcoin-qt}
 
 [ ! -x $BITCOIND ] && echo "$BITCOIND not found or not executable." && exit 1
 

@@ -1,5 +1,5 @@
-Building Litecoin
+Building OGKushcoin
 ================
 
 See doc/build-*.md for instructions on building the various
-elements of the Litecoin Core reference implementation of Litecoin.
+elements of the OGKushcoin Core reference implementation of OGKushcoin.
