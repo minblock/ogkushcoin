@@ -641,7 +641,7 @@ and git merge commit are mentioned.
 - #9136 `b422913` sync\_blocks cleanup (ryanofsky)
 - #9151 `4333b1c` proxy\_test: Calculate hardcoded port numbers (MarcoFalke)
 - #9206 `e662d28` Make test constant consistent with consensus.h (btcdrak)
-- #9139 `0de7fd3` Change sync\_blocks to pick smarter maxheight (on top of #9196) (ryanofsky)
+- #9139 `0de7fd3` Change sync\_blocks to ogkushk smarter maxheight (on top of #9196) (ryanofsky)
 - #9100 `97ec6e5` tx\_valid: re-order inputs to how they are encoded (dcousens)
 - #9202 `e56cf67` bench: Add support for measuring CPU cycles (laanwj)
 - #9223 `5412c08` unification of Bloom filter representation (s-matthew-english)

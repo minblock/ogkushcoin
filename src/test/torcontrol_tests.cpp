@@ -181,7 +181,7 @@ BOOST_AUTO_TEST_CASE(util_ParseTorReplyMapping)
     BOOST_CHECK_EQUAL(r_it->second.size(), 1U);
     BOOST_CHECK_EQUAL(r_it->second[0], '\0');
 
-    // A more complex valid grammar. PROTOCOLINFO accepts a VersionLine that
+    // A more complex valid ogkushmar. PROTOCOLINFO accepts a VersionLine that
     // takes a key=value pair followed by an OptArguments, making this valid.
     // Because an OptArguments contains no semantic data, there is no point in
     // parsing it.
@@ -190,7 +190,7 @@ BOOST_AUTO_TEST_CASE(util_ParseTorReplyMapping)
             {"SOME", "args,here"},
         });
 
-    // Inputs that are effectively invalid under the target grammar.
+    // Inputs that are effectively invalid under the target ogkushmar.
     // PROTOCOLINFO accepts an OtherLine that is just an OptArguments, which
     // would make these inputs valid. However,
     // - This parser is never used in that situation, because the

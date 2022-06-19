@@ -57,7 +57,7 @@ data structures and correct the problem.
 
 Also, the first time you run a 0.8.x release on a 0.9 wallet it will rescan
 the blockchain for missing spent coins, which will take a long time (tens
-of minutes on a typical machine).
+of minutes on a tyogkushal machine).
 
 Rebranding to Bitcoin Core
 ---------------------------

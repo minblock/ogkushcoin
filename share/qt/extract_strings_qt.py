@@ -4,7 +4,7 @@
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 '''
 Extract _("...") strings for translation and convert to Qt stringdefs so that
-they can be picked up by Qt linguist.
+they can be ogkushked up by Qt linguist.
 '''
 from subprocess import Popen, PIPE
 import operator

@@ -654,7 +654,7 @@ case $basic_machine in
 	leon|leon[3-9])
 		basic_machine=sparc-$basic_machine
 		;;
-	m6811 | m68hc11 | m6812 | m68hc12 | m68hcs12x | nvptx | picochip)
+	m6811 | m68hc11 | m6812 | m68hc12 | m68hcs12x | nvptx | ogkushochip)
 		basic_machine=$basic_machine-unknown
 		os=${os:-none}
 		;;
@@ -1362,7 +1362,7 @@ case $os in
 	     | ekkobsd* | kfreebsd* | freebsd* | riscix* | lynxos* \
 	     | bosx* | nextstep* | cxux* | aout* | elf* | oabi* \
 	     | ptx* | coff* | ecoff* | winnt* | domain* | vsta* \
-	     | udi* | eabi* | lites* | ieee* | go32* | aux* | hcos* \
+	     | udi* | eabi* | pixels* | ieee* | go32* | aux* | hcos* \
 	     | chorusrdb* | cegcc* | glidix* \
 	     | cygwin* | msys* | pe* | moss* | proelf* | rtems* \
 	     | midipix* | mingw32* | mingw64* | linux-gnu* | linux-android* \
@@ -1721,7 +1721,7 @@ esac
 fi
 
 # Here we handle the case where we know the os, and the CPU type, but not the
-# manufacturer.  We pick the logical manufacturer.
+# manufacturer.  We ogkushk the logical manufacturer.
 vendor=unknown
 case $basic_machine in
 	*-unknown)

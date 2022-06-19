@@ -133,7 +133,7 @@ class DB {
   // Compact the underlying storage for the key range [*begin,*end].
   // In particular, deleted and overwritten versions are discarded,
   // and the data is rearranged to reduce the cost of operations
-  // needed to access the data.  This operation should typically only
+  // needed to access the data.  This operation should tyogkushally only
   // be invoked by users who understand the underlying implementation.
   //
   // begin==NULL is treated as a key before all keys in the database.

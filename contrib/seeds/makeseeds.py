@@ -30,7 +30,7 @@ SUSPICIOUS_HOSTS = {
 PATTERN_IPV4 = re.compile(r"^((\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})):(\d+)$")
 PATTERN_IPV6 = re.compile(r"^\[([0-9a-z:]+)\]:(\d+)$")
 PATTERN_ONION = re.compile(r"^([abcdefghijklmnopqrstuvwxyz234567]{16}\.onion):(\d+)$")
-PATTERN_AGENT = re.compile(r"^(/LitecoinCore:0.14.(0|1|2|99)/|/LitecoinCore:0.15.(0|1|2|99)/|/LitecoinCore:0.16.(0|1|2|99)/|/LitecoinCore:0.17.(0|1|2|99)/)$")
+PATTERN_AGENT = re.compile(r"^(/OGKushCore:0.14.(0|1|2|99)/|/OGKushCore:0.15.(0|1|2|99)|/OGKushCore:0.16.(0|1|2|99)/)$")
 
 def parseline(line):
     sline = line.split()
@@ -143,7 +143,7 @@ def main():
 
     # Skip entries with valid address.
     ips = [ip for ip in ips if ip is not None]
-    # Skip entries from suspicious hosts.
+    # Skip entries from susogkushious hosts.
     ips = [ip for ip in ips if ip['ip'] not in SUSPICIOUS_HOSTS]
     # Enforce minimal number of blocks.
     ips = [ip for ip in ips if ip['blocks'] >= MIN_BLOCKS]

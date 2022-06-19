@@ -32,7 +32,7 @@ class RawTransactionsTest(BitcoinTestFramework):
     def skip_test_if_missing_module(self):
         self.skip_if_no_wallet()
 
-    def setup_network(self):
+    def setup_network(self, split=False):
         self.setup_nodes()
 
         connect_nodes_bi(self.nodes, 0, 1)
@@ -213,7 +213,7 @@ class RawTransactionsTest(BitcoinTestFramework):
         dec_tx  = self.nodes[2].decoderawtransaction(rawtx)
         assert_equal(utx['txid'], dec_tx['vin'][0]['txid'])
 
-        assert_raises_rpc_error(-5, "changeAddress must be a valid litecoin address", self.nodes[2].fundrawtransaction, rawtx, {'changeAddress':'foobar'})
+        assert_raises_rpc_error(-5, "changeAddress must be a valid ogkush address", self.nodes[2].fundrawtransaction, rawtx, {'changeAddress':'foobar'})
 
         ############################################################
         # test a fundrawtransaction with a provided change address #
@@ -478,8 +478,10 @@ class RawTransactionsTest(BitcoinTestFramework):
 
         ############################################################
         # locked wallet test
-        self.nodes[1].encryptwallet("test")
-        self.stop_nodes()
+        self.stop_node(0)
+        self.nodes[1].node_encrypt_wallet("test")
+        self.stop_node(2)
+        self.stop_node(3)
 
         self.start_nodes()
         # This test is not meant to test fee estimation and we'd like
@@ -659,7 +661,7 @@ class RawTransactionsTest(BitcoinTestFramework):
         inputs = []
         outputs = {self.nodes[3].getnewaddress() : 1}
         rawtx = self.nodes[3].createrawtransaction(inputs, outputs)
-        result = self.nodes[3].fundrawtransaction(rawtx) # uses min_relay_tx_fee (set by settxfee)
+        result = self.nodes[3].fundrawtransaction(rawtx, {"feeRate": 1*min_relay_tx_fee}) # uses min_relay_tx_fee (set by settxfee)
         result2 = self.nodes[3].fundrawtransaction(rawtx, {"feeRate": 2*min_relay_tx_fee})
         result3 = self.nodes[3].fundrawtransaction(rawtx, {"feeRate": 10*min_relay_tx_fee})
         result_fee_rate = result['fee'] * 1000 / count_bytes(result['hex'])

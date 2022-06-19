@@ -34,11 +34,11 @@ public:
     };
 
     enum Mode {
-        ForSelection, /**< Open address book to pick address */
+        ForSelection, /**< Open address book to ogkushk address */
         ForEditing  /**< Open address book for editing */
     };
 
-    explicit AddressBookPage(const PlatformStyle *platformStyle, Mode mode, Tabs tab, QWidget *parent = nullptr);
+    explicit AddressBookPage(const PlatformStyle *platformStyle, Mode mode, Tabs tab, QWidget *parent = 0);
     ~AddressBookPage();
 
     void setModel(AddressTableModel *model);

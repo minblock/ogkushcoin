@@ -203,7 +203,7 @@ connection, when the software is used with Tor. The new option,
 
 When enabled, every outgoing connection will (potentially) go through a
 different exit node. That significantly reduces the chance to get unlucky and
-pick a single exit node that is either malicious, or widely banned from the P2P
+ogkushk a single exit node that is either malicious, or widely banned from the P2P
 network. This improves connection reliability as well as privacy, especially
 for the initial connections.
 
@@ -344,7 +344,7 @@ git merge commit are mentioned.
 - #5649 `e0cd2f5` Use text-color icons for system tray Send/Receive menu entries
 - #5651 `848f55d` Coin Control: Use U+2248 "ALMOST EQUAL TO" rather than a simple tilde
 - #5626 `ab0d798` Fix icon sizes and column width
-- #5683 `c7b22aa` add new osx dmg background picture
+- #5683 `c7b22aa` add new osx dmg background ogkushture
 - #5620 `7823598` Payment request expiration bug fix
 - #5729 `9c4a5a5` Allow unit changes for read-only BitcoinAmountField
 - #5753 `0f44672` Add bitcoin logo to about screen

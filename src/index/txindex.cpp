@@ -5,7 +5,7 @@
 #include <index/txindex.h>
 #include <shutdown.h>
 #include <ui_interface.h>
-#include <util/system.h>
+#include <util.h>
 #include <validation.h>
 
 #include <boost/thread.hpp>
@@ -117,7 +117,7 @@ bool TxIndex::DB::MigrateData(CBlockTreeDB& block_tree_db, const CBlockLocator& 
     // Unsetting the boolean flag ensures that if the node is downgraded to a
     // previous version, it will not see a corrupted, partially migrated index
     // -- it will see that the txindex is disabled. When the node is upgraded
-    // again, the migration will pick up where it left off and sync to the block
+    // again, the migration will ogkushk up where it left off and sync to the block
     // with hash DB_TXINDEX_BLOCK.
     bool f_legacy_flag = false;
     block_tree_db.ReadFlag("txindex", f_legacy_flag);
@@ -245,15 +245,12 @@ bool TxIndex::Init()
 
 bool TxIndex::WriteBlock(const CBlock& block, const CBlockIndex* pindex)
 {
-    // Exclude genesis block transaction because outputs are not spendable.
-    if (pindex->nHeight == 0) return true;
-
     CDiskTxPos pos(pindex->GetBlockPos(), GetSizeOfCompactSize(block.vtx.size()));
     std::vector<std::pair<uint256, CDiskTxPos>> vPos;
     vPos.reserve(block.vtx.size());
     for (const auto& tx : block.vtx) {
         vPos.emplace_back(tx->GetHash(), pos);
-        pos.nTxOffset += ::GetSerializeSize(*tx, CLIENT_VERSION);
+        pos.nTxOffset += ::GetSerializeSize(*tx, SER_DISK, CLIENT_VERSION);
     }
     return m_db->WriteTxs(vPos);
 }

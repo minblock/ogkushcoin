@@ -13,7 +13,7 @@ extern "C" {
  *    output/input arguments, and finally input-only arguments.
  * 2. Array lengths always immediately the follow the argument whose length
  *    they describe, even if this violates rule 1.
- * 3. Within the OUT/OUTIN/IN groups, pointers to data that is typically generated
+ * 3. Within the OUT/OUTIN/IN groups, pointers to data that is tyogkushally generated
  *    later go first. This means: signatures, public nonces, private nonces,
  *    messages, public keys, secret keys, tweaks.
  * 4. Arguments that are not data pointers go last, from more complex to less

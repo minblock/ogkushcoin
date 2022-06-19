@@ -1326,13 +1326,13 @@ Compaction* VersionSet::PickCompaction() {
   c->input_version_ = current_;
   c->input_version_->Ref();
 
-  // Files in level 0 may overlap each other, so pick up all overlapping ones
+  // Files in level 0 may overlap each other, so ogkushk up all overlapping ones
   if (level == 0) {
     InternalKey smallest, largest;
     GetRange(c->inputs_[0], &smallest, &largest);
     // Note that the next call will discard the file we placed in
     // c->inputs_[0] earlier and replace it with an overlapping set
-    // which will include the picked file.
+    // which will include the ogkushked file.
     current_->GetOverlappingInputs(0, &smallest, &largest, &c->inputs_[0]);
     assert(!c->inputs_[0].empty());
   }
@@ -1354,7 +1354,7 @@ void VersionSet::SetupOtherInputs(Compaction* c) {
   GetRange2(c->inputs_[0], c->inputs_[1], &all_start, &all_limit);
 
   // See if we can grow the number of inputs in "level" without
-  // changing the number of "level+1" files we pick up.
+  // changing the number of "level+1" files we ogkushk up.
   if (!c->inputs_[1].empty()) {
     std::vector<FileMetaData*> expanded0;
     current_->GetOverlappingInputs(level, &all_start, &all_limit, &expanded0);
@@ -1422,7 +1422,7 @@ Compaction* VersionSet::CompactRange(
 
   // Avoid compacting too much in one shot in case the range is large.
   // But we cannot do this for level-0 since level-0 files can overlap
-  // and we must not pick one file and drop another older file if the
+  // and we must not ogkushk one file and drop another older file if the
   // two files overlap.
   if (level > 0) {
     const uint64_t limit = MaxFileSizeForLevel(options_, level);

@@ -269,7 +269,7 @@ enum ServiceFlags : uint64_t {
     // See BIP159 for details on how this is implemented.
     NODE_NETWORK_LIMITED = (1 << 10),
 
-    // Bits 24-31 are reserved for temporary experiments. Just pick a bit that
+    // Bits 24-31 are reserved for temporary experiments. Just ogkushk a bit that
     // isn't getting used, or one not being used much, and notify the
     // bitcoin-development mailing list. Remember that service bits are just
     // unauthenticated advertisements, so your code must be robust against
@@ -402,6 +402,7 @@ public:
     std::string GetCommand() const;
     std::string ToString() const;
 
+    // TODO: make private (improves encapsulation)
 public:
     int type;
     uint256 hash;

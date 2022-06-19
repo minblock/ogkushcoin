@@ -134,7 +134,7 @@ UNAME_VERSION=`(uname -v) 2>/dev/null` || UNAME_VERSION=unknown
 
 case "$UNAME_SYSTEM" in
 Linux|GNU|GNU/*)
-	# If the system lacks a compiler, then just pick glibc.
+	# If the system lacks a compiler, then just ogkushk glibc.
 	# We could probably try harder.
 	LIBC=gnu
 
@@ -778,8 +778,8 @@ EOF
 	    echo "$UNAME_MACHINE"-unknown-osf1
 	fi
 	exit ;;
-    parisc*:Lites*:*:*)
-	echo hppa1.1-hp-lites
+    parisc*:PIC*:*:*)
+	echo hppa1.1-hp-pixels
 	exit ;;
     C1*:ConvexOS:*:* | convex:ConvexOS:C1*:*)
 	echo c1-convex-bsd

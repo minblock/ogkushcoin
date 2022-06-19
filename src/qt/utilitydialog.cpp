@@ -14,16 +14,13 @@
 #include <qt/clientmodel.h>
 #include <qt/guiconstants.h>
 #include <qt/intro.h>
-#ifdef ENABLE_BIP70
 #include <qt/paymentrequestplus.h>
-#endif
 #include <qt/guiutil.h>
 
 #include <clientversion.h>
 #include <init.h>
 #include <interfaces/node.h>
-#include <util/system.h>
-#include <util/strencodings.h>
+#include <util.h>
 
 #include <stdio.h>
 
@@ -55,9 +52,9 @@ HelpMessageDialog::HelpMessageDialog(interfaces::Node& node, QWidget *parent, bo
     {
         setWindowTitle(tr("About %1").arg(tr(PACKAGE_NAME)));
 
-        std::string licenseInfo = LicenseInfo();
         /// HTML-format the license message from the core
-        QString licenseInfoHTML = QString::fromStdString(LicenseInfo());
+        QString licenseInfo = QString::fromStdString(LicenseInfo());
+        QString licenseInfoHTML = licenseInfo;
         // Make URLs clickable
         QRegExp uri("<(.*)>", Qt::CaseSensitive, QRegExp::RegExp2);
         uri.setMinimal(true); // use non-greedy matching
@@ -67,13 +64,13 @@ HelpMessageDialog::HelpMessageDialog(interfaces::Node& node, QWidget *parent, bo
 
         ui->aboutMessage->setTextFormat(Qt::RichText);
         ui->scrollArea->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
-        text = version + "\n" + QString::fromStdString(FormatParagraph(licenseInfo));
+        text = version + "\n" + licenseInfo;
         ui->aboutMessage->setText(version + "<br><br>" + licenseInfoHTML);
         ui->aboutMessage->setWordWrap(true);
         ui->helpMessage->setVisible(false);
     } else {
         setWindowTitle(tr("Command-line options"));
-        QString header = "Usage:  litecoin-qt [command-line options]                     \n";
+        QString header = "Usage:  ogkush-qt [command-line options]                     \n";
         QTextCursor cursor(ui->helpMessage->document());
         cursor.insertText(version);
         cursor.insertBlock();
@@ -129,7 +126,7 @@ HelpMessageDialog::~HelpMessageDialog()
 void HelpMessageDialog::printToConsole()
 {
     // On other operating systems, the expected action is to print the message to the console.
-    tfm::format(std::cout, "%s\n", qPrintable(text));
+    fprintf(stdout, "%s\n", qPrintable(text));
 }
 
 void HelpMessageDialog::showOrPrint()

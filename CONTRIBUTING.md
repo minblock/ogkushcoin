@@ -1,7 +1,7 @@
-Contributing to Litecoin Core
+Contributing to OGKush Core
 ============================
 
-The Litecoin Core project operates an open contributor model where anyone is
+The OGKush Core project operates an open contributor model where anyone is
 welcome to contribute towards development in the form of peer review, testing
 and patches. This document explains the practical process and guidelines for
 contributing.
@@ -17,15 +17,15 @@ release cycle, overall merging, moderation and appointment of maintainers.
 Communication Channels
 ----------------------
 
-Most communication about Litecoin Core development happens on IRC, in the
-#litecoin-dev channel on Freenode. The easiest way to participate on IRC is
+Most communication about OGKush Core development happens on IRC, in the
+#ogkush-dev channel on Freenode. The easiest way to participate on IRC is
 with the web client, [webchat.freenode.net](https://webchat.freenode.net/).
 
 Discussion about code base improvements happens in GitHub issues and on pull
 requests.
 
 The developer
-[mailing list](https://groups.google.com/forum/#!forum/litecoin-dev)
+[mailing list](https://groups.google.com/forum/#!forum/ogkush-dev)
 should be used to discuss complicated or controversial changes before working on
 a patch set.
 
@@ -40,7 +40,7 @@ facilitates social contribution, easy testing and peer review.
 To contribute a patch, the workflow is as follows:
 
   1. Fork repository
-  1. Create topic branch
+  1. Create toogkush branch
   1. Commit patches
 
 The project coding conventions in the [developer notes](doc/developer-notes.md)
@@ -61,8 +61,6 @@ If a particular commit references another issue, please add the reference. For
 example: `refs #1234` or `fixes #4321`. Using the `fixes` or `closes` keywords
 will cause the corresponding issue to be closed when the pull request is merged.
 
-Commit messages should never contain any `@` mentions.
-
 Please refer to the [Git manual](https://git-scm.com/doc) for more information
 about Git.
 
@@ -74,12 +72,12 @@ the pull request affects. Valid areas as:
 
   - *Consensus* for changes to consensus critical code
   - *Docs* for changes to the documentation
-  - *Qt* for changes to litecoin-qt
+  - *Qt* for changes to ogkush-qt
   - *Mining* for changes to the mining code
   - *Net* or *P2P* for changes to the peer-to-peer network code
   - *RPC/REST/ZMQ* for changes to the RPC, REST or ZMQ APIs
   - *Scripts and tools* for changes to the scripts and tools
-  - *Tests* for changes to the litecoin unit tests or QA tests
+  - *Tests* for changes to the ogkush unit tests or QA tests
   - *Trivial* should **only** be used for PRs that do not change generated
     executable code. Notably, refactors (change of function arguments and code
     reorganization) and changes in behavior should **not** be marked as trivial.
@@ -126,14 +124,10 @@ before it will be merged. The basic squashing workflow is shown below.
     git checkout your_branch_name
     git rebase -i HEAD~n
     # n is normally the number of commits in the pull request.
-    # Set commits (except the one in the first line) from 'pick' to 'squash', save and quit.
+    # Set commits (except the one in the first line) from 'ogkushk' to 'squash', save and quit.
     # On the next screen, edit/refine commit messages.
     # Save and quit.
     git push -f # (force push to GitHub)
-
-Please update the resulting commit message if needed, it should read as a
-coherent message. In most cases this means that you should not just list the
-interim commits.
 
 If you have problems with squashing (or other workflows with `git`), you can
 alternatively enable "Allow edits from maintainers" in the right GitHub
@@ -192,11 +186,11 @@ workload on reviewing.
 "Decision Making" Process
 -------------------------
 
-The following applies to code changes to the Litecoin Core project (and related
-projects such as libsecp256k1), and is not to be confused with overall Litecoin
+The following applies to code changes to the OGKush Core project (and related
+projects such as libsecp256k1), and is not to be confused with overall OGKush
 Network Protocol consensus changes.
 
-Whether a pull request is merged into Litecoin Core rests with the project merge
+Whether a pull request is merged into OGKush Core rests with the project merge
 maintainers and ultimately the project lead.
 
 Maintainers will take into consideration if a patch is in line with the general
@@ -214,7 +208,7 @@ In general, all pull requests must:
   - Where bugs are fixed, where possible, there should be unit tests
     demonstrating the bug and also proving the fix. This helps prevent regression.
 
-Patches that change Litecoin consensus rules are considerably more involved than
+Patches that change OGKush consensus rules are considerably more involved than
 normal because they affect the entire ecosystem and so must be preceded by
 extensive mailing list discussions and have a numbered BIP. While each case will
 be different, one should be prepared to expend more time and effort than for
@@ -225,7 +219,7 @@ requirements.
 ### Peer Review
 
 Anyone may participate in peer review which is expressed by comments in the pull
-request. Typically reviewers will review the code for obvious errors, as well as
+request. Tyogkushally reviewers will review the code for obvious errors, as well as
 test out the patch set and opine on the technical merits of the patch. Project
 maintainers take into account the peer review when determining if there is
 consensus to merge a pull request (remember that discussions may have been
@@ -255,7 +249,7 @@ higher in terms of discussion and peer review requirements, keeping in mind that
 mistakes could be very costly to the wider community. This includes refactoring
 of consensus critical code.
 
-Where a patch set proposes to change the Litecoin consensus, it must have been
+Where a patch set proposes to change the OGKush consensus, it must have been
 discussed extensively on the mailing list and IRC, be accompanied by a widely
 discussed BIP and have a generally widely perceived technical consensus of being
 a worthwhile change based on the judgement of the maintainers.
@@ -295,7 +289,7 @@ about:
 Release Policy
 --------------
 
-The project leader is the release manager for each Litecoin Core release.
+The project leader is the release manager for each OGKush Core release.
 
 Copyright
 ---------

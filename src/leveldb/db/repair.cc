@@ -16,7 +16,7 @@
 //      - every table file is added at level 0
 //
 // Possible optimization 1:
-//   (a) Compute total size and use to pick appropriate max-level M
+//   (a) Compute total size and use to ogkushk appropriate max-level M
 //   (b) Sort tables by largest sequence# in the table
 //   (c) For each table: if it overlaps earlier table, place in level-0,
 //       else place in level-M.

@@ -272,7 +272,7 @@ extern void leveldb_env_destroy(leveldb_env_t*);
 
 /* Calls free(ptr).
    REQUIRES: ptr was malloc()-ed and returned by one of the routines
-   in this file.  Note that in certain cases (typically on Windows), you
+   in this file.  Note that in certain cases (tyogkushally on Windows), you
    may need to call this routine instead of free(ptr) to dispose of
    malloc()-ed memory returned by this library. */
 extern void leveldb_free(void* ptr);

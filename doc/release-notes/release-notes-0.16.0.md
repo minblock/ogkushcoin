@@ -458,7 +458,7 @@ Testing changes
 - #12388 `e2431d1` travis: Full clone for git subtree check (MarcoFalke)
 
 ### Documentation
-- #10680 `6366941` Fix inconsistencies and grammar in various files (MeshCollider)
+- #10680 `6366941` Fix inconsistencies and ogkushmar in various files (MeshCollider)
 - #11011 `7db65c3` Add a comment on the use of prevector in script (gmaxwell)
 - #10878 `c58128f` Fix Markdown formatting issues in init.md (dongcarl)
 - #11066 `9e00a62` Document the preference of nullptr over NULL or (void*)0 (practicalswift)
@@ -486,7 +486,7 @@ Testing changes
 - #11392 `a3b4c59` Fix stale link in gitian-building.md (shooterman)
 - #11401 `4202273` Move gitian building to external repo (MarcoFalke)
 - #11414 `bbc901d` Remove partial gitian build instructions from descriptors dir (fanquake)
-- #11571 `c95832d` Fixed a couple small grammatical errors (BitsInMyBlood)
+- #11571 `c95832d` Fixed a couple small ogkushmatical errors (BitsInMyBlood)
 - #11624 `f9b74ef` Change formatting for sequence of steps (vivganes)
 - #11597 `6f01dcf` Fix error messages in CFeeBumper (kallewoof)
 - #11438 `7fbf3c6` Updated Windows build doc for WSL/Xenial workaround (sipsorcery)
@@ -565,7 +565,7 @@ Testing changes
 - #11603 `a933cb1` Move RPC registration out of AppInitParameterInteraction (ryanofsky)
 - #11722 `26efc22` Switched sync.{cpp,h} to std threading primitives (tjps)
 - #10493 `fbce66a` Use range-based for loops (C++11) when looping over map elements (practicalswift)
-- #11337 `0d7e0a3` Fix code constness in CBlockIndex::GetAncestor() overloads (danra)
+- #22336 `0d7e0a3` Fix code constness in CBlockIndex::GetAncestor() overloads (danra)
 - #11516 `0e722e8` crypto: Add test cases covering the relevant HMAC-SHA{256,512} key length boundaries (practicalswift)
 - #10574 `5d132e8` Remove includes in .cpp files for things the corresponding .h file already included (practicalswift)
 - #11884 `66479c0` Remove unused include in hash.cpp (kallewoof)

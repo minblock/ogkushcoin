@@ -129,7 +129,7 @@ class RandomGenerator {
   RandomGenerator() {
     // We use a limited amount of data over and over again and ensure
     // that it is larger than the compression window (32KB), and also
-    // large enough to serve all typical value sizes we want to write.
+    // large enough to serve all tyogkushal value sizes we want to write.
     Random rnd(301);
     std::string piece;
     while (data_.size() < 1048576) {

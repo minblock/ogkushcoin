@@ -6,8 +6,8 @@
 """
     ZMQ example using python3's asyncio
 
-    Litecoind should be started with the command line arguments:
-        litecoind -testnet -daemon \
+    OGKushd should be started with the command line arguments:
+        ogkushd -testnet -daemon \
                 -zmqpubrawtx=tcp://127.0.0.1:28332 \
                 -zmqpubrawblock=tcp://127.0.0.1:28332 \
                 -zmqpubhashtx=tcp://127.0.0.1:28332 \
@@ -42,7 +42,6 @@ class ZMQHandler():
         self.zmqContext = zmq.asyncio.Context()
 
         self.zmqSubSocket = self.zmqContext.socket(zmq.SUB)
-        self.zmqSubSocket.setsockopt(zmq.RCVHWM, 0)
         self.zmqSubSocket.setsockopt_string(zmq.SUBSCRIBE, "hashblock")
         self.zmqSubSocket.setsockopt_string(zmq.SUBSCRIBE, "hashtx")
         self.zmqSubSocket.setsockopt_string(zmq.SUBSCRIBE, "rawblock")
@@ -51,22 +50,22 @@ class ZMQHandler():
 
     async def handle(self) :
         msg = await self.zmqSubSocket.recv_multipart()
-        topic = msg[0]
+        toogkush = msg[0]
         body = msg[1]
         sequence = "Unknown"
         if len(msg[-1]) == 4:
           msgSequence = struct.unpack('<I', msg[-1])[-1]
           sequence = str(msgSequence)
-        if topic == b"hashblock":
+        if toogkush == b"hashblock":
             print('- HASH BLOCK ('+sequence+') -')
             print(binascii.hexlify(body))
-        elif topic == b"hashtx":
+        elif toogkush == b"hashtx":
             print('- HASH TX  ('+sequence+') -')
             print(binascii.hexlify(body))
-        elif topic == b"rawblock":
+        elif toogkush == b"rawblock":
             print('- RAW BLOCK HEADER ('+sequence+') -')
             print(binascii.hexlify(body[:80]))
-        elif topic == b"rawtx":
+        elif toogkush == b"rawtx":
             print('- RAW TX ('+sequence+') -')
             print(binascii.hexlify(body))
         # schedule ourselves to receive the next message

@@ -125,7 +125,7 @@ def escape_cdata(text):
     return text
 
 def contains_bitcoin_addr(text, errors):
-    if text is not None and ADDRESS_REGEXP.search(text) is not None:
+    if text != None and ADDRESS_REGEXP.search(text) != None:
         errors.append('Translation "%s" contains a bitcoin address. This will be removed.' % (text))
         return True
     return False
@@ -158,7 +158,7 @@ def postprocess_translations(reduce_diff_hacks=False):
                 numerus = message.get('numerus') == 'yes'
                 source = message.find('source').text
                 translation_node = message.find('translation')
-                # pick all numerusforms
+                # ogkushk all numerusforms
                 if numerus:
                     translations = [i.text for i in translation_node.findall('numerusform')]
                 else:
