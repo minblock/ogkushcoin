@@ -124,7 +124,6 @@ public:
         // service bits we want, but we should get them updated to support all service bits wanted by any
         // release ASAP to avoid it where possible.
         vSeeds.emplace_back("seed.ogkush.org");
-        vSeeds.emplace_back("seed.picsco.in");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,5);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
@@ -151,7 +150,7 @@ public:
                 {59032, uint256S("0x4df27e935989a4b3d0d04f5507de6b9d88e93dd687b320d96d171f421a273738")},
                 {101848, uint256S("0x00ba320cf081e0664e924aeb918d3ccb64a2381f004e8ecbb632dabe29526b9e")},
                 {329646, uint256S("0x0bfe7b0651fb1dbc52a13eb581e8cb4772c1196f9aad074d8df0a18bddd21eb6")},
-                {480552, uint256S("0xaa2bda3f31b0320351747f6bb9a84bb12d3b15d84250f75e4ae531b4b89ac6bb")},
+                {480552, uint256S("0xaa2bda3f31b0320351747f6bb9a84bb12d3b15d84250f75e4ae531b4b89ac6bb")}
             }
         };
 
