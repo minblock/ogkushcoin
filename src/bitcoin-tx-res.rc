@@ -16,14 +16,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "OGKush"
-            VALUE "FileDescription",    "ogkush-tx (CLI OGKush transaction editor utility)"
+            VALUE "CompanyName",        "OGKushcoin"
+            VALUE "FileDescription",    "ogkushcoin-tx (CLI OGKushcoin transaction editor utility)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "ogkush-tx"
+            VALUE "InternalName",       "ogkushcoin-tx"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "ogkush-tx.exe"
-            VALUE "ProductName",        "ogkush-tx"
+            VALUE "OriginalFilename",   "ogkushcoin-tx.exe"
+            VALUE "ProductName",        "ogkushcoin-tx"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

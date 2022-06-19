@@ -127,7 +127,7 @@ minimum relay feerate. The initial minimum relay feerate is set to
 Bitcoin Core 0.12 also introduces new default policy limits on the length and
 size of unconfirmed transaction chains that are allowed in the mempool
 (generally limiting the length of unconfirmed chains to 25 transactions, with a
-total size of 101 KB).  These limits can be overriden using command line
+total size of 101 KB).  These limits can be overridden using command line
 arguments; see the extended help (`--help -help-debug`) for more information.
 
 Opt-in Replace-by-fee transactions
@@ -226,7 +226,7 @@ priority delta will be ignored and only the fee metric will be effective.
 This internal automatic prioritization handling is being considered for removal
 entirely in Bitcoin Core 0.13, and it is at this time undecided whether the
 more accurate priority calculation for chained unconfirmed transactions will be
-restored. Community direction on this toogkush is particularly requested to help
+restored. Community direction on this topic is particularly requested to help
 set project priorities.
 
 Automatically use Tor hidden services

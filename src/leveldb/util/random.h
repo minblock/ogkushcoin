@@ -15,6 +15,7 @@ namespace leveldb {
 class Random {
  private:
   uint32_t seed_;
+
  public:
   explicit Random(uint32_t s) : seed_(s & 0x7fffffffu) {
     // Avoid bad seeds.
@@ -23,8 +24,8 @@ class Random {
     }
   }
   uint32_t Next() {
-    static const uint32_t M = 2147483647L;   // 2^31-1
-    static const uint64_t A = 16807;  // bits 14, 8, 7, 5, 2, 1, 0
+    static const uint32_t M = 2147483647L;  // 2^31-1
+    static const uint64_t A = 16807;        // bits 14, 8, 7, 5, 2, 1, 0
     // We are computing
     //       seed_ = (seed_ * A) % M,    where M = 2^31-1
     //
@@ -51,12 +52,10 @@ class Random {
   // REQUIRES: n > 0
   bool OneIn(int n) { return (Next() % n) == 0; }
 
-  // Skewed: ogkushk "base" uniformly from range [0,max_log] and then
-  // return "base" random bits.  The effect is to ogkushk a number in the
+  // Skewed: pick "base" uniformly from range [0,max_log] and then
+  // return "base" random bits.  The effect is to pick a number in the
   // range [0,2^max_log-1] with exponential bias towards smaller numbers.
-  uint32_t Skewed(int max_log) {
-    return Uniform(1 << Uniform(max_log + 1));
-  }
+  uint32_t Skewed(int max_log) { return Uniform(1 << Uniform(max_log + 1)); }
 };
 
 }  // namespace leveldb

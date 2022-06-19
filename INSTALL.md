@@ -1,5 +1,5 @@
-Building OGKush
+Building OGKushcoin
 ================
 
 See doc/build-*.md for instructions on building the various
-elements of the OGKush Core reference implementation of OGKush.
+elements of the OGKushcoin Core reference implementation of OGKushcoin.
