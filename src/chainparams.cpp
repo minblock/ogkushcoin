@@ -70,7 +70,7 @@ public:
         consensus.BIP16Height = 0; // 90525e3e1f966a75e8e2d3545962f27a763f6de9f1308de515edc412be3644e9	19th Jan 2019 22:32:23
         consensus.BIP34Height = 0;
         consensus.BIP34Hash = uint256S("0x90525e3e1f966a75e8e2d3545962f27a763f6de9f1308de515edc412be3644e9");
-        consensus.BIP65Height = 04; // 90525e3e1f966a75e8e2d3545962f27a763f6de9f1308de515edc412be3644e9
+        consensus.BIP65Height = 0; // 90525e3e1f966a75e8e2d3545962f27a763f6de9f1308de515edc412be3644e9
         consensus.BIP66Height = 0; // 90525e3e1f966a75e8e2d3545962f27a763f6de9f1308de515edc412be3644e9
         consensus.CSVHeight = 64512; // 5f12ad3c1f710820ca362b637c45ee7fe85b3deed9d99034112550b5417a9cb3
         consensus.SegwitHeight = 64512; // 5f12ad3c1f710820ca362b637c45ee7fe85b3deed9d99034112550b5417a9cb3
@@ -202,7 +202,7 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_MWEB].nStartHeight = 2209536; // Jan/Feb 2022
         consensus.vDeployments[Consensus::DEPLOYMENT_MWEB].nTimeoutHeight = 2419200; // 364 days later
 
-		consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000000001df7b5aa1700ce");
+        consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000000001df7b5aa1700ce");
         consensus.defaultAssumeValid = uint256S("0x1efb29c8187d5a496a33377941d1df415169c3ce5d8c05d055f25b683ec3f9a3"); //612653
 
         pchMessageStart[0] = 0xda;
@@ -222,7 +222,7 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.emplace_back("testseed.ogkush.org");
+        vSeeds.emplace_back("testnet-seed.ogkush.org");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);
